@@ -19,12 +19,6 @@ Beautiful, accessible, romantic, contemplative
 
 ---
 
-## NPCs Present
-
-None (though villagers visit occasionally)
-
----
-
 ## Secrets
 
 A hidden cave at the tide line, accessible only at very low tide.
@@ -36,9 +30,3 @@ Old fishermen know which areas have dangerous currents.
 ## Danger Level
 
 **Medium** (safe on calm days, dangerous during storms)
-
----
-
-## Notes
-
-A place for lovers to walk. A place for artists to sketch. A place where Lucie might come to observe the water.

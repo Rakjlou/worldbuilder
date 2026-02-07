@@ -14,24 +14,24 @@ Wild, dangerous, beautiful, isolated, timeless
 
 ## Connected Locations
 
-- Gabriel's House - Above on the cliff
+- Gabriel's House -- Above on the cliff
 - Cliff Overlook
 
 ---
 
 ## Items Present
 
-- dinghy - Gabriel's small boat, moored here
+- Dinghy -- Gabriel's small boat, moored here
 
 ---
 
 ## Secrets
 
-The cave contains tide pools with bioluminescent creatures—visible on very dark nights.
+The cave contains tide pools with bioluminescent creatures -- visible on very dark nights.
 
 Old boat wreckage from decades past, mostly buried in sand and stone.
 
-**The cave leads to very deep water.** Old stories say that those who dive deep enough might encounter something beautiful and terrible—a shimmer in the darkness, a jellyfish of light. But most who descend that far never return to tell of it.
+**The cave leads to very deep water.** Old stories say that those who dive deep enough might encounter something beautiful and terrible -- a shimmer in the darkness, a jellyfish of light. But most who descend that far never return to tell of it.
 
 ---
 
@@ -44,5 +44,3 @@ Old boat wreckage from decades past, mostly buried in sand and stone.
 ## Notes
 
 Tide times matter here. High tide makes the path treacherous. Low tide opens possibilities. The cave is impassable during high tide.
-
-This is where Gabriel might take Lucie. This is where the story reaches its crisis.

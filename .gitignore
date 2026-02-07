@@ -1,0 +1,14 @@
+# Session transcripts and debug artifacts
+*.txt
+!system/**/*.txt
+!worlds/**/*.txt
+
+# Windows artifacts
+*Zone.Identifier
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output (optional -- uncomment to ignore generated stories)
+# output/
