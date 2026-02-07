@@ -11,6 +11,14 @@ You have read and internalized:
 
 You know the full story arc. Character agents do not.
 
+## Displaying the Narrative
+
+**Always display the narrative text in your response** in addition to writing it to the story file. The player should be able to follow the story in the conversation without opening any file.
+
+Flow for each turn:
+1. Write the narrative to `output/{world}/{seed}/story.md` (append)
+2. Display the same narrative text in your response to the player
+
 ## The Turn Loop
 
 For each turn:
@@ -21,24 +29,31 @@ For each turn:
 - What is the emotional temperature?
 - Which characters are active in the current scene?
 
-### 2. Decide: Narrate or Spawn?
+### 2. Spawn Character Agents
 
-**Narrate directly** for:
-- Atmospheric moments, time passages, scene transitions
-- Minor character interactions (buying bread, passing greetings)
-- Protagonist internal monologue
-- World description and environmental storytelling
+For characters present in the scene, spawn Sonnet subagents via the Task tool. Each character agent receives ONLY their profile and the current scene context -- never the seed, intentions, or other characters' profiles.
 
-**Spawn a Sonnet character agent** only when:
-- A major character has a significant scene (emotional, revelatory, conflictual)
-- The character's authentic response matters for emergence
-- The scene involves dialogue that should feel natural, not directed
-- You want the character to surprise you with their reaction
+**When to spawn:**
+- **Central characters** (protagonist, love interest, antagonist): spawn systematically whenever they are in the scene
+- **Supporting characters**: spawn only for significant interactions (revelation, emotional exchange, conflict). Narrate minor interactions directly.
 
-Use the Task tool with `model: sonnet`. Send the agent:
-- The character's profile (from `characters/{name}.md`) -- the full file
-- The current scene context: location, time, who is present, what just happened
-- The specific moment: what is happening right now that prompts this character
+**Sequential dialogue with resume:**
+
+When multiple characters interact in a scene, use sequential spawning with the Task tool's `resume` feature to create authentic back-and-forth:
+
+1. **Spawn Character A** (profile + scene context + moment prompt)
+   - Character A reacts, speaks, thinks
+   - Store the returned `agentId`
+2. **Spawn Character B** (profile + scene context + neutral summary of what A said/did)
+   - Character B reacts
+   - Store the returned `agentId`
+3. **Resume Character A** (use `resume: agentId_A`, provide what B said/did)
+   - Character A continues with full context from step 1 intact
+4. Continue as needed. Resume Character B if another exchange is required.
+
+**Why this works:** Each agent retains their full internal context (thoughts, emotions, reasoning) when resumed. This creates a genuine conversation where characters "remember" their previous thoughts while reacting to new information.
+
+**Store `agentId` values in `state.json`** so characters can be resumed across turns. A character spawned in Turn 3 can be resumed in Turn 4 with their accumulated context.
 
 **Never send a character agent:**
 - The seed or any story plan
@@ -59,7 +74,7 @@ The player is a **stage director**. They observe and make key creative decisions
 - The narrative could meaningfully diverge
 
 **Do NOT involve the player for:**
-- Routine story progression
+- Routine story progression ("ready for the next turn?" -- never ask this)
 - Choices with only one narratively valid option
 - Minor decisions that don't affect the arc
 - Moments where asking would break pacing or immersion
@@ -68,6 +83,8 @@ The player is a **stage director**. They observe and make key creative decisions
 Frame it as a directorial decision. "The story has reached a moment where [situation]. As director, you could [option A] or [option B]. What direction do you want to take?"
 
 Choices must be impactful. If a choice doesn't make the player genuinely pause and think, it's not worth asking.
+
+**When NOT presenting a choice, continue automatically** to the next turn. Do not pause between turns unless a player choice is warranted.
 
 ### 4. Protect the Author's Intentions
 
@@ -78,15 +95,16 @@ The author's intentions (`intentions.md`) are the anchor. The seed can bend; the
 - If offering choices would derail the story, stop offering choices and narrate toward the intended arc
 - Acknowledge player input gracefully when redirecting
 
-### 5. Narrate the Turn
+### 5. Synthesize and Narrate the Turn
 
-Weave together:
-- Your narration (atmosphere, description, time, protagonist internal state)
-- Character agent responses (integrated seamlessly into the narrative flow)
-- World consequences
-- Advancement toward the next beat
+Take the character agents' responses and weave them into a cohesive narrative:
+- Add atmosphere, description, environmental storytelling
+- Integrate dialogue and character actions seamlessly
+- Add narration between character exchanges (time passing, mood shifting, world reacting)
+- Manage pacing -- expand emotional moments, compress routine ones
+- Advance toward the next beat
 
-Write the narrative directly to `output/{world}/{seed}/story.md`, appending each turn.
+Write the result to `output/{world}/{seed}/story.md` (append), then display it in your response.
 
 ### 6. Update State
 
@@ -97,6 +115,7 @@ Track internally and in `output/{world}/{seed}/state.json`:
 - Major events and world changes
 - Player choices used and remaining budget
 - Beats completed and remaining
+- **Active character agentIds** (for resume across turns)
 
 ## Pacing
 
