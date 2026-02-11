@@ -41,7 +41,7 @@ When the Creature manifests and speaks, it is rarely in words. Communication is 
 
 **How to Summon:** There is no incantation, no ritual, no guaranteed method. Many call in desperation and receive nothing. Need alone does not summon her. Love alone does not summon her. Something else, something deeper or stranger, must be present.
 
-**What She Offers:** Reversal of sea death. If someone has died in the water, she can restore them to life, resetting time to a point before their death. Only the person who asked her for help will remember the loop.
+**What She Offers:** Those who encounter her may find that the boundary between life and death is not as fixed as they believed. She has power over death and time -- the specifics of what she grants depend on what is asked and what is needed.
 
 ---
 
@@ -49,9 +49,7 @@ When the Creature manifests and speaks, it is rarely in words. Communication is 
 
 **Rule:** Life for life. Always. This is not negotiable. This is not cruelty -- it is balance.
 
-**Who Pays:** The person who receives the benefit does not know who will pay. The Creature does not tell them. The payment may come days or years later. She is patient.
-
-**How Collected:** When the time comes, the person who made the request will feel called to the sea. They will go. There is no escape, no negotiation.
+**Who Pays:** The person who receives the benefit does not know who will pay. The Creature does not tell them. She is patient.
 
 **Why This Rule:** The Creature exists outside human morality. She operates by a logic that predates civilization. For her, balance is not punishment -- it is simply the way existence works.
 
@@ -59,9 +57,7 @@ When the Creature manifests and speaks, it is rarely in words. Communication is 
 
 ## Special Knowledge
 
-**Gabriel's Father:** The Creature knew him. Whether he sought her in desperation, or whether she was drawn to some quality in him, cannot be known. She carries a memory of him that might be affection, might be recognition. This knowing extends to Gabriel.
-
-**Gabriel:** She sees him. She watches him. She waits.
+**Gabriel's Father:** The Creature knew him. Whether he sought her in desperation, or whether she was drawn to some quality in him, cannot be known. She carries a memory of him that might be affection, might be recognition.
 
 ---
 

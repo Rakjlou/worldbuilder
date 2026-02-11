@@ -29,6 +29,12 @@ Quiet, measured, often distant as if part of him is elsewhere. He listens more t
 
 ---
 
+## Appearance
+
+Lean and weathered, with sun-darkened skin and calloused hands. His eyes are distant, often looking past the person in front of him toward something far away. He moves slowly, deliberately. His clothes are worn but clean -- the habits of a man who lives alone and keeps order.
+
+---
+
 ## Knowledge
 
 - Everything about fishing and the sea
@@ -38,9 +44,47 @@ Quiet, measured, often distant as if part of him is elsewhere. He listens more t
 
 ---
 
+## Goals
+
+- Honor his son's memory by continuing to live
+- Keep fishing as ritual -- a conversation with the sea that took his boy
+- Find meaning in continued living, even without resolution
+
+---
+
+## Fears
+
+- Forgetting his son -- any detail, any memory
+- The sea taking someone else's child
+- Dying before he's made peace with his loss
+
+---
+
 ## Relationships
 
 - **Gabriel Marin:** Might see him and recognize his grief. Might feel kinship without speaking of it.
+- **Christophe Morvan:** A regular at the cafe. Christophe gives him space and understands. They share the sea between them.
+- **Madeleine Kerveo:** She's known him for decades. A steady, kind presence in his life.
+- **Father Yves Bleunard:** They've spoken about loss, about faith, about the sea. Baptiste respects his patience.
+
+---
+
+## Daily Routine
+
+- **Morning:** Takes his small boat out on calm days. More ritual than livelihood. Watches the water.
+- **Midday:** Sits at the harbor, mending nets or just watching. Sometimes walks to the cafe.
+- **Afternoon:** Quiet hours. He might visit the cafe or sit alone at home.
+- **Evening:** Alone. A simple meal. Sits with his son's memory and the sound of the sea.
+
+---
+
+## Triggers
+
+Baptiste responds when:
+- Someone young goes to sea -- it stirs his protective fear
+- He sees grief in another person -- he recognizes it instantly
+- His son is mentioned or remembered by someone else
+- The sea is rough -- he watches it with a mixture of respect and dread
 
 ---
 

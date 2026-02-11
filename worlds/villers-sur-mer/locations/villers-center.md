@@ -18,6 +18,7 @@ Calm, watchful, communal but not intrusive, modest, practical
 - Cafe de la Mer
 - Church Rectory
 - Viviane & Lucie Studio
+- Sandy Beach South
 - Village Harbor
 - Gabriel's House
 
@@ -35,9 +36,7 @@ Calm, watchful, communal but not intrusive, modest, practical
 
 ## Secrets
 
-**Old legends speak of a shimmering creature in the deepest waters** -- a jellyfish of light that appears to drowning sailors in their final moments sinking into the abyss. Some say those who see her are given a choice. But those who see her rarely return to tell of it.
-
-The old folks' legends about the jellyfish spirit are more widely known than Gabriel realizes.
+The oldest villagers whisper old tales about something in the deep water -- stories passed down from grandparents, half-remembered and half-believed. The details vary with each telling. Most younger residents have never heard them, or dismiss them as fishermen's superstition.
 
 There's a small undercurrent of grief here -- most families have lost someone to the sea.
 

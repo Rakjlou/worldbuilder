@@ -11,7 +11,7 @@ Lucie is a painter in her early 30s who lost her brother ten years ago in the se
 
 She's brilliant and broken in equal measure. She appears withdrawn to outsiders, but her internal world is intense and complex. She hasn't let anyone close since her brother's death.
 
-She's cautious about connection because loss taught her how devastating it can be. But she notices things. Sometimes she dreams of diving deep and seeing a shimmer in the darkness below -- something beautiful and terrifying, like a jellyfish made of light. She tries to paint it, but she can never quite capture what she sees in dreams.
+She's cautious about connection because loss taught her how devastating it can be. But she notices things -- light, color, mood, the way the sea changes minute to minute.
 
 She's not naive. She carries darkness. She understands risk. She's not a muse -- she's a real person with real trauma learning to live again through art and potential connection.
 
@@ -74,7 +74,8 @@ Paint-stained hands and clothes. Dark hair often in a bun or loose. Eyes that se
 
 - **Viviane Colas:** Her only real friend. Viviane cares for her deeply but is frustrated by Lucie's isolation. Lucie loves Viviane but resists her attempts to draw her into community.
 - **Gabriel Marin:** Has not met him.
-- **The Creature:** Dreams of a shimmering creature in the deep -- a jellyfish of light suspended in darkness. She hasn't seen it while awake, but paints it from dreams.
+- **Madeleine Kerveo:** Buys supplies from her. Madeleine is kind, but Lucie keeps their exchanges brief.
+- **Sophie Guerin:** The teacher has invited her to village events. Lucie usually declines, but notices her persistence.
 
 ---
 

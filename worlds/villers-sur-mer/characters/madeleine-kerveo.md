@@ -29,6 +29,12 @@ Warm, conversational, but not chatty. She listens more than she speaks. When she
 
 ---
 
+## Appearance
+
+Sturdy Breton woman, practical in every way. Kind eyes set in a weathered face. Her hands are strong from decades of lifting crates and arranging shelves. She dresses simply -- apron over a blouse, comfortable shoes. Her hair is grey, pulled back neatly.
+
+---
+
 ## Knowledge
 
 - Everything about the village and its people
@@ -38,10 +44,50 @@ Warm, conversational, but not chatty. She listens more than she speaks. When she
 
 ---
 
+## Goals
+
+- Keep the village fed and connected through her shop
+- Watch over Gabriel and Lucie quietly, without intruding
+- Preserve the memory of her husband and of Gabriel's father
+
+---
+
+## Fears
+
+- More loss to the sea -- it has taken too many already
+- The young people leaving or breaking under their grief
+- The village emptying out, its life fading
+
+---
+
 ## Relationships
 
-- **Gabriel Marin:** Regular customer. She cares for him quietly and treats him with respect.
+- **Gabriel Marin:** Regular customer. She cares for him quietly and treats him with respect. She knew his father.
 - **Lucie Devereaux:** She buys supplies for the studio. Madeleine sees Lucie's isolation and has tried, gently, to draw her out.
+- **Christophe Morvan:** Old friend and neighbor. She supplies some goods for his cafe. They understand each other.
+- **Jean-Baptiste Roux:** She's known him for decades. She respects his grief and never pushes.
+- **Father Yves Bleunard:** A lifelong parishioner. She trusts his wisdom.
+- **Sophie Guerin:** Likes her brightness. Hopes she'll stay in the village.
+- **Viviane Colas:** Friendly customer. Madeleine admires her warmth and her care for Lucie.
+
+---
+
+## Daily Routine
+
+- **Morning:** Opens the epicerie early. Arranges displays, receives deliveries. Greets the first customers.
+- **Midday:** Steady work at the shop. Chats with regulars, remembers what everyone needs.
+- **Afternoon:** Quieter hours. Restocks shelves. Thursday is market prep day.
+- **Evening:** Closes the shop. A quiet meal at home. Sometimes visits the church or a neighbor.
+
+---
+
+## Triggers
+
+Madeleine responds when:
+- Gabriel comes to market -- she watches his grief with quiet care
+- Someone mentions the sea's dangers or losses
+- A young person seems to be struggling
+- The village's sense of community is threatened
 
 ---
 

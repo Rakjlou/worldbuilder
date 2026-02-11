@@ -23,23 +23,17 @@ The village clusters around a small central square containing:
 
 A converted **stone barn** at the village's southern edge serves as a shared artist studio.
 
-**Gabriel's house** sits isolated on the northern cliff, a 10-minute walk from the village center. Connected by a narrow winding path, it's functionally separate -- the last inhabited place before the edge of the world.
+**Gabriel's house** sits isolated on the northern cliff, a 15-minute walk from the village center. Connected by a narrow winding path, it's functionally separate -- the last inhabited place before the edge of the world.
 
 ## The Sea & Its Mystery
 
 The sea here is both beautiful and merciless. Locals respect it. Tourists underestimate it.
 
-Deep in the water lives **the Creature** -- a god-like entity, calm and detached as the concept of fate itself. She appears as a shimmering jellyfish-like figure of light, beautiful and terrible in equal measure. But she dwells in the deepest waters and does not rise to the surface. To see her, one must descend -- diving into the depths, drowning and sinking, or being pulled down by desperate need.
-
-The encounter happens underwater, in a suspended moment outside time: water fills the lungs, breath should fail, but does not. The person hangs there in the deep with her light surrounding them, unable to breathe but not drowning. This is the tiny fantasy, the magic at the heart of the world -- the impossible conversation in the abyss.
+Among the old folks of Villers, there are whispered stories of something dwelling in the deepest waters -- a presence, ancient and vast. The stories are vague and contradictory: a shimmer in the darkness, a light where no light should be, a feeling of being seen by something immense. Most dismiss the tales. A few do not. The stories are not widely discussed -- they belong to the oldest generation, told in low voices after too much wine, half-believed even by those who tell them.
 
 ### On Gabriel's Father
 
-There is a connection between Gabriel's father and the Creature. **Did he seek her, descending into the deep water when illness took his ability to sail? Or did she call him down -- some rare quality that drew her vast attention?** His journal contains fragments: *"I descended into the deep and she was there -- a shimmer of light, a jellyfish made of stars. I should have drowned, but she held me in that moment. I couldn't breathe but didn't need to."* And then: *"Did I seek her, or did she call me down? I cannot know."*
-
-The truth is unknowable, and perhaps both are true. Whether their connection began in his desperation or in her curiosity, whether he was chosen or whether he sought, remains a mystery Gabriel inherits but cannot solve. Father Yves knows legends his old relatives told of something ancient dwelling in the deepest waters. Gabriel's father lived in love with the sea, even when illness prevented him from sailing.
-
-**Whether his father sought her or she was drawn to him, whether their connection was born of desperation or recognition, Gabriel cannot know. But the connection existed, and through it, she sees Gabriel as more than just another human calling from the shore.** This kindness is not salvation -- it is witness. She sees him, knows him, understands his longing.
+Gabriel's father loved the sea deeply. Even after illness prevented him from sailing, he remained connected to the water -- walking the cliffs, watching the tides, sitting for hours at the overlook. He spent his final years in quiet communion with the ocean, and whatever peace he found there, he took with him. Father Yves remembers him as a man who understood something about the sea that most people didn't -- though what that was, he could never quite articulate.
 
 ## Time & Season
 
@@ -55,11 +49,11 @@ This is a **summer tale**. The story unfolds across months when the days are lon
 
 ## Current Situation
 
-Gabriel is living in his late father's house, trying to honor his father's love of the sea. He does not yet understand the sea. He watches the sea for signs of something beyond the ordinary -- a presence, a meaning, something vast that he cannot name.
+Gabriel is living in his late father's house, trying to honor his father's love of the sea. He does not yet understand the sea. He reads his father's journals and maritime books, looking for the understanding his father seemed to possess.
 
-Lucie is channeling her soul through painting. She has lost her brother to the sea ten years ago and now has found peace in trying to stop time in her paintings. She paints every moment she wants to remember for any reason, with a specific thing for the sea because her brother was afraid of it.
+Lucie is channeling her soul through painting. She lost her brother to the sea ten years ago and has found a kind of peace in trying to stop time in her paintings. She paints obsessively -- the sea in all its moods, moments she wants to preserve, the light on water. The sea fascinates and frightens her in equal measure.
 
-They both watch the sea. They both sense the weight of something ancient in the depths. And they are both about to discover that the sea is not just beautiful -- it is alive, aware, and it remembers those who love it.
+They live in the same small village but have not yet met. Both carry grief. Both are drawn to the water. Both are searching for something they cannot name.
 
 ## Atmosphere & Tone
 

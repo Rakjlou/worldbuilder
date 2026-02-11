@@ -37,17 +37,9 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 
 ## Secrets
 
-A leather journal hidden in the father's bedroom drawer with vivid entries:
+A leather journal in the father's bedroom drawer, filled with personal reflections on the sea, voyages, and something he felt in the deep water that he struggled to put into words. The entries grow more searching toward the end -- less about sailing, more about meaning.
 
-> "I descended into the deep and she was there -- a shimmer of light, a jellyfish made of stars. I should have drowned, but she held me in that moment. I couldn't breathe but didn't need to."
-
-And later:
-
-> "Did I seek her, or did she call me down? I cannot know."
-
-Evidence that the father spent time at the cliff's edge, perhaps preparing to dive into the deep waters below. Whether he was seeking her or answering her call, the evidence does not clarify.
-
-A painting (unfinished) of a shimmering jellyfish-like shape suspended in deep, dark water, glowing with bioluminescent light. A note on the back: "Did I find you, or did you find me?"
+An unfinished painting -- something abstract, luminous, as if the father was trying to capture a feeling rather than a subject. It hangs in the study, facing the window.
 
 ---
 

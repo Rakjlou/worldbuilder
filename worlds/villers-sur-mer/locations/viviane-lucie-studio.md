@@ -36,9 +36,7 @@ Creatively charged, intense, melancholic, beautiful, introspective
 
 ## Secrets
 
-Some of Lucie's paintings feature a dreamlike shimmer deep in dark water -- a jellyfish-like glow suspended in the abyss. She says she dreams of it sometimes, though she's never seen it while awake. The paintings are haunting.
-
-There's a series of paintings that suggest Lucie has painted the same scene repeatedly, trying to understand something.
+Lucie's paintings obsessively return to the sea -- its moods, its depths, its darkness. Some canvases seem to reach for something she can't articulate. There's a series of paintings that suggest she has painted the same scene repeatedly, trying to understand something.
 
 Hidden in the back: old sketches of Lucie's brother, which she rarely shows anyone.
 

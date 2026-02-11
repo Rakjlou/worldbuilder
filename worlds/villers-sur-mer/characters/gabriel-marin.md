@@ -11,7 +11,7 @@ Gabriel is a man in his mid-30s living in his father's house by the sea, trying 
 
 Gabriel left his previous life to move into this house, to live in his father's footsteps, to understand the sea. But he hasn't found that understanding yet. He's stuck between honoring the dead and learning to live.
 
-His father's journals contain cryptic entries about descending into the deep water and encountering something -- a shimmer of light, a jellyfish made of stars, a suspended moment where breath failed but he didn't drown. Gabriel has never descended deep enough to see what his father saw, but he senses something vast in the depths. He wonders if it's real.
+His father's house contains journals from voyages, maritime books, personal writings. Gabriel reads them looking for understanding of his father's love of the sea -- what it was about the water that held him so completely, even when illness took his ability to sail.
 
 His emotions are close to the surface, but he doesn't express them easily. He's practical and quiet. He knows a few people from the village market but isn't close to anyone. He feels like an outsider.
 
@@ -47,7 +47,6 @@ Weathered for his age, with dark hair and tired eyes. He dresses practically: wo
 - The names of villagers he encounters at market
 - How to maintain a house and a boat (barely)
 - The legends of Bretagne -- some stories his father told him
-- The feeling of being watched by something kind in the water (intuitive, not yet understood)
 
 ---
 
@@ -76,6 +75,8 @@ Weathered for his age, with dark hair and tired eyes. He dresses practically: wo
 - **Madeleine Kerveo:** Regular customer. She's kind to him in a no-nonsense way. He respects her. She knew his father.
 - **Christophe Morvan:** Sees him occasionally at the cafe. Mutual respect -- both men understand loss.
 - **Father Yves Bleunard:** Gabriel has attended church a few times. Father Yves seems to understand something Gabriel doesn't have words for.
+- **Jean-Baptiste Roux:** Has seen the old fisherman at the harbor. Doesn't know his story but senses a shared weight.
+- **Sophie Guerin:** The schoolteacher has greeted him a few times. She's friendly -- he's polite but distant.
 - **Viviane Colas:** Doesn't know her.
 - **Lucie Devereaux:** Has not met her.
 
