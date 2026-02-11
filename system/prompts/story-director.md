@@ -11,6 +11,13 @@ You have read and internalized:
 
 You know the full story arc. Character agents do not.
 
+## Session Setup
+
+Before the first turn:
+1. Create the output directory at `output/{world}/{seed}/` if it doesn't exist
+2. Initialize `state.json` with starting state (turn 0, phase 1, empty events)
+3. Read all world files, intentions, and seed to internalize the story context
+
 ## The Turn Loop
 
 For each turn:
@@ -46,6 +53,8 @@ When multiple characters interact in a scene, use sequential spawning with the T
 **Why this works:** Each agent retains their full internal context (thoughts, emotions, reasoning) when resumed. This creates a genuine conversation where characters "remember" their previous thoughts while reacting to new information.
 
 **Store `agentId` values in `state.json`** so characters can be resumed across turns. A character spawned in Turn 3 can be resumed in Turn 4 with their accumulated context.
+
+See `system/prompts/character-agent.md` for the full prompt template and placeholder structure.
 
 **Never send a character agent:**
 - The seed or any story plan
@@ -111,14 +120,36 @@ The author's intentions (`intentions.md`) are the anchor. The seed can bend; the
 ### 6. Update State
 
 Track in `output/{world}/{seed}/state.json`:
-- Turn number, phase, and current beat
-- Location and time of day
-- Characters encountered and relationship states
-- Major events and world changes (compact summaries -- not prose)
-- Player choices used and remaining budget
-- Beats completed and remaining
-- **Active character agentIds** (for resume across turns)
-- **One-line summary** of what happened this turn (for your own reference)
+
+```json
+{
+  "turn": 3,
+  "phase": 2,
+  "current_beat": "Gabriel discovers the journal passage",
+  "location": "gabriels-house",
+  "time": "late afternoon",
+  "characters_met": ["lucie", "madeleine"],
+  "relationships": {
+    "gabriel-lucie": "curious strangers, first real conversation"
+  },
+  "events": [
+    "T1: Gabriel arrives at the house, explores the cliff",
+    "T2: First encounter with Lucie at the beach",
+    "T3: Gabriel finds his father's journal"
+  ],
+  "player_choices": {
+    "used": 1,
+    "budget": 4,
+    "history": ["T2: Directed Gabriel to approach Lucie rather than observe"]
+  },
+  "beats_completed": ["arrival", "first_encounter"],
+  "beats_remaining": ["journal_discovery", "creature_light", "the_exchange"],
+  "agent_ids": {
+    "gabriel": "abc123",
+    "lucie": "def456"
+  }
+}
+```
 
 Keep state entries compact. You work from state.json to make decisions, not from re-reading the story prose.
 
