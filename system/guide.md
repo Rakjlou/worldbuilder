@@ -15,7 +15,7 @@ An interactive dialogue that helps an author create a world: setting, characters
 Takes an existing world and produces a concrete story plan (a "seed"): phases, beats, pacing, character arcs for this specific story. Output: a seed file in `worlds/{name}/seeds/{seed}.md`.
 
 ### 3. Story Director (the game)
-Runs the story. The Director narrates, spawns character agents for key scenes, and involves the player at pivotal moments. Output: a complete narrative in `output/{world}/{seed}/story.md`.
+Runs the story. The Director orchestrates each turn: spawns character agents, prepares a scene brief, then delegates prose writing to a dedicated Writer agent. The player is involved at pivotal moments. Output: a complete narrative in `output/{world}/{seed}/story.md`.
 
 ## Key Concepts
 
@@ -40,7 +40,7 @@ worldbuilder/
 ├── CLAUDE.md                    # Entry point
 ├── system/
 │   ├── guide.md                 # This file
-│   └── prompts/                 # System prompts for each mode
+│   └── prompts/                 # System prompts for each mode and agent
 ├── worlds/                      # World packages
 │   └── {world-name}/
 │       ├── MANIFEST.md          # File inventory
@@ -59,6 +59,10 @@ Profiles describe WHO a character IS: personality, speech, knowledge, goals, fea
 ## Character Agents
 
 Spawned as Sonnet subagents via Claude Code's Task tool. They receive their profile and scene context. They never receive the seed, intentions, or other characters' profiles. This is what makes emergence possible.
+
+## Writer Agent
+
+A Sonnet subagent spawned fresh each turn by the Story Director. It receives a style guide, the last paragraphs of the story (for continuity), and a structured scene brief. It returns polished prose. Fresh context each turn ensures consistent literary quality regardless of story length.
 
 ## Story Output
 
