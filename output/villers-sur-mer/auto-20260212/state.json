@@ -1,0 +1,29 @@
+{
+  "turn": 14,
+  "phase": 6,
+  "current_beat": "COMPLETE",
+  "location": "villers-sur-mer",
+  "time": "autumn",
+  "status": "finished",
+  "events": [
+    "T1: Gabriel discovers father's unsent letters to 'L.'",
+    "T2: Madeleine reveals L. was Luc, her husband.",
+    "T3: Lucie's bottle-letter found by Gabriel.",
+    "T4: Gabriel writes response. Lucie finds it.",
+    "T5: Weeks of correspondence. Viviane notices change. Creature's light visible.",
+    "T6: First meeting at Sandy Beach at sunset.",
+    "T7: Revelations -- families linked through Luc.",
+    "T8: Studio visit, journals compared, Creature's light seen together.",
+    "T9: Night before the dive. 'Je t'aime.' Sleepless vigil.",
+    "T10: THE DIVE. Lucie taken by the Creature. Gabriel surfaces alone.",
+    "T11: Funeral. Gabriel reads father's final journal entry -- understands the debt.",
+    "T12: Visits Lucie's studio, sees her prophetic final painting. Viviane: 'Elle t'aimait.' Gabriel decides.",
+    "T13: Gabriel's final dive. The sacrifice. He dissolves into the sea. Balance restored.",
+    "T14: Aftermath. Dinghy found empty. Viviane finds the final letter. The Creature's light fades forever."
+  ],
+  "player_choices": {
+    "used": 1,
+    "budget": 3,
+    "history": ["T9: Player chose L'Ivresse -- no counsel sought before diving"]
+  }
+}

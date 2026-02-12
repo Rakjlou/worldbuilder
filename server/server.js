@@ -159,24 +159,26 @@ function splitTextForTTS(text, maxLen = 4000) {
 }
 
 async function generateAudioChunk(text) {
-  const res = await callApi({
-    type: 'TEXT_TO_SPEECH',
-    model: config.tts.model,
-    conversationId: 'TEXT_TO_SPEECH',
-    promptObject: {
-      text,
+  const res = await fetch(`${config.tts.url}/v1/audio/speech`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: config.tts.model,
+      input: text,
       voice: config.tts.voice,
       speed: config.tts.speed,
       response_format: config.tts.response_format,
-    },
+      stream: config.tts.stream ?? false,
+      ...(config.tts.lang_code && { lang_code: config.tts.lang_code }),
+    }),
   });
 
-  // OpenAI TTS via 1min.ai returns JSON with a temporaryUrl
-  const json = await res.json();
-  const audioUrl = json.aiRecord.temporaryUrl;
-  const audioRes = await fetch(audioUrl);
-  if (!audioRes.ok) throw new Error(`Failed to download audio: ${audioRes.status}`);
-  return Buffer.from(await audioRes.arrayBuffer());
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Kokoro TTS error (${res.status}): ${errText}`);
+  }
+
+  return Buffer.from(await res.arrayBuffer());
 }
 
 async function generateAudio(text) {
@@ -305,17 +307,27 @@ app.get('/api/chapter/:index/image', async (req, res) => {
   }
 });
 
+// --- Audio format helpers ---
+const AUDIO_FORMATS = {
+  mp3:  { ext: 'mp3',  mime: 'audio/mpeg' },
+  wav:  { ext: 'wav',  mime: 'audio/wav' },
+  flac: { ext: 'flac', mime: 'audio/flac' },
+  opus: { ext: 'opus', mime: 'audio/opus' },
+  pcm:  { ext: 'pcm',  mime: 'audio/pcm' },
+};
+const audioFmt = AUDIO_FORMATS[config.tts.response_format] || AUDIO_FORMATS.mp3;
+
 // API: get chapter audio
 app.get('/api/chapter/:index/audio', async (req, res) => {
   const index = parseInt(req.params.index, 10);
   const chapter = currentStory.chapters[index];
   if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
 
-  const cachedAudio = path.join(cacheDir, `audio_${index}.mp3`);
+  const cachedAudio = path.join(cacheDir, `audio_${index}.${audioFmt.ext}`);
 
   // Serve from cache
   if (fs.existsSync(cachedAudio)) {
-    return serveFile(res, cachedAudio, 'audio/mpeg');
+    return serveFile(res, cachedAudio, audioFmt.mime);
   }
 
   // Deduplicate in-flight requests
@@ -323,7 +335,7 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
   if (inFlight.has(key)) {
     try {
       await inFlight.get(key);
-      return serveFile(res, cachedAudio, 'audio/mpeg');
+      return serveFile(res, cachedAudio, audioFmt.mime);
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -345,7 +357,7 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
 
   try {
     await promise;
-    serveFile(res, cachedAudio, 'audio/mpeg');
+    serveFile(res, cachedAudio, audioFmt.mime);
   } catch (err) {
     console.error(`Audio generation failed for chapter ${index}:`, err.message);
     res.status(500).json({ error: `Audio generation failed: ${err.message}` });
