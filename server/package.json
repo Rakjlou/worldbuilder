@@ -1,0 +1,14 @@
+{
+  "name": "story-reader",
+  "version": "1.0.0",
+  "description": "Immersive story reader for Worldbuilder narratives",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "marked": "^15.0.0",
+    "ws": "^8.18.0"
+  }
+}

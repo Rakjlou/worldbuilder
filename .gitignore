@@ -10,5 +10,9 @@
 .DS_Store
 Thumbs.db
 
+# Server config (API keys)
+server/config.json
+server/cache/
+
 # Output (optional -- uncomment to ignore generated stories)
 # output/

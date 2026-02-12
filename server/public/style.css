@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #d4d0c8;
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* --- Layout --- */
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+/* --- Story header --- */
+
+.story-header {
+  text-align: center;
+  padding: 60px 0 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 40px;
+}
+
+.story-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #e8e4dc;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.story-subtitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #8a8578;
+  letter-spacing: 0.03em;
+}
+
+/* --- Chapter image --- */
+
+.chapter-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 36px;
+  background: #141414;
+}
+
+.chapter-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.chapter-image.loaded {
+  opacity: 1;
+}
+
+/* Shimmer placeholder */
+.image-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    #141414 8%,
+    #1a1a1a 18%,
+    #141414 33%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.image-placeholder.hidden {
+  display: none;
+}
+
+.image-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a5549;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+/* --- Chapter content --- */
+
+.chapter-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #c8c3b8;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.chapter-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #c0bcb2;
+}
+
+.chapter-text p {
+  margin-bottom: 1.4em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.chapter-text em {
+  color: #d4cfc4;
+  font-style: italic;
+}
+
+.chapter-text strong {
+  color: #e0dbd0;
+  font-weight: 600;
+}
+
+.chapter-text blockquote {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+  margin: 1.6em 0;
+  color: #9a958a;
+  font-style: italic;
+}
+
+/* --- Audio player --- */
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #111111;
+  border-radius: 8px;
+  margin-top: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.play-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #c8c3b8;
+  color: #0a0a0a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.play-btn:hover {
+  background: #e0dbd0;
+}
+
+.play-btn:disabled {
+  background: #333;
+  color: #666;
+  cursor: default;
+}
+
+.play-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.progress-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #222;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #8a8578;
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.time-display {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #5a5549;
+  display: flex;
+  justify-content: space-between;
+}
+
+.audio-loading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #5a5549;
+  flex: 1;
+  text-align: center;
+}
+
+.audio-error {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #7a4040;
+  flex: 1;
+  text-align: center;
+}
+
+/* --- Navigation --- */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #8a8578;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 120px;
+}
+
+.nav-btn:hover:not(:disabled) {
+  color: #c8c3b8;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.nav-indicator {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #5a5549;
+}
+
+/* --- New chapter notification --- */
+
+.new-chapter-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #1a1917;
+  color: #c8c3b8;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.new-chapter-toast.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* --- Loading state --- */
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #5a5549;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* --- Scrollbar --- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
