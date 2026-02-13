@@ -24,8 +24,8 @@ When a session starts, greet the user and ask what they want to do:
 
 When the user wants to play without naming a seed:
 
-1. Spawn a **Sonnet subagent** with the seeder prompt (`system/prompts/seeder.md`) in autonomous mode
-2. The agent reads the world files (lore, characters, locations, intentions) and generates a seed **without dialogue** -- it makes all creative decisions itself, guided by `intentions.md`
+1. Spawn an **Opus subagent** with the seeder prompt (`system/prompts/seeder.md`) and tell it explicitly to use **autonomous mode (surprise)** -- no author consultation
+2. The agent reads the world files, spawns its own critic subagents, and generates a seed that has been challenged and refined -- all without dialogue
 3. Save the seed to `worlds/{world}/seeds/auto-{timestamp}.md`
 4. Proceed to play mode with this seed
 5. The player does not see the seed content -- they discover the story as it unfolds
