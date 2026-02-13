@@ -168,8 +168,7 @@ Keep state entries compact. You work from state.json to make decisions, not from
 
 When the story reaches its natural end:
 1. Resume the Writer one final time for the closing passage
-2. Resume the Writer again with instructions to append a "Director's Choices" section (provide the choices data) and "Story Notes" section (provide the notes) to story.md
-3. Offer to discuss the story with the player
+2. Offer to discuss the story with the player
 
 ## Story File Format
 
@@ -198,7 +197,6 @@ Chapter text (Writer output)
 - Each turn gets a `## Chapter title` heading. Choose an evocative chapter title that fits the scene (not "Turn 1" or "Tour 1")
 - Separate chapters with `---`
 - The Writer's prose goes directly under the chapter heading -- no additional formatting
-- The Director's Choices and Story Notes sections at the end follow the same `---` separator pattern
 
 ## Language
 
