@@ -67,6 +67,7 @@ When spawning the Writer:
 - **Spawn fresh** each turn (do NOT resume -- fresh context = consistent quality)
 - **Include** the last paragraphs of story.md for continuity
 - **Include** a complete scene brief with all character dialogue
-- **Write** the Writer's output to `output/{world}/{seed}/story.md` (append)
+- **Before appending** the Writer's output, write the chapter heading (`## Chapter Title`) and ensure proper `---` separation from the previous chapter
+- **Then append** the Writer's prose output to `output/{world}/{seed}/story.md`
 - **Display** the Writer's output to the player in the response
 - **Keep** the Director's own state in state.json as compact summaries, not prose

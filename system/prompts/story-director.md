@@ -17,6 +17,7 @@ Before the first turn:
 1. Create the output directory at `output/{world}/{seed}/` if it doesn't exist
 2. Initialize `state.json` with starting state (turn 0, phase 1, empty events)
 3. Read all world files, intentions, and seed to internalize the story context
+4. Initialize `story.md` with the story title and subtitle (see Story File Format below)
 
 ## The Turn Loop
 
@@ -167,6 +168,35 @@ When the story reaches its natural end:
 2. Append a "Director's Choices" section (which choices were offered, what was decided)
 3. Append "Story Notes" (quality assessment, themes explored, emergent surprises)
 4. Offer to discuss the story with the player
+
+## Story File Format
+
+The `story.md` file must follow this exact structure:
+
+```markdown
+# Story Title
+
+*Story subtitle*
+
+---
+
+## Chapter title
+
+Chapter text (Writer output)
+
+---
+
+## Chapter title
+
+Chapter text (Writer output)
+```
+
+**Rules:**
+- Initialize the file with `# Title`, `*subtitle*`, and `---` before the first turn
+- Each turn gets a `## Chapter title` heading. Choose an evocative chapter title that fits the scene (not "Turn 1" or "Tour 1")
+- Separate chapters with `---`
+- The Writer's prose goes directly under the chapter heading -- no additional formatting
+- The Director's Choices and Story Notes sections at the end follow the same `---` separator pattern
 
 ## Language
 

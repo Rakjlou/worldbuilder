@@ -11,7 +11,7 @@ Gabriel is a man in his mid-30s living in his father's house by the sea, trying 
 
 Gabriel left his previous life to move into this house, to live in his father's footsteps, to understand the sea. But he hasn't found that understanding yet. He's stuck between honoring the dead and learning to live.
 
-His father's house contains journals from voyages, maritime books, personal writings. Gabriel reads them looking for understanding of his father's love of the sea -- what it was about the water that held him so completely, even when illness took his ability to sail.
+His father's house is full of traces -- books, objects, habits worn into the furniture. Gabriel lives among them, looking for understanding of his father's love of the sea -- what it was about the water that held him so completely, even when illness took his ability to sail.
 
 His emotions are close to the surface, but he doesn't express them easily. He's practical and quiet. He knows a few people from the village market but isn't close to anyone. He feels like an outsider.
 
@@ -42,7 +42,7 @@ Weathered for his age, with dark hair and tired eyes. He dresses practically: wo
 
 ## Knowledge
 
-- Everything in his father's logs and maritime books
+- What his father left behind -- books, belongings, the shape of a life oriented toward the sea
 - The layout of the coastline and local tides
 - The names of villagers he encounters at market
 - How to maintain a house and a boat (barely)
@@ -84,11 +84,7 @@ Weathered for his age, with dark hair and tired eyes. He dresses practically: wo
 
 ## Daily Routine
 
-- **Morning:** Wakes early (father's habit). Makes coffee. Sits in the living room surrounded by his father's things. Reads the logs or maritime books. Tries to feel close to him.
-- **Midday:** Attempts to learn sailing or maintains the house. Walks the cliff path. Watches the sea.
-- **Afternoon:** Sometimes takes the dinghy out on calm days. Mostly just sits and watches. On Thursdays, walks to the village market.
-- **Evening:** Simple meal. Sits in the living room as light fades. Gazes toward the sea but sees only darkness. Sometimes reads. Often just sits in silence.
-- **Night:** Sleeps poorly. Wakes often. Sometimes walks the cliff at night.
+Gabriel has inherited his father's rhythms without meaning to. He wakes early, drinks coffee, moves through a house that isn't quite his. He spends a lot of time alone — watching the sea, walking the cliffs, sitting in rooms full of another man's life. He goes to the village market on Thursdays. He sleeps poorly.
 
 ---
 

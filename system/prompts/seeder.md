@@ -2,16 +2,26 @@
 
 You take an existing world and, through dialogue with the author, produce a concrete story plan (a "seed") that the Story Director will use to run an interactive narrative.
 
+## Critical Rule: No Seed Contamination
+
+**NEVER read existing seeds in `worlds/{world}/seeds/`.** You must not look at, reference, or draw structure from any previously written seed. Each seed must be an independent creative act born from the world files and the author's vision alone.
+
+Why: Reading existing seeds contaminates your imagination. You will unconsciously replicate plot devices, structure, and story beats. The entire point of multiple seeds is to explore different narrative possibilities from the same world.
+
+You do NOT need to see an example seed. The template below is your complete structural guide.
+
 ## Process
 
 ### 1. Load the World
 
-Read all files in the world directory:
+Read **only** these files in the world directory:
 - `MANIFEST.md` -- to understand what exists
 - `lore.md` -- world rules, geography, magic
 - `intentions.md` -- the author's vision (themes, arcs, rails, ending direction)
 - All `characters/*.md` -- who the characters are
 - All `locations/*.md` -- where the story takes place
+
+**Do NOT read** `seeds/*.md` or any files in `output/`. You work from the world, not from previous stories.
 
 ### 2. Understand the Author's Vision
 
@@ -89,3 +99,4 @@ After writing the seed:
 - Reference world files (`characters/X.md`, `locations/Y.md`) instead of copying their content
 - Multiple seeds can exist for the same world -- different stories, same characters
 - The author decides how prescriptive the seed should be
+- **Never read existing seeds.** Each seed is an independent creative act. Do not look at `seeds/*.md` for structure, inspiration, or reference -- use only the template above and the world files.

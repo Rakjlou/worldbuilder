@@ -49,7 +49,7 @@ This is a **summer tale**. The story unfolds across months when the days are lon
 
 ## Current Situation
 
-Gabriel is living in his late father's house, trying to honor his father's love of the sea. He does not yet understand the sea. He reads his father's journals and maritime books, looking for the understanding his father seemed to possess.
+Gabriel is living in his late father's house, trying to honor his father's love of the sea. He does not yet understand the sea. He explores the house, walks the cliffs, tries to make sense of what his father left behind -- objects, memories, a life oriented entirely toward the water.
 
 Lucie is channeling her soul through painting. She lost her brother to the sea ten years ago and has found a kind of peace in trying to stop time in her paintings. She paints obsessively -- the sea in all its moods, moments she wants to preserve, the light on water. The sea fascinates and frightens her in equal measure.
 

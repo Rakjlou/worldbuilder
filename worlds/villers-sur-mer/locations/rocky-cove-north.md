@@ -27,11 +27,7 @@ Wild, dangerous, beautiful, isolated, timeless
 
 ## Secrets
 
-The cave contains tide pools with bioluminescent creatures -- visible on very dark nights.
-
-Old boat wreckage from decades past, mostly buried in sand and stone.
-
-**The cave leads to very deep water.** The depth is surprising -- the seafloor drops away sharply beyond the cave mouth into dark, cold Atlantic water.
+Old boat wreckage from decades past, mostly buried in sand and stone -- remnants of boats that misjudged the rocks.
 
 ---
 
