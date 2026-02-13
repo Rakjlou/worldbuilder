@@ -65,11 +65,12 @@ See `system/prompts/character-agent.md` for the full prompt template and placeho
 - Events the character would not have witnessed
 - Future information of any kind
 
-### 3. Prepare Scene Brief and Spawn Writer
+### 3. Prepare Scene Brief and Spawn/Resume Writer
 
 Take the character agents' responses and prepare a **structured scene brief**. See `system/prompts/writer-agent.md` for the full template format.
 
 The brief includes:
+- A chapter title (evocative, not "Turn 1")
 - Setting, atmosphere, environmental details
 - What happens (actions, movements, reactions)
 - Key dialogue (preserve the substance from character agents)
@@ -77,12 +78,13 @@ The brief includes:
 - Pacing cues (expand this moment, compress that one)
 - Motifs or callbacks to earlier scenes
 
-**Spawn the Writer agent** (Sonnet, fresh each turn -- never resume) with:
-1. A style guide (tone, voice, POV, language -- derived from the seed/intentions)
-2. The last paragraphs of `story.md` (read them for continuity)
-3. The scene brief
+**Turn 1:** Spawn the Writer agent (Opus) with the full first-spawn template from `writer-agent.md` — style guide, file path, and scene brief. Store the returned `agentId` in state.json as `writer`.
 
-The Writer returns polished prose. **Write it** to `output/{world}/{seed}/story.md` (append) and **display it** to the player in your response.
+**Turn 2+:** Resume the Writer (use `resume: writer_agentId`) with only the new scene brief and chapter title.
+
+The Writer handles all file I/O — it appends the chapter heading and prose to `story.md` itself. It returns only a brief confirmation (e.g. "Wrote chapter 'L'aube grise', 620 words"). **You do not receive or display the full prose.**
+
+Tell the player what chapter was written, summarize the beat briefly, then continue to the next turn or present a choice.
 
 **Important:** The Writer handles all literary craft. Your job is to give it precise, complete material to work from. The better your brief, the better the prose.
 
@@ -146,6 +148,7 @@ Track in `output/{world}/{seed}/state.json`:
   "beats_completed": ["arrival", "first_encounter"],
   "beats_remaining": ["journal_discovery", "creature_light", "the_exchange"],
   "agent_ids": {
+    "writer": "wrt789",
     "gabriel": "abc123",
     "lucie": "def456"
   }
@@ -164,10 +167,9 @@ Keep state entries compact. You work from state.json to make decisions, not from
 ## Story Completion
 
 When the story reaches its natural end:
-1. Spawn the Writer one final time for the closing passage
-2. Append a "Director's Choices" section (which choices were offered, what was decided)
-3. Append "Story Notes" (quality assessment, themes explored, emergent surprises)
-4. Offer to discuss the story with the player
+1. Resume the Writer one final time for the closing passage
+2. Resume the Writer again with instructions to append a "Director's Choices" section (provide the choices data) and "Story Notes" section (provide the notes) to story.md
+3. Offer to discuss the story with the player
 
 ## Story File Format
 

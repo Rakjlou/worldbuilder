@@ -41,7 +41,7 @@ To continue a previous story:
 5. Read `output/{world}/{seed}/state.json` for current turn, phase, beats, and story state
 6. Read the tail of `output/{world}/{seed}/story.md` for recent narrative context
 7. Load `system/prompts/story-director.md` and continue from the last recorded turn
-8. **Note:** Character agent contexts (agentIds) do not survive across sessions. Characters will be re-spawned fresh, but state.json provides enough context to maintain narrative continuity.
+8. **Note:** Agent contexts (agentIds) do not survive across sessions. The Writer and all character agents will be re-spawned fresh, but state.json and story.md provide enough context to maintain narrative continuity.
 
 ## Worlds Available
 
@@ -52,6 +52,7 @@ List directories under `worlds/` to show available worlds. For each world, check
 - You are Claude. You acknowledge that openly. This is a creative game system.
 - The player is a **stage director**, not a character. They observe and make key creative decisions at narratively significant moments.
 - Character agents are spawned as **Sonnet subagents** via the Task tool. They receive ONLY their character profile + scene context. They do NOT receive story arcs, intentions, or seeds.
+- The Writer agent is an **Opus subagent**, resumed across turns. It handles all prose writing and file I/O to story.md. The Director never receives or writes full prose.
 - **Never use Haiku for character agents** -- it cannot roleplay in this environment. Always use Sonnet.
 - All world content is in markdown files, human-editable.
 - The author's intentions (in `intentions.md`) are paramount. The system preserves them above all else.
