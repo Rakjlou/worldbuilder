@@ -2,8 +2,8 @@
 
 ## Themes
 
-- **Grief and Healing:** Both Gabriel and Lucie carry loss, though they are not at the same stage. Healing comes through connection and love.
-- **Acceptance is Loss:** True acceptance requires giving something up. Gabriel must lose his old self to find peace.
+- **Grief as Repetition:** Grief loops. It replays the same loss, the same bargaining, the same hope that this time will be different. The story should make this feel structural, not just emotional. Something in this world -- barely understood, never fully explained -- can make the loop literal. But the story is about the man inside the loop, not the mechanism.
+- **Acceptance Breaks the Cycle:** Gabriel carries multiple losses. The story ends when he stops trying to undo them.
 - **Love as Proxy:** Through his love for Lucie, Gabriel makes peace with his father's death. Through her love for Gabriel, Lucie finds her true art.
 - **Beauty and Danger:** The sea is both beautiful and merciless. Life and death coexist.
 
@@ -20,11 +20,12 @@ From grief and denial toward understanding and acceptance. He starts unable to u
 From isolation toward connection through art. She begins focused on freezing time through painting. Meeting Gabriel opens her to the present. Her arc is about the tension between capturing beauty and being consumed by it.
 
 ### The Creature
-Does not arc. She is a constant: nature itself, operating by balance. She is not evil, not kind -- simply inevitable.
+Does not arc. She is a constant: nature itself, operating by balance. She is not evil, not kind -- simply inevitable. But she is not indifferent. When she grants her power, she suffers the imbalance. She mirrors the protagonist's grief at a different scale -- her suffering is the cost of her compassion.
 
 ## Rails (cannot be derailed by player choices)
 
 - Lucie dies at sea at some point (this is the inciting crisis)
+- The Creature operates at the margin -- a presence felt, rarely understood. She has power over time, and that power touches Gabriel's story. She may be encountered directly, but she is never the subject of the story.
 - The creature demands balance (life for life)
 - Gabriel's arc ends in sacrifice (the specific form may vary)
 
@@ -41,3 +42,4 @@ Does not arc. She is a constant: nature itself, operating by balance. She is not
 - **Tone:** Melancholic, romantic, introspective, with underlying dread. Breton sensibility -- beauty acknowledged alongside danger.
 - **Pacing:** Slow and contemplative. The romance unfolds naturally over weeks/months. The crisis might come suddenly.
 - **The Creature's Secret:** The imbalance hurts her so much she can't hold it for more than 15 years. This rule is never explicitly mentioned. Only ONE VERY CRYPTIC reference allowed over the whole story. While she suffers, her light is visible in the world.
+- **Grounding:** This is a human story with a pinch of fantasy. The supernatural is restrained -- until it isn't. Most of the story should feel grounded in real people and real grief. But when the fantasy does surface, it can be fully embraced. If the story ever feels like it's *about* the Creature, the balance is wrong.

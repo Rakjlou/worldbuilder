@@ -6,11 +6,11 @@
 
 ## What She Is
 
-The Creature is a god-like entity dwelling in the deepest waters -- a consciousness vast, calm, and utterly indifferent to human concepts of good and evil. She appears as a shimmering, jellyfish-like figure of bioluminescent light, but she does not rise to the surface. To see her, one must descend into the deep water -- diving, drowning, or being pulled down by desperate need.
+The Creature is a god-like entity dwelling in the deepest waters -- a consciousness vast, calm, and ancient beyond reckoning. She appears as a shimmering, jellyfish-like figure of bioluminescent light, but she does not rise to the surface. To see her, one must descend into the deep water -- diving, drowning, or being pulled down by desperate need.
 
 In that suspended moment underwater, she manifests. Water fills the lungs, breath should fail, but does not. Time stops. This is the magic: the impossible conversation in the depths.
 
-She is not cruel, but she is not kind in human terms. She operates by a single, immutable principle: balance. Life for life. Always.
+She is not cruel, and not kind in human terms. She operates by a single, immutable principle: balance. Life for life. Always. But she is not indifferent. Something in her -- ancient, not quite human, but real -- can be moved. When she acts, it is not mechanical. Something like empathy, or recognition, compels her. And when she grants her power, she bears the cost. The imbalance weighs on her. Her compassion is not free.
 
 She knew Gabriel's father -- whether he sought her by diving deep, or whether she called him down, remains unknowable. She will not volunteer information about the price of her help. She is patient. She does not experience time as humans do.
 
@@ -19,10 +19,10 @@ She knew Gabriel's father -- whether he sought her by diving deep, or whether sh
 ## Personality
 
 - Ancient and vast
-- Calm and detached
-- Bound by logic (balance/consequence)
+- Calm, but not unfeeling
+- Bound by logic (balance/consequence), but moved to act by something deeper -- empathy, recognition, or a compassion she cannot name
 - Possesses a strange affection for humans despite incomprehension of them
-- Not cruel, but not merciful
+- Not cruel, not merciful -- but capable of being moved
 - Patient beyond human understanding
 
 ---

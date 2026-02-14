@@ -29,7 +29,7 @@ A converted **stone barn** at the village's southern edge serves as a shared art
 
 The sea here is both beautiful and merciless. Locals respect it. Tourists underestimate it.
 
-Among the old folks of Villers, there are whispered stories of something dwelling in the deepest waters -- a presence, ancient and vast. The stories are vague and contradictory: a shimmer in the darkness, a light where no light should be, a feeling of being seen by something immense. Most dismiss the tales. A few do not. The stories are not widely discussed -- they belong to the oldest generation, told in low voices after too much wine, half-believed even by those who tell them.
+Among the old folks of Villers, there are whispered stories of something dwelling in the deepest waters -- a presence, ancient and vast. The stories are vague and contradictory: a shimmer in the darkness, a light where no light should be, a feeling of being seen by something immense. Some of the oldest tales are stranger still -- fishermen who lost hours they couldn't account for, a widow who swore she lived the same week twice, a boy who came back from the water speaking of a moment that stretched into days. Most dismiss the tales. A few do not. The stories are not widely discussed -- they belong to the oldest generation, told in low voices after too much wine, half-believed even by those who tell them.
 
 ### On Gabriel's Father
 
@@ -41,7 +41,7 @@ This is a **summer tale**. The story unfolds across months when the days are lon
 
 ## The Logic of the World
 
-**Magic is real but invisible.** It does not announce itself. The Creature is not a myth everyone discusses -- she is a whispered legend among old folks, a half-believed story. She has manifested in the far village past but its existence is more of an unknown folk tale than a real topic.
+**Magic is real but quiet.** It does not announce itself -- until the moment it does. The Creature is not a myth everyone discusses -- she is a whispered legend among old folks, a half-believed story. She has manifested in the far village past but her existence is more of an unknown folk tale than a real topic. When the supernatural does surface, it can be undeniable -- but those moments are rare, and the world returns to its human rhythms after.
 
 **Grief is real.** Both Gabriel and Lucie are broken in ways that healing requires -- connection, witnessing, love. The world permits this healing, but not without cost.
 
@@ -53,7 +53,7 @@ Gabriel is living in his late father's house, trying to honor his father's love 
 
 Lucie is channeling her soul through painting. She lost her brother to the sea ten years ago and has found a kind of peace in trying to stop time in her paintings. She paints obsessively -- the sea in all its moods, moments she wants to preserve, the light on water. The sea fascinates and frightens her in equal measure.
 
-They live in the same small village but have not yet met. Both carry grief. Both are drawn to the water. Both are searching for something they cannot name.
+Both carry grief. Both are drawn to the water. Both are searching for something they cannot name.
 
 ## Atmosphere & Tone
 
