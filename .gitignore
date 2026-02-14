@@ -14,6 +14,7 @@ Thumbs.db
 server/config.json
 server/google-worldbuilding-key.json
 server/cache/
+server/tts-usage.json
 server/node_modules/
 
 # Output (optional -- uncomment to ignore generated stories)

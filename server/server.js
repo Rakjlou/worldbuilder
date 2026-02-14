@@ -16,6 +16,23 @@ const ttsClient = new textToSpeech.TextToSpeechClient({
   keyFilename: path.join(__dirname, 'google-worldbuilding-key.json'),
 });
 
+// --- TTS usage tracking (free tier: 4M chars/month for Standard voices) ---
+const FREE_TIER_LIMIT = 4_000_000;
+const usagePath = path.join(__dirname, 'tts-usage.json');
+
+function loadUsage() {
+  const currentMonth = new Date().toISOString().slice(0, 7);
+  try {
+    const data = JSON.parse(fs.readFileSync(usagePath, 'utf-8'));
+    if (data.month === currentMonth) return data;
+  } catch {}
+  return { month: currentMonth, chars: 0 };
+}
+
+function saveUsage(usage) {
+  fs.writeFileSync(usagePath, JSON.stringify(usage, null, 2), 'utf-8');
+}
+
 // --- CLI args ---
 const storyPath = process.argv[2];
 if (!storyPath) {
@@ -165,7 +182,12 @@ function splitTextForTTS(text, maxLen = 4000) {
 }
 
 async function generateAudioChunk(text) {
-  console.log(`    TTS request: voice=${config.tts.voice}, lang=${config.tts.languageCode}, encoding=${config.tts.audioEncoding}`);
+  const usage = loadUsage();
+  if (usage.chars + text.length > FREE_TIER_LIMIT) {
+    throw new Error(`TTS free tier limit reached (${usage.chars.toLocaleString()}/${FREE_TIER_LIMIT.toLocaleString()} chars). Resets next month.`);
+  }
+
+  console.log(`    TTS request: voice=${config.tts.voice}, lang=${config.tts.languageCode}, encoding=${config.tts.audioEncoding} (usage: ${usage.chars.toLocaleString()}+${text.length} chars)`);
   const [response] = await ttsClient.synthesizeSpeech({
     input: { text },
     voice: {
@@ -177,6 +199,9 @@ async function generateAudioChunk(text) {
       speakingRate: config.tts.speakingRate,
     },
   });
+
+  usage.chars += text.length;
+  saveUsage(usage);
 
   return Buffer.from(response.audioContent, 'base64');
 }
