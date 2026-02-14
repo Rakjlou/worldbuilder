@@ -9,7 +9,6 @@ const textToSpeech = require('@google-cloud/text-to-speech');
 
 // --- Config ---
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
-const API_URL = 'https://api.1min.ai/api/features';
 
 // --- Google Cloud TTS client ---
 const ttsClient = new textToSpeech.TextToSpeechClient({
@@ -112,54 +111,63 @@ function parseStory(content) {
 let currentStory = parseStory(fs.readFileSync(resolvedStoryPath, 'utf-8'));
 console.log(`Loaded story: "${currentStory.storyTitle}" (${currentStory.chapters.length} chapters)`);
 
-// --- 1min.ai API helpers ---
-async function callApi(body) {
-  const res = await fetch(API_URL, {
+// --- Gemini image generation ---
+const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+
+async function generateImageWithGemini(chapterText) {
+  const { apiKey, model, systemPrompt } = config.gemini;
+  const url = `${GEMINI_API_BASE}/${model}:generateContent`;
+
+  const body = {
+    contents: [{
+      parts: [{ text: chapterText }],
+    }],
+    generationConfig: {
+      responseModalities: ['IMAGE', 'TEXT'],
+    },
+  };
+
+  if (systemPrompt) {
+    body.systemInstruction = { parts: [{ text: systemPrompt }] };
+  }
+
+  const res = await fetch(url, {
     method: 'POST',
     headers: {
-      'API-KEY': config.apiKey,
       'Content-Type': 'application/json',
+      'x-goog-api-key': apiKey,
     },
     body: JSON.stringify(body),
   });
 
   if (!res.ok) {
     const text = await res.text();
-    throw new Error(`1min.ai API error (${res.status}): ${text}`);
+    throw new Error(`Gemini API error (${res.status}): ${text}`);
   }
 
-  return res;
-}
-
-async function generateImagePrompt(chapterText) {
-  const res = await callApi({
-    type: 'CHAT_WITH_AI',
-    model: config.llm.model,
-    promptObject: {
-      prompt: `${config.llm.promptPrefix}\n\nTexte du chapitre :\n${chapterText}`,
-    },
-  });
-
   const json = await res.json();
-  return json.aiRecord.aiRecordDetail.resultObject[0];
-}
 
-async function generateImage(imagePrompt) {
-  const res = await callApi({
-    type: 'IMAGE_GENERATOR',
-    model: config.image.model,
-    promptObject: {
-      prompt: imagePrompt,
-      aspect_ratio: config.image.aspect_ratio || '16:9',
-      output_quality: config.image.output_quality ?? 90,
-      num_inference_steps: config.image.num_inference_steps ?? 4,
-      megapixels: config.image.megapixels || '1',
-      go_fast: config.image.go_fast ?? true,
-    },
-  });
+  const candidate = json.candidates?.[0];
+  if (!candidate) {
+    throw new Error('Gemini returned no candidates');
+  }
 
-  const json = await res.json();
-  return json.aiRecord.temporaryUrl;
+  const parts = candidate.content?.parts || [];
+  const imagePart = parts.find(p => p.inlineData);
+  if (!imagePart) {
+    const textPart = parts.find(p => p.text);
+    const detail = textPart ? `: ${textPart.text.slice(0, 200)}` : '';
+    throw new Error(`Gemini returned no image${detail}`);
+  }
+
+  const { mimeType, data } = imagePart.inlineData;
+  const textPart = parts.find(p => p.text);
+
+  return {
+    imageBuffer: Buffer.from(data, 'base64'),
+    mimeType: mimeType || 'image/png',
+    description: textPart?.text || null,
+  };
 }
 
 // Split text into chunks of max ~4000 chars, breaking at paragraph boundaries
@@ -278,12 +286,16 @@ app.get('/api/chapter/:index/image', async (req, res) => {
   const chapter = currentStory.chapters[index];
   if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
 
-  const cachedImage = path.join(cacheDir, `image_${index}.jpg`);
+  const cachedImagePng = path.join(cacheDir, `image_${index}.png`);
+  const cachedImageJpg = path.join(cacheDir, `image_${index}.jpg`);
   const cachedPrompt = path.join(cacheDir, `prompt_${index}.txt`);
 
-  // Serve from cache
-  if (fs.existsSync(cachedImage)) {
-    return serveFile(res, cachedImage, 'image/jpeg');
+  // Serve from cache (check both new PNG and old JPG formats)
+  if (fs.existsSync(cachedImagePng)) {
+    return serveFile(res, cachedImagePng, 'image/png');
+  }
+  if (fs.existsSync(cachedImageJpg)) {
+    return serveFile(res, cachedImageJpg, 'image/jpeg');
   }
 
   // Deduplicate in-flight requests
@@ -291,7 +303,7 @@ app.get('/api/chapter/:index/image', async (req, res) => {
   if (inFlight.has(key)) {
     try {
       await inFlight.get(key);
-      return serveFile(res, cachedImage, 'image/jpeg');
+      return serveFile(res, cachedImagePng, 'image/png');
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -299,23 +311,19 @@ app.get('/api/chapter/:index/image', async (req, res) => {
 
   const promise = (async () => {
     try {
-      console.log(`Generating image for chapter ${index}...`);
+      console.log(`Generating image for chapter ${index} via Gemini...`);
 
-      // Step 1: Generate image prompt via LLM
-      const imagePrompt = await generateImagePrompt(chapter.rawContent);
-      fs.writeFileSync(cachedPrompt, imagePrompt, 'utf-8');
-      console.log(`  Image prompt: ${imagePrompt.slice(0, 100)}...`);
+      const result = await generateImageWithGemini(chapter.rawContent);
 
-      // Step 2: Generate image
-      const imageUrl = await generateImage(imagePrompt);
-      console.log(`  Image URL received, downloading...`);
+      // Cache the image
+      fs.writeFileSync(cachedImagePng, result.imageBuffer);
+      console.log(`  Image cached for chapter ${index} (${result.mimeType})`);
 
-      // Step 3: Download and cache the image
-      const imgRes = await fetch(imageUrl);
-      if (!imgRes.ok) throw new Error(`Failed to download image: ${imgRes.status}`);
-      const imgBuffer = Buffer.from(await imgRes.arrayBuffer());
-      fs.writeFileSync(cachedImage, imgBuffer);
-      console.log(`  Image cached for chapter ${index}`);
+      // Save description for debugging if Gemini returned one
+      if (result.description) {
+        fs.writeFileSync(cachedPrompt, result.description, 'utf-8');
+        console.log(`  Description: ${result.description.slice(0, 100)}...`);
+      }
     } finally {
       inFlight.delete(key);
     }
@@ -325,7 +333,7 @@ app.get('/api/chapter/:index/image', async (req, res) => {
 
   try {
     await promise;
-    serveFile(res, cachedImage, 'image/jpeg');
+    serveFile(res, cachedImagePng, 'image/png');
   } catch (err) {
     console.error(`Image generation failed for chapter ${index}:`, err.message);
     res.status(500).json({ error: `Image generation failed: ${err.message}` });
