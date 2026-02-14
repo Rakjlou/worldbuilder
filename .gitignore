@@ -12,6 +12,7 @@ Thumbs.db
 
 # Server
 server/config.json
+server/google-worldbuilding-key.json
 server/cache/
 server/node_modules/
 
