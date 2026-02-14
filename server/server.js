@@ -5,10 +5,16 @@ const path = require('path');
 const crypto = require('crypto');
 const http = require('http');
 const { WebSocketServer } = require('ws');
+const textToSpeech = require('@google-cloud/text-to-speech');
 
 // --- Config ---
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
 const API_URL = 'https://api.1min.ai/api/features';
+
+// --- Google Cloud TTS client ---
+const ttsClient = new textToSpeech.TextToSpeechClient({
+  keyFilename: path.join(__dirname, 'google-worldbuilding-key.json'),
+});
 
 // --- CLI args ---
 const storyPath = process.argv[2];
@@ -159,26 +165,20 @@ function splitTextForTTS(text, maxLen = 4000) {
 }
 
 async function generateAudioChunk(text) {
-  const res = await fetch(`${config.tts.url}/v1/audio/speech`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: config.tts.model,
-      input: text,
-      voice: config.tts.voice,
-      speed: config.tts.speed,
-      response_format: config.tts.response_format,
-      stream: config.tts.stream ?? false,
-      ...(config.tts.lang_code && { lang_code: config.tts.lang_code }),
-    }),
+  console.log(`    TTS request: voice=${config.tts.voice}, lang=${config.tts.languageCode}, encoding=${config.tts.audioEncoding}`);
+  const [response] = await ttsClient.synthesizeSpeech({
+    input: { text },
+    voice: {
+      languageCode: config.tts.languageCode,
+      name: config.tts.voice,
+    },
+    audioConfig: {
+      audioEncoding: config.tts.audioEncoding,
+      speakingRate: config.tts.speakingRate,
+    },
   });
 
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Kokoro TTS error (${res.status}): ${errText}`);
-  }
-
-  return Buffer.from(await res.arrayBuffer());
+  return Buffer.from(response.audioContent, 'base64');
 }
 
 async function generateAudio(text) {
@@ -309,13 +309,11 @@ app.get('/api/chapter/:index/image', async (req, res) => {
 
 // --- Audio format helpers ---
 const AUDIO_FORMATS = {
-  mp3:  { ext: 'mp3',  mime: 'audio/mpeg' },
-  wav:  { ext: 'wav',  mime: 'audio/wav' },
-  flac: { ext: 'flac', mime: 'audio/flac' },
-  opus: { ext: 'opus', mime: 'audio/opus' },
-  pcm:  { ext: 'pcm',  mime: 'audio/pcm' },
+  MP3:        { ext: 'mp3',  mime: 'audio/mpeg' },
+  LINEAR16:   { ext: 'wav',  mime: 'audio/wav' },
+  OGG_OPUS:   { ext: 'opus', mime: 'audio/opus' },
 };
-const audioFmt = AUDIO_FORMATS[config.tts.response_format] || AUDIO_FORMATS.mp3;
+const audioFmt = AUDIO_FORMATS[config.tts.audioEncoding] || AUDIO_FORMATS.MP3;
 
 // API: get chapter audio
 app.get('/api/chapter/:index/audio', async (req, res) => {
