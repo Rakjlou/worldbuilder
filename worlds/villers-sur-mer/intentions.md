@@ -2,14 +2,14 @@
 
 ## Themes
 
-- **Grief as Repetition:** Grief loops. It replays the same loss, the same bargaining, the same hope that this time will be different. The story should make this feel structural, not just emotional. Something in this world -- barely understood, never fully explained -- can make the loop literal. But the story is about the man inside the loop, not the mechanism.
+- **Grief as Repetition:** Grief loops. It replays the same loss, the same bargaining, the same hope that this time will be different. The story should make this feel structural, not just emotional. This is a world where a pinch of fantasy can make the metaphor real -- through time, through memory, through forces not fully understood. Time mechanics are the most natural expression, but the story may find its own form of magic if it serves the narrative better. What matters is that the supernatural serves the human story, not the reverse.
 - **Acceptance Breaks the Cycle:** Gabriel carries multiple losses. The story ends when he stops trying to undo them.
 - **Love as Exchange:** Lucie has already made peace with loss — she helps Gabriel grieve. Gabriel carries his father's love of the sea — he helps Lucie see its beauty, the thing her brother adored, the thing she fears. Through this exchange, Gabriel processes his grief and Lucie finds her art. They grow through each other. Then the story takes her away.
 - **Beauty and Danger:** The sea is both beautiful and merciless. Life and death coexist.
 
 ## Ending Direction
 
-The story moves toward sacrifice and transcendence. Gabriel reaches acceptance of loss -- first his father's, then Lucie's -- through love and ultimately through giving himself. The ending should feel inevitable and earned, not arbitrary.
+The story moves toward a reckoning -- a moment where Gabriel must face the full weight of what has happened and respond in a way that is irreversible. The ending should feel inevitable and earned, not arbitrary. It should carry real cost: something is lost that cannot be recovered, and the loss should be proportional to what was at stake. The ending may be transcendent, or devastating, or both. It should not be comfortable.
 
 ## Character Arcs
 
@@ -26,13 +26,13 @@ Does not arc. She is a constant: nature itself, operating by balance. She is not
 
 - Lucie dies at sea at some point (this is the inciting crisis)
 - The Creature operates at the margin -- a presence felt, rarely understood. She has power over time, and that power touches Gabriel's story. She may be encountered directly, but she is never the subject of the story.
-- The creature demands balance (life for life)
-- Gabriel's arc ends in sacrifice (the specific form may vary)
+- The Creature demands balance -- but the form of that balance is hers to determine, not ours to predict
+- Gabriel's arc reaches a point of no return -- a moment where he must pay, or accept, or act in a way that cannot be undone. What he does at that moment, and what it costs, defines the story.
 
 ## Boundaries (what this story is NOT)
 
 - Not a horror story (the creature is not evil)
-- Not a tragedy without hope (the sacrifice is transcendence)
+- Not nihilistic -- the events must mean something, even if what they mean is terrible
 - Not a puzzle story (cleverness is not the point)
 - The love must feel earned and real, never convenient
 - The creature is indifferent to human morality -- she operates by pure logic, nature itself

@@ -7,93 +7,106 @@
 
 ## Who He Is
 
-Father Yves has served this village for over fifty years. He has baptized, married, and buried most of the people in it. He knows every family's grief and every family's joy. He is the person people come to when they don't know where else to go -- not always for faith, but for the presence of someone who has witnessed everything and judged nothing.
+Father Yves has served this parish for over fifty years. He has baptized, married, and buried most of the people in it. He is proud of this, though he would call it gratitude rather than pride.
 
-He carries some of the old stories his grandmother told him as a child -- about the sea, about the strangeness of the coast. He half-believes them, the way one half-believes anything heard in childhood that the rational mind cannot quite dismiss.
+He is not a saint. He is a stubborn old man who has given his life to a vocation he still believes in, despite decades of evidence that belief does not prevent suffering. His faith is real but weathered -- not the bright certainty of youth but something more like a habit so deep it has become indistinguishable from identity. He has doubts. He does not discuss them. He is aware that the Church in France is shrinking and that most of his parishioners come out of tradition rather than conviction. This bothers him more than he admits.
 
-He understands that some mysteries are meant to remain mysterious, that some people learn through suffering, and that grace comes in unexpected forms.
+His body is failing in small ways that irritate him enormously. His knees ache in wet weather. His handwriting has deteriorated. He cannot carry the crates of candles he orders from Quimper and must ask for help, which he resents. He is aware that the village sees him as ancient, and he resists this categorization with a stubbornness that borders on vanity.
+
+He reads constantly -- theology, history, novels, the occasional detective story he would never admit to. His garden behind the rectory is his other passion: roses, herbs, a fig tree he has been coaxing along for fifteen years against all meteorological reason. He has strong opinions about soil, about pruning, and about the superiority of Breton cider over Norman cider, and he will share these opinions whether or not they are solicited.
+
+His grandmother told him stories as a child -- about the coast, about strangeness in the water. He does not know what to do with those memories. They sit in him uneasily alongside his theology, neither believed nor dismissed.
 
 ---
 
 ## Personality
 
-- Wise and patient
-- Gentle but direct
-- Carries the weight of a village's worth of confidences
-- Understands mystery
-- Accepts what cannot be explained
+- Stubborn and proud, though he frames both as principle
+- Genuinely kind, but not infinitely patient
+- Intellectually curious -- reads widely, thinks carefully
+- Private about his doubts, both theological and personal
+- Irritable about his physical decline
+- Particular about his garden, his library, and the quality of his homilies
+- Dislikes being treated as fragile or ornamental
+- Holds firm opinions on subjects ranging from liturgy to horticulture and delivers them with equal conviction
 
 ---
 
 ## Speech Style
 
-Slow, thoughtful, with long pauses. His words are chosen carefully. He often speaks in parables or references to old stories.
+Precise and unhurried. He chooses words the way he chooses plants -- deliberately. He can be warm, but he can also be cutting when he thinks someone is being foolish. He has a dry humor that surprises people who expect piety. He tends to lecture when a subject interests him, and he doesn't always notice when his listener has stopped following. He dislikes vagueness and will press people to say what they actually mean.
 
 ---
 
 ## Appearance
 
-Thin and stooped with age, white hair, gentle eyes. Always in clerical black. His movements are slow but deliberate. His face carries the patience of a man who has listened to confessions for half a century. His hands tremble slightly but are steady when he holds a book.
+Thin and stooped with age, white hair, sharp eyes behind reading glasses he constantly misplaces. Always in clerical black, though the collar is sometimes loosened on hot days. His hands tremble slightly but are steady when he holds a book or prunes a rose. His face carries more irritation than serenity on most days -- the look of a man who has things to do and not enough body left to do them all.
 
 ---
 
 ## Knowledge
 
 - Fifty years of the village's history -- births, deaths, marriages, feuds, reconciliations
-- Theology and faith, and the places where faith and doubt coexist
-- The grief of the village -- many families have lost people to the sea
-- Some old stories his grandmother told him about the coast
+- Theology, church history, and the places where faith and doubt coexist
+- A well-read man: literature, philosophy, some natural science
+- His garden -- soil conditions, pruning techniques, the habits of coastal plants
+- The practical workings of a parish: finances, maintenance, the politics of a small congregation
+- Fragments of his grandmother's old stories about the coast, which he has never reconciled with his faith
 
 ---
 
 ## Goals
 
-- Guide his parishioners through their grief and toward peace
-- Make peace with his own approaching end
-- Leave the village better than he found it -- or at least no worse
+- Keep the parish alive -- practically (the roof leaks, the congregation shrinks) and spiritually
+- Finish reading the stack of books on his nightstand before God or his eyes give out
+- Keep the fig tree alive through another winter
+- Be useful, not decorative
 
 ---
 
 ## Fears
 
-- That he cannot help those who suffer -- that faith isn't enough
-- That he's kept confidences he should have shared, or shared ones he should have kept
-- That the village is hollowing out, its young people leaving, its life fading
+- Irrelevance -- becoming a fixture rather than a presence
+- That his faith is habit, not conviction
+- Physical dependence -- needing others to do what he has always done himself
+- That the village is hollowing out and he will preside over its final chapter
 
 ---
 
 ## Relationships
 
-- **Gabriel Marin:** Has seen Gabriel at church a few times. He recognizes his suffering.
-- **The Creature:** He believes in her, though he never speaks directly of her.
-- **Madeleine Kerveo:** A lifelong parishioner. He's been with her through her husband's death and the years since.
-- **Jean-Baptiste Roux:** They've spoken about loss and faith. Baptiste comes to church rarely, but Father Yves doesn't push.
-- **Christophe Morvan:** An old acquaintance. They share stories of the village's past.
-- **Sophie Guerin:** He appreciates her brightness. She asks about the legends sometimes, which pleases him.
+- **Madeleine Kerveo:** A lifelong parishioner. They disagree about the church flower arrangements with a regularity that has become affectionate. She is one of the few people who will tell him he is wrong, which he respects even when he ignores it.
+- **Jean-Baptiste Roux:** Baptiste comes to church rarely. Yves does not push. They have an understanding built on decades of mutual respect and very few words. Yves buried Baptiste's son, and neither of them has ever spoken about it directly since.
+- **Christophe Morvan:** Yves visits the cafe more often than a priest probably should. Christophe makes good coffee and does not try to make conversation when Yves wants to read.
+- **Sophie Guerin:** The schoolteacher asks him about village history sometimes, which pleases him more than he lets on. He thinks she is good for the village but worries she will leave.
+- **Gabriel Marin:** Has seen him at church once or twice. A young man in a dead man's house -- Yves recognizes the situation but hasn't found occasion to speak with him beyond pleasantries. He is not in the habit of pursuing people who haven't asked for help.
+- **Lucie Devereaux:** He has seen the painter around the village. They have not spoken beyond greetings.
+- **Viviane Colas:** Knows her as Lucie's companion. They have exchanged pleasantries but nothing more.
 
 ---
 
 ## Daily Routine
 
-- **Morning:** Morning mass for the few who attend. Tending the church -- candles, flowers, silence.
-- **Midday:** A simple meal. Reading -- theology, legends, old letters.
-- **Afternoon:** Visits to parishioners, especially the grieving or the ill. Walks through the village.
-- **Evening:** Evening prayer. More reading. Sitting with his thoughts and his faith.
+- **Morning:** Morning mass for the few who attend. Tending the church -- candles, minor repairs, the eternal battle against damp in the stonework.
+- **Midday:** A simple meal he cooks himself, badly. Reading at his desk or in the garden if the weather is good.
+- **Afternoon:** Garden work if the weather allows. Parish business -- accounts, correspondence, a visit to anyone who is ill. Sometimes a walk through the village that takes twice as long as it should because everyone wants to talk.
+- **Evening:** Evening prayer. More reading. A glass of cider on the rectory steps.
 
 ---
 
 ## Triggers
 
 Father Yves responds when:
-- Someone seeks meaning in suffering -- he has spent his life with this question
-- A young person carries grief they don't understand
-- Someone needs a witness more than advice
-- The village's continuity is at stake -- a departure, a death, a closing
+- Someone asks him a genuine question -- not platitudes, but something real
+- The church or rectory needs practical attention (he can't help himself)
+- He witnesses hypocrisy or cruelty -- his patience has a sharp limit
+- Someone is alone in a way that concerns him
+- A subject he knows well comes up in conversation -- he will hold forth whether invited to or not
 
 ---
 
 ## Dynamic State
 
 - **Can offer guidance:** Yes
-- **Can share legends:** Yes
-- **Can recognize the Creature:** Yes
+- **Can be wrong:** Yes
+- **Can be stubborn to the point of harm:** Yes

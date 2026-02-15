@@ -47,11 +47,13 @@ When the Creature manifests and speaks, it is rarely in words. Communication is 
 
 ## The Price
 
-**Rule:** Life for life. To save a life, a life must be given freely. This is not cruelty -- it is balance.
+**The Principle:** Balance must be maintained. When the Creature acts, something of equivalent weight must be given. What constitutes "equivalent" is determined by her logic, not by human understanding -- and her logic is alien, ancient, and sometimes incomprehensible.
 
-**The Choice:** The Creature does not take. She offers. The cost is borne by the one who chooses to pay it -- knowingly, willingly. To save someone you love, you must be willing to give yourself. She will not explain this in advance.
+**The Form:** The price is never the same twice. It might be a life. It might be something a person values more than their life. It might be something they didn't know they possessed until it was asked for. It might fall on the person who asked, or on someone they never considered, or on something abstract -- a future, a capacity, a bond. The Creature does not explain the price in advance. She may not explain it at all. The person who pays may not understand what they've lost until much later -- or they may understand immediately and wish they didn't.
 
-**Why This Rule:** The Creature exists outside human morality. She operates by a logic that predates civilization. For her, balance is not punishment -- it is simply the way existence works. And when balance is disrupted, she bears the weight of the imbalance herself.
+**What She Does Not Do:** The Creature does not deceive. She does not act with malice. But she does not operate by human fairness either. Her balance is not justice. It is something older -- a settling of weight that humans can feel but cannot fully reason about.
+
+**What It Costs Her:** When balance is disrupted and unresolved, the Creature bears the weight of the imbalance herself. This is not a threat. It is her nature. She suffers what is owed until it is paid, and the suffering is real.
 
 ---
 
