@@ -33,7 +33,7 @@ function saveUsage(usage) {
 }
 
 // --- CLI args ---
-const noMedia = process.argv.includes('--no-media');
+let noMedia = process.argv.includes('--no-media');
 const storyPath = process.argv.filter(a => a !== '--no-media').slice(2)[0];
 if (!storyPath) {
   console.error('Usage: node server.js [--no-media] <path-to-story.md>');
@@ -280,6 +280,12 @@ app.get('/api/story', (req, res) => {
       htmlContent: c.htmlContent,
     })),
   });
+});
+
+// API: toggle media
+app.post('/api/media-enabled', express.json(), (req, res) => {
+  noMedia = !req.body.enabled;
+  res.json({ mediaEnabled: !noMedia });
 });
 
 // API: get chapter image

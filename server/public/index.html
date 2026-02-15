@@ -16,6 +16,23 @@
   Nouveau chapitre disponible — cliquer pour voir
 </div>
 
+<div class="menu-overlay" id="menu-overlay"></div>
+<button class="menu-btn" id="menu-btn">&#9776;</button>
+<aside class="menu-panel" id="menu-panel">
+  <div class="menu-section">
+    <h3 class="menu-heading">Chapitres</h3>
+    <ul class="chapter-list" id="chapter-list"></ul>
+  </div>
+  <div class="menu-section" id="media-section">
+    <h3 class="menu-heading">Médias</h3>
+    <label class="media-toggle">
+      <input type="checkbox" id="media-toggle" checked>
+      <span class="toggle-slider"></span>
+      <span class="toggle-label">Images & audio</span>
+    </label>
+  </div>
+</aside>
+
 <script>
 // --- State ---
 let story = null;
@@ -27,6 +44,47 @@ let mediaEnabled = true;
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
+const menuOverlay = document.getElementById('menu-overlay');
+const menuBtn = document.getElementById('menu-btn');
+const menuPanel = document.getElementById('menu-panel');
+const mediaToggle = document.getElementById('media-toggle');
+
+// --- Menu ---
+function toggleMenu() {
+  menuOverlay.classList.toggle('open');
+  menuPanel.classList.toggle('open');
+}
+
+menuBtn.addEventListener('click', toggleMenu);
+menuOverlay.addEventListener('click', toggleMenu);
+
+function updateChapterList() {
+  const list = document.getElementById('chapter-list');
+  if (!story || !list) return;
+  list.innerHTML = story.chapters.map((ch, i) =>
+    `<li class="${i === currentIndex ? 'active' : ''}" data-index="${i}">${ch.title}</li>`
+  ).join('');
+  list.querySelectorAll('li').forEach(li => {
+    li.addEventListener('click', () => {
+      renderChapter(parseInt(li.dataset.index));
+      toggleMenu();
+    });
+  });
+}
+
+function updateMediaToggle() {
+  mediaToggle.checked = mediaEnabled;
+}
+
+mediaToggle.addEventListener('change', async () => {
+  mediaEnabled = mediaToggle.checked;
+  await fetch('/api/media-enabled', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ enabled: mediaEnabled }),
+  });
+  renderChapter(currentIndex);
+});
 
 // --- Icons ---
 const PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>';
@@ -38,6 +96,8 @@ async function loadStory() {
   story = await res.json();
   mediaEnabled = story.mediaEnabled !== false;
   document.title = story.storyTitle + ' — Story Reader';
+  updateChapterList();
+  updateMediaToggle();
   renderChapter(0);
 }
 
@@ -99,6 +159,9 @@ function renderChapter(index) {
     loadChapterImage(index);
     loadChapterAudio(index);
   }
+
+  // Update menu state
+  updateChapterList();
 
   // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -233,6 +296,9 @@ function connectWS() {
       if (navIndicator) {
         navIndicator.textContent = `Chapitre ${currentIndex + 1} / ${story.chapters.length}`;
       }
+
+      // Update menu chapter list
+      updateChapterList();
     }
   });
 
@@ -254,7 +320,9 @@ function showToast(chapterCount) {
 
 // --- Keyboard navigation ---
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight' && currentIndex < story.chapters.length - 1) {
+  if (e.key === 'Escape' && menuPanel.classList.contains('open')) {
+    toggleMenu();
+  } else if (e.key === 'ArrowRight' && currentIndex < story.chapters.length - 1) {
     renderChapter(currentIndex + 1);
   } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
     renderChapter(currentIndex - 1);

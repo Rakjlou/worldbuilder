@@ -337,3 +337,160 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #333;
 }
+
+/* --- Menu button --- */
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  color: #8a8578;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1;
+}
+
+.menu-btn:hover {
+  color: #d4d0c8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Menu overlay --- */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Menu panel --- */
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  z-index: 999;
+  transform: translateX(100%);
+  background: #111;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 60px 20px 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.menu-panel.open {
+  transform: translateX(0);
+}
+
+/* --- Menu sections --- */
+
+.menu-section {
+  margin-bottom: 28px;
+}
+
+.menu-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8a8578;
+  margin-bottom: 12px;
+}
+
+/* --- Chapter list --- */
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.85rem;
+  color: #8a8578;
+  transition: color 0.2s, background 0.2s;
+}
+
+.chapter-list li:hover {
+  color: #d4d0c8;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.chapter-list li.active {
+  color: #d4d0c8;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Media toggle --- */
+
+.media-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.media-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: #333;
+  border-radius: 10px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #888;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.media-toggle input:checked + .toggle-slider {
+  background: #8a8578;
+}
+
+.media-toggle input:checked + .toggle-slider::after {
+  transform: translateX(20px);
+  background: #e8e4dc;
+}
+
+.toggle-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #d4d0c8;
+}
