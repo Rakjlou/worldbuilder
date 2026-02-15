@@ -1,0 +1,40 @@
+{
+  "turn": 20,
+  "phase": 6,
+  "current_beat": "STORY COMPLETE. La Lumière Sous l'Eau.",
+  "location": "the-open-water",
+  "time": "dusk, late summer",
+  "characters_met": ["lucie", "viviane", "madeleine", "baptiste", "father-yves", "sophie", "christophe", "the-creature"],
+  "events": [
+    "T1: Gabriel explores father's study, finds 'la lumiere sous l'eau'. Cliff bench.",
+    "T2: Thursday market. Meets Lucie. Speaks father's phrase. She recognizes it.",
+    "T3: Studio visit. Lucie's paintings. Shared understanding.",
+    "T4: Tide pools. His father, her twin Thomas. Shared grief.",
+    "T5: Weeks compress. Growing closeness. Village notices. Baptiste warns. Father Yves uneasy.",
+    "T6: First kiss on the cliff overlook. Recognition.",
+    "T7: Second letter fragment -- something breathing below the surface.",
+    "T8: The luminous week. Dinghy. Full love.",
+    "T9: Madeleine's husband -- 15 years ago, a calm day. The sea gives and takes.",
+    "T10: THE CALM MORNING. Lucie dies. The boat comes back empty.",
+    "T11: Desperate search. Father Yves shares the old stories.",
+    "T12: Gabriel dives with fury. Meets the Creature. Accepts the loops.",
+    "T13: First loop. Hides the oars. Lucie dies at the rocky cove. Loop fails.",
+    "T14: Second loop. Tells Lucie everything. She chooses the sea. 'Si j'arrête, elle gagne.' Loop fails. Gabriel understands.",
+    "T15: Father's final letter. 'Je n'ai rien demandé.' The revelation.",
+    "T16: Father Yves: 'La mer veut ta présence.' Gabriel walks the village.",
+    "T17: Viviane and the paintings. Gabriel's farewell without words.",
+    "T18: The descent. The sacrifice. Light. Transcendence. Baptiste smiles.",
+    "T19: Epilogue. Madeleine's flowers. Viviane's discovery. Father Yves's service. Baptiste fishes. Sophie writes.",
+    "T20: Final image. The sea. The bench. The light beneath the water."
+  ],
+  "player_choices": {
+    "used": 3,
+    "budget": 4,
+    "history": [
+      "T10: Player chose LA RECHERCHE -- Gabriel's grief manifests as obsessive searching",
+      "T12: Player chose LE DÉFI -- Gabriel confronts the Creature with anger",
+      "T17: Player chose VIVIANE -- Gabriel's farewell is at the studio with Lucie's paintings"
+    ]
+  },
+  "status": "COMPLETE"
+}
