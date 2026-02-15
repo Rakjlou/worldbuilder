@@ -23,6 +23,7 @@ let currentIndex = 0;
 let audio = null;
 let isPlaying = false;
 let audioLoaded = false;
+let mediaEnabled = true;
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
@@ -35,6 +36,7 @@ const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="
 async function loadStory() {
   const res = await fetch('/api/story');
   story = await res.json();
+  mediaEnabled = story.mediaEnabled !== false;
   document.title = story.storyTitle + ' — Story Reader';
   renderChapter(0);
 }
@@ -59,19 +61,23 @@ function renderChapter(index) {
       ${story.storySubtitle ? `<p class="story-subtitle">${story.storySubtitle}</p>` : ''}
     </header>
 
+    ${mediaEnabled ? `
     <div class="chapter-image-wrapper">
       <div class="image-placeholder" id="img-placeholder"></div>
       <img class="chapter-image" id="chapter-img" alt="">
       <div class="image-error" id="img-error" style="display:none"></div>
     </div>
+    ` : ''}
 
     <h2 class="chapter-title">${ch.title}</h2>
     <div class="chapter-text">${ch.htmlContent}</div>
 
+    ${mediaEnabled ? `
     <div class="audio-player" id="audio-player">
       <button class="play-btn" id="play-btn" disabled>${PLAY_ICON}</button>
       <div class="audio-loading" id="audio-status">Chargement de la narration...</div>
     </div>
+    ` : ''}
 
     <nav class="navigation">
       <button class="nav-btn" id="prev-btn" ${index === 0 ? 'disabled' : ''}>&#8592; Precedent</button>
@@ -88,11 +94,11 @@ function renderChapter(index) {
     if (currentIndex < story.chapters.length - 1) renderChapter(currentIndex + 1);
   });
 
-  // Load image
-  loadChapterImage(index);
-
-  // Load audio
-  loadChapterAudio(index);
+  // Load media (unless disabled)
+  if (mediaEnabled) {
+    loadChapterImage(index);
+    loadChapterAudio(index);
+  }
 
   // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });

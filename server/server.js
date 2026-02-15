@@ -33,9 +33,10 @@ function saveUsage(usage) {
 }
 
 // --- CLI args ---
-const storyPath = process.argv[2];
+const noMedia = process.argv.includes('--no-media');
+const storyPath = process.argv.filter(a => a !== '--no-media').slice(2)[0];
 if (!storyPath) {
-  console.error('Usage: node server.js <path-to-story.md>');
+  console.error('Usage: node server.js [--no-media] <path-to-story.md>');
   process.exit(1);
 }
 const resolvedStoryPath = path.resolve(storyPath);
@@ -272,6 +273,7 @@ app.get('/api/story', (req, res) => {
   res.json({
     storyTitle: currentStory.storyTitle,
     storySubtitle: currentStory.storySubtitle,
+    mediaEnabled: !noMedia,
     chapters: currentStory.chapters.map(c => ({
       index: c.index,
       title: c.title,
@@ -282,6 +284,7 @@ app.get('/api/story', (req, res) => {
 
 // API: get chapter image
 app.get('/api/chapter/:index/image', async (req, res) => {
+  if (noMedia) return res.status(404).json({ error: 'Media generation disabled (--no-media)' });
   const index = parseInt(req.params.index, 10);
   const chapter = currentStory.chapters[index];
   if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
@@ -350,6 +353,7 @@ const audioFmt = AUDIO_FORMATS[config.tts.audioEncoding] || AUDIO_FORMATS.MP3;
 
 // API: get chapter audio
 app.get('/api/chapter/:index/audio', async (req, res) => {
+  if (noMedia) return res.status(404).json({ error: 'Media generation disabled (--no-media)' });
   const index = parseInt(req.params.index, 10);
   const chapter = currentStory.chapters[index];
   if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
@@ -434,5 +438,7 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`\nStory Reader running at http://localhost:${PORT}`);
   console.log(`Watching: ${resolvedStoryPath}`);
-  console.log(`Cache: ${cacheDir}\n`);
+  console.log(`Cache: ${cacheDir}`);
+  if (noMedia) console.log(`Media: DISABLED (--no-media)`);
+  console.log();
 });
