@@ -9,10 +9,11 @@ const textToSpeech = require('@google-cloud/text-to-speech');
 
 // --- Config ---
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
+const secrets = JSON.parse(fs.readFileSync(path.join(__dirname, 'secrets.json'), 'utf-8'));
 
 // --- Google Cloud TTS client ---
 const ttsClient = new textToSpeech.TextToSpeechClient({
-  keyFilename: path.join(__dirname, 'google-worldbuilding-key.json'),
+  keyFilename: path.join(__dirname, secrets.googleCloudKeyFile),
 });
 
 // --- TTS usage tracking (free tier: 4M chars/month for Standard voices) ---
@@ -190,7 +191,8 @@ console.log(`Loaded story: "${currentStory.storyTitle}" (${currentStory.chapters
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 async function generateImagePrompt(chapterText) {
-  const { apiKey, promptModel, imagePrompt } = config.gemini;
+  const { promptModel, imagePrompt } = config.gemini;
+  const apiKey = secrets.geminiApiKey;
   const url = `${GEMINI_API_BASE}/${promptModel}:generateContent`;
 
   const body = {
@@ -219,7 +221,8 @@ async function generateImagePrompt(chapterText) {
 }
 
 async function generateImageWithImagen(prompt, model) {
-  const { apiKey, aspectRatio, imageSize } = config.gemini;
+  const { aspectRatio, imageSize } = config.gemini;
+  const apiKey = secrets.geminiApiKey;
   const url = `${GEMINI_API_BASE}/${model}:predict`;
 
   const body = {

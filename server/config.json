@@ -1,0 +1,26 @@
+{
+  "tts": {
+    "defaultVoice": "fr-FR-Standard-G",
+    "voices": [
+      "fr-FR-Standard-G",
+      "fr-FR-Studio-D",
+      "fr-FR-Wavenet-G",
+      "fr-FR-Chirp3-HD-Sadachbia"
+    ],
+    "languageCode": "fr-FR",
+    "speakingRate": 0.95,
+    "audioEncoding": "MP3"
+  },
+  "gemini": {
+    "defaultImageModel": "imagen-4.0-fast-generate-001",
+    "imageModels": [
+      "imagen-4.0-fast-generate-001",
+      "imagen-4.0-generate-001",
+      "imagen-4.0-ultra-generate-001"
+    ],
+    "promptModel": "gemini-2.5-flash",
+    "imagePrompt": "You are an art director for illustrated fiction. Given a chapter of narrative text, write a concise English prompt for an AI image generator. Focus on visual elements: setting, lighting, mood, character poses, and atmosphere. The style should be rich and painterly, like a high-quality book illustration. Do not include any text or words in the image. Output only the image generation prompt, nothing else.",
+    "aspectRatio": "16:9",
+    "imageSize": "1K"
+  }
+}

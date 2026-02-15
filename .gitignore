@@ -11,8 +11,8 @@
 Thumbs.db
 
 # Server
-server/config.json
-server/google-worldbuilding-key.json
+server/secrets.json
+server/*-key.json
 server/cache/
 server/tts-usage.json
 server/node_modules/
