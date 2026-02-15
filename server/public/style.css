@@ -152,13 +152,19 @@ body {
 
 .audio-player {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
   padding: 16px 20px;
   background: #111111;
   border-radius: 8px;
-  margin-top: 36px;
+  margin-bottom: 36px;
   border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
 }
 
 .play-btn {
@@ -493,4 +499,54 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   color: #d4d0c8;
+}
+
+/* --- Voice selector (in audio player) --- */
+
+.voice-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* --- Voice chip --- */
+
+.voice-chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #8a8578;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.voice-chip:hover {
+  color: #d4d0c8;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.voice-chip.active {
+  color: #e8e4dc;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Voice select menu (in sidebar) --- */
+
+.voice-select-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.voice-select-menu .voice-chip {
+  text-align: left;
+  width: 100%;
 }

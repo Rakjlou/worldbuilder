@@ -31,6 +31,10 @@
       <span class="toggle-label">Images & audio</span>
     </label>
   </div>
+  <div class="menu-section" id="voice-section" style="display:none">
+    <h3 class="menu-heading">Voix</h3>
+    <div class="voice-select-menu" id="voice-select-menu"></div>
+  </div>
 </aside>
 
 <script>
@@ -41,6 +45,8 @@ let audio = null;
 let isPlaying = false;
 let audioLoaded = false;
 let mediaEnabled = true;
+let currentVoice = '';
+let allVoices = [];
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
@@ -84,7 +90,34 @@ mediaToggle.addEventListener('change', async () => {
     body: JSON.stringify({ enabled: mediaEnabled }),
   });
   renderChapter(currentIndex);
+  updateVoiceMenu();
 });
+
+function updateVoiceMenu() {
+  const section = document.getElementById('voice-section');
+  const container = document.getElementById('voice-select-menu');
+  if (!section || !container) return;
+  if (!mediaEnabled || allVoices.length < 2) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = '';
+  container.innerHTML = allVoices.map(v =>
+    `<button class="voice-chip ${v.id === currentVoice ? 'active' : ''}" data-voice="${v.id}">${v.label}</button>`
+  ).join('');
+  container.querySelectorAll('.voice-chip').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      currentVoice = btn.dataset.voice;
+      await fetch('/api/voice', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ voice: currentVoice }),
+      });
+      updateVoiceMenu();
+      loadChapterAudio(currentIndex);
+    });
+  });
+}
 
 // --- Icons ---
 const PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>';
@@ -95,9 +128,12 @@ async function loadStory() {
   const res = await fetch('/api/story');
   story = await res.json();
   mediaEnabled = story.mediaEnabled !== false;
+  currentVoice = story.currentVoice;
+  allVoices = story.voices || [];
   document.title = story.storyTitle + ' — Story Reader';
   updateChapterList();
   updateMediaToggle();
+  updateVoiceMenu();
   renderChapter(0);
 }
 
@@ -127,17 +163,16 @@ function renderChapter(index) {
       <img class="chapter-image" id="chapter-img" alt="">
       <div class="image-error" id="img-error" style="display:none"></div>
     </div>
+    <div class="audio-player" id="audio-player">
+      <div class="audio-controls">
+        <button class="play-btn" id="play-btn" disabled>${PLAY_ICON}</button>
+        <div class="audio-loading" id="audio-status">Chargement de la narration...</div>
+      </div>
+    </div>
     ` : ''}
 
     <h2 class="chapter-title">${ch.title}</h2>
     <div class="chapter-text">${ch.htmlContent}</div>
-
-    ${mediaEnabled ? `
-    <div class="audio-player" id="audio-player">
-      <button class="play-btn" id="play-btn" disabled>${PLAY_ICON}</button>
-      <div class="audio-loading" id="audio-status">Chargement de la narration...</div>
-    </div>
-    ` : ''}
 
     <nav class="navigation">
       <button class="nav-btn" id="prev-btn" ${index === 0 ? 'disabled' : ''}>&#8592; Precedent</button>
@@ -190,12 +225,32 @@ async function loadChapterImage(index) {
 // --- Audio loading ---
 async function loadChapterAudio(index) {
   const player = document.getElementById('audio-player');
-  const playBtn = document.getElementById('play-btn');
-  const statusEl = document.getElementById('audio-status');
+  if (!player) return;
+
+  // Stop current audio
+  if (audio) {
+    audio.pause();
+    audio.src = '';
+    audio = null;
+  }
+  isPlaying = false;
+  audioLoaded = false;
+
+  // Show loading state
+  player.innerHTML = `
+    <div class="audio-controls">
+      <button class="play-btn" id="play-btn" disabled>${PLAY_ICON}</button>
+      <div class="audio-loading" id="audio-status">Chargement de la narration...</div>
+    </div>
+  `;
 
   try {
-    const res = await fetch(`/api/chapter/${index}/audio`);
+    const res = await fetch(`/api/chapter/${index}/audio?voice=${encodeURIComponent(currentVoice)}`);
     if (!res.ok) throw new Error('Audio generation failed');
+
+    // Read cached voices from header
+    let cachedVoices = [];
+    try { cachedVoices = JSON.parse(res.headers.get('X-Cached-Voices') || '[]'); } catch {}
 
     const blob = await res.blob();
     const url = URL.createObjectURL(blob);
@@ -203,18 +258,31 @@ async function loadChapterAudio(index) {
     audio = new Audio(url);
     audioLoaded = true;
 
-    // Replace status with progress controls
+    // Build voice selector HTML if multiple cached voices
+    let voiceSelectorHTML = '';
+    if (cachedVoices.length >= 2) {
+      const chips = cachedVoices.map(v => {
+        const label = allVoices.find(av => av.id === v)?.label || v;
+        return `<button class="voice-chip ${v === currentVoice ? 'active' : ''}" data-voice="${v}">${label}</button>`;
+      }).join('');
+      voiceSelectorHTML = `<div class="voice-selector">${chips}</div>`;
+    }
+
+    // Replace with progress controls + optional voice selector
     player.innerHTML = `
-      <button class="play-btn" id="play-btn">${PLAY_ICON}</button>
-      <div class="progress-wrapper">
-        <div class="progress-bar" id="progress-bar">
-          <div class="progress-fill" id="progress-fill"></div>
-        </div>
-        <div class="time-display">
-          <span id="time-current">0:00</span>
-          <span id="time-total">--:--</span>
+      <div class="audio-controls">
+        <button class="play-btn" id="play-btn">${PLAY_ICON}</button>
+        <div class="progress-wrapper">
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="time-display">
+            <span id="time-current">0:00</span>
+            <span id="time-total">--:--</span>
+          </div>
         </div>
       </div>
+      ${voiceSelectorHTML}
     `;
 
     const newPlayBtn = document.getElementById('play-btn');
@@ -224,11 +292,21 @@ async function loadChapterAudio(index) {
     const timeTotal = document.getElementById('time-total');
 
     audio.addEventListener('loadedmetadata', () => {
+      if (!audio) return;
       timeTotal.textContent = formatTime(audio.duration);
     });
 
+    // Autoplay
+    audio.play().then(() => {
+      if (!audio) return;
+      isPlaying = true;
+      newPlayBtn.innerHTML = PAUSE_ICON;
+    }).catch(e => {
+      console.warn('Autoplay blocked by browser:', e.message);
+    });
+
     audio.addEventListener('timeupdate', () => {
-      if (!audio.duration) return;
+      if (!audio || !audio.duration) return;
       const pct = (audio.currentTime / audio.duration) * 100;
       progressFill.style.width = pct + '%';
       timeCurrent.textContent = formatTime(audio.currentTime);
@@ -258,9 +336,26 @@ async function loadChapterAudio(index) {
       audio.currentTime = pct * audio.duration;
     });
 
+    // Voice selector click handlers
+    player.querySelectorAll('.voice-selector .voice-chip').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        currentVoice = btn.dataset.voice;
+        await fetch('/api/voice', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ voice: currentVoice }),
+        });
+        updateVoiceMenu();
+        loadChapterAudio(index);
+      });
+    });
+
   } catch (err) {
-    statusEl.className = 'audio-error';
-    statusEl.textContent = 'Narration indisponible';
+    const statusEl = document.getElementById('audio-status');
+    if (statusEl) {
+      statusEl.className = 'audio-error';
+      statusEl.textContent = 'Narration indisponible';
+    }
   }
 }
 

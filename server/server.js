@@ -34,6 +34,7 @@ function saveUsage(usage) {
 
 // --- CLI args ---
 let noMedia = process.argv.includes('--no-media');
+let currentVoice = config.tts.defaultVoice;
 const storyPath = process.argv.filter(a => a !== '--no-media').slice(2)[0];
 if (!storyPath) {
   console.error('Usage: node server.js [--no-media] <path-to-story.md>');
@@ -49,6 +50,26 @@ if (!fs.existsSync(resolvedStoryPath)) {
 const storyHash = crypto.createHash('md5').update(resolvedStoryPath).digest('hex').slice(0, 12);
 const cacheDir = path.join(__dirname, 'cache', storyHash);
 fs.mkdirSync(cacheDir, { recursive: true });
+
+// --- Migrate old audio cache files to voice-keyed names ---
+(function migrateAudioCache() {
+  try {
+    const files = fs.readdirSync(cacheDir);
+    for (const file of files) {
+      const match = file.match(/^audio_(\d+)\.(\w+)$/);
+      if (match) {
+        const [, idx, ext] = match;
+        const newName = `audio_${idx}_${config.tts.defaultVoice}.${ext}`;
+        const oldPath = path.join(cacheDir, file);
+        const newPath = path.join(cacheDir, newName);
+        if (!fs.existsSync(newPath)) {
+          fs.renameSync(oldPath, newPath);
+          console.log(`Migrated cache: ${file} -> ${newName}`);
+        }
+      }
+    }
+  } catch {}
+})();
 
 // --- Markdown stripping for TTS ---
 function stripMarkdown(md) {
@@ -67,6 +88,21 @@ function stripMarkdown(md) {
     .replace(/^---+$/gm, '')               // horizontal rules
     .replace(/\n{3,}/g, '\n\n')            // collapse multiple newlines
     .trim();
+}
+
+// --- Voice helpers ---
+function voiceLabel(voiceName) {
+  return voiceName.replace(/^[a-z]{2}-[A-Z]{2}-/, '');
+}
+
+function getCachedVoicesForChapter(index) {
+  const prefix = `audio_${index}_`;
+  const suffix = `.${audioFmt.ext}`;
+  try {
+    return fs.readdirSync(cacheDir)
+      .filter(f => f.startsWith(prefix) && f.endsWith(suffix))
+      .map(f => f.slice(prefix.length, -suffix.length));
+  } catch { return []; }
 }
 
 // --- Story parsing ---
@@ -190,18 +226,18 @@ function splitTextForTTS(text, maxLen = 4000) {
   return chunks;
 }
 
-async function generateAudioChunk(text) {
+async function generateAudioChunk(text, voice) {
   const usage = loadUsage();
   if (usage.chars + text.length > FREE_TIER_LIMIT) {
     throw new Error(`TTS free tier limit reached (${usage.chars.toLocaleString()}/${FREE_TIER_LIMIT.toLocaleString()} chars). Resets next month.`);
   }
 
-  console.log(`    TTS request: voice=${config.tts.voice}, lang=${config.tts.languageCode}, encoding=${config.tts.audioEncoding} (usage: ${usage.chars.toLocaleString()}+${text.length} chars)`);
+  console.log(`    TTS request: voice=${voice}, lang=${config.tts.languageCode}, encoding=${config.tts.audioEncoding} (usage: ${usage.chars.toLocaleString()}+${text.length} chars)`);
   const [response] = await ttsClient.synthesizeSpeech({
     input: { text },
     voice: {
       languageCode: config.tts.languageCode,
-      name: config.tts.voice,
+      name: voice,
     },
     audioConfig: {
       audioEncoding: config.tts.audioEncoding,
@@ -215,17 +251,17 @@ async function generateAudioChunk(text) {
   return Buffer.from(response.audioContent, 'base64');
 }
 
-async function generateAudio(text) {
+async function generateAudio(text, voice) {
   const chunks = splitTextForTTS(text);
   if (chunks.length === 1) {
-    return generateAudioChunk(chunks[0]);
+    return generateAudioChunk(chunks[0], voice);
   }
 
   // Generate all chunks sequentially and concatenate
   const buffers = [];
   for (let i = 0; i < chunks.length; i++) {
     console.log(`    Audio chunk ${i + 1}/${chunks.length} (${chunks[i].length} chars)`);
-    const buf = await generateAudioChunk(chunks[i]);
+    const buf = await generateAudioChunk(chunks[i], voice);
     buffers.push(buf);
   }
   return Buffer.concat(buffers);
@@ -234,8 +270,8 @@ async function generateAudio(text) {
 // --- In-flight generation tracking ---
 const inFlight = new Map();
 
-function getGenerationKey(type, index) {
-  return `${type}_${index}`;
+function getGenerationKey(type, index, voice) {
+  return voice ? `${type}_${index}_${voice}` : `${type}_${index}`;
 }
 
 // --- File serving helper (Express 5 sendFile can be finicky) ---
@@ -274,6 +310,8 @@ app.get('/api/story', (req, res) => {
     storyTitle: currentStory.storyTitle,
     storySubtitle: currentStory.storySubtitle,
     mediaEnabled: !noMedia,
+    voices: config.tts.voices.map(v => ({ id: v, label: voiceLabel(v) })),
+    currentVoice,
     chapters: currentStory.chapters.map(c => ({
       index: c.index,
       title: c.title,
@@ -286,6 +324,16 @@ app.get('/api/story', (req, res) => {
 app.post('/api/media-enabled', express.json(), (req, res) => {
   noMedia = !req.body.enabled;
   res.json({ mediaEnabled: !noMedia });
+});
+
+// API: change voice
+app.post('/api/voice', express.json(), (req, res) => {
+  const voice = req.body.voice;
+  if (!config.tts.voices.includes(voice)) {
+    return res.status(400).json({ error: 'Unknown voice' });
+  }
+  currentVoice = voice;
+  res.json({ currentVoice });
 });
 
 // API: get chapter image
@@ -364,19 +412,30 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
   const chapter = currentStory.chapters[index];
   if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
 
-  const cachedAudio = path.join(cacheDir, `audio_${index}.${audioFmt.ext}`);
+  const voice = req.query.voice || currentVoice;
+  if (!config.tts.voices.includes(voice)) {
+    return res.status(400).json({ error: 'Unknown voice' });
+  }
+
+  const cachedAudio = path.join(cacheDir, `audio_${index}_${voice}.${audioFmt.ext}`);
+
+  function serveCached() {
+    const cachedVoices = getCachedVoicesForChapter(index);
+    res.set('X-Cached-Voices', JSON.stringify(cachedVoices));
+    serveFile(res, cachedAudio, audioFmt.mime);
+  }
 
   // Serve from cache
   if (fs.existsSync(cachedAudio)) {
-    return serveFile(res, cachedAudio, audioFmt.mime);
+    return serveCached();
   }
 
   // Deduplicate in-flight requests
-  const key = getGenerationKey('audio', index);
+  const key = getGenerationKey('audio', index, voice);
   if (inFlight.has(key)) {
     try {
       await inFlight.get(key);
-      return serveFile(res, cachedAudio, audioFmt.mime);
+      return serveCached();
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -384,11 +443,11 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
 
   const promise = (async () => {
     try {
-      console.log(`Generating audio for chapter ${index}...`);
+      console.log(`Generating audio for chapter ${index} (voice: ${voice})...`);
       const plainText = stripMarkdown(chapter.rawContent);
-      const audioBuffer = await generateAudio(plainText);
+      const audioBuffer = await generateAudio(plainText, voice);
       fs.writeFileSync(cachedAudio, audioBuffer);
-      console.log(`  Audio cached for chapter ${index}`);
+      console.log(`  Audio cached for chapter ${index} (voice: ${voice})`);
     } finally {
       inFlight.delete(key);
     }
@@ -398,7 +457,7 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
 
   try {
     await promise;
-    serveFile(res, cachedAudio, audioFmt.mime);
+    serveCached();
   } catch (err) {
     console.error(`Audio generation failed for chapter ${index}:`, err.message);
     res.status(500).json({ error: `Audio generation failed: ${err.message}` });
