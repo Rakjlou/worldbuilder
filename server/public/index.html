@@ -59,6 +59,7 @@ let currentVoice = '';
 let allVoices = [];
 let currentImageModel = '';
 let allImageModels = [];
+let onTitlePage = true;
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
@@ -181,6 +182,51 @@ async function loadStory() {
   updateMediaToggle();
   updateVoiceMenu();
   updateImageModelMenu();
+  renderTitlePage();
+}
+
+// --- Title Page ---
+function renderTitlePage() {
+  onTitlePage = true;
+  currentIndex = -1;
+
+  // Stop any playing audio
+  if (audio) {
+    audio.pause();
+    audio.src = '';
+    audio = null;
+  }
+  isPlaying = false;
+  audioLoaded = false;
+
+  app.innerHTML = `
+    <div class="title-page">
+      <div class="title-page-content">
+        <h1 class="title-page-title">${story.storyTitle}</h1>
+        ${story.storySubtitle ? `<p class="title-page-subtitle">${story.storySubtitle}</p>` : ''}
+        <button class="title-page-begin" id="begin-btn">Commencer</button>
+      </div>
+    </div>
+  `;
+
+  const beginBtn = document.getElementById('begin-btn');
+  beginBtn.addEventListener('click', beginStory);
+
+  // Also allow clicking anywhere on the title page or pressing Enter/Space
+  const titlePage = document.querySelector('.title-page');
+  titlePage.addEventListener('click', (e) => {
+    if (e.target !== beginBtn) beginStory();
+  });
+
+  // Update menu state
+  updateChapterList();
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function beginStory() {
+  onTitlePage = false;
   renderChapter(0);
 }
 
@@ -505,7 +551,10 @@ function showToast(chapterCount) {
 
 // --- Keyboard navigation ---
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && menuPanel.classList.contains('open')) {
+  if (onTitlePage && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault();
+    beginStory();
+  } else if (e.key === 'Escape' && menuPanel.classList.contains('open')) {
     toggleMenu();
   } else if (e.key === 'ArrowRight' && currentIndex < story.chapters.length - 1) {
     renderChapter(currentIndex + 1);
