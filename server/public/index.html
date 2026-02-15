@@ -40,6 +40,10 @@
     <h3 class="menu-heading">Voix</h3>
     <div class="voice-select-menu" id="voice-select-menu"></div>
   </div>
+  <div class="menu-section" id="image-model-section" style="display:none">
+    <h3 class="menu-heading">Mod&#232;le image</h3>
+    <div class="voice-select-menu" id="image-model-menu"></div>
+  </div>
 </aside>
 
 <script>
@@ -53,6 +57,8 @@ let mediaEnabled = true;
 let autoplayEnabled = true;
 let currentVoice = '';
 let allVoices = [];
+let currentImageModel = '';
+let allImageModels = [];
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
@@ -102,6 +108,7 @@ mediaToggle.addEventListener('change', async () => {
   });
   renderChapter(currentIndex);
   updateVoiceMenu();
+  updateImageModelMenu();
 });
 
 function updateVoiceMenu() {
@@ -130,6 +137,32 @@ function updateVoiceMenu() {
   });
 }
 
+function updateImageModelMenu() {
+  const section = document.getElementById('image-model-section');
+  const container = document.getElementById('image-model-menu');
+  if (!section || !container) return;
+  if (!mediaEnabled || allImageModels.length < 2) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = '';
+  container.innerHTML = allImageModels.map(m =>
+    `<button class="voice-chip ${m.id === currentImageModel ? 'active' : ''}" data-model="${m.id}">${m.label}</button>`
+  ).join('');
+  container.querySelectorAll('.voice-chip').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      currentImageModel = btn.dataset.model;
+      await fetch('/api/image-model', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: currentImageModel }),
+      });
+      updateImageModelMenu();
+      loadChapterImage(currentIndex);
+    });
+  });
+}
+
 // --- Icons ---
 const PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>';
 const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
@@ -141,10 +174,13 @@ async function loadStory() {
   mediaEnabled = story.mediaEnabled !== false;
   currentVoice = story.currentVoice;
   allVoices = story.voices || [];
+  currentImageModel = story.currentImageModel || '';
+  allImageModels = story.imageModels || [];
   document.title = story.storyTitle + ' — Story Reader';
   updateChapterList();
   updateMediaToggle();
   updateVoiceMenu();
+  updateImageModelMenu();
   renderChapter(0);
 }
 
@@ -218,19 +254,60 @@ async function loadChapterImage(index) {
   const img = document.getElementById('chapter-img');
   const placeholder = document.getElementById('img-placeholder');
   const errorEl = document.getElementById('img-error');
+  const wrapper = img?.closest('.chapter-image-wrapper');
 
-  img.onload = () => {
-    img.classList.add('loaded');
-    placeholder.classList.add('hidden');
-  };
+  if (!img) return;
 
-  img.onerror = () => {
+  // Remove any existing model selector
+  const oldSelector = wrapper?.parentElement?.querySelector('.image-model-selector');
+  if (oldSelector) oldSelector.remove();
+
+  try {
+    const res = await fetch(`/api/chapter/${index}/image?model=${encodeURIComponent(currentImageModel)}`);
+    if (!res.ok) throw new Error('Image generation failed');
+
+    // Read cached models from header
+    let cachedModels = [];
+    try { cachedModels = JSON.parse(res.headers.get('X-Cached-Models') || '[]'); } catch {}
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+
+    img.onload = () => {
+      img.classList.add('loaded');
+      placeholder.classList.add('hidden');
+      URL.revokeObjectURL(url);
+    };
+    img.src = url;
+
+    // Show inline model chips below image when multiple cached models exist
+    if (cachedModels.length >= 2 && wrapper) {
+      const chips = cachedModels.map(m => {
+        const label = allImageModels.find(am => am.id === m)?.label || m;
+        return `<button class="voice-chip ${m === currentImageModel ? 'active' : ''}" data-model="${m}">${label}</button>`;
+      }).join('');
+      const selector = document.createElement('div');
+      selector.className = 'image-model-selector';
+      selector.innerHTML = chips;
+      wrapper.after(selector);
+      selector.querySelectorAll('.voice-chip').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          currentImageModel = btn.dataset.model;
+          await fetch('/api/image-model', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ model: currentImageModel }),
+          });
+          updateImageModelMenu();
+          loadChapterImage(index);
+        });
+      });
+    }
+  } catch (err) {
     placeholder.classList.add('hidden');
     errorEl.textContent = 'Illustration indisponible';
     errorEl.style.display = 'flex';
-  };
-
-  img.src = `/api/chapter/${index}/image`;
+  }
 }
 
 // --- Audio loading ---

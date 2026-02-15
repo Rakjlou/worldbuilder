@@ -35,6 +35,7 @@ function saveUsage(usage) {
 // --- CLI args ---
 let noMedia = process.argv.includes('--no-media');
 let currentVoice = config.tts.defaultVoice;
+let currentImageModel = config.gemini.defaultImageModel;
 const storyPath = process.argv.filter(a => a !== '--no-media').slice(2)[0];
 if (!storyPath) {
   console.error('Usage: node server.js [--no-media] <path-to-story.md>');
@@ -71,6 +72,26 @@ fs.mkdirSync(cacheDir, { recursive: true });
   } catch {}
 })();
 
+// --- Migrate old image cache files to model-keyed names ---
+(function migrateImageCache() {
+  try {
+    const files = fs.readdirSync(cacheDir);
+    for (const file of files) {
+      const match = file.match(/^image_(\d+)\.(png|jpg)$/);
+      if (match) {
+        const [, idx, ext] = match;
+        const newName = `image_${idx}_${config.gemini.defaultImageModel}.png`;
+        const oldPath = path.join(cacheDir, file);
+        const newPath = path.join(cacheDir, newName);
+        if (!fs.existsSync(newPath)) {
+          fs.renameSync(oldPath, newPath);
+          console.log(`Migrated image cache: ${file} -> ${newName}`);
+        }
+      }
+    }
+  } catch {}
+})();
+
 // --- Markdown stripping for TTS ---
 function stripMarkdown(md) {
   return md
@@ -98,6 +119,23 @@ function voiceLabel(voiceName) {
 function getCachedVoicesForChapter(index) {
   const prefix = `audio_${index}_`;
   const suffix = `.${audioFmt.ext}`;
+  try {
+    return fs.readdirSync(cacheDir)
+      .filter(f => f.startsWith(prefix) && f.endsWith(suffix))
+      .map(f => f.slice(prefix.length, -suffix.length));
+  } catch { return []; }
+}
+
+// --- Image model helpers ---
+function imageModelLabel(name) {
+  if (name.includes('-fast-')) return 'Fast';
+  if (name.includes('-ultra-')) return 'Ultra';
+  return 'Standard';
+}
+
+function getCachedImageModelsForChapter(index) {
+  const prefix = `image_${index}_`;
+  const suffix = '.png';
   try {
     return fs.readdirSync(cacheDir)
       .filter(f => f.startsWith(prefix) && f.endsWith(suffix))
@@ -148,25 +186,17 @@ function parseStory(content) {
 let currentStory = parseStory(fs.readFileSync(resolvedStoryPath, 'utf-8'));
 console.log(`Loaded story: "${currentStory.storyTitle}" (${currentStory.chapters.length} chapters)`);
 
-// --- Gemini image generation ---
+// --- Image generation (Gemini Flash prompt + Imagen 4) ---
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-async function generateImageWithGemini(chapterText) {
-  const { apiKey, model, systemPrompt } = config.gemini;
-  const url = `${GEMINI_API_BASE}/${model}:generateContent`;
+async function generateImagePrompt(chapterText) {
+  const { apiKey, promptModel, imagePrompt } = config.gemini;
+  const url = `${GEMINI_API_BASE}/${promptModel}:generateContent`;
 
   const body = {
-    contents: [{
-      parts: [{ text: chapterText }],
-    }],
-    generationConfig: {
-      responseModalities: ['IMAGE', 'TEXT'],
-    },
+    contents: [{ parts: [{ text: chapterText }] }],
+    systemInstruction: { parts: [{ text: imagePrompt }] },
   };
-
-  if (systemPrompt) {
-    body.systemInstruction = { parts: [{ text: systemPrompt }] };
-  }
 
   const res = await fetch(url, {
     method: 'POST',
@@ -179,31 +209,51 @@ async function generateImageWithGemini(chapterText) {
 
   if (!res.ok) {
     const text = await res.text();
-    throw new Error(`Gemini API error (${res.status}): ${text}`);
+    throw new Error(`Gemini prompt API error (${res.status}): ${text}`);
   }
 
   const json = await res.json();
+  const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!text) throw new Error('Gemini returned no prompt text');
+  return text.trim();
+}
 
-  const candidate = json.candidates?.[0];
-  if (!candidate) {
-    throw new Error('Gemini returned no candidates');
+async function generateImageWithImagen(prompt, model) {
+  const { apiKey, aspectRatio, imageSize } = config.gemini;
+  const url = `${GEMINI_API_BASE}/${model}:predict`;
+
+  const body = {
+    instances: [{ prompt }],
+    parameters: {
+      sampleCount: 1,
+      aspectRatio: aspectRatio || '1:1',
+    },
+  };
+  if (imageSize) body.parameters.imageSize = imageSize;
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-goog-api-key': apiKey,
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Imagen API error (${res.status}): ${text}`);
   }
 
-  const parts = candidate.content?.parts || [];
-  const imagePart = parts.find(p => p.inlineData);
-  if (!imagePart) {
-    const textPart = parts.find(p => p.text);
-    const detail = textPart ? `: ${textPart.text.slice(0, 200)}` : '';
-    throw new Error(`Gemini returned no image${detail}`);
+  const json = await res.json();
+  const prediction = json.predictions?.[0];
+  if (!prediction?.bytesBase64Encoded) {
+    throw new Error('Imagen returned no image data');
   }
-
-  const { mimeType, data } = imagePart.inlineData;
-  const textPart = parts.find(p => p.text);
 
   return {
-    imageBuffer: Buffer.from(data, 'base64'),
-    mimeType: mimeType || 'image/png',
-    description: textPart?.text || null,
+    imageBuffer: Buffer.from(prediction.bytesBase64Encoded, 'base64'),
+    mimeType: prediction.mimeType || 'image/png',
   };
 }
 
@@ -312,6 +362,8 @@ app.get('/api/story', (req, res) => {
     mediaEnabled: !noMedia,
     voices: config.tts.voices.map(v => ({ id: v, label: voiceLabel(v) })),
     currentVoice,
+    imageModels: config.gemini.imageModels.map(m => ({ id: m, label: imageModelLabel(m) })),
+    currentImageModel,
     chapters: currentStory.chapters.map(c => ({
       index: c.index,
       title: c.title,
@@ -324,6 +376,16 @@ app.get('/api/story', (req, res) => {
 app.post('/api/media-enabled', express.json(), (req, res) => {
   noMedia = !req.body.enabled;
   res.json({ mediaEnabled: !noMedia });
+});
+
+// API: change image model
+app.post('/api/image-model', express.json(), (req, res) => {
+  const model = req.body.model;
+  if (!config.gemini.imageModels.includes(model)) {
+    return res.status(400).json({ error: 'Unknown image model' });
+  }
+  currentImageModel = model;
+  res.json({ currentImageModel });
 });
 
 // API: change voice
@@ -343,24 +405,31 @@ app.get('/api/chapter/:index/image', async (req, res) => {
   const chapter = currentStory.chapters[index];
   if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
 
-  const cachedImagePng = path.join(cacheDir, `image_${index}.png`);
-  const cachedImageJpg = path.join(cacheDir, `image_${index}.jpg`);
+  const model = req.query.model || currentImageModel;
+  if (!config.gemini.imageModels.includes(model)) {
+    return res.status(400).json({ error: 'Unknown image model' });
+  }
+
+  const cachedImage = path.join(cacheDir, `image_${index}_${model}.png`);
   const cachedPrompt = path.join(cacheDir, `prompt_${index}.txt`);
 
-  // Serve from cache (check both new PNG and old JPG formats)
-  if (fs.existsSync(cachedImagePng)) {
-    return serveFile(res, cachedImagePng, 'image/png');
+  function serveCached() {
+    const cachedModels = getCachedImageModelsForChapter(index);
+    res.set('X-Cached-Models', JSON.stringify(cachedModels));
+    serveFile(res, cachedImage, 'image/png');
   }
-  if (fs.existsSync(cachedImageJpg)) {
-    return serveFile(res, cachedImageJpg, 'image/jpeg');
+
+  // Serve from cache
+  if (fs.existsSync(cachedImage)) {
+    return serveCached();
   }
 
   // Deduplicate in-flight requests
-  const key = getGenerationKey('image', index);
+  const key = getGenerationKey('image', index, model);
   if (inFlight.has(key)) {
     try {
       await inFlight.get(key);
-      return serveFile(res, cachedImagePng, 'image/png');
+      return serveCached();
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -368,19 +437,23 @@ app.get('/api/chapter/:index/image', async (req, res) => {
 
   const promise = (async () => {
     try {
-      console.log(`Generating image for chapter ${index} via Gemini...`);
-
-      const result = await generateImageWithGemini(chapter.rawContent);
-
-      // Cache the image
-      fs.writeFileSync(cachedImagePng, result.imageBuffer);
-      console.log(`  Image cached for chapter ${index} (${result.mimeType})`);
-
-      // Save description for debugging if Gemini returned one
-      if (result.description) {
-        fs.writeFileSync(cachedPrompt, result.description, 'utf-8');
-        console.log(`  Description: ${result.description.slice(0, 100)}...`);
+      // Step 1: generate English prompt from chapter text (reuse cached prompt if available)
+      let prompt;
+      if (fs.existsSync(cachedPrompt)) {
+        prompt = fs.readFileSync(cachedPrompt, 'utf-8');
+        console.log(`Reusing cached prompt for chapter ${index}`);
+      } else {
+        console.log(`Generating image prompt for chapter ${index} via ${config.gemini.promptModel}...`);
+        prompt = await generateImagePrompt(chapter.rawContent);
+        fs.writeFileSync(cachedPrompt, prompt, 'utf-8');
+        console.log(`  Prompt: ${prompt.slice(0, 120)}...`);
       }
+
+      // Step 2: generate image from prompt
+      console.log(`Generating image for chapter ${index} via ${model}...`);
+      const result = await generateImageWithImagen(prompt, model);
+      fs.writeFileSync(cachedImage, result.imageBuffer);
+      console.log(`  Image cached for chapter ${index} (${imageModelLabel(model)})`);
     } finally {
       inFlight.delete(key);
     }
@@ -390,7 +463,7 @@ app.get('/api/chapter/:index/image', async (req, res) => {
 
   try {
     await promise;
-    serveFile(res, cachedImagePng, 'image/png');
+    serveCached();
   } catch (err) {
     console.error(`Image generation failed for chapter ${index}:`, err.message);
     res.status(500).json({ error: `Image generation failed: ${err.message}` });
