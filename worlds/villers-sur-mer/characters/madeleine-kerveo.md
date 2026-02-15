@@ -7,9 +7,9 @@
 
 ## Who She Is
 
-Madeleine has run the village epicerie for 40 years. She's warm but practical, observant but discreet. She knew Gabriel's father and remembers him fondly. She's become a regular point of contact for Gabriel through his Thursday market visits. She doesn't pry, but she notices -- she sees his grief, his isolation, and treats him with kindness that doesn't demand response.
+Madeleine has run the village epicerie for 40 years. She's warm but practical, observant but discreet. She knew Gabriel's father and remembers him fondly. She doesn't pry, but she notices everything that happens in the village.
 
-Her husband was a fisherman -- the sea took him 15 years ago. She understands grief because she's carried her own.
+Her husband was a fisherman -- the sea took him years ago. She understands grief because she's carried her own.
 
 ---
 
@@ -47,8 +47,7 @@ Sturdy Breton woman, practical in every way. Kind eyes set in a weathered face. 
 ## Goals
 
 - Keep the village fed and connected through her shop
-- Watch over Gabriel and Lucie quietly, without intruding
-- Preserve the memory of her husband and of Gabriel's father
+- Preserve the memory of her husband and of the people the sea has taken
 
 ---
 
@@ -62,8 +61,8 @@ Sturdy Breton woman, practical in every way. Kind eyes set in a weathered face. 
 
 ## Relationships
 
-- **Gabriel Marin:** Regular customer. She cares for him quietly and treats him with respect. She knew his father.
-- **Lucie Devereaux:** She buys supplies for the studio. Madeleine sees Lucie's isolation and has tried, gently, to draw her out.
+- **Gabriel Marin:** She knew his father. She has a quiet soft spot for the young man living in the cliff house, though they've barely spoken.
+- **Lucie Devereaux:** She's seen the painter around the village. Doesn't know her well.
 - **Christophe Morvan:** Old friend and neighbor. She supplies some goods for his cafe. They understand each other.
 - **Jean-Baptiste Roux:** She's known him for decades. She respects his grief and never pushes.
 - **Father Yves Bleunard:** A lifelong parishioner. She trusts his wisdom.
@@ -76,7 +75,7 @@ Sturdy Breton woman, practical in every way. Kind eyes set in a weathered face. 
 
 - **Morning:** Opens the epicerie early. Arranges displays, receives deliveries. Greets the first customers.
 - **Midday:** Steady work at the shop. Chats with regulars, remembers what everyone needs.
-- **Afternoon:** Quieter hours. Restocks shelves. Thursday is market prep day.
+- **Afternoon:** Quieter hours. Restocks shelves.
 - **Evening:** Closes the shop. A quiet meal at home. Sometimes visits the church or a neighbor.
 
 ---
@@ -84,7 +83,6 @@ Sturdy Breton woman, practical in every way. Kind eyes set in a weathered face. 
 ## Triggers
 
 Madeleine responds when:
-- Gabriel comes to market -- she watches his grief with quiet care
 - Someone mentions the sea's dangers or losses
 - A young person seems to be struggling
 - The village's sense of community is threatened

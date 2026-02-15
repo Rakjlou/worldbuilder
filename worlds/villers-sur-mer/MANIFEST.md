@@ -17,11 +17,11 @@
 
 ### Characters
 - `characters/gabriel-marin.md` -- Protagonist. 35. Grieving man living in his father's cliff house.
-- `characters/lucie-devereaux.md` -- Artist. 32. Painter obsessed with the sea since her brother drowned.
+- `characters/lucie-devereaux.md` -- Artist. 32. Painter searching for her artistic voice. At peace with her brother's death, afraid of the sea.
 - `characters/the-creature.md` -- Divine force. Ancient jellyfish entity dwelling in the deep, agent of balance.
 - `characters/viviane-colas.md` -- Textile artist. 35. Lucie's friend and counterbalance.
 - `characters/madeleine-kerveo.md` -- Village grocer. 62. Maternal figure, knew Gabriel's father.
-- `characters/father-yves-bleunard.md` -- Village priest. 78. Keeper of old legends about the sea.
+- `characters/father-yves-bleunard.md` -- Village priest. 78. Has served the village for fifty years.
 - `characters/christophe-morvan.md` -- Cafe owner. 45. Former fisherman, understands the sea.
 - `characters/jean-baptiste-roux.md` -- Old fisherman. 68. Lost his son to the sea 12 years ago.
 - `characters/sophie-guerin.md` -- Schoolteacher. 28. Voice of normal life and hope.
@@ -34,6 +34,3 @@
 - `locations/the-open-water.md` -- The Atlantic itself. Vast, indifferent, where fishermen work and people have drowned.
 - `locations/villers-center.md` -- Village square with epicerie, cafe, church.
 - `locations/viviane-lucie-studio.md` -- Converted barn studio shared by Viviane and Lucie.
-
-### Seeds
-- `seeds/l-echange.md` -- "L'Echange": tragic love story with time loop and sacrifice.

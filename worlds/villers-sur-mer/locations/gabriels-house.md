@@ -28,7 +28,7 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 
 ## Items Present
 
-- Father's belongings -- Maritime books, sailing logs, personal effects
+- Father's belongings -- Nautical charts, navigation tools, personal effects
 - Ship's compass -- On the living room mantle
 - Family photographs -- Old photos on the walls
 - Dinghy -- Small boat kept at the rocky cove below
@@ -37,7 +37,7 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 
 ## Secrets
 
-The father lived alone for years after his wife's death. The house reflects a man who simplified his life down to essentials: the sea, his routines, his memories. Drawers contain half-written letters he never sent. The fridge had expired food when Gabriel arrived. His clothes still smell like salt.
+The father lived alone for years after his wife's death. The house reflects a man who simplified his life down to essentials: the sea, his routines, his memories. The fridge had expired food when Gabriel arrived. His clothes still smell like salt.
 
 The study door sticks — the father stopped using it in his final months, preferring to sit in the living room watching the water.
 

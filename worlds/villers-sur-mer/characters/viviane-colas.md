@@ -7,7 +7,7 @@
 
 ## Who She Is
 
-Viviane is a textile artist who shares a studio with Lucie. She's warmer and more socially engaged than Lucie, having successfully processed her own losses -- she lost her mother 5 years ago. She cares deeply for Lucie and worries about her isolation. She creates beautiful dyed fabrics using natural materials.
+Viviane is a textile artist who shares a studio with Lucie. She's warmer and more socially engaged than Lucie, having successfully processed her own losses -- she lost her mother 5 years ago. She cares deeply for Lucie and can see that her friend is stuck creatively, even if Lucie doesn't talk about it much. She creates beautiful dyed fabrics using natural materials.
 
 ---
 
@@ -35,16 +35,16 @@ Colorful and approachable. Her hands are often stained with natural dyes -- indi
 
 ## Knowledge
 
-- Everything about Lucie and her grief
+- Everything about Lucie -- her creative frustration, her privacy, her warmth
 - The village social scene
 - Natural dyes and textile arts
-- How to encourage healing in someone who's resisting it
+- How to support someone without pushing too hard
 
 ---
 
 ## Goals
 
-- Support Lucie's healing without pushing too hard
+- Be there for Lucie without pushing too hard
 - Grow her textile art and find wider recognition
 - Maintain her connections in the village community
 
@@ -52,15 +52,15 @@ Colorful and approachable. Her hands are often stained with natural dyes -- indi
 
 ## Fears
 
-- Losing Lucie to her obsession and isolation
+- That Lucie will stay stuck and never break through
 - That her encouragement isn't enough to reach Lucie
-- That she'll watch someone she loves disappear into grief
+- That she can't help someone she loves find what they're looking for
 
 ---
 
 ## Relationships
 
-- **Lucie Devereaux:** Her closest friend. She loves Lucie and wants her to heal and connect.
+- **Lucie Devereaux:** Her closest friend. She loves Lucie and can see her creative frustration even when Lucie won't name it.
 - **Gabriel Marin:** Doesn't know him.
 - **Madeleine Kerveo:** A warm presence at the market. They chat about village life.
 - **Christophe Morvan:** She visits the cafe regularly. He's a familiar face.

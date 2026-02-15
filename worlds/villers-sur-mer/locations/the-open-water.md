@@ -4,7 +4,7 @@ Past the cove, past the harbor, past the sheltered inlets -- the Atlantic. Vast,
 
 From a small boat, the sea feels infinite. The swells are long and slow on calm days, lifting and dropping the hull in a rhythm that becomes hypnotic. On rough days, the waves are steep and the coast disappears behind walls of water. The depth beneath the keel goes from meters to dozens of meters to unknowable. The water changes color as it deepens -- green near shore, then dark blue, then black.
 
-This is where the fishermen work. This is where Lucie's brother drowned. This is where Gabriel's father spent his life. The sea is not hostile. It simply does not care.
+This is where the fishermen work. This is where Gabriel's father spent his life. The sea is not hostile. It simply does not care.
 
 ---
 

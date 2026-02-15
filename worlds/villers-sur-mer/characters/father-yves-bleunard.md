@@ -1,15 +1,15 @@
 # Father Yves Bleunard
 
 **Age:** 78
-**Role:** Elderly Priest -- Keeper of Legends
+**Role:** Village Priest
 
 ---
 
 ## Who He Is
 
-Father Yves is the village priest, elderly and wise. He's one of the few who knows the old legends about the sea creature -- his grandmother told him stories as a child of something ancient dwelling in the deepest waters, something that chooses certain rare souls for reasons unknowable. She said some are privileged to be seen by it, though none understand why.
+Father Yves has served this village for over fifty years. He has baptized, married, and buried most of the people in it. He knows every family's grief and every family's joy. He is the person people come to when they don't know where else to go -- not always for faith, but for the presence of someone who has witnessed everything and judged nothing.
 
-He believed them then, and time has only deepened his belief in the sacred strangeness of the world. He's noticed Gabriel coming to church sometimes, a young man carrying grief visibly. He recognizes in him something he once carried himself.
+He carries some of the old stories his grandmother told him as a child -- about the sea, about the strangeness of the coast. He half-believes them, the way one half-believes anything heard in childhood that the rational mind cannot quite dismiss.
 
 He understands that some mysteries are meant to remain mysterious, that some people learn through suffering, and that grace comes in unexpected forms.
 
@@ -19,7 +19,7 @@ He understands that some mysteries are meant to remain mysterious, that some peo
 
 - Wise and patient
 - Gentle but direct
-- Keeper of old stories
+- Carries the weight of a village's worth of confidences
 - Understands mystery
 - Accepts what cannot be explained
 
@@ -39,26 +39,26 @@ Thin and stooped with age, white hair, gentle eyes. Always in clerical black. Hi
 
 ## Knowledge
 
-- The legends of the sea creature passed down through his family
-- Theology and faith
+- Fifty years of the village's history -- births, deaths, marriages, feuds, reconciliations
+- Theology and faith, and the places where faith and doubt coexist
 - The grief of the village -- many families have lost people to the sea
-- Gabriel's father (they may have known each other through the church)
+- Some old stories his grandmother told him about the coast
 
 ---
 
 ## Goals
 
 - Guide his parishioners through their grief and toward peace
-- Preserve the old legends before they die with him
 - Make peace with his own approaching end
+- Leave the village better than he found it -- or at least no worse
 
 ---
 
 ## Fears
 
-- That the legends he carries will die with him, unheard or disbelieved
 - That he cannot help those who suffer -- that faith isn't enough
-- That the village is losing its connection to the sacred and the strange
+- That he's kept confidences he should have shared, or shared ones he should have kept
+- That the village is hollowing out, its young people leaving, its life fading
 
 ---
 
@@ -86,9 +86,9 @@ Thin and stooped with age, white hair, gentle eyes. Always in clerical black. Hi
 
 Father Yves responds when:
 - Someone seeks meaning in suffering -- he has spent his life with this question
-- The sea is mentioned with reverence or fear -- it stirs the legends in him
 - A young person carries grief they don't understand
-- Someone asks about the old stories
+- Someone needs a witness more than advice
+- The village's continuity is at stake -- a departure, a death, a closing
 
 ---
 
