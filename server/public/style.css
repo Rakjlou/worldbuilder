@@ -246,6 +246,81 @@ body {
   text-align: center;
 }
 
+/* --- Volume control --- */
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.volume-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #8a8578;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 0.2s, background 0.2s;
+  padding: 0;
+}
+
+.volume-btn:hover {
+  color: #c8c3b8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.volume-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.volume-slider {
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: #222;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8a8578;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  background: #c8c3b8;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8a8578;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  background: #c8c3b8;
+}
+
 /* --- Navigation --- */
 
 .navigation {
@@ -640,5 +715,9 @@ body {
 
   .title-page-subtitle {
     font-size: 1.1rem;
+  }
+
+  .volume-slider {
+    width: 60px;
   }
 }

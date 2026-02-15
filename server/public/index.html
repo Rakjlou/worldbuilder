@@ -60,6 +60,7 @@ let allVoices = [];
 let currentImageModel = '';
 let allImageModels = [];
 let onTitlePage = true;
+let volume = parseFloat(localStorage.getItem('storyVolume') || '0.7');
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
@@ -167,6 +168,8 @@ function updateImageModelMenu() {
 // --- Icons ---
 const PLAY_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>';
 const PAUSE_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+const VOLUME_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="11,7 6,11 2,11 2,13 6,13 11,17 11,7"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M18.36 5.64a9 9 0 0 1 0 12.73"/></svg>';
+const VOLUME_MUTED_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="11,7 6,11 2,11 2,13 6,13 11,17 11,7"/><line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" stroke-width="2"/><line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" stroke-width="2"/></svg>';
 
 // --- Load story ---
 async function loadStory() {
@@ -390,6 +393,7 @@ async function loadChapterAudio(index) {
     const url = URL.createObjectURL(blob);
 
     audio = new Audio(url);
+    audio.volume = volume;
     audioLoaded = true;
 
     // Build voice selector HTML if multiple cached voices
@@ -415,6 +419,10 @@ async function loadChapterAudio(index) {
             <span id="time-total">--:--</span>
           </div>
         </div>
+        <div class="volume-control">
+          <button class="volume-btn" id="volume-btn">${volume > 0 ? VOLUME_ICON : VOLUME_MUTED_ICON}</button>
+          <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="${volume * 100}">
+        </div>
       </div>
       ${voiceSelectorHTML}
     `;
@@ -424,6 +432,8 @@ async function loadChapterAudio(index) {
     const progressFill = document.getElementById('progress-fill');
     const timeCurrent = document.getElementById('time-current');
     const timeTotal = document.getElementById('time-total');
+    const volumeBtn = document.getElementById('volume-btn');
+    const volumeSlider = document.getElementById('volume-slider');
 
     audio.addEventListener('loadedmetadata', () => {
       if (!audio) return;
@@ -470,6 +480,29 @@ async function loadChapterAudio(index) {
       const rect = progressBar.getBoundingClientRect();
       const pct = (e.clientX - rect.left) / rect.width;
       audio.currentTime = pct * audio.duration;
+    });
+
+    // Volume controls
+    volumeSlider.addEventListener('input', (e) => {
+      volume = e.target.value / 100;
+      audio.volume = volume;
+      volumeBtn.innerHTML = volume > 0 ? VOLUME_ICON : VOLUME_MUTED_ICON;
+      localStorage.setItem('storyVolume', volume);
+    });
+
+    volumeBtn.addEventListener('click', () => {
+      if (volume > 0) {
+        // Mute
+        volumeSlider.dataset.prevVolume = volume;
+        volume = 0;
+      } else {
+        // Unmute
+        volume = parseFloat(volumeSlider.dataset.prevVolume || '0.7');
+      }
+      audio.volume = volume;
+      volumeSlider.value = volume * 100;
+      volumeBtn.innerHTML = volume > 0 ? VOLUME_ICON : VOLUME_MUTED_ICON;
+      localStorage.setItem('storyVolume', volume);
     });
 
     // Voice selector click handlers
