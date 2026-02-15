@@ -30,6 +30,11 @@
       <span class="toggle-slider"></span>
       <span class="toggle-label">Images & audio</span>
     </label>
+    <label class="media-toggle">
+      <input type="checkbox" id="autoplay-toggle" checked>
+      <span class="toggle-slider"></span>
+      <span class="toggle-label">Lecture auto</span>
+    </label>
   </div>
   <div class="menu-section" id="voice-section" style="display:none">
     <h3 class="menu-heading">Voix</h3>
@@ -45,6 +50,7 @@ let audio = null;
 let isPlaying = false;
 let audioLoaded = false;
 let mediaEnabled = true;
+let autoplayEnabled = true;
 let currentVoice = '';
 let allVoices = [];
 
@@ -81,6 +87,11 @@ function updateChapterList() {
 function updateMediaToggle() {
   mediaToggle.checked = mediaEnabled;
 }
+
+const autoplayToggle = document.getElementById('autoplay-toggle');
+autoplayToggle.addEventListener('change', () => {
+  autoplayEnabled = autoplayToggle.checked;
+});
 
 mediaToggle.addEventListener('change', async () => {
   mediaEnabled = mediaToggle.checked;
@@ -297,13 +308,15 @@ async function loadChapterAudio(index) {
     });
 
     // Autoplay
-    audio.play().then(() => {
-      if (!audio) return;
-      isPlaying = true;
-      newPlayBtn.innerHTML = PAUSE_ICON;
-    }).catch(e => {
-      console.warn('Autoplay blocked by browser:', e.message);
-    });
+    if (autoplayEnabled) {
+      audio.play().then(() => {
+        if (!audio) return;
+        isPlaying = true;
+        newPlayBtn.innerHTML = PAUSE_ICON;
+      }).catch(e => {
+        console.warn('Autoplay blocked by browser:', e.message);
+      });
+    }
 
     audio.addEventListener('timeupdate', () => {
       if (!audio || !audio.duration) return;
