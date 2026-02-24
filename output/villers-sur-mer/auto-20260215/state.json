@@ -1,0 +1,33 @@
+{
+  "turn": 15,
+  "phase": 9,
+  "current_beat": "STORY COMPLETE",
+  "location": "cliff-overlook",
+  "time": "September (second summer). After.",
+  "events": [
+    "T1: La maison sur la falaise -- Gabriel's morning, the bread, Madeleine",
+    "T2: Le nœud de cabestan -- Baptiste teaches, the letter, the bench",
+    "T3: Les lignes dans l'eau -- Gabriel meets Lucie on the coastal path",
+    "T4: Le banc de pierre -- Lucie visits the overlook, sketches the sea",
+    "T5: Fidélité -- The exchange. Thomas and the father. First glow.",
+    "T6: L'été -- They fall in love at the sandy beach at dusk",
+    "T7: Ce qu'il voyait -- The cave painting. Lucie's art arrives.",
+    "T8: La tempête -- Lucie dies.",
+    "T9: L'abîme -- Grief. Yves visits. The recursive realization.",
+    "T10: La créature -- Gabriel descends. The offer. He agrees.",
+    "T11: Le deuxième été -- Time folds. Gabriel carries everything.",
+    "T12: Les toiles vides -- Gabriel protects, Lucie's art dies.",
+    "T13: La cage -- PLAYER CHOICE: Lucie confronts Gabriel, forces the release.",
+    "T14: Les derniers jours -- Lucie's art blazes back. The last good days.",
+    "T15: L'acceptation -- The dinghy. The storm. The hands in the water. Gabriel survives. The light fades."
+  ],
+  "player_choices": {
+    "used": 1,
+    "budget": 3,
+    "history": ["T13: Player chose Lucie forces the release"]
+  },
+  "status": "COMPLETE",
+  "agent_ids": {
+    "writer": "aa90344"
+  }
+}
