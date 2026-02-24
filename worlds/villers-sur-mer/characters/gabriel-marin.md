@@ -7,11 +7,11 @@
 
 ## Who He Is
 
-Gabriel is a man in his mid-30s living in his father's house by the sea, trying to honor his father's love of the ocean while processing grief that still feels fresh. Less than two years ago, his father died from a disease that eventually prevented him from sailing -- the one thing he loved.
+Gabriel is a man in his mid-30s living in his father's house by the sea, processing grief that still feels fresh. Less than two years ago, his father died from a disease that eventually prevented him from sailing -- the one thing he loved.
 
-Gabriel left his previous life to move into this house, to live in his father's footsteps, to understand the sea. But he hasn't found that understanding yet. He's stuck between honoring the dead and learning to live.
+Gabriel left his previous life to move into this house because it was the closest he could get to the man who raised him. He's not searching for answers -- he's searching for proximity. Living in his father's rooms, walking his father's coast, sitting where his father sat. It's not enough, but it's what he has.
 
-His father's house is full of traces -- objects, tools, habits worn into the furniture, a boat he can no longer sail. Gabriel lives among them, looking for understanding of his father's love of the sea -- what it was about the water that held him so completely, even when illness took his ability to sail.
+His father's house is full of traces -- objects, tools, habits worn into the furniture. Gabriel lives among them, trying to feel his father in the walls and the salt air and the sound of the water.
 
 His emotions are close to the surface, but he doesn't express them easily. He's practical and quiet. He knows a few people in the village but isn't close to anyone. He feels like an outsider.
 
@@ -24,7 +24,7 @@ His emotions are close to the surface, but he doesn't express them easily. He's 
 - Respectful of the sea but not yet intimate with it
 - Lonely but not hostile to connection
 - Practical and quiet
-- Seeking meaning in inherited spaces
+- Holding on to inherited spaces as a form of closeness
 
 ---
 
@@ -46,23 +46,23 @@ Weathered for his age, with dark hair and tired eyes. He dresses practically: wo
 - The layout of the coastline and local tides
 - The names of a few villagers
 - How to maintain a house and a boat (barely)
-- The legends of Bretagne -- some stories his father told him
+- Brittany -- the landscape, the coast, the rhythm of rural life here
 
 ---
 
 ## Goals
 
-- To understand his father's love of the sea
+- To feel close to his father by living in his world
 - To find peace with his father's death
 - To discover if there's meaning in living here, or if it's just running away
-- To connect with something larger than his grief
+- To build a life, not just inhabit a dead man's
 - To find companionship (though he doesn't consciously admit this)
 
 ---
 
 ## Fears
 
-- That he'll never understand what his father loved about the sea
+- That the closeness he came here for won't come -- that the house is just a house
 - That his father's memory will fade
 - That he's wasting his life in isolation
 - The sea itself -- its indifference to human life

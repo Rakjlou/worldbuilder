@@ -1,8 +1,8 @@
-# Gabriel's House (The Sailor's Shrine)
+# Gabriel's House
 
-A stone cottage perched on the northern cliff, accessed by a winding path through wild grass and weather-beaten rocks. The house is weathered but solid, with weathered shutters and a small chimney.
+A stone cottage perched on the northern cliff, accessed by a winding path through wild grass and weather-beaten rocks. The house is weathered but solid, with salt-faded shutters and a small chimney.
 
-Inside, every room is haunted by the ghost of Gabriel's father -- sailing maps on the walls, ship's compasses, photographs of a younger man on various vessels. The living room is the heart of this shrine: large windows face the sea, a fireplace holds maritime memories, shelves groan with books about ships and sailing.
+Inside, the rooms still hold Gabriel's father's belongings -- sailing maps on the walls, ship's compasses, photographs of a younger man on various vessels. The living room faces the sea through large windows. A fireplace, bookshelves full of maritime books, comfortable but worn furniture.
 
 ---
 
@@ -38,7 +38,7 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 
 The father lived alone for years after his wife's death. The house reflects a man who simplified his life down to essentials: the sea, his routines, his memories. The fridge had expired food when Gabriel arrived. His clothes still smell like salt.
 
-The study door sticks — the father stopped using it in his final months, preferring to sit in the living room watching the water.
+The study door sticks in humid weather.
 
 ---
 
@@ -54,7 +54,7 @@ The study door sticks — the father stopped using it in his final months, prefe
 The heart of the house. Large windows facing the sea. Fireplace, bookshelves, sailing charts, ship's compass on mantle, comfortable but worn furniture. Gabriel spends most of his time here.
 
 ### Father's Bedroom
-Untouched since his death. Bed perfectly made. Wardrobe of his clothes. Personal effects.
+His father's clothes are still in the wardrobe. The bed is made. Gabriel hasn't changed much in here.
 
 ### Kitchen
 Functional, sparse. Gabriel cooks simply.
@@ -63,4 +63,4 @@ Functional, sparse. Gabriel cooks simply.
 Small, impersonal. He barely sleeps.
 
 ### Study
-His father's room. Maritime books, maps on every surface. Gabriel rarely enters.
+His father's room. Maritime books, maps on every surface. Gabriel sits here sometimes when he wants to be surrounded by his father's things.

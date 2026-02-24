@@ -48,7 +48,7 @@ Compact and wiry, with the knotted forearms and scarred hands of a man who has h
 - The economics of small-scale fishing: who buys, who cheats, what regulations actually mean for a working fisherman
 - Old Breton weather sayings that are right about 70% of the time, which he considers a better average than the météo
 - Village history going back to his grandfather's generation -- who owned what boat, who drowned where, which families have been here and which are newcomers (anyone arriving after 1960)
-- Some of the old stories about the coast -- things his grandmother told him that he categorizes as "not nonsense" without committing further
+- The names and fates of fishermen going back three generations -- who drowned where, whose boat was lost in which storm
 
 ---
 
@@ -107,5 +107,5 @@ Baptiste responds when:
 - **Arthritis severity:** Getting worse; currently manageable but affects his grip on cold mornings
 - **Attitude toward Gabriel:** Neutral, mildly curious -- hasn't engaged yet
 - **Harbor authority conflict:** Ongoing, simmering
-- **Willingness to teach:** Latent -- he hasn't had anyone to teach since Erwann, and the impulse is buried but not dead
+- **Willingness to teach:** Low -- he prefers people figure things out, and has no patience for hand-holding
 - **Emotional guard:** High; keeps people at a comfortable distance through bluntness and routine

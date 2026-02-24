@@ -14,13 +14,12 @@ Calm, watchful, communal but not intrusive, modest, practical
 
 ## Connected Locations
 
-- Madeleine's Epicerie
-- Cafe de la Mer
-- Church Rectory
-- Viviane & Lucie Studio
-- Sandy Beach South
-- Village Harbor
-- Gabriel's House
+- Coastal Path -- Leads north toward Gabriel's house and the cliff overlook
+- Village Harbor -- Stone steps descend south to the quay
+- Sandy Beach South -- Further south along the coast
+- Viviane & Lucie Studio -- Southern edge of the village
+- Village School -- Adjacent, across a narrow lane
+- Inland Edge -- The D-road heads inland from the back of the village
 
 ---
 
@@ -36,9 +35,7 @@ Calm, watchful, communal but not intrusive, modest, practical
 
 ## Secrets
 
-The oldest villagers whisper old tales about something in the deep water -- stories passed down from grandparents, half-remembered and half-believed. The details vary with each telling. Most younger residents have never heard them, or dismiss them as fishermen's superstition.
-
-There's a small undercurrent of grief here -- most families have lost someone to the sea.
+Most families in the village have lost someone to the sea over the generations. It's not discussed often, but it shows in small ways -- the widows who still live alone, the family names on the war memorial that also appear in the harbor's drowning records, the way older residents glance at the water when the weather shifts.
 
 ---
 

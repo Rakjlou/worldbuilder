@@ -27,7 +27,7 @@
 - `characters/sophie-guerin.md` -- Schoolteacher. 28. Voice of normal life and hope.
 
 ### Locations
-- `locations/gabriels-house.md` -- Isolated cliff cottage full of his father's maritime artifacts.
+- `locations/gabriels-house.md` -- Isolated cliff cottage on the northern headland. Gabriel's father's belongings still fill the rooms.
 - `locations/cliff-overlook.md` -- Windswept promontory on the northern cliff. Gabriel's thinking spot.
 - `locations/sandy-beach-south.md` -- Accessible beach south of village. Beautiful, romantic.
 - `locations/the-open-water.md` -- The Atlantic itself. Vast, indifferent, where fishermen work and people have drowned.

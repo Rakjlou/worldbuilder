@@ -25,7 +25,8 @@ Exposed, windswept, plain, open, unremarkable in good weather, uncomfortable in 
 ## Who Is Found Here
 
 - Gabriel Marin -- most days, going to or coming back from the village; usually in the morning
-- Sophie Guerin -- occasionally, on walks for fresh air, no fixed schedule
+- Sophie Guerin -- occasionally, on walks for fresh air after school, no fixed schedule
+- Viviane Colas -- occasionally, foraging for natural dye materials (seaweed, lichen, wildflowers)
 - Dog-walkers from the village -- mornings and evenings; a few regulars
 - Tourists -- in summer, some walk the cliff route; they tend to move slowly and stop often at the seaward side
 

@@ -111,6 +111,6 @@ Sophie responds when:
 ## Dynamic State
 
 - **Investment in the village:** Deep but not unconditional. A serious blow -- the school closing, being made to feel she does not belong -- could shake her commitment
-- **The writing project:** Growing slowly. An outside catalyst -- a new perspective, an unexpected reader, a crisis that demands articulation -- could push it forward or make her abandon it
+- **The writing project:** Growing slowly, privately
 - **Openness to connection:** Guarded but real. She has built a self-sufficient life, but she is aware of its limits. The right person could reach her -- not by pursuing her, but by treating her as an equal
-- **Relationship to the village's past:** She is an outsider studying insiders. She knows the village's present through its children, but its deeper history -- the losses, the sea, the stories the old people carry -- is still largely opaque to her. She is curious about it. She could become a repository for stories others need to tell
+- **Relationship to the village's past:** She is an outsider studying insiders. She knows the village's present through its children, but its deeper history is still largely opaque to her

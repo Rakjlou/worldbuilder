@@ -35,9 +35,9 @@ Vast, humbling, beautiful, indifferent, alive
 
 ## Secrets
 
-The sea floor drops away steeply off the northern cliffs. Fishermen avoid the deep water there -- not from superstition, but because the currents are strange and the depth is unsettling. Nets cast there come back empty or tangled in ways that don't make sense.
+The sea floor drops away steeply off the northern cliffs. The depth change produces strong lateral currents that fishermen avoid -- not worth the risk for the catch. Further out, the Atlantic shelf drops sharply, and the water temperature changes enough that fog can form over the cold patch on warm days.
 
-Old fishermen say the sea has moods that don't match the weather. Sometimes the water goes glassy and still on a windy day. Sometimes a swell comes from nowhere on a calm one.
+Weather changes fast off this coast. A high-pressure system can stall and give a week of calm, or a low can come through in hours and turn the sea from flat to four-meter swells. Fishermen read the sky and the barometric pressure, not the forecast.
 
 ---
 

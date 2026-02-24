@@ -37,7 +37,7 @@ Creatively charged, restless, warm, cluttered with half-finished work
 
 ## Secrets
 
-Lucie's canvases tell the story of someone searching. The subjects shift -- landscapes, still lifes, portraits, abstractions -- never settling. Some paintings are technically accomplished but feel hollow. A few sketches, hidden in the back, are of her brother. She doesn't show those to anyone.
+Lucie's canvases show range but not direction. The subjects shift -- landscapes, still lifes, portraits, abstractions -- never settling. Some are technically accomplished. None of them look like they came from the same artist.
 
 ---
 

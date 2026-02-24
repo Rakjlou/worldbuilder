@@ -4,7 +4,7 @@ A windswept promontory on the northern cliff, five minutes' walk from Gabriel's 
 
 A weathered stone bench sits near the edge, placed decades ago by someone who wanted to watch the sea. The grass around it is worn flat. On clear days, the horizon is a clean line between grey-blue water and sky. On stormy days, the wind is strong enough to stagger a person.
 
-This is where Gabriel comes when the house feels too close. It's where his father came before him.
+This is where Gabriel comes when the house feels too close.
 
 ---
 
@@ -30,13 +30,13 @@ Exposed, contemplative, vast, vertiginous, humbling
 ## Items Present
 
 - Weathered stone bench -- Old, lichen-covered, facing the sea
-- Iron ring bolt -- Hammered into the rock near the edge, purpose unclear (perhaps for securing a rope descent)
+- Iron ring bolt -- Old mooring or tethering point hammered into the rock, corroded
 
 ---
 
 ## Secrets
 
-The stone bench shows decades of wear -- someone sat here often, for years. Scratches on the armrest suggest a habit of tracing patterns while watching the sea. This was Gabriel's father's place. Gabriel has found himself drawn to it too, sitting where his father sat, watching what his father watched.
+The stone bench shows decades of wear -- several people have used it over the years, villagers who wanted to sit and watch the water. Gabriel's father came here sometimes. So do others. The grass is worn flat from foot traffic more than from any single person's vigil.
 
 ---
 

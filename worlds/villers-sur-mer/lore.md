@@ -7,7 +7,6 @@
 The landscape is quintessentially Breton: moody, beautiful, dangerous. The coast features:
 - Dark granite cliffs rising 30-50 feet above the water
 - Tidal pools and sandy coves accessible during low tide
-- Tidal pools and sea-worn rock formations
 - A rocky harbor with weathered fishing boats
 - Wild grass and sparse vegetation clinging to coastal stone
 
@@ -41,15 +40,11 @@ This is a **summer tale**. The story unfolds across months when the days are lon
 
 **Grief is real.** Gabriel carries grief he hasn't processed. The world permits healing -- through connection, witnessing, love -- but not without cost.
 
-**Fate and choice coexist uneasily.** Gabriel will have agency in how he lives. But some losses cannot be prevented, no matter how cleverly he chooses.
-
 ## Current Situation
 
-Gabriel is living in his late father's house, trying to honor his father's love of the sea. He does not yet understand the sea. He explores the house, walks the cliffs, tries to make sense of what his father left behind -- objects, memories, a life oriented entirely toward the water.
+Gabriel is living in his late father's house on the northern cliff. He came here to be close to his father. He walks the coast, sits in the rooms, lives among his father's belongings.
 
 Lucie is painting constantly, searching for something in her work she hasn't found yet. She lost her brother ten years ago and has made her peace with it. She paints in part to honor him — to preserve moments, to freeze time. But her art hasn't come alive yet, and she knows it.
-
-Gabriel carries grief he hasn't processed. Lucie has processed hers but hasn't found her art. Both are searching for something they cannot name.
 
 ## Atmosphere & Tone
 

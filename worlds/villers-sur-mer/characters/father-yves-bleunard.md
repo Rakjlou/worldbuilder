@@ -15,8 +15,6 @@ His body is failing in small ways that irritate him enormously. His knees ache i
 
 He reads constantly -- theology, history, novels, the occasional detective story he would never admit to. His garden behind the rectory is his other passion: roses, herbs, a fig tree he has been coaxing along for fifteen years against all meteorological reason. He has strong opinions about soil, about pruning, and about the superiority of Breton cider over Norman cider, and he will share these opinions whether or not they are solicited.
 
-His grandmother told him stories as a child -- about the coast, about strangeness in the water. He does not know what to do with those memories. They sit in him uneasily alongside his theology, neither believed nor dismissed.
-
 ---
 
 ## Personality
@@ -51,7 +49,7 @@ Thin and stooped with age, white hair, sharp eyes behind reading glasses he cons
 - A well-read man: literature, philosophy, some natural science
 - His garden -- soil conditions, pruning techniques, the habits of coastal plants
 - The practical workings of a parish: finances, maintenance, the politics of a small congregation
-- Fragments of his grandmother's old stories about the coast, which he has never reconciled with his faith
+- The parish records going back generations -- births, deaths, the names of fishermen lost at sea
 
 ---
 
