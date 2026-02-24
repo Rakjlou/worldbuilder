@@ -29,8 +29,11 @@
 ### Locations
 - `locations/gabriels-house.md` -- Isolated cliff cottage full of his father's maritime artifacts.
 - `locations/cliff-overlook.md` -- Windswept promontory on the northern cliff. Gabriel's thinking spot.
-- `locations/rocky-cove-north.md` -- Treacherous cove with cave leading to deep water. High danger.
 - `locations/sandy-beach-south.md` -- Accessible beach south of village. Beautiful, romantic.
 - `locations/the-open-water.md` -- The Atlantic itself. Vast, indifferent, where fishermen work and people have drowned.
 - `locations/villers-center.md` -- Village square with epicerie, cafe, church.
 - `locations/viviane-lucie-studio.md` -- Converted barn studio shared by Viviane and Lucie.
+- `locations/village-harbor.md` -- Working fishing harbor south of village center. Granite quay, moored boats.
+- `locations/coastal-path.md` -- Clifftop path connecting Gabriel's house to the village. 15-minute walk.
+- `locations/village-school.md` -- Single-classroom école on the village square. Sophie's domain.
+- `locations/inland-edge.md` -- Where the village meets the countryside. D-road, fields, bocage.

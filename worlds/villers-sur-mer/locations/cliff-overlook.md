@@ -17,7 +17,7 @@ Exposed, contemplative, vast, vertiginous, humbling
 ## Connected Locations
 
 - Gabriel's House -- 5 minute walk east along the cliff path
-- Rocky Cove North -- Visible below; the treacherous cliff path descends from near here
+- Coastal Path -- Continues south toward the village
 
 ---
 

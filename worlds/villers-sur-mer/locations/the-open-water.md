@@ -1,6 +1,6 @@
 # The Open Water (The Atlantic)
 
-Past the cove, past the harbor, past the sheltered inlets -- the Atlantic. Vast, grey-green, indifferent. The water stretches to the horizon in every direction, and the village shrinks to a thin line of stone against the cliffs.
+Past the harbor, past the sheltered inlets -- the Atlantic. Vast, grey-green, indifferent. The water stretches to the horizon in every direction, and the village shrinks to a thin line of stone against the cliffs.
 
 From a small boat, the sea feels infinite. The swells are long and slow on calm days, lifting and dropping the hull in a rhythm that becomes hypnotic. On rough days, the waves are steep and the coast disappears behind walls of water. The depth beneath the keel goes from meters to dozens of meters to unknowable. The water changes color as it deepens -- green near shore, then dark blue, then black.
 
@@ -16,8 +16,7 @@ Vast, humbling, beautiful, indifferent, alive
 
 ## Connected Locations
 
-- Rocky Cove North -- Departure point via Gabriel's dinghy
-- Village Harbor -- Departure point for larger boats
+- Village Harbor -- Departure point for all boats, including Gabriel's dinghy
 - Sandy Beach South -- Visible from the water
 
 ---

@@ -21,9 +21,7 @@ Beautiful, accessible, romantic, contemplative
 
 ## Secrets
 
-A hidden cave at the tide line, accessible only at very low tide.
-
-Old fishermen know which areas have dangerous currents.
+Old fishermen know which areas have dangerous currents. The southern end has a rip that catches swimmers who venture past the rocks.
 
 ---
 

@@ -7,7 +7,7 @@
 The landscape is quintessentially Breton: moody, beautiful, dangerous. The coast features:
 - Dark granite cliffs rising 30-50 feet above the water
 - Tidal pools and sandy coves accessible during low tide
-- Natural caves worn into the cliff face
+- Tidal pools and sea-worn rock formations
 - A rocky harbor with weathered fishing boats
 - Wild grass and sparse vegetation clinging to coastal stone
 

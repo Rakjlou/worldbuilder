@@ -15,7 +15,6 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 ## Connected Locations
 
 - Villers Center -- 15 minute walk down the coastal path
-- Rocky Cove North -- Visible from the windows, accessible via cliff path
 - Cliff Overlook -- 5 minute walk along the cliff edge
 
 ---
@@ -31,7 +30,7 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 - Father's belongings -- Nautical charts, navigation tools, personal effects
 - Ship's compass -- On the living room mantle
 - Family photographs -- Old photos on the walls
-- Dinghy -- Small boat kept at the rocky cove below
+- Dinghy -- Small boat kept at the village harbor
 
 ---
 
