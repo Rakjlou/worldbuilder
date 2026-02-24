@@ -62,7 +62,7 @@ Spawned as Sonnet subagents via Claude Code's Task tool. They receive their prof
 
 ## Writer Agent
 
-A Sonnet subagent spawned fresh each turn by the Story Director. It receives a style guide, the last paragraphs of the story (for continuity), and a structured scene brief. It returns polished prose. Fresh context each turn ensures consistent literary quality regardless of story length.
+An Opus subagent spawned on Turn 1 and resumed across turns via the Task tool's `resume` feature. It receives a style guide and output file path on first spawn, then a scene brief each turn. It carries the full narrative in its context, ensuring consistency of voice, names, details, and callbacks without needing to re-read the story file.
 
 ## Story Output
 

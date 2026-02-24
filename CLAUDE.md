@@ -20,13 +20,15 @@ When a session starts, greet the user and ask what they want to do:
 - If the user says "resume" --> Follow the Resume procedure below.
 - If the user names a specific world or seed without a mode --> Ask which mode they want.
 
+**"Load X" means:** Read the prompt file into your context and adopt that role for the remainder of this session. You do not spawn a subagent -- you become the Worldbuilder, Seeder, or Story Director. The one exception is Auto-Seed, which explicitly spawns an Opus subagent.
+
 ## Auto-Seed (seedless play)
 
 When the user wants to play without naming a seed:
 
 1. Spawn an **Opus subagent** with the seeder prompt (`system/prompts/seeder.md`) and tell it explicitly to use **autonomous mode (surprise)** -- no author consultation
 2. The agent reads the world files, spawns its own critic subagents, and generates a seed that has been challenged and refined -- all without dialogue
-3. Save the seed to `worlds/{world}/seeds/auto-{timestamp}.md`
+3. Save the seed to `worlds/{world}/seeds/{YYYYMMDD}-{seed-title}.md` (kebab-case title, e.g. `20260215-la-lumiere-sous-leau.md`)
 4. Proceed to play mode with this seed
 5. The player does not see the seed content -- they discover the story as it unfolds
 
@@ -56,4 +58,5 @@ List directories under `worlds/` to show available worlds. For each world, check
 - **Never use Haiku for character agents** -- it cannot roleplay in this environment. Always use Sonnet.
 - All world content is in markdown files, human-editable.
 - The author's intentions (in `intentions.md`) are paramount. The system preserves them above all else.
+- **Language:** The seed declares the narration language. The user can override at play time. The Director propagates the resolved language to all spawned agents (character and Writer). World files are written in whatever language the author prefers (typically English), independent of narration language.
 - Read `system/guide.md` if you need to understand the full system design.

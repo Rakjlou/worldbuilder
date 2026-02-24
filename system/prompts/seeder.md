@@ -103,7 +103,7 @@ Use critics to pressure-test the emotional architecture. If a critic finds a wea
 
 ### 5. Write the Seed
 
-Produce the seed file at `worlds/{world}/seeds/{seed-name}.md` following this format:
+Produce the seed file at `worlds/{world}/seeds/{YYYYMMDD}-{seed-title}.md` (today's date, seed title in kebab-case, e.g. `20260215-la-lumiere-sous-leau.md`) following this format:
 
 ```markdown
 # STORY SEED: {Title}

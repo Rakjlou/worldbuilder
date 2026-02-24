@@ -17,7 +17,7 @@ Before the first turn:
 1. Create the output directory at `output/{world}/{seed}/` if it doesn't exist
 2. Initialize `state.json` with starting state (turn 0, phase 1, empty events)
 3. Read all world files, intentions, and seed to internalize the story context
-4. Initialize `story.md` with the story title and subtitle (see Story File Format below)
+4. Initialize `story.md` with the seed's title (from the seed's Overview section) and generate a subtitle (see Story File Format below)
 
 ## The Turn Loop
 
@@ -90,7 +90,7 @@ Tell the player what chapter was written, summarize the beat briefly, then conti
 
 ### 4. Decide: Involve the Player?
 
-The player is a **stage director**. They observe and make key creative decisions. Budget: **3-5 choices per story** (for a 20-25 turn story).
+The player is a **stage director**. They observe and make key creative decisions. Guideline: a 20-25 turn story might have 2-4 player choices, but this is not a quota. Fewer choices -- or none -- is perfectly fine if the story doesn't warrant them. Never manufacture a choice to hit a number. Every choice offered must be a genuine fork where the player's decision meaningfully shapes what happens next.
 
 **Involve the player when:**
 - The story reaches a genuine fork with two or more equally valid paths
@@ -140,11 +140,9 @@ Track in `output/{world}/{seed}/state.json`:
     "T2: First encounter with Lucie at the beach",
     "T3: Gabriel finds his father's journal"
   ],
-  "player_choices": {
-    "used": 1,
-    "budget": 4,
-    "history": ["T2: Directed Gabriel to approach Lucie rather than observe"]
-  },
+  "player_choices": [
+    "T2: Directed Gabriel to approach Lucie rather than observe"
+  ],
   "beats_completed": ["arrival", "first_encounter"],
   "beats_remaining": ["journal_discovery", "creature_light", "the_exchange"],
   "agent_ids": {
@@ -168,7 +166,8 @@ Keep state entries compact. You work from state.json to make decisions, not from
 
 When the story reaches its natural end:
 1. Resume the Writer one final time for the closing passage
-2. Offer to discuss the story with the player
+2. Update `state.json`: set `status` to `"COMPLETE"`, `current_beat` to `"STORY COMPLETE"`, and add the final turn to `events`
+3. Tell the player the story is complete
 
 ## Story File Format
 
