@@ -35,6 +35,7 @@ function saveUsage(usage) {
 
 // --- CLI args ---
 let noMedia = process.argv.includes('--no-media');
+let watchEnabled = true;
 let currentVoice = config.tts.defaultVoice;
 let currentImageModel = config.gemini.defaultImageModel;
 const storyPath = process.argv.filter(a => a !== '--no-media').slice(2)[0];
@@ -357,12 +358,18 @@ function broadcast(data) {
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API: get story structure
+// API: get story structure (always re-read from disk to avoid stale state)
 app.get('/api/story', (req, res) => {
+  try {
+    currentStory = parseStory(fs.readFileSync(resolvedStoryPath, 'utf-8'));
+  } catch (err) {
+    console.error('Error reading story file:', err.message);
+  }
   res.json({
     storyTitle: currentStory.storyTitle,
     storySubtitle: currentStory.storySubtitle,
     mediaEnabled: !noMedia,
+    watchEnabled,
     voices: config.tts.voices.map(v => ({ id: v, label: voiceLabel(v) })),
     currentVoice,
     imageModels: config.gemini.imageModels.map(m => ({ id: m, label: imageModelLabel(m) })),
@@ -379,6 +386,13 @@ app.get('/api/story', (req, res) => {
 app.post('/api/media-enabled', express.json(), (req, res) => {
   noMedia = !req.body.enabled;
   res.json({ mediaEnabled: !noMedia });
+});
+
+// API: toggle file watching
+app.post('/api/watch-enabled', express.json(), (req, res) => {
+  watchEnabled = !!req.body.enabled;
+  console.log(`File watching: ${watchEnabled ? 'ON' : 'OFF'}`);
+  res.json({ watchEnabled });
 });
 
 // API: change image model
@@ -540,39 +554,37 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
   }
 });
 
-// --- File watcher ---
-let watchDebounce = null;
-fs.watch(resolvedStoryPath, (eventType) => {
-  if (eventType !== 'change') return;
-  clearTimeout(watchDebounce);
-  watchDebounce = setTimeout(() => {
-    try {
-      const content = fs.readFileSync(resolvedStoryPath, 'utf-8');
-      const newStory = parseStory(content);
-      const oldCount = currentStory.chapters.length;
-      const newCount = newStory.chapters.length;
+// --- File polling (stat check every 2s, read only on change) ---
+let lastMtimeMs = fs.statSync(resolvedStoryPath).mtimeMs;
+setInterval(() => {
+  if (!watchEnabled) return;
+  try {
+    const { mtimeMs } = fs.statSync(resolvedStoryPath);
+    if (mtimeMs === lastMtimeMs) return;
+    lastMtimeMs = mtimeMs;
 
-      if (newCount !== oldCount) {
-        console.log(`Story updated: ${oldCount} -> ${newCount} chapters`);
-        currentStory = newStory;
-        broadcast({
-          type: 'story-updated',
-          chapterCount: newCount,
-          chapters: newStory.chapters.map(c => ({
-            index: c.index,
-            title: c.title,
-            htmlContent: c.htmlContent,
-          })),
-        });
-      } else {
-        // Content might have changed even if count is the same
-        currentStory = newStory;
-      }
-    } catch (err) {
-      console.error('Error re-reading story:', err.message);
+    const content = fs.readFileSync(resolvedStoryPath, 'utf-8');
+    const newStory = parseStory(content);
+    const oldCount = currentStory.chapters.length;
+    const newCount = newStory.chapters.length;
+
+    if (newCount !== oldCount) {
+      console.log(`Story updated: ${oldCount} -> ${newCount} chapters`);
     }
-  }, 500);
-});
+    currentStory = newStory;
+    broadcast({
+      type: 'story-updated',
+      chapterCount: newCount,
+      chapters: newStory.chapters.map(c => ({
+        index: c.index,
+        title: c.title,
+        htmlContent: c.htmlContent,
+      })),
+    });
+  } catch (err) {
+    console.error('Error polling story file:', err.message);
+  }
+}, 2000);
 
 // --- Start ---
 const PORT = process.env.PORT || 3000;

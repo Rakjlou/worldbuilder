@@ -24,7 +24,12 @@
     <ul class="chapter-list" id="chapter-list"></ul>
   </div>
   <div class="menu-section" id="media-section">
-    <h3 class="menu-heading">Médias</h3>
+    <h3 class="menu-heading">Paramètres</h3>
+    <label class="media-toggle">
+      <input type="checkbox" id="watch-toggle" checked>
+      <span class="toggle-slider"></span>
+      <span class="toggle-label">Suivi en direct</span>
+    </label>
     <label class="media-toggle">
       <input type="checkbox" id="media-toggle" checked>
       <span class="toggle-slider"></span>
@@ -55,6 +60,7 @@ let isPlaying = false;
 let audioLoaded = false;
 let mediaEnabled = true;
 let autoplayEnabled = true;
+let watchEnabled = true;
 let currentVoice = '';
 let allVoices = [];
 let currentImageModel = '';
@@ -68,6 +74,7 @@ const menuOverlay = document.getElementById('menu-overlay');
 const menuBtn = document.getElementById('menu-btn');
 const menuPanel = document.getElementById('menu-panel');
 const mediaToggle = document.getElementById('media-toggle');
+const watchToggle = document.getElementById('watch-toggle');
 
 // --- Menu ---
 function toggleMenu() {
@@ -99,6 +106,15 @@ function updateMediaToggle() {
 const autoplayToggle = document.getElementById('autoplay-toggle');
 autoplayToggle.addEventListener('change', () => {
   autoplayEnabled = autoplayToggle.checked;
+});
+
+watchToggle.addEventListener('change', async () => {
+  watchEnabled = watchToggle.checked;
+  await fetch('/api/watch-enabled', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ enabled: watchEnabled }),
+  });
 });
 
 mediaToggle.addEventListener('change', async () => {
@@ -176,6 +192,8 @@ async function loadStory() {
   const res = await fetch('/api/story');
   story = await res.json();
   mediaEnabled = story.mediaEnabled !== false;
+  watchEnabled = story.watchEnabled !== false;
+  watchToggle.checked = watchEnabled;
   currentVoice = story.currentVoice;
   allVoices = story.voices || [];
   currentImageModel = story.currentImageModel || '';
