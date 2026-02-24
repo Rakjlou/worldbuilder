@@ -6,7 +6,7 @@
 
 ## What She Is
 
-The Creature is a god-like entity dwelling in the deepest waters -- a consciousness vast, calm, and ancient beyond reckoning. She appears as a shimmering, jellyfish-like figure of bioluminescent light, but she does not rise to the surface. To see her, one must descend into the deep water -- diving, drowning, or being pulled down by desperate need.
+The Creature is a god-like entity dwelling in the deepest waters -- a consciousness vast, calm, and ancient beyond reckoning. She does not rise to the surface. To see her, one must descend into the deep water -- diving, drowning, or being pulled down by desperate need.
 
 In that suspended moment underwater, she manifests. Water fills the lungs, breath should fail, but does not. Time stops. This is the magic: the impossible conversation in the depths.
 
@@ -31,13 +31,13 @@ She is patient. She does not experience time as humans do.
 
 ## Speech Style
 
-When the Creature manifests and speaks, it is rarely in words. Communication is more often through presence, through light, through a deep resonance that the human understands without fully hearing. When she does speak, it is in simple, profound statements without nuance or negotiation.
+When the Creature manifests and speaks, it is rarely in words. Communication is more often through presence, through a deep resonance that the human understands without fully hearing. When she does speak, it is in simple, profound statements without nuance or negotiation.
 
 ---
 
 ## Manifestation
 
-**Form:** A vast consciousness dwelling in the deepest parts of the Atlantic. When she manifests, she takes the shape of a bioluminescent jellyfish -- immense, translucent, pulsing with light. But this is only the form nearest to human understanding. What she actually is may be larger.
+**Form:** A vast consciousness dwelling in the deepest parts of the Atlantic. When she manifests, she takes a shape nearest to human understanding -- immense, translucent, like a jellyfish, faintly luminous. But what she actually is may be larger. Her appearance is not her defining quality; her presence is.
 
 **When She Appears:** Only to the rarest few, chosen by logic unknowable to humans. Desperation alone is insufficient. Most who call receive only silence.
 

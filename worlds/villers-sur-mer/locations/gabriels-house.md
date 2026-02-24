@@ -27,7 +27,7 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 
 ## Items Present
 
-- Father's belongings -- Nautical charts, navigation tools, personal effects
+- Father's belongings -- Nautical charts, navigation tools, a barometer he checked every morning, oilskins hanging by the door, rope coiled the way he liked it. No journals, no letters -- he was not a writing man. His presence is in the wear patterns, not in words.
 - Ship's compass -- On the living room mantle
 - Family photographs -- Old photos on the walls
 - Dinghy -- Small boat kept at the village harbor
@@ -36,7 +36,7 @@ Melancholic, frozen in time, introspective, lonely, full of longing
 
 ## Secrets
 
-The father lived alone for years after his wife's death. The house reflects a man who simplified his life down to essentials: the sea, his routines, his memories. The fridge had expired food when Gabriel arrived. His clothes still smell like salt.
+The father lived alone for years after his wife's death. He was a practical man -- a sailor, not a philosopher. He loved the sea the way some people love their work: it was what he did, where he was himself, where the world made sense. When disease took his ability to sail, he watched the water from the living room because it was all he had left. The house reflects a man who simplified his life down to essentials. The fridge had expired food when Gabriel arrived. His clothes still smell like salt.
 
 The study door sticks in humid weather.
 
@@ -63,4 +63,4 @@ Functional, sparse. Gabriel cooks simply.
 Small, impersonal. He barely sleeps.
 
 ### Study
-His father's room. Maritime books, maps on every surface. Gabriel sits here sometimes when he wants to be surrounded by his father's things.
+His father's room. Maritime books, charts, maps on every surface. Navigation references, tide tables, a shelf of Admiralty pilots. The reading of a working sailor, not a mystic.
