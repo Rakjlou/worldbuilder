@@ -18,6 +18,7 @@ Before the first turn:
 2. Initialize `state.json` with starting state (turn 0, phase 1, empty events)
 3. Read all world files, intentions, and seed to internalize the story context
 4. Initialize `story.md` with the seed's title (from the seed's Overview section) and generate a subtitle (see Story File Format below)
+5. Write the session path to `.current-session` in the project root (e.g., `output/villers-sur-mer/20260215-la-lumiere-sous-leau`). This file is used by infrastructure hooks -- the Director does not read it back.
 
 ## The Turn Loop
 

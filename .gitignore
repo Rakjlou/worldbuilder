@@ -17,5 +17,14 @@ server/cache/
 server/tts-usage.json
 server/node_modules/
 
+# Claude Code local settings (machine-specific permissions)
+.claude/settings.local.json
+
+# Runtime session pointer
+.current-session
+
+# Agent ID registry (runtime)
+.agent-registry.json
+
 # Output (optional -- uncomment to ignore generated stories)
 # output/

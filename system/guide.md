@@ -38,6 +38,9 @@ The seed can adapt to player choices. The intentions cannot be violated. If a pl
 ```
 worldbuilder/
 ├── CLAUDE.md                    # Entry point
+├── .current-session             # Runtime: path to active output dir
+├── scripts/
+│   └── log-character-agent.py   # PostToolUse hook for agent logging
 ├── system/
 │   ├── guide.md                 # This file
 │   └── prompts/                 # System prompts for each mode and agent
@@ -50,6 +53,11 @@ worldbuilder/
 │       ├── locations/           # Location descriptions
 │       └── seeds/               # Story plans
 └── output/                      # Generated stories
+    └── {world}/{seed}/
+        ├── state.json           # Turn state and agent IDs
+        ├── story.md             # The narrative
+        └── agents/              # Character agent logs (auto-generated)
+            └── {character}.md
 ```
 
 ## Character Profiles
@@ -67,3 +75,9 @@ An Opus subagent spawned on Turn 1 and resumed across turns via the Task tool's 
 ## Story Output
 
 A finished story is a readable markdown document containing all narrative chapters, a summary of player choices, and story notes. It lives in `output/{world}/{seed}/story.md`.
+
+## Character Agent Logs
+
+Every character agent response is automatically logged to `output/{world}/{seed}/agents/{character-name}.md` via a PostToolUse hook. This happens at the infrastructure level -- no Director or Writer context is consumed.
+
+Each character gets a single accumulating file with turn-numbered sections. These preserve raw, unedited character responses including internal monologue, before the Director filters and the Writer transforms them into prose.
