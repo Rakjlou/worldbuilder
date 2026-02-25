@@ -706,6 +706,66 @@ body {
   }
 }
 
+/* --- Monologue mode (Coulisses) --- */
+
+.character-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.monologue-section {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.monologue-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.monologue-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #8a8578;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.monologue-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #b8b4aa;
+  border-left: 2px solid rgba(138, 133, 120, 0.3);
+  padding-left: 20px;
+}
+
+.monologue-text p {
+  margin-bottom: 1.2em;
+}
+
+.monologue-text em {
+  color: #c8c3b8;
+  font-style: italic;
+}
+
+.monologue-text strong {
+  color: #d4cfc4;
+  font-weight: 600;
+}
+
+.monologue-empty {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #5a5549;
+  text-align: center;
+  padding: 60px 20px;
+}
+
 /* --- Responsive adjustments --- */
 
 @media (max-width: 600px) {

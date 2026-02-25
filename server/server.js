@@ -184,6 +184,97 @@ function parseStory(content) {
   return { storyTitle, storySubtitle, chapters };
 }
 
+// --- Agent monologue helpers ---
+
+function getSessionDir() {
+  return path.dirname(resolvedStoryPath);
+}
+
+function buildChapterTurnMap(story) {
+  const sessionDir = getSessionDir();
+  const stateFile = path.join(sessionDir, 'state.json');
+  const map = new Map();
+
+  try {
+    const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
+    if (Array.isArray(state.events)) {
+      for (const event of state.events) {
+        // Pattern: "T3: Les lignes dans l'eau -- description"
+        const match = event.match(/^T(\d+):\s*(.+?)(?:\s*--.*)?$/);
+        if (!match) continue;
+        const turnNum = parseInt(match[1], 10);
+        const eventTitle = match[2].trim();
+
+        // Find matching chapter by title
+        const chapterIdx = story.chapters.findIndex(ch => ch.title === eventTitle);
+        if (chapterIdx >= 0) {
+          map.set(chapterIdx, turnNum);
+        }
+      }
+    }
+  } catch {}
+
+  // Fallback: agent hook logs 0-based turn numbers, so chapter index = turn number
+  for (let i = 0; i < story.chapters.length; i++) {
+    if (!map.has(i)) {
+      map.set(i, i);
+    }
+  }
+
+  return map;
+}
+
+function parseAgentFile(filePath) {
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const lines = content.split('\n');
+
+  // Extract name from first line: "# Gabriel Marin -- Agent Dialogues"
+  let name = path.basename(filePath, '.md');
+  const headerMatch = lines[0]?.match(/^#\s+(.+?)(?:\s*--.*)?$/);
+  if (headerMatch) name = headerMatch[1].trim();
+
+  // Split on ## Turn N — label headers
+  const sections = [];
+  const parts = content.split(/\n(?=## Turn \d+)/);
+  for (const part of parts) {
+    const turnMatch = part.match(/^## Turn (\d+)\s*[—–-]\s*(.+)$/m);
+    if (!turnMatch) continue;
+
+    const turn = parseInt(turnMatch[1], 10);
+    const label = turnMatch[2].trim();
+    const headerEnd = part.indexOf('\n', part.indexOf('## Turn'));
+    let rawContent = headerEnd >= 0 ? part.slice(headerEnd + 1).trim() : '';
+    // Remove trailing --- separator
+    rawContent = rawContent.replace(/\n---\s*$/, '').trim();
+
+    sections.push({
+      turn,
+      label,
+      rawContent,
+      htmlContent: marked(rawContent),
+    });
+  }
+
+  return { name, sections };
+}
+
+function getAvailableCharacters() {
+  const agentsDir = path.join(getSessionDir(), 'agents');
+  try {
+    const files = fs.readdirSync(agentsDir).filter(f => f.endsWith('.md'));
+    return files.map(f => {
+      const slug = f.replace(/\.md$/, '');
+      const filePath = path.join(agentsDir, f);
+      const firstLine = fs.readFileSync(filePath, 'utf-8').split('\n')[0] || '';
+      const match = firstLine.match(/^#\s+(.+?)(?:\s*--.*)?$/);
+      const name = match ? match[1].trim() : slug;
+      return { name, slug };
+    });
+  } catch {
+    return [];
+  }
+}
+
 // --- Current story state ---
 let currentStory = parseStory(fs.readFileSync(resolvedStoryPath, 'utf-8'));
 console.log(`Loaded story: "${currentStory.storyTitle}" (${currentStory.chapters.length} chapters)`);
@@ -413,6 +504,41 @@ app.post('/api/voice', express.json(), (req, res) => {
   }
   currentVoice = voice;
   res.json({ currentVoice });
+});
+
+// API: list available character agents
+app.get('/api/agents', (req, res) => {
+  res.json({ characters: getAvailableCharacters() });
+});
+
+// API: get agent monologues for a chapter
+app.get('/api/chapter/:index/agents/:slug', (req, res) => {
+  const index = parseInt(req.params.index, 10);
+  const slug = req.params.slug;
+  const agentFile = path.join(getSessionDir(), 'agents', `${slug}.md`);
+
+  if (!fs.existsSync(agentFile)) {
+    return res.status(404).json({ error: 'Agent not found' });
+  }
+
+  const turnMap = buildChapterTurnMap(currentStory);
+  const turnNumber = turnMap.get(index);
+
+  if (turnNumber === undefined) {
+    return res.json({ character: slug, slug, turn: null, sections: [] });
+  }
+
+  const parsed = parseAgentFile(agentFile);
+  const sections = parsed.sections
+    .filter(s => s.turn === turnNumber)
+    .map(s => ({ label: s.label, htmlContent: s.htmlContent }));
+
+  res.json({
+    character: parsed.name,
+    slug,
+    turn: turnNumber,
+    sections,
+  });
 });
 
 // API: get chapter image
