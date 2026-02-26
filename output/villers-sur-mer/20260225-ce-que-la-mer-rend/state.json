@@ -1,0 +1,29 @@
+{
+  "turn": 16,
+  "phase": 10,
+  "phase_name": "Ce que la mer rend",
+  "status": "COMPLETE",
+  "current_beat": "STORY COMPLETE",
+  "location": "gabriels-house",
+  "time": "after",
+  "characters_met": ["madeleine", "kit", "baptiste", "lucie", "viviane", "father-yves", "sophie"],
+  "events": [
+    "T1-9: Arrival through masterwork.",
+    "T10: Fullness. Barometer drops.",
+    "T11: The taking.",
+    "T12: Grief. Creature. Offer accepted.",
+    "T13: First return. Prevention. Cost begins.",
+    "T14: Second return. Failed. Baptiste's truth.",
+    "T15: The choice. Gabriel lets Lucie go. The bowline holds.",
+    "T16: What the sea returns. Gabriel reads the barometer. Goes out on the water anyway."
+  ],
+  "player_choices": [
+    "T4: Option B -- cafe rain squall meeting."
+  ],
+  "beats_completed": ["gabriel_alone_cliff_house", "first_village_encounters", "harbor_baptiste_lucie_glimpse", "gabriel_lucie_proper_meeting", "coastal_path_conversations", "studio_visit", "cliff_overlook_exchange", "lucie_paints_sea", "love_deepening", "art_breakthrough", "summer_fullness", "barometer_drops", "the_taking", "grief_collapse", "creature_encounter", "first_return", "cage_recognition", "second_return", "harbor_baptiste_truth", "the_choice", "lucie_goes", "what_the_sea_returns"],
+  "beats_remaining": [],
+  "agent_ids": {
+    "gabriel": "a1231318a28f5389e",
+    "writer": "a45bff989faf01944"
+  }
+}
