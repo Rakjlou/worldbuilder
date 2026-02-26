@@ -26,5 +26,8 @@ server/node_modules/
 # Agent ID registry (runtime)
 .agent-registry.json
 
+# Hook debug log
+.hook-debug.log
+
 # Output (optional -- uncomment to ignore generated stories)
 # output/

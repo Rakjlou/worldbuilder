@@ -59,6 +59,24 @@ def extract_context_label_resume(prompt: str) -> str:
     return "Continued dialogue"
 
 
+def _extract_continue_label(prompt: str) -> str:
+    """Extract context label from a 'Continue in character' prompt.
+
+    Takes the first meaningful sentence after the character instruction line.
+    """
+    # Skip past the first line ("Continue in character as ...") and look for content
+    lines = prompt.split("\n")
+    for line in lines[1:]:
+        stripped = line.strip()
+        if stripped and not stripped.startswith("Same rules"):
+            sentence = re.match(r"(.+?[.!?])", stripped)
+            text = sentence.group(1) if sentence else stripped
+            if len(text) > 80:
+                text = text[:77] + "..."
+            return text
+    return "Continued scene"
+
+
 def load_agent_registry(cwd: str) -> dict:
     """Load the agent ID -> character name registry."""
     path = os.path.join(cwd, ".agent-registry.json")
@@ -107,7 +125,8 @@ def main():
     # Step 2: Must match character agent patterns
     has_narrative_marker = "in an interactive narrative" in prompt
     has_resume_marker = "just responded to you:" in prompt
-    if not has_narrative_marker and not has_resume_marker:
+    has_continue_marker = "Continue in character as " in prompt
+    if not has_narrative_marker and not has_resume_marker and not has_continue_marker:
         return
 
     # Step 3: Exclude Writer first spawn
@@ -124,12 +143,28 @@ def main():
         agent_id = tool_response.get("agentId")
 
     if is_resume and has_resume_marker:
-        # Resume: look up character name from registry
+        # Resume reacting to another character: look up name from registry
         resume_id = tool_input.get("resume", "")
         character_name = registry.get(resume_id)
         if not character_name:
             return
         context_label = extract_context_label_resume(prompt)
+        # Register new agent ID if it changed (agent expired and was re-created)
+        if agent_id and agent_id != resume_id:
+            registry[agent_id] = character_name
+            save_agent_registry(cwd, registry)
+    elif has_continue_marker:
+        # Continued scene: extract name from "Continue in character as {name}."
+        match = re.search(r"Continue in character as (.+?)\.", prompt)
+        if not match:
+            return
+        character_name = match.group(1).strip()
+        # Extract a context label from the prompt content
+        context_label = _extract_continue_label(prompt)
+        # Register this agent ID for future resumes
+        if agent_id:
+            registry[agent_id] = character_name
+            save_agent_registry(cwd, registry)
     else:
         # First spawn: extract name from prompt
         match = re.search(r"You are (.+?) in an interactive narrative", prompt)
