@@ -1,0 +1,45 @@
+{
+  "turn": 4,
+  "phase": 2,
+  "current_beat": "le-decalage complete, moving to les-mains",
+  "location": "centre-integration-planetaire",
+  "time": "day 3, three weeks before activation",
+  "characters_met": ["tomasz", "seo-yun", "nadia", "yara", "declan", "kwame"],
+  "relationships": {
+    "team-dynamic": "Ancient ecosystem. Tomasz welcomed back. Seo-yun observes from the edge.",
+    "tomasz-seo-yun": "Have not met yet."
+  },
+  "events": [
+    "T1: Tomasz arrives at the Centre. Badge A. Goes to verification room.",
+    "T2: Seo-yun arrives. Badge C. Badge beeps red at verification level. Eats alone.",
+    "T3: Tomasz begins verification -- 7th seal set apart (ambiguous texture). Seo-yun calibrates, first samples clean. Team seen at canteen.",
+    "T4: Seo-yun finds 0.3% shift on lot 17-C Fe-Ni peak at 44.7°. Within tolerance (±0.5%) but tolerance was set for 150 GPa, system operates at 340 GPa. She verifies 3 times, checks calibration. Doesn't speak yet -- not sure. Starts looking at validation docs."
+  ],
+  "player_choices": [],
+  "beats_completed": ["arrivee-tomasz", "arrivee-seo-yun", "le-rituel", "le-decalage"],
+  "beats_remaining": [
+    "les-mains",
+    "la-conversation",
+    "quotidien-paradoxe",
+    "le-test",
+    "choix-arreter",
+    "l-email",
+    "la-reunion",
+    "nadia",
+    "la-confrontation",
+    "derniers-jours",
+    "les-appels",
+    "la-veille",
+    "l-activation",
+    "la-cascade",
+    "le-sol",
+    "les-mains-immobiles",
+    "le-matin"
+  ],
+  "agent_ids": {
+    "tomasz": "adb07784f22c378b3",
+    "writer": "a63df497cf644c9d8",
+    "seo-yun": "ad9c5b521d7cd4348"
+  },
+  "status": "IN_PROGRESS"
+}

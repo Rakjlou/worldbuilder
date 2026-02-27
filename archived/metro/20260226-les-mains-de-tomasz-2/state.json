@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETE",
+  "turn": 21,
+  "phase": 5,
+  "current_beat": "STORY COMPLETE",
+  "location": "outside-centre",
+  "time": "some days after activation",
+  "characters_met": ["tomasz", "seo-yun", "nadia", "yara", "declan", "kwame"],
+  "relationships": {
+    "tomasz-seo-yun": "Both knew. Both silent. One signed, one dropped her badge in the grass.",
+    "declan-yara": "Fractured by paradox.",
+    "kwame": "The witness. Hands flat on the console.",
+    "yara": "Irréprochable. The protocol trap.",
+    "nadia": "Perfect work feeding a failing system."
+  },
+  "events": [
+    "T1: Tomasz arrives. Badge A.",
+    "T2: Seo-yun arrives. Badge C.",
+    "T3: Verification ritual. Canteen intro.",
+    "T4: Seo-yun discovers 0.3% shift. 150 vs 340 GPa.",
+    "T5: Tomasz alone with seal. Tactile fog.",
+    "T6: First conversation. Canteen warmth.",
+    "T7: Paradox atmosphere. Kwame notes RF signal.",
+    "T8: Diamond cracks at 310. One diamond left.",
+    "T9: Last diamond. Stops at 317. Deviation 0.95%. Report: 'conforme dans la plage testée.'",
+    "T10: Seo-yun reads report, understands omission. Email to Yara at 2h17 AM.",
+    "T11: Meeting -- Yara's POV. Two columns. Lot 17-C conforme.",
+    "T12: Nadia portrait. Sequencing solution.",
+    "T13: Confrontation. 'Je ne sais plus.' Long silence. 'Mes mains—' unfinished. 'Le rapport est signé.'",
+    "T14: Centre fills. Compte-rendu has no errors. That's the problem.",
+    "T15: Phone calls. Tomasz: Zosia's wolf. Seo-yun: truths that don't frighten.",
+    "T16: La veille. Tomasz in verification room. Doesn't touch the cells. Hands at his sides.",
+    "T17: Activation. Nominal. Then the shift. Sector 7.",
+    "T18: Cascade. Nadia fights. Each correction creates a new problem.",
+    "T19: Seo-yun sees sector 7, lot 17-C. Recognition. Floor trembles. Neon goes out.",
+    "T20: Tomasz against the wall. Hands hidden. Perfectly still. He knows.",
+    "T21: Seo-yun outside. Badge C in the wet grass. The goats. The mountains."
+  ],
+  "player_choices": [
+    "T6: Option B -- tablet first, badge at exit",
+    "T9: Option A -- show the gesture on the dial",
+    "T11: Yara's POV for the meeting",
+    "T13: Option A -- long silence",
+    "T15: Option A -- Tomasz's call in full"
+  ],
+  "beats_completed": ["arrivee-tomasz", "arrivee-seo-yun", "rituel-verification", "decalage-spectral", "mains-brouillard", "conversation-tomasz-seo-yun", "quotidien-paradoxe", "test-diamant", "choix-arreter-310", "email-seo-yun", "reunion-technique", "portrait-nadia", "confrontation", "derniers-jours", "appels-telephoniques", "veille-activation", "activation", "cascade", "sol-tremble", "mains-immobiles", "le-matin-badge"],
+  "beats_remaining": [],
+  "total_words": 11079,
+  "chapters": 21
+}
