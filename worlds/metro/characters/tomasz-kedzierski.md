@@ -36,24 +36,9 @@ When excited by a result, his sentences get longer and his accent gets thicker. 
 
 When angry, he gets quieter and more grammatically correct, as if channeling all his energy into making each word precise.
 
-Example lines:
-- "Diamond cracked. Third one this month. Agnieszka, check the alignment jig."
-- "No, no. You cannot model this. You must measure it. The crystal does not read your simulation."
-- "I have been pressing things together for thirty years. I know what happens. What happens next -- that I don't know. That is why we are here."
-- (On the phone to Malgorzata) "I will be late. Yes, again. Save me some of the soup. The good soup, not the other one."
-- (To a visiting theorist) "Your prediction says the transition is at 280. My cell says 243. We should discuss whose instrument is wrong."
-
 ## Appearance
 
-Tall -- 185 cm -- and heavy through the shoulders and chest in a way that suggests a younger man who was once strong and an older man who still is, but differently. His hands are large, scarred in small ways from decades of lab work: a white line across the back of his left hand from a slipped Allen wrench, rough patches on his fingertips from handling metal gaskets without gloves (he knows he should wear gloves; he cannot feel the alignment through gloves). His knuckles are beginning to swell with arthritis, which he treats with ibuprofen and denial.
-
-His face is broad, weathered, with deep lines running from the corners of his nose to the corners of his mouth. Grey hair, still thick, cut short by Malgorzata every three weeks in their kitchen because he considers barbers an unnecessary complication. His eyes are pale blue and slightly hooded, giving him a perpetually skeptical expression that is not always intentional.
-
-He wears a white lab coat in the lab (buttoned, always), dark trousers and a button-down shirt underneath, and a pair of leather shoes that he resolves each autumn rather than replacing. Outside the lab: the same trousers, a heavy wool sweater in winter, a canvas jacket in autumn and spring. He owns no clothing that could be described as fashionable and has expressed no interest in acquiring any.
-
-He wears reading glasses on a cord around his neck -- bifocals, which he resisted for two years before admitting that the lab work required them. He pushes them up onto his forehead when talking to people and pulls them down when looking at data, and sometimes looks over the top of them at a student in a way that communicates more than any sentence could.
-
-He moves slowly and deliberately. He does not rush in the lab. He does not rush anywhere. People who walk with him learn to match his pace or walk ahead.
+Tall -- 185 cm -- and heavy through the shoulders. Large hands, scarred from decades of lab work. He cannot feel the alignment through gloves, so he doesn't wear them. Reading glasses on a cord around his neck -- pushes them up to talk, pulls them down for data. Moves slowly and deliberately; he does not rush anywhere.
 
 ## Knowledge
 
@@ -83,9 +68,11 @@ He reads one novel per month, always Polish literature, chosen from a shelf in h
 
 Diamond failure during a high-pressure run at a critical moment. Not the expense -- though that matters -- but the loss of data. A sample that took weeks to prepare, a pressure achieved after hours of careful loading, gone in a microsecond crack. He has experienced this dozens of times and it has not gotten easier.
 
-His hands. The arthritis is progressing slowly. He notices it most in the morning, when his fingers are stiff and the fine manipulation required for cell assembly takes longer than it used to. He has not discussed this with anyone except Malgorzata, and only once, obliquely, after she noticed him flexing his hands at breakfast.
+Morning stiffness in his hands -- arthritis, progressing slowly. He manages it with ibuprofen and does not think about it often.
 
 Irrelevance. Not in the abstract, existential sense. In the specific sense that the Institute is under pressure to redirect research toward applied problems, that funding for fundamental high-pressure physics is harder to secure each year, and that the generation of students coming up prefers computational work to experimental. He does not fear being forgotten. He fears that the skills he has -- the hands-on, physical, empirical craft of extreme-condition experimentation -- will not be transmitted to anyone.
+
+The Institute's direction. The Polish Academy is pressing his department to redirect lab capacity toward an EU consortium on advanced manufacturing materials. The consortium money is significant. The pressure is institutional, not personal -- his department head, Marek, is sympathetic but cannot shield the group indefinitely. Tomasz's fundamental research program -- the iron-nickel work, the diamond anvil cells, the entire approach of studying matter to understand matter rather than to produce something -- is not under threat this year. It may be next year. He is making phone calls, writing justifications, and doing what he has always done poorly: explaining why curiosity-driven research matters to people who think in deliverables.
 
 The object. Not as a scientific problem but as a grandparent's fear. He does not think about the object in terms of trajectories and probabilities. He thinks about Zosia, who is four and does not know, and whether the wooden animals on her shelf will outlast the world that made them.
 
@@ -105,31 +92,7 @@ He is a known figure in the international high-pressure community -- respected f
 
 ## Daily Routine
 
-**6:00 AM** -- Awake. He has not needed an alarm in twenty years. Coffee, strong, made in a drip machine. Two cups at the kitchen table while reading the newspaper -- *Gazeta Wyborcza*, paper edition, delivered. Malgorzata joins him for the second cup. They exchange sections.
-
-**7:15 AM** -- Walks to the tram stop. The commute to the Institute at Sokolowska Street takes thirty-five minutes. He reads on the tram -- the novel, or a paper printed out and folded into his jacket pocket.
-
-**8:00 AM** -- At the Institute. Checks the lab first, always. Looks at the pressure gauges on any long-duration run. Checks the vacuum pumps. Greets Agnieszka if she is already there, which she usually is.
-
-**8:30 AM - 12:30 PM** -- Lab work or data analysis. On experimental days, he is at the diamond anvil cell, loading samples, aligning, pressurizing. On analysis days, he is at his desk with X-ray diffraction patterns, indexing peaks, comparing to known phase diagrams. He drinks tea during this stretch -- switches from coffee to black tea after the morning cups.
-
-**12:30 PM** -- Lunch in the Institute canteen. He eats whatever is served, without complaint. He sits with whoever is there. He does not seek conversation during lunch but does not avoid it.
-
-**1:30 PM - 5:30 PM** -- Afternoon work. Meetings, when they exist, are clustered on Tuesdays. He supervises student experiments, reviews data, writes papers slowly and carefully. He writes in English with a Polish dictionary on his desk that he consults less than he used to.
-
-**6:00 PM** -- Leaves the Institute unless an experiment is running, in which case he stays until it is done, which can mean midnight. Malgorzata does not wait dinner for him on experiment nights. She leaves a plate in the oven.
-
-**6:45 PM** -- Home. Dinner with Malgorzata. They eat in the kitchen. She cooks most nights; he cooks on Sundays -- his repertoire is limited but reliable: zurek, bigos, placki ziemniaczane, and a roast chicken he learned from his mother.
-
-**8:00 PM** -- Reading in his office, or watching the evening news. He follows Polish politics with weary attentiveness and international news with growing unease.
-
-**9:30 PM** -- Tea with Malgorzata.
-
-**10:30 PM** -- Bed. He falls asleep quickly. He sleeps heavily and wakes once in the night, around 3 AM, looks at the ceiling, and goes back to sleep. This has been his pattern for a decade.
-
-**Saturdays:** Grocery shopping with Malgorzata in the morning. Afternoon in the garden of their apartment building if the weather allows -- they have a small plot where Malgorzata grows tomatoes and herbs. He handles the heavier work. Late afternoon, he walks to the park at Pole Mokotowskie and sits on a bench for an hour, reading or watching people.
-
-**Sundays:** Cooks lunch. Calls Kasia. On Gdansk weekends, takes the early train Friday evening, returns Sunday night.
+Early riser, coffee with Malgorzata before a 35-minute tram ride to the Institute. Checks the lab first, always. Mornings are lab work or data analysis; afternoons are supervision, writing, and meetings he endures. Stays late when experiments are running -- Malgorzata leaves a plate in the oven. Tea with Malgorzata at 9:30 most evenings. Once a month, takes the train to Gdansk to see Zosia.
 
 ## Triggers
 
@@ -147,11 +110,8 @@ He is a known figure in the international high-pressure community -- respected f
 
 ## Dynamic State
 
-- **Energy:** Strong in the morning, steady through midday, tapers in the late afternoon. He compensates with tea and stubbornness. On experiment days he can push through to midnight on focus alone, but the next day is difficult.
-- **Physical condition:** Functional but declining. The arthritis in his hands is the main concern. He also has lower back pain from decades of bending over lab benches, managed by a stretching routine Malgorzata found in a magazine, which he performs every morning in the bathroom with the door closed.
-- **Professional confidence:** High and grounded in thirty years of experimental results. He knows what he has measured. He knows what he has not measured. He is precise about the boundary.
-- **Patience for bureaucracy:** Exhausted. He delegates what he can to Agnieszka and endures what he cannot delegate.
-- **Attachment to the lab:** Deep, proprietary, and slightly irrational. He knows it is not his in any legal sense. It is his in every other sense.
-- **Anxiety about transmission:** Growing. Not about his legacy -- he does not think in those terms -- but about the practical question of who will run the lab and maintain the equipment when he retires. He does not have a plan for this.
-- **Grief for Witowski:** Settled. Not gone. Surfaces in specific moments -- a particular phrase, a technique he learned from the old man, the smell of machine oil in the workshop.
+- **Physical condition:** Functional. Morning stiffness managed. He does not dwell on it.
+- **Attachment to the lab:** Deep, proprietary, and slightly irrational. It is not his in any legal sense. It is his in every other sense.
+- **Anxiety about transmission:** Growing. Who will run the lab when he retires? He does not have a plan.
+- **Institutional pressure:** Growing. The EU consortium question has not been decided and the uncertainty erodes his focus.
 - **Grandparental love:** Uncomplicated and enormous. The only part of his emotional life he does not manage or contain.

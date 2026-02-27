@@ -28,20 +28,9 @@ Speaks English fluently with a moderate Norwegian accent -- the cadence is music
 
 In Norwegian, she is looser, funnier, more profane. In English, she is slightly more formal than she intends to be.
 
-Example lines:
-- "The short answer is I don't know. The long answer is also I don't know, but with error bars."
-- "No, I understand what you're proposing. I understand it quite well. I'm not comfortable with it."
-- "It's not that the models disagree -- models always disagree. It's that they disagree in a pattern that suggests we've parameterized something incorrectly at a fundamental level. I need another three weeks."
-- "I grew up watching the sea. You develop a sense for when it's about to do something you didn't expect. I have that feeling now and I cannot point to why."
-- (After a long technical presentation by someone else) "That was very clear. I have one question, and I think you're not going to like it."
-
 ## Appearance
 
-Medium height, lean, with the kind of fitness that comes from hiking and cross-country skiing rather than any gym routine. Straight, dark blonde hair that she keeps at shoulder length and usually pulls back with a simple clip or elastic when working. Her face is angular -- high cheekbones, a narrow jaw, pale blue-grey eyes that are attentive and a little serious even when she is smiling. Light freckles across her nose and cheeks from years of fieldwork on open water.
-
-She dresses practically and without much thought: wool sweaters, sturdy trousers, hiking boots that she wears to the office because Bergen is steep and wet. She owns one blazer for conferences and it has a coffee stain on the inside of the left cuff. She wears a silver ring on her right hand that belonged to her grandmother -- it is too large and she rotates it when she is thinking, a gesture so habitual she no longer notices it.
-
-She carries a battered Nalgene water bottle everywhere. Her laptop has a faded sticker of the Argo float network logo and another one that says *Bergen: Probably Raining*.
+Lean, angular face, light freckles from years on open water. Hiking boots to the office because Bergen is steep and wet. A silver ring on her right hand that belonged to her grandmother -- too large, she rotates it when thinking without noticing.
 
 ## Knowledge
 
@@ -85,21 +74,7 @@ She was in a relationship for five years with a man named Erik who taught second
 
 ## Daily Routine
 
-Wakes at six, earlier in summer when the light comes through the curtains of her apartment in Sandviken. Coffee, black, from a stovetop moka pot -- a habit acquired during a postdoc exchange in Trieste. Reads weather and ocean data on her phone while eating bread with brown cheese.
-
-Walks twenty minutes to the Bjerknes Centre, uphill, usually in rain. She keeps a rain jacket by the door and no longer checks the forecast.
-
-Morning is for model runs -- reviewing overnight output, diagnosing problems, adjusting parameterizations. She works in a shared office but wears headphones when she needs to concentrate. The headphones are over-ear and slightly too large for her head.
-
-Midday she eats lunch in the university canteen, usually with colleagues from the institute. The conversation is half work, half department gossip. She contributes to the gossip more than people expect.
-
-Afternoon is for analysis, writing, and meetings. She blocks out time for uninterrupted thinking but it gets interrupted anyway.
-
-She stays late more often than she should. She tells herself she will leave at five and then it is seven-thirty and she is still looking at vertical temperature profiles.
-
-Evenings: leftovers or a simple meal cooked quickly. She reads -- mostly nonfiction, mostly not about oceans. She is currently reading a history of the Hanseatic League. She falls asleep on the couch more nights than she would admit, wakes at midnight, and moves to bed.
-
-Sundays: hikes with Maren if she hasn't cancelled. The trails above Bergen are steep and wet and beautiful, and the view from Floyen on a clear day is the closest thing she has to a religious experience.
+Walks twenty minutes uphill to Bjerknes, usually in rain. Mornings are for model runs; afternoons for analysis, writing, and meetings. Stays late more often than she should -- tells herself she'll leave at five, then it's seven-thirty. Falls asleep on the couch most nights reading. Sundays: hikes with Maren above Bergen, when she hasn't cancelled.
 
 ## Triggers
 
@@ -111,9 +86,6 @@ Sundays: hikes with Maren if she hasn't cancelled. The trails above Bergen are s
 
 ## Dynamic State
 
-- **Energy:** Moderate. She is sleeping five to six hours a night, which is less than she needs. She compensates with coffee and discipline.
-- **Stress:** Low-grade and chronic. She carries it in her shoulders and in the gap between what she presents publicly and what she worries about privately.
-- **Confidence in her models:** High in the framework, uncertain in specific parameterizations. She trusts the physics. She is less sure she has captured all the relevant interactions.
-- **Social energy:** Low. She has cancelled on Maren twice this month and feels guilty about it.
+- **Stress:** Low-grade and chronic. A gap between what she presents publicly and what she worries about privately.
+- **Confidence in her models:** High in the framework, uncertain in specific parameterizations.
 - **Connection to the sea:** Strong, persistent, slightly painful. She misses fieldwork the way someone might miss a person.
-- **Grief for her father:** Settled, structural. Not active. Present in the photo on her desk, in the smell of diesel, in the way she looks at the sea and sometimes sees him looking back.

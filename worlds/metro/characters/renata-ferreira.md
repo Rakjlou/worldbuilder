@@ -32,24 +32,9 @@ Relaxed, she uses longer sentences and more color. She tells anecdotes with spec
 
 When nervous, she becomes more formal. Her English stiffens. She starts sentences with "In principle" or "Formally speaking." She avoids first person.
 
-Example lines:
-- "Show me the raw data. Not the processed. The raw."
-- "Luciano, I will be late. I know. I know. Yes. Tell him I said sorry and I mean it."
-- "The thermal profile is wrong. Not wrong like debatable. Wrong like the math doesn't close."
-- "In principle, the observation is reproducible. Formally speaking, no one has reproduced it."
-- "He wanted fish sticks again. I made fish sticks. What am I going to do, argue with a twelve-year-old about fish sticks?"
-
 ## Appearance
 
-Medium height, 163 cm, with a compact, grounded posture. Dark brown skin, hair kept natural and short — a close-cropped style she adopted eight years ago and never changed because she liked not thinking about it. Strong jaw, slightly asymmetric — her left cheekbone sits a millimeter higher than her right, a detail only visible in photographs.
-
-She wears reading glasses on a chain around her neck, pushes them onto her forehead when talking to people, and then forgets they are there. She has been photographed at three separate conferences with the glasses on her forehead.
-
-Her work wardrobe is a rotation of dark solid-colored blouses and the same style of grey trousers from the same store, bought in packs. On weekends she wears whatever Mateus has not claimed from the laundry pile, which means she owns hoodies that are too large for her.
-
-She walks with purpose, slightly fast for her leg length, which makes people hurry to keep up. She stands with her weight on her left foot, right foot angled out, one hand in a pocket if there is a pocket available.
-
-The first thing people notice is her stillness. In a room full of fidgeting academics, she is the one who is not moving.
+Compact, grounded posture. Natural close-cropped hair she adopted eight years ago and never changed. Reading glasses she pushes onto her forehead when talking to people, then forgets -- photographed at three conferences with them there. The first thing people notice is her stillness: in a room full of fidgeting academics, she is the one who is not moving.
 
 ## Knowledge
 
@@ -99,31 +84,7 @@ With people she trusts, she is blunt to the point of being startling. The transi
 
 ## Daily Routine
 
-**6:00 AM** — Awake without an alarm. Coffee, black, made in a stovetop Bialetti that she brought from São Paulo and which she will not replace. Checks email in Portuguese-language news order: Folha, then IPGP inbox, then international.
-
-**6:45 AM** — Wakes Mateus. This takes three attempts. She has stopped being patient about it and simply opens the blinds.
-
-**7:15 AM** — Walks Mateus to his collège on Rue du Château des Rentiers. They talk about whatever he is thinking about, which lately is either football or a girl named Léa whom he mentions too casually.
-
-**7:45 AM** — Swim days (Monday, Wednesday, Friday): Piscine Joséphine Baker. Twenty-five laps, slow but uninterrupted.
-
-**9:00 AM** — At IPGP, Rue Jussieu. Her office is small, organized, and has a large printed seismic cross-section of the Pacific mantle pinned to the wall that she has not updated since 2019.
-
-**9:00 AM - 12:30 PM** — Research, student meetings, data analysis. She works with headphones on — Brazilian popular music, always, volume low.
-
-**12:30 PM** — Lunch at the university cafeteria. She sits with whoever is there. She eats quickly.
-
-**1:30 PM - 6:00 PM** — Afternoons vary. On crisis weeks, she is in briefings, video calls with international collaborators, reviewing new observations. On quieter weeks, she writes papers or reviews student work.
-
-**6:30 PM** — Home. Dinner with Mateus. She cooks simple food: rice and beans, grilled chicken, salad. She insists they eat at the table.
-
-**8:30 PM** — Mateus does homework or watches TV. She reads papers or works on models at the kitchen table with the laptop angled so Mateus cannot see the screen.
-
-**10:30 PM** — Reads in bed. Fiction, always. Currently rereading Clarice Lispector, which she does every few years.
-
-**11:00 PM** — Asleep.
-
-On Luciano's weekends (first and third of the month), she works late at the office, eats at the Brazilian restaurant alone with a book, and is asleep by midnight.
+Walks Mateus to school, swims three mornings a week at the Piscine Joséphine Baker, then at IPGP by nine. Works with headphones on -- Brazilian music, always. Home by 6:30 for dinner with Mateus; she insists they eat at the table. On Luciano's weekends she works late and eats alone at a Brazilian restaurant with a book.
 
 ## Triggers
 
@@ -136,8 +97,6 @@ On Luciano's weekends (first and third of the month), she works late at the offi
 
 ## Dynamic State
 
-- **Energy:** Stable through midday, depleted by 4 PM, restored partially by the walk home.
-- **Confidence in her own analysis:** High and carefully maintained. She re-runs her models not because she doubts them but because she cannot afford to be sloppy.
-- **Patience for institutional politics:** Low and falling. She has been in enough committee meetings to know when a decision has already been made before the meeting starts.
+- **Confidence in her analysis:** High and carefully maintained. She re-runs models not from doubt but because she cannot afford to be sloppy.
 - **Loneliness:** Present, constant, managed. Higher on Luciano's weekends. Lowest when Mateus is talking.
-- **Connection to Brazil:** A low hum. Stronger on Sundays. She has not been home in eighteen months.
+- **Connection to Brazil:** A low hum. She has not been home in eighteen months.

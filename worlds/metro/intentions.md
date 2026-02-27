@@ -24,12 +24,12 @@ These are not prescribed scenes. They are gravitational points the story should 
 
 - **The first observation.** Someone sees something in the data that doesn't fit. The moment is quiet. It could be nothing. It is not nothing.
 - **The confirmation.** The anomaly becomes a certainty. A small group of people knows something the world does not. The weight of this knowledge is the first real drama.
-- **The recognition.** The object's nature is identified -- it matches Earth. This is the moment where the story shifts from disaster movie to something stranger and more painful. The tone must change here.
+- **The recognition.** The moment where the nature of the threat shifts from external to reflexive -- where it becomes clear that what is approaching may not be separate from what is here. The tone must change here. This is where the story stops being about survival and starts being about something harder to name.
 - **The emergence of teleportation.** Born from the crisis, not preceding it. The technology arrives as hope, then as a tool, then as a subject of argument, then as the thing everyone's life revolves around.
 - **The fracture.** The paradox divides everyone -- scientists, politicians, public. The two positions are irreconcilable and both are defensible. Relationships break along this line.
 - **The build.** The industrial undertaking. The world reorients itself around a single project. This should feel heavy, real, ugly, and awe-inspiring. Workers, supply chains, politics, money, sacrifice.
 - **The pressure.** Time running out. Decisions forced before they're ready. Human relationships strained past their capacity. The conditions for failure assembling themselves from ordinary human behavior.
-- **The activation.** Something goes wrong. Something recognizably, banally, tragically human. Not a betrayal. Not a sabotage. Something closer to an error that was always going to happen given who these people are and what they were asked to do.
+- **The activation.** Something goes wrong. Something recognizably, banally, tragically human. Not a betrayal. Not a sabotage. Something closer to an error that was always going to happen given who these people are and what they were asked to do. The cause is rooted in the human element, not the physics — the system was designed to work. The consequences are planetary.
 
 ## Character Arc Directions
 
@@ -52,6 +52,7 @@ Things that must happen in any story built from this world:
 - The planetary system is designed to work correctly, accounting for the displacement.
 - The activation goes wrong due to human causes, not physics.
 - The paradox (two positions) exists and divides people.
+- The paradox is grounded in observable evidence. The temporal displacement and its implications should be shown through concrete physical phenomena — not left as an abstraction that only experts discuss. The story is hard SF; the reader earns their understanding by paying attention, but the writer must give them something to pay attention to.
 - The moral ("correct activation would have worked") is never stated explicitly by any character or narrator.
 
 ## Boundaries
@@ -73,6 +74,8 @@ Things the story must NOT become:
 - **Show, don't explain.** The science is shown through behavior, not exposition. A character re-running a model at 2 AM tells the audience more than a paragraph of explanation.
 - **The mundane is sacred.** A phone call to a mother. A lunch in a canteen. A Sunday hike. These moments are not filler between plot points. They are the story. The plot is what interrupts them.
 - **Restraint on the paradox.** The temporal loop is the premise, not the subject. The story is about the people inside the loop, not the loop itself. If characters spend more time discussing the paradox than living their lives, the balance is wrong.
+- **But the paradox must be felt.** Restraint does not mean invisibility. The paradox is the heart of this world, and if a reader finishes the story without understanding what the paradox *is* — viscerally, not just conceptually — the story has failed. The paradox should be grounded in physical, observable evidence: instruments that show impossible readings, data that runs the wrong direction, signals that arrive before they are sent. These are not exposition. They are moments where a character stares at a screen and the reader stares with them, and both understand that something is deeply wrong. The paradox enters the story through the senses — things seen, measured, graphed, argued over in a lab at 3 AM — not necessarily through philosophical monologue, although it's up to seeding to decide in the end.
+- **The team is the story.** The narrative should distribute its attention across the senior scientific team, not collapse onto one or two characters. The group's internal dynamics — who agrees, who dissents, who goes silent, who reaches across a divide, who retreats into their own discipline — are the mechanism through which the paradox becomes a human problem. A story that follows only two people has probably narrowed the world too much into a relationship drama. The crisis belongs to the group, and possibly who they work with, as well as the planet as a whole.
 
 ## Secrets
 

@@ -36,25 +36,9 @@ Under pressure or when frustrated, he becomes quieter, not louder. His sentences
 
 When explaining his own work to non-specialists, he immediately begins with an analogy, then becomes impatient with the analogy halfway through and abandons it for the actual technical explanation.
 
-Example lines:
-- (To a graduate student who has over-interpreted a result) "This is what the data shows. This is what you say the data shows. These are not the same thing. I want you to find the sentence in your write-up where you made the jump, and I want you to look at it for five minutes, and then come back."
-- (To a colleague asking if fieldwork was difficult this season) "The ice road was worse than last year. We had one tent pole collapse in the second week. The methane flux measurements were better than I expected, actually. So -- average. A normal season."
-- (Tired, to himself, when a gas analyzer fails in the field) "Of course. Yes. Naturally." Then he opens his toolkit.
-- (On being asked by a journalist why he chose to study something so remote) "I did not choose it because it was remote. I chose it because it is old. The organic matter in the layers I core is ten thousand years old, sometimes more. It has been frozen this whole time. And now it is not frozen. I want to know what happens when things that have been still for that long start to move."
-- (At a colleague's retirement party, after being asked to say a few words) "Gennady Petrovich has been at this institute for thirty-one years. In that time he has been right about most things and said very little about the things he was wrong about. I consider this an excellent scientific career. Za zdorovye."
-- (To his daughter, on the phone, when she asks if he is eating properly) "Yes. I had pelmeni. They were from a package. They were fine, Masha. I am not a student."
-
 ## Appearance
 
-He is medium height, about 178 cm, with a broad build that suggests he was heavier once and then stopped eating badly but did not change shape. His hands are large and look weathered beyond his age -- dry skin, a small permanent scar on his right index finger from a sediment coring tube, short nails with ingrained traces of field dirt that do not fully come clean even when he tries. His hair is dark with a substantial amount of gray concentrated at the temples, cut practically short by whoever is cheapest near the institute. He has a beard he trims inconsistently: at the start of a fieldwork season it is neat; by week three it is whatever it is.
-
-In Yakutsk, he dresses in layers that are appropriate to the temperature and give no particular thought to whether they match. He has a heavy padded jacket the color of khaki that he bought eight years ago and has not replaced despite a torn lining on the left sleeve. He wears the same two pairs of thermal-lined trousers through most of winter, rotating them. In summer, he switches to work pants and fleece and looks identical to his winter self except slightly less bulky.
-
-In the field, he moves with the economy of someone who has done this in temperatures where inefficiency costs something. He checks equipment before he looks at scenery. He walks with a slight forward lean, which a physiotherapist told him three years ago is causing neck problems, and which he has not corrected.
-
-He has a habit of pressing his lips together briefly before he speaks, as though he is deciding whether the sentence is worth saying.
-
-The first thing most people notice about him is his stillness. He stands without fidgeting. He does not fill silence with movement. In a room of animated scientists, he sits like a piece of furniture that is listening.
+Broad build, hands weathered beyond his age with ingrained field dirt that never fully comes clean. Beard trimmed inconsistently -- neat at the start of a field season, whatever it is by week three. Presses his lips together before speaking, as though deciding whether the sentence is worth saying. In a room of animated scientists, he sits like a piece of furniture that is listening.
 
 ## Knowledge
 
@@ -104,29 +88,9 @@ He does not articulate most of this. He carries it as a kind of low-grade attent
 
 ## Daily Routine
 
-**Yakutsk (October through April, approximately):**
+In Yakutsk: at his desk by seven, writing and data in the morning, students and admin in the afternoon. Cooks simple food at home, reads in the evening, asleep by eleven. Does not truly rest on weekends.
 
-He wakes without an alarm at 6:15. He does not adapt to this; it is simply what his body does. He makes tea, stands at the kitchen window for a few minutes while it is dark and will be dark for another hour or two or three depending on the month, then dresses and walks to the institute. The walk is twenty minutes in summer and takes longer in deep winter when the air is cold enough to require deliberate, measured breathing. He has a specific route that has not changed in twelve years.
-
-He is at his desk by seven. He reads email and journal alerts until eight. From eight to noon he writes or processes data, depending on what is urgent. He prefers writing in the morning when his concentration is not yet used up. He has lunch at his desk -- usually something from the canteen he brings back in a container, or leftovers from whatever he made the previous evening. He reads while he eats. He does not always notice when he has finished eating.
-
-The afternoon is administrative, collaborative, or spent on less demanding analytical tasks. He will spend part of it with his students, reviewing data or discussing methods. He attends institute seminars when they are relevant and sometimes when they are not, sitting in the back.
-
-He leaves between six and seven, depending on what is unfinished. He cooks at home most evenings -- competently, without enthusiasm, usually something simple: soup, buckwheat, pasta with whatever is in the refrigerator. He reads in the evening, a mix of scientific papers and, occasionally, fiction that he is embarrassed by in a vague way and would not leave on his desk. He is asleep by eleven.
-
-On weekends he does not truly rest. He works at a lower intensity -- reading rather than writing, reviewing rather than analyzing -- but he is not good at absence from work. He skis occasionally in winter if the weather is acceptable, on trails outside the city. He goes alone.
-
-**Field (typically May through September, variable):**
-
-He wakes with the light, which in June means around four. He lies in his sleeping bag for twenty minutes anyway, because it is warm and outside it is not. The first task is always the stove in the field tent or hut -- getting water boiling. Everything waits on the kettle.
-
-By five or five-thirty he is outside. He takes initial measurements in the early morning when temperatures are most stable and wind is usually lowest. Methane flux measurements require the chambers to sit for precise intervals; his mornings are organized around these intervals. He moves between sites on foot or by boat depending on the location, carrying equipment that has been packed and repacked until the weight distribution is automatic.
-
-Meals in the field are functional. Breakfast is oatmeal or bread and tea. Lunch is whatever can be carried and eaten without stopping if the measurement schedule is pressing -- usually dry sausage, cheese, crackers. Dinner, if they are at a fixed camp, is something cooked on the propane stove. He is a capable field cook in the way that he can produce edible food from limited ingredients without complaint.
-
-Evenings in the field, after data recording is done, are long during the high-summer months and he uses them inconsistently. He reads papers he has downloaded. He writes field notes that are more detailed than his published methods sections. Sometimes, in late evening with the sun still fully up, he simply sits outside and watches the lake. He does not call this anything. He does not describe it to anyone.
-
-He sleeps better in the field than in Yakutsk.
+In the field (May through September): wakes with the light, measurements organized around methane flux chamber intervals. Moves between sites on foot or by boat. Sometimes in late evening with the sun still up, he sits outside and watches the lake. He sleeps better in the field than in Yakutsk.
 
 ## Triggers
 
@@ -144,10 +108,6 @@ He sleeps better in the field than in Yakutsk.
 
 ## Dynamic State
 
-- **Energy:** Present at full capacity in the morning; declining from mid-afternoon onward in a consistent, predictable curve. He knows this and schedules accordingly. In the field, the pattern is shifted earlier.
-- **Stress:** Currently elevated on two separate tracks that do not interact: the paper revisions (methodological anxiety, manageable) and the equipment procurement (institutional friction, which produces a different kind of stress that is less productive). He is holding both without letting either become the other.
-- **Social bandwidth:** Low at baseline. Extended interaction with people he does not know well depletes him. He manages this by being the first to leave rooms, which colleagues have long stopped interpreting as rudeness.
-- **Relationship with his work:** Stable, habitual, slightly compulsive. He does not experience it as passion in the way he would describe passion. It is more that stopping is not a real option he considers. The data is there. The measurements need to be made. He will make them.
-- **Relationship with Yakutsk:** He is not romantic about it. It is where his work is. He has also lived here for fifteen years and the city is now simply where he lives, with all the specificity and inconvenience that implies.
-- **Background state regarding his father:** He does not think about his father often, but when he does -- something institutional, or a calculation his father would have recognized -- it surfaces briefly and then passes. He does not examine this. He is not a person who examines this kind of thing.
-- **Physical condition:** Functional. A persistent tension in his neck and upper back from decades of bending over equipment and spreadsheets. He notices it mostly at the end of long writing days. He does not do anything about it and does not intend to.
+- **Stress:** Elevated on two tracks that do not interact: the paper revisions (methodological anxiety) and equipment procurement (institutional friction).
+- **Social bandwidth:** Low. He manages this by being the first to leave rooms.
+- **Relationship with his work:** Stable, habitual, slightly compulsive. Stopping is not a real option he considers. The data is there. The measurements need to be made.

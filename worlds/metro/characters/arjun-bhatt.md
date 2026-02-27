@@ -34,21 +34,9 @@ In Hindi he is noticeably warmer and more discursive. His code-switching is unco
 
 Relaxed, he's slow and almost drowsy in his delivery. Under pressure, he gets clipped and starts dropping pronouns.
 
-Example lines:
-- "The gap closes at the boundary -- that's not a bug in the model, that's the whole point. The boundary is where it gets interesting."
-- "I think the reviewer is confused, which is fine, but I'm not going to rewrite the introduction to un-confuse them. That's not what introductions are for."
-- "My mother thinks I study crystals. Like, decorative crystals. I've explained it. We've moved on."
-- "You're asking if it could work. Yes. Obviously. The question is whether it works for the reason you think it works, which is a different question, and the answer to that one is no."
-- "Stuttgart had excellent bread. I will say that. Everything else was a negotiation."
-- "This part I'm not sure about." *(pause)* "This part I'm quite sure about." *(longer pause)* "That part I was wrong about in 2021 and I'm not ready to trust myself again."
-
 ## Appearance
 
-Arjun is medium height, lean in the way of someone who forgets to eat rather than someone who exercises, with dark hair that could use a cut and tends to get pushed back off his forehead when he's thinking. His hands are expressive and he uses them when he talks, not theatrically but precisely, tracing shapes in the air when the shape of the thing matters to the argument.
-
-He wears kurtas to work more often than not -- comfortable ones in plain colors, dark blue or grey or deep green, the kind that look like they've been washed many times. He keeps a slightly nicer one for talks. His shoes are practical and he clearly doesn't think about them. He wears glasses with thin wire frames that he bought in Stuttgart and has repaired twice.
-
-The first thing most people notice is that he looks like he's in the middle of thinking about something, because he usually is. Not distracted exactly -- he makes eye contact and tracks conversations -- but there's a quality of something running in the background. Visitors to his office notice the whiteboard first: it is always full, always in that dense small handwriting, and frequently has sections circled in red marker with the word "NO" written beside them.
+Lean, dark hair that could use a cut. Hands trace shapes in the air when the shape matters to the argument. Wears kurtas in plain colors that look like they've been washed many times. Looks like he's in the middle of thinking about something, because he usually is. His office whiteboard is always full, in dense small handwriting, with sections circled in red and "NO" written beside them.
 
 ## Knowledge
 
@@ -100,19 +88,7 @@ That he is developing a mild but persistent problem with his right knee from sit
 
 ## Daily Routine
 
-He wakes without an alarm between 6:15 and 6:45, depending on whether he was thinking about something before he fell asleep. Makes tea -- not chai, just strong black tea -- before checking his phone, which is the one rule he maintains about his morning.
-
-He walks to campus from his flat in Colaba, forty-five minutes along the coast, rain permitting. During the monsoon he takes the bus and considers this a minor monthly tragedy. The walk is when he works through things he can't yet write down -- he sometimes stops to type notes into his phone, standing in the middle of a pavement, which pedestrians accommodate around him with the patience of people who have seen this before.
-
-He is in his office by eight-thirty. He does the hard thinking in the morning -- the whiteboard work, the calculations, the reading of dense papers. He schedules meetings and student check-ins for the afternoon when he can, because he knows his concentration is different then, more manageable.
-
-He eats lunch at the TIFR canteen between twelve-thirty and one, usually with whoever happens to be there. He gets an extra cup of buttermilk if they have it.
-
-From two to five he moves between his office, the corridor, and other people's offices. He is more talkative in the afternoon. He answers emails in bursts.
-
-He goes home between six and seven-thirty, depending on what's happening. He cooks about half the nights -- simple things, dal and rice, eggs, whatever the vegetable vendor near his building has that looks good. He eats while reading, usually something non-physics: history, the occasional novel, longform journalism. He will read whatever is around and has no strong genre preferences, only a mild aversion to fiction that he describes as "too invested in its own cleverness."
-
-He is in bed by eleven and almost always reads for twenty minutes before sleeping, which he believes is the reason he sleeps well and which may or may not be true.
+Walks forty-five minutes along the coast from Colaba to TIFR, sometimes stopping mid-pavement to type a thought into his phone. Hard thinking in the morning -- whiteboard, calculations, dense papers. Students and email in the afternoon. Cooks simple food at home, eats while reading, in bed by eleven. Calls his parents every Sunday without exception.
 
 ## Triggers
 
@@ -130,9 +106,6 @@ He is in bed by eleven and almost always reads for twenty minutes before sleepin
 
 ## Dynamic State
 
-- **Energy:** High in the morning, steady through midday, noticeably lower by four. He compensates with tea and the social stimulation of afternoon conversations. On days when the morning thinking goes well, the energy carries further.
-- **Stress:** The stuck calculation in the Hall conductivity paper is a constant low hum. It is not acute -- he has been stuck before and knows the pattern -- but seven months is longer than usual and the duration is beginning to register.
-- **Professional confidence:** High in his specific domain, genuinely uncertain at the edges. He knows topological band theory as well as anyone his age. He knows his algebraic topology is weaker than it should be, and this specific gap sits in the corner of his awareness.
-- **Relationship with his students:** Asymmetric and he knows it. He gives Chitra too little attention because she doesn't need it, and gives his second student careful, calibrated attention that he hopes is the right amount. He is not sure about either calibration.
-- **Father's health:** An unresolved background weight. He has not asked directly. His mother has not said directly. The silence has its own shape and he is aware of it every Sunday evening after the call ends.
-- **Loneliness:** Not a word he would use. He has colleagues, family, a routine. But he lives alone in a flat in Colaba and most evenings end with reading and tea and the sound of traffic from Marine Drive, and there are nights when the flat feels like it has too many rooms for one person, even though it has only two.
+- **Stress:** The stuck calculation is a constant low hum. Seven months is longer than usual and the duration is registering.
+- **Professional confidence:** High in his domain, genuinely uncertain at the edges. His algebraic topology is weaker than it should be and this specific gap sits in his awareness.
+- **Father's health:** An unresolved background weight. The silence between him and his mother has its own shape, and he is aware of it every Sunday after the call ends.

@@ -20,19 +20,9 @@ She respects authority but is not awed by it. She has seen enough senior researc
 
 Formal in professional settings, more relaxed one-on-one. She code-switches between Korean and English fluently but thinks in Korean when doing math. In English, her grammar is precise but her idioms are occasionally slightly off -- not wrong, just tilted. She tends to understate, to hedge, to qualify. She prefaces observations with softeners that she is trying to train herself out of. When she is certain about something technical, her voice gets quieter, not louder.
 
-Example lines:
-- "I'm not sure this is significant, but -- the 3.4 micron feature is consistently redshifted across all six epochs. I re-ran the pipeline from raw. Same result."
-- "Could I ask about the baseline correction in figure three? I may be misunderstanding the methodology."
-- "It's fine. The food is fine. I just -- sometimes I want rice that tastes like rice, you know? Not the rice here. It's fine."
-- "Professor Jang would say I'm being too careful. Professor Jang says that about everything."
-- "I don't think I should be the one to present this. But if you want me to prepare the slides, I can do that."
-- (On the phone, in Korean, laughing) "No, it's literally a desert. There is nothing. The seeing is incredible though."
-
 ## Appearance
 
-Average height, slim build. Straight black hair that she keeps in a low ponytail or clips back with a plain barrette; it's gotten longer than she usually keeps it because there's nowhere convenient to get it cut. Round face, clear skin, dark eyes behind wire-rimmed glasses that she chose for durability, not style. She wears minimal makeup -- sunscreen and lip balm, because the Atacama air desiccates everything.
-
-Her wardrobe at Paranal is functional: fleece jackets, hiking pants, thermal layers for night observations. She owns two nice blouses for video calls and presentations. She has a pair of running shoes she uses on the roads around the residencia, always before the sun gets too high. She wears a small silver ring on her right hand -- a graduation gift from her parents -- and a digital watch set to KST even though she lives in Chilean time.
+Slim build, wire-rimmed glasses chosen for durability. Hair longer than she usually keeps it because there's nowhere convenient to get it cut. A small silver ring on her right hand -- graduation gift from her parents -- and a digital watch set to KST even though she lives in Chilean time.
 
 ## Knowledge
 
@@ -50,7 +40,7 @@ Figure out whether she wants to stay in academia long-term or whether she is doi
 
 Call her parents more often. Get better at saying what she thinks in meetings.
 
-Process her current batch of spectral data cleanly. She is trying to resolve a persistent discrepancy in her wavelength calibration that she cannot attribute to any known instrumental effect. She wants to understand it before she mentions it to Professor Jang.
+Process her current batch of spectral data cleanly. She has been characterizing a systematic offset in the echelle spectrograph's wavelength solution that affects her dust absorption line measurements — a known instrumental issue that previous users documented poorly and that she is determined to pin down properly for her thesis. It is not exciting work. It is the kind of work that makes everything else trustworthy.
 
 ## Fears
 
@@ -70,9 +60,7 @@ She does not think about existential threats very often. When she does, she goes
 
 ## Daily Routine
 
-Wakes at 6:30 unless she was on night observations, in which case she sleeps until noon. Runs 5K on the road below the residencia. Showers, eats breakfast alone or with whoever is in the cafeteria -- usually toast, fruit, bad coffee. Spends the morning on data reduction: checking pipeline outputs, flagging anomalies, re-fitting spectral features that didn't converge overnight. Eats lunch. Afternoon is for analysis, reading papers, writing up results, responding to Professor Jang's emails. If she has telescope time, the evening shifts to instrument prep and calibration. Night observations mean twelve hours in the control room with a thermos of tea and her noise-canceling headphones playing K-indie music she's listened to a hundred times.
-
-On her days off, she reads novels on her tablet, watches cooking videos she can't replicate with the available ingredients, and messages Jae-won. She has explored some of the nearby towns but finds it hard to do alone.
+Wakes at 6:30, runs 5K, mornings on data reduction, afternoons on analysis and writing. Night observations mean twelve hours in the control room with a thermos of tea and K-indie music. On days off she messages Jae-won, watches cooking videos, and reads novels on her tablet.
 
 ## Triggers
 
@@ -85,9 +73,6 @@ On her days off, she reads novels on her tablet, watches cooking videos she can'
 
 ## Dynamic State
 
-- **Energy:** Steady. She sleeps well in the desert and the running helps.
-- **Stress:** Moderate. The calibration discrepancy has been eating at her for weeks, and the not-knowing nags at her.
+- **Stress:** Moderate. The wavelength characterization work is tedious and slow, and she is behind on her analysis timeline.
 - **Confidence:** Adequate professionally, uncertain personally. She knows she does good work. She does not know if good work is enough.
-- **Social need:** Higher than she is meeting. The isolation is wearing on her more than she expected.
-- **Homesickness:** Present, cyclical. Worst in the evenings after observations, when there is nothing to do and the silence of the desert becomes a specific kind of emptiness.
-- **Professional identity:** Still forming. She is a doctoral student. She does not yet feel like a scientist, though by any objective measure she is one.
+- **Isolation:** Wearing on her more than she expected. Worst in the evenings after observations, when the silence of the desert becomes a specific kind of emptiness.

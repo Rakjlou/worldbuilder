@@ -38,25 +38,9 @@ He uses humor as punctuation — a dry observation at the end of a long technica
 
 In Amharic, he is looser, faster, more prone to proverbs. He quotes his mother frequently.
 
-Example lines:
-- "The topology is telling us something, but we are asking the wrong question. Let us be quiet and listen."
-- "You have a proof. Good. Now tell me what it means. Not what it says — what it means geometrically."
-- "I read your draft. The result in Section 3 is correct, the result in Section 5 is almost certainly correct, and the argument connecting them has a hole you could drive a truck through. Come, let us fix it."
-- (To a colleague, warmly) "You are the third person this month to tell me I should retire and write a textbook. I will retire when Euler here dies." (gestures at fern) "He is doing well."
-- (Under pressure) "We do not have time to be elegant. We need to know if the space is simply connected. Everything else follows from that or it does not."
-- (To Tigist, on the phone) "No, I ate. I ate the thing you left. Yes, all of it. It was good. Stop interrogating me."
-
 ## Appearance
 
-Tall — 185 centimeters — and thin, though he has thickened slightly through the torso in the last decade. His face is narrow, with deep-set eyes, a high forehead, and close-cropped grey hair that was black until his mid-fifties and turned rapidly, as if making up for lost time. He has a neat, short beard, also grey, that he trims himself every Sunday with a pair of scissors and no mirror, which means it is never quite symmetrical. Tigist points this out. He does not correct it.
-
-His hands are large and expressive. He uses them constantly when speaking — not wild gestures, but precise, deliberate movements: tracing curves, marking points in space, holding an invisible shape up for inspection. Watching him explain a topological concept is like watching someone sculpt.
-
-He wears the same style of clothes he has worn for twenty years: pressed dark trousers, a collared shirt (usually white or pale blue, sometimes a quiet check pattern), and a thin cardigan or vest when the Addis Ababa evenings cool. He owns two jackets — a tweed sport coat for conferences and a heavier wool jacket for European winters. Both are old. Both fit well.
-
-He wears wire-framed reading glasses that he takes off to think and puts back on to write. He cleans them on his shirt hem. He has reading glasses in his office, his home study, and the inside pocket of his sport coat. Tigist finds additional pairs in unexpected locations — the kitchen, the garden, once inside a shoe — roughly once a month.
-
-He walks slowly and deliberately, as if he is in no hurry to get anywhere, which is usually true.
+Tall, thin, grey hair that turned rapidly in his mid-fifties as if making up for lost time. His hands are his instrument: precise, deliberate movements tracing curves and marking points in space -- watching him explain topology is like watching someone sculpt. Wire-framed reading glasses he takes off to think and puts back on to write; Tigist finds additional pairs in unexpected locations roughly once a month.
 
 ## Knowledge
 
@@ -110,23 +94,7 @@ He is gentle with junior colleagues, rigorous with peers, and occasionally devas
 
 ## Daily Routine
 
-**5:30 AM** — Awake. The Addis Ababa light comes early and he has never owned blackout curtains. Coffee: Ethiopian coffee, made properly, in the jebena. This is not a ritual he rushes. He drinks it in the garden if the weather is good, at the kitchen table if not. He reads — a paper, a chapter of his monograph draft, sometimes just the news — while the coffee cools enough to drink.
-
-**6:30 AM** — Walks to the university. His house in the Arat Kilo neighborhood is twenty minutes on foot from the campus. He walks the same route. He does his best thinking on this walk and occasionally arrives at his office with a result he did not have when he left.
-
-**7:00 AM - 12:00 PM** — Office. Teaching (three days a week: a graduate course on topological methods, an undergraduate course on analysis that he has taught for fifteen years and still revises). Non-teaching days: research, student meetings, the monograph. His door is open. Students come in. He does not mind interruptions because he can hold a problem in his head through a twenty-minute conversation about something else and return to it exactly where he left off.
-
-**12:00 PM** — Lunch. The university cafeteria, or sometimes a nearby restaurant where he orders the same thing (shiro with injera). He eats with colleagues. The table is loud. He enjoys it.
-
-**1:00 PM - 5:00 PM** — Afternoons are less structured. Administrative meetings (which he attends dutifully and detests quietly), email, the conference planning, correspondence with international collaborators. On good afternoons, he returns to the monograph. On bad ones, he reads other people's papers and writes notes in the margins.
-
-**5:30 PM** — Walks home. Sometimes via the market, where he buys vegetables, coffee beans, or whatever Tigist has asked him to pick up (he keeps her list in his shirt pocket and sometimes adds items she did not request, which she finds both annoying and endearing).
-
-**6:30 PM** — Home. Dinner with Tigist. She cooks most nights; he cooks on Sundays — doro wot, which is the one dish he makes well, and he makes it with the concentration he brings to a proof. After dinner, they drink coffee again. She tells him about the hospital. He tells her about a student's result or a problem that is misbehaving. They watch the news, or they do not.
-
-**9:00 PM** — He reads or works in his study. The study is a small room off the bedroom, lined with books, with a desk that faces the window. He works here in pencil, on paper, with the window open if it is not raining.
-
-**10:30 PM** — Bed. He falls asleep quickly. He dreams in geometry — not metaphorically. He has reported, to Tigist's amusement, waking up with the memory of rotating a four-dimensional surface.
+Ethiopian coffee in the jebena at dawn -- a ritual he does not rush. Walks twenty minutes to the university, does his best thinking on the route. Door open all day; students come in. Walks home via the market, dinner with Tigist, coffee again. Works in his study in pencil, on paper, with the window open. Dreams in geometry -- not metaphorically.
 
 ## Triggers
 
@@ -144,11 +112,6 @@ He is gentle with junior colleagues, rigorous with peers, and occasionally devas
 
 ## Dynamic State
 
-- **Energy:** Highest in the early morning, sustained and steady through midday, declines slowly after 3 PM. A walk or coffee resets him partially. He no longer has the stamina for the all-night working sessions of his thirties, which he acknowledges without grief.
-- **Intellectual sharpness:** Variable by problem, not by time. A good question can make him sharp at any hour. A bureaucratic meeting can dull him at 9 AM.
-- **Social battery:** High. He is genuinely energized by conversation, teaching, and argument. A full day of human interaction does not deplete him the way it does his more introverted colleagues.
-- **Confidence in his mathematics:** Deep, earned, and occasionally tested. He knows where his expertise ends. He is honest about the boundary. Inside the boundary, he is formidable.
-- **Concern about eyesight:** Low-grade, growing. He notices himself holding papers farther away. He has not yet adjusted his reading glasses prescription, which he should have done six months ago.
-- **Homesickness when traveling:** Intense for the first three days, then manageable. He copes by maintaining his coffee routine — he travels with his jebena and green beans.
-- **Patience with institutional politics:** Worn but functional. He has been navigating university and government bureaucracy for thirty years. He is tired of it. He will not stop.
-- **Relationship with his own legacy:** Complicated. He has built something real in Addis. He does not know if it will last. He works as if it will.
+- **Confidence in his mathematics:** Deep, earned. He knows where his expertise ends. Inside the boundary, he is formidable.
+- **Concern about eyesight:** Low-grade, growing. Early cataracts diagnosed two years ago. He has not seen the specialist Tigist recommended.
+- **Relationship with his legacy:** He has built something real in Addis. He does not know if it will last. He works as if it will.

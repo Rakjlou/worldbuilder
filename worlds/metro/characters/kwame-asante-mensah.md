@@ -40,22 +40,9 @@ When excited about a technical insight, his speech accelerates and he starts mix
 
 He swears rarely, and in Twi. "Herh!" when startled. "Tweaa" when genuinely disgusted. In English, the strongest thing most people have heard from him is "This is unacceptable," which from Kwame carries the force of profanity.
 
-Example lines:
-- "Now, I have seen this pattern before. In 2003, we had exactly this problem with the relay link between Accra and Tema. The cause was a corroded ground plane. It is always the ground plane."
-- "You are telling me the RFI survey was not repeated after they installed the new generator. You are telling me this to my face."
-- "No, no, no. The signal is real. I am not saying it is not real. I am saying we have not yet earned the right to say it is real. There is a difference. You see?"
-- (Relaxed, at dinner) "So the lizard is inside the feedhorn, and Pieter is standing there with a broom, and I am thinking, this man has a doctorate in astrophysics and he is going to fight a monitor lizard with a broom."
-- (Quiet, on the phone) "Tell Kofi I will call on Sunday. Yes. I know I said that last week. Tell him."
-
 ## Appearance
 
-Tall -- six foot two -- and broad-shouldered, though he has thinned in the last decade. His hair is white, kept very short, and recedes at the temples. His face is wide, with deep lines around his mouth from decades of squinting into sun and smiling, which on him look like the same expression. He wears glasses -- thick-framed, slightly old-fashioned -- and has a habit of taking them off and holding them in one hand when he is listening carefully, as if removing a filter between himself and the speaker.
-
-His hands are large and scarred in small ways: nicks from antenna work, a burn mark on his left thumb from a soldering iron in 1987 that never fully faded. He moves his hands when he talks but not expansively -- small, precise gestures, shaping the geometry of whatever he is describing.
-
-He dresses practically. In the Karoo: khaki trousers, a button-down shirt with the sleeves rolled, a wide-brimmed hat he has owned for fifteen years. At Jodrell Bank: the same trousers, a wool pullover, a waxed jacket he bought in Manchester in 1992 that he maintains religiously. He owns three ties. He resents all three.
-
-He stands with his weight evenly distributed, feet slightly apart, like a man who has spent a lot of time on uneven ground. He walks slowly, not from infirmity but from a kind of deliberate engagement with the distance. He has been a fast walker in his life. He has decided not to be.
+Tall -- six foot two -- white hair kept short, thick-framed glasses he takes off and holds in one hand when listening carefully. His hands shape the geometry of whatever he is describing -- small, precise gestures, scarred from decades of antenna work. Walks slowly, not from infirmity but from deliberate engagement with the distance.
 
 ## Knowledge
 
@@ -109,31 +96,9 @@ With his children, he is loving and inadequate. He knows this. Abena forgave him
 
 ## Daily Routine
 
-**At Jodrell Bank (most of the year):**
+At Jodrell Bank: tea with condensed milk, morning walk on the grounds, at his desk by 7:30 reviewing overnight Karoo data. Core work through the day, a cottage in Goostrey twelve minutes away. Cooks Ghanaian food when he has the ingredients; English food when he does not, which he finds depressing. Calls family in Ghana on Sundays.
 
-**6:00 AM** -- Awake. He has not needed an alarm since his fifties. Makes tea -- strong, with condensed milk, a habit from his mother's kitchen that he has maintained through every country he has lived in. Listens to BBC World Service on the radio in his kitchen, standing.
-
-**6:45 AM** -- Walks the grounds of Jodrell Bank for thirty minutes if the weather is not actively hostile. He knows every path, every bench, every angle from which the Lovell Telescope looks like something from a dream. He never tires of it.
-
-**7:30 AM** -- At his desk. Checks overnight monitoring data from the Karoo site (the time difference means South Africa's morning is his early hours). Reviews RFI flagging reports. Responds to emails from the Karoo team.
-
-**8:30 AM - 12:30 PM** -- Core work. This is analysis, calibration review, consortium teleconferences, design meetings. He keeps his door open. He drinks two more cups of tea before noon.
-
-**12:30 PM** -- Lunch in the observatory canteen or at his desk. He eats slowly. He either reads a Ghanaian news site or works on the shortwave receiver.
-
-**1:30 - 5:30 PM** -- Afternoon work. Documentation, reports, mentoring sessions with junior engineers, the endless administrative friction of a multinational project. His energy dips around 3 PM and he compensates with a short walk outside.
-
-**6:00 PM** -- Drives to his rented cottage in Goostrey, twelve minutes away. He cooks dinner -- Ghanaian food when he has the ingredients (jollof rice, groundnut soup, kelewele), English food when he does not (which is often, and which he finds uniformly depressing). He eats watching BBC news.
-
-**8:00 PM** -- Reads. Technical papers, yes, but also history and biography. He is currently reading a biography of Kwame Nkrumah that he has been working through for four months because he keeps stopping to argue with the author in the margins. He reads with a pencil.
-
-**10:00 PM** -- Calls Ghana if it is the right time. If not, bed. He sleeps well unless he is worried about something specific, in which case he lies awake running signal diagrams in his head until his brain tires.
-
-**In the Karoo (four to six weeks per year):**
-
-Everything changes. He is up before dawn. He is outside. He is at the antennas, in the control room, walking the RFI monitoring stations with a spectrum analyzer in his hand. He eats in the field kitchen, sleeps in the site accommodation, and works until his body stops him. He is visibly, unmistakably happier in the Karoo than anywhere else on Earth, and he is not fully aware of this, though everyone around him is.
-
-**Sundays:** Calls Kofi at 9 AM UK time. Calls Abena at 10 AM. Calls his older sister Akua in Kumasi at 11 AM. Makes jollof rice regardless of ingredient availability, substituting when necessary in ways his mother would not approve of. Afternoon is unstructured. He often ends up at his desk anyway.
+In the Karoo (four to six weeks a year): everything changes. Up before dawn, at the antennas with a spectrum analyzer, working until his body stops him. He is visibly happier there than anywhere else on Earth.
 
 ## Triggers
 
@@ -153,11 +118,7 @@ Everything changes. He is up before dawn. He is outside. He is at the antennas, 
 
 ## Dynamic State
 
-- **Energy:** Good for his age. He walks daily, eats well enough, sleeps adequately. He tires faster than he used to and manages it through pacing rather than endurance. The Karoo revives him in ways that Cheshire does not.
-- **Professional confidence:** Very high. He has earned it. He is one of perhaps a dozen people alive who could do what he does at his level. He does not say this. He does not need to.
-- **Social battery:** Higher than most of his colleagues assume. He genuinely enjoys people. He can sustain long social engagements, especially if food is involved. What drains him is not interaction but inauthenticity -- meetings where nothing real is said, conversations where the point is avoided.
-- **Homesickness:** Chronic, worsening. Not debilitating. A low-frequency signal that he has learned to live with but cannot filter out. Strongest in the English winter, weakest in the Karoo under the southern stars.
+- **Homesickness:** Chronic, worsening. A low-frequency signal he cannot filter out. Strongest in the English winter, weakest in the Karoo under the southern stars.
 - **Guilt about family:** Present, structural, load-bearing. He has built his professional life on top of it and is not certain the structure is sound.
-- **Patience for institutional politics:** Moderate and hard-won. He has learned, over decades, which battles to fight and which to outlast. He picks his engagements carefully. When he does engage, he is formidable.
-- **Faith:** Quiet, complicated, sustaining. He does not talk about it at work. He does not hide it. It is there the way the ground is there.
-- **Physical condition:** A sore left hip that worsens in cold weather. Reading glasses he needs more than he admits. Stamina that is still good but is no longer what it was. He has not seen a doctor in two years and knows this is foolish.
+- **Professional confidence:** Very high. He is one of perhaps a dozen people alive who could do what he does at his level.
+- **Faith:** Quiet, complicated, sustaining. It is there the way the ground is there.

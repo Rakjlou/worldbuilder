@@ -14,9 +14,9 @@ An anomaly detected during a routine sky survey. Initially dismissed — a data 
 
 The object is large. Planet-scale large. It moves fast — fast enough that the window between confirmed detection and projected collision is measured in decades, not centuries. This speed is the master variable of the world: it sets the pace of everything that follows. How much time there is to deny, to study, to argue, to build, to fail.
 
-Early analysis reveals troubling data. The object's composition, its mass, its spectral signature — they match nothing in any catalog. Or rather, they match one thing too well. The scientific evidence pointing to the object's true nature accumulates slowly, reluctantly, like a diagnosis no one wants to confirm.
+Early analysis reveals troubling data. The object's composition, its mass, its spectral signature — they match nothing in any catalog. Or rather, they match one thing too well: Earth. The data is there for anyone with the instruments and the will to look.
 
-What is done with this information — who learns it, when, and how the world reacts — is not prescribed. The lore establishes only what is true: the object is real, it is coming, and the data about its nature is available to anyone with the instruments and the will to look.
+Who discovers this, when, how the information spreads, and how the world reacts — none of this is prescribed. The lore establishes only what is physically true: the object is real, it is coming, and its observational characteristics are consistent with those of Earth.
 
 ---
 
@@ -36,7 +36,9 @@ But the principle has a hidden cost.
 
 ### The Temporal Displacement
 
-Every teleportation event produces a negative temporal displacement: the object arrives at its destination fractionally *before* it departed from its origin. At small scales — laboratory experiments, cargo transfers — this displacement is small. Microseconds. Nanoseconds. A measurable oddity, confirmed and reproduced in controlled settings. Who knows about this property, when they learn it, and what is done with that knowledge is not prescribed by the lore.
+Every teleportation event produces a negative temporal displacement: the object arrives at its destination fractionally *before* it departed from its origin. At small scales — laboratory experiments, cargo transfers — this displacement is small. Microseconds. Nanoseconds. But it is not abstract. It produces observable physical signatures: a signal received before it was sent, a correlation that runs backward, an effect that precedes its cause. These violations of ordinary causality are measurable with standard instruments. They are the displacement made tangible — the point where the mathematics becomes something a person can see on a screen and feel in their stomach.
+
+The displacement is confirmed and reproduced in controlled settings. Who knows about this property, when they learn it, and what is done with that knowledge is not prescribed by the lore.
 
 The relationship between energy and temporal displacement is exponential. The curve is steep: scaling up from lab equipment to industrial cargo barely registers. But at each new order of magnitude, the displacement stretches further. The math is well-characterized. There are models, tables, error margins.
 
@@ -58,16 +60,13 @@ But it has never been fired at full scale. It cannot be test-fired at full scale
 
 ## The Paradox
 
-The evidence suggests a closed causal loop: the Earth is teleported to escape the approaching object, but the teleportation sends it back in time, making it *become* the approaching object. The threat creates the response that creates the threat.
+The temporal displacement at planetary scale places the destination in the past. The object's observational characteristics match Earth's. The implication is available to anyone who examines both datasets together: the approaching body may be Earth itself, displaced by the very system built to save it.
 
 This is never established as absolute fact within the world. The data is compelling. The models are consistent. But compelling data and consistent models have been wrong before, and the human capacity to reject an intolerable conclusion is vast.
 
-The paradox generates a fracture line through every institution, every team, every relationship:
+The paradox is not a debate position. It is a property of the physics. What people do with it — how they interpret the evidence, what actions they advocate, where they draw the line between acceptable risk and unacceptable certainty — is not prescribed.
 
-- **If the loop is real**, then activating the teleporter is what causes the collision. The only way to break the cycle is to not teleport — and accept the impact.
-- **If the loop is not real** (or if it can be broken), then the teleporter is humanity's only chance. Not using it means certain death.
-
-There is no way to know which is true without activating the system. And activation is irreversible.
+There is no way to test the hypothesis without activating the system. And activation is irreversible.
 
 ---
 
@@ -85,21 +84,19 @@ The system, once built, requires someone to activate it. That activation require
 
 ## The Activation
 
-The lore establishes only this: the system is activated, and it is activated badly. Not as designed. Not as intended. Something goes wrong — something rooted in the human element, not the physics.
+The system has never been tested at full scale. It cannot be test-fired — the first planetary activation is the real one. The activation sequence requires precise coordination across the entire global infrastructure: power delivery, spatial targeting, temporal offset calibration, and the human chain of decisions that authorizes and executes it.
 
-Whether the activation is premature, unauthorized, sabotaged, accidental, or simply the result of a cascading series of small human failures is not prescribed. What matters is that the cause is recognizably human. Not a cosmic joke. Not a technical impossibility. Something that, in retrospect, was always going to happen because of who these people were and what they were under pressure to do.
-
-The consequences are planetary and immediate. The surface is devastated. Whether anyone survives, and in what condition, and what they find — that belongs to the story, not the lore.
+The system was designed to work. Whether it does, and what happens when the decision to activate is made, belongs to the story.
 
 ---
 
 ## The Scientific Team
 
-At the center of this world is a small team of scientists — six or seven people — who are present from the early days of the discovery through to the crisis. They are not the only people who matter, but they are the ones closest to the truth, the longest.
+At the center of this world is a group of senior researchers — astronomers, physicists, engineers, and adjacent disciplines — who are present from the early days of the discovery. They are the people who first saw the data, who built the models, who argued about what it meant, who watched the world change around their observation.
 
-They are researchers: astronomers, physicists, engineers, and adjacent disciplines. They are the people who first saw the data, who built the models, who argued about what it meant, who watched the world change around their discovery.
+As the crisis scales from an academic anomaly to a planetary project, the team may grow, acquire institutional structure, develop hierarchies of access and authority. How this happens — whether through formal promotion, political appointment, or the quiet accretion of seniority — is determined at seeding time. The seed should decide what the team becomes, and who is on it.
 
-Over the years, their relationships with each other deepen, complicate, and fracture under the weight of what they know. They are colleagues, rivals, friends, former lovers, mentors, and protégés. The interpersonal dynamics within this group create the conditions — directly or indirectly — for how the activation unfolds.
+Over the years, their relationships with each other deepen, complicate, and fracture under the weight of what they know. They are colleagues, rivals, friends, former lovers, mentors, and protégés.
 
 They are not heroes or villains. They are people who happened to be looking at the sky at the right time, and who then had to live with what they saw.
 

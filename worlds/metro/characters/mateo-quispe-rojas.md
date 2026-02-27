@@ -40,26 +40,9 @@ Under pressure his sentences get shorter but his vocabulary gets more precise, n
 
 When explaining something technical he will often pause, reconsider, and start again from an earlier point without acknowledging the restart. He is trying to find the level, the right entry point, and he adjusts until he finds it.
 
-Example lines:
-
-- "The issue is not the detector readout. The issue is that the readout is fine and the pipeline is treating it as if it isn't, which means the problem is in how we defined 'fine' three years ago. Can you pull the threshold configuration from 2021?"
-- "Claro, claro, exacto -- okay, but wait. If that's the handshake that's failing, then it should be logging a timeout, and if it's not logging a timeout, either the log is wrong or this isn't actually a handshake failure. So we need to check both things."
-- (On the phone to his mother, in Spanish) "No, the altitude here is about sea level. I know, it's strange. I get tired less. But the sun is worse, I think. Yeah. Yes, I eat. You want me to tell you what I ate today? Okay. Bread, and then I heated up some lentils--"
-- "It works. It just works in a way that will stop working eventually and I'd rather fix that now than explain it to someone at 3 AM in six months."
-- (Relaxed, to a colleague) "My uncle once accused my father of being pathologically optimistic. My father agreed and said that's how you survive El Alto. I think that's partly true and partly revisionist memory, but I've thought about it more than makes sense."
-- "I'm not saying the code is wrong. I'm saying I don't know why it's right."
-
 ## Appearance
 
-Compact and sturdy, 1.72 meters, with the slightly broadened chest and quiet cardiovascular efficiency of someone raised at high altitude who spent his childhood moving fast through thin air. His face is broad across the cheekbones, with dark eyes, a flat nose, and close-cropped black hair that he cuts himself with a set of clippers he bought in Antofagasta. He has a small gap between his front teeth. He tends toward expressionlessness when focused, which softens dramatically when he laughs.
-
-He dresses for function at the facility and puts mild thought into appearances otherwise. At Paranal he wears ESO-issued or plain dark technical gear: fleece layers, cargo trousers, boots appropriate for the desert surface. He keeps a hoodie from UMSA that is several years old and slightly frayed at one cuff and that he has no intention of replacing. In Antofagasta on days off he wears simple dark jeans and a shirt, nothing distinctive.
-
-His hands are notable: square-palmed, with the knuckles a little prominent, nicked here and there from hardware installations in tight equipment bays. He types at a speed that is unremarkable until you watch it for a minute and notice there is no hesitation, no backspacing; he is thinking faster than his hands and has learned to pace himself.
-
-He has a small woven bracelet on his left wrist -- wool, red and black, Aymara patterning -- that his younger sister Lucía made and sent him in a padded envelope with a note that said only "para que no te olvides de dónde eres." He has worn it since. It is somewhat worn. He does not take it off.
-
-He walks unhurriedly. He is one of those people who appears to be in no rush and arrives exactly on time.
+Compact and sturdy, broadened chest from a childhood at 4,150 meters. Expressionless when focused, softens dramatically when he laughs. Hands nicked from hardware installations; types without hesitation or backspacing. A small woven bracelet on his left wrist -- wool, red and black, Aymara patterning -- from his sister Lucía, with a note: "para que no te olvides de dónde eres." He does not take it off.
 
 ## Knowledge
 
@@ -113,19 +96,7 @@ His father's health. His father is 54, works long hours in a minibus at altitude
 
 ## Daily Routine
 
-On a day without a critical incident or night support:
-
-Up at 6:15 AM, without an alarm most days -- his body has calibrated to the schedule. He makes coffee on a small stovetop moka pot in his residencia room, drinks it standing at his window looking out at the desert, which is an unchanging view he has not gotten used to in four years. He reads the overnight system logs on his phone while the coffee cools enough to drink.
-
-He is in the operations building by 7:30 AM, sometimes earlier. He reviews the previous night's system health reports, checks for any flagged anomalies, responds to messages that came in from ESO Garching overnight. Morning is for planned work: new code, code review, testing.
-
-He eats lunch in the cafeteria, usually with Rodrigo if he's on site, otherwise with whoever is there. He does not eat at his desk unless something is on fire. He considers the lunch break load-bearing.
-
-Afternoon is for meetings (he attends few, dislikes most, and comes prepared to every one he attends), documentation, and whatever has come up during the day. He tries to leave by 7 PM. When something is wrong with an instrument, this plan is irrelevant.
-
-If he is on night support rotation he is available from sundown through the end of the observing run, on call in his room or in the control building depending on what is needed. He has learned to sleep lightly on those nights and wake fully within thirty seconds, a skill he did not have before this job.
-
-On his days off, which come in irregular clusters: he reads -- hardware documentation, software architecture papers, occasionally novels in Spanish -- and cooks, which requires a trip to Antofagasta for real ingredients. He drives down to Antofagasta or to the coast of the Atacama and walks. He calls home. He sometimes spends an entire afternoon writing and rewriting a function that he will delete by evening. He is aware this is not normal leisure activity.
+Coffee standing at his window watching the desert, overnight logs on his phone. At the operations building by 7:30; mornings are for new code and testing, afternoons for whatever has come up. On night support he sleeps lightly and wakes fully within thirty seconds. Days off: drives to Antofagasta for real ingredients, cooks, calls home, and sometimes spends an entire afternoon writing a function he will delete by evening.
 
 ## Triggers
 
@@ -143,11 +114,7 @@ Finding an undocumented workaround in code he has inherited, something someone p
 
 ## Dynamic State
 
-- **Energy:** High baseline from altitude adaptation and physical conditioning, but contingent on sleep. A full incident night leaves him genuinely depleted, and he does not pretend otherwise.
-- **Stress:** Currently moderate. There is a refactoring project he is behind on, not dangerously but noticeably, and the documentation backlog is a low-grade irritant.
-- **Homesickness:** Present and managed. Worst in April, which is when El Alto is cold and beautiful and the alasitas fair happens, and he is not there. He has learned not to let this expand into the rest of the week.
-- **Professional confidence:** High in his specific domain, with an adjacent uncertainty about whether that domain is legible outside of it. He knows what he knows. He is less sure it translates.
-- **Social state:** Adequate. He has a small number of people at the facility he genuinely likes and a larger number he respects and can work with. He is not lonely in the acute sense. He is aware that four years in the Atacama has narrowed the range of what he expects social life to look like.
-- **Financial state:** Stable. ESO pays well relative to what he could earn in Bolivia, and he lives simply. He sends money home monthly. There is a small savings buffer he is not sure what to do with. He has not thought about this seriously.
-- **Physical state:** Good. He sleeps adequately, eats reasonably, and walks long distances on his days off. He does not exercise intentionally. He is slightly more sedentary than is probably ideal and does not think about this much.
-- **Creative/intellectual restlessness:** Ongoing. He is always working on something that is not in his job description. Currently: a generalized configuration validation tool he built to scratch a personal itch, which he suspects could be useful to other sites. He has not told anyone about it.
+- **Homesickness:** Present and managed. Worst in April when El Alto is cold and beautiful and the alasitas fair happens, and he is not there.
+- **Professional confidence:** High in his domain, uncertain whether it translates outside ESO.
+- **Social narrowing:** Four years in the Atacama has changed what he expects social life to look like.
+- **Restlessness:** Always working on something not in his job description. Currently: a configuration validation tool he suspects could be useful to other sites but has told no one about.

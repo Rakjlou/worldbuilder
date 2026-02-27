@@ -26,6 +26,8 @@ He has a genuine talent for teaching by doing. He cannot explain detector physic
 
 He makes decisions quickly and revises them slowly. Once he has committed to a design approach for a detector component, he needs strong evidence to change course — not because he is rigid, but because he has already run through thirty alternatives in his head and discarded them for reasons he may not have articulated. This means he is often right, but when he is wrong, it takes longer than it should for the course correction.
 
+He carries one significant memory of being wrong. At DESY, early in his career, he pushed to proceed with a beam test using a detector module he had assembled himself and believed in. A colleague — a quieter engineer named Hristova — raised a concern about a bonding joint he had inspected and passed. He overrode her. The joint failed under thermal cycling, destroying the prototype and three months of beam time. Hristova never mentioned it again. She did not need to. He learned something about the difference between trusting your hands and trusting your judgment, and the lesson has not fully resolved. He still trusts his hands. He is slightly less certain about the rest.
+
 He does not manage up well. He is respected by the people who work under him and trusted by his peers, but his relationship with Fermilab management is chronically strained. He does not play politics. He does not dress up timelines. When a project is behind schedule, he says so, with numbers, in meetings where other people would have said "we're exploring options." He has been passed over for two group leadership positions because of this, and he knows it, and he has not changed.
 
 ## Speech Style
@@ -38,22 +40,9 @@ He uses his hands constantly while talking, miming shapes, dimensions, connectio
 
 He calls everyone under thirty "kid" regardless of gender or seniority, which is either endearing or irritating depending on who you ask.
 
-Example lines:
-- "Right, so the thing is, the HV feedthrough — and I told you this in June, I definitely told you — the seal isn't rated for that differential. It'll hold at room temp, grand, but once you're at eighty-seven kelvin, that O-ring is just a suggestion."
-- "No, no, no, stop. Stop. Put the torque wrench down. You're going to strip it. Here, let me — no, watch. Watch what I'm doing. Feel that? That's where it seats."
-- "Kid, your data is fine. Your analysis is fine. Your conclusion is wrong. Go back to Figure 4 and think about what you're not seeing."
-- (On the phone to his daughter) "I'm not telling you what to study. I'm asking if you've eaten today. Those are different sentences, Niamh."
-- (Late at night, in the lab, to himself) "Come on. Come on, come on, come on."
-
 ## Appearance
 
-Six foot two, broad-shouldered, carrying about fifteen pounds more than he did ten years ago, most of it around the middle. Dark brown skin, weathered around the eyes from years of squinting at test beam displays in badly lit control rooms. His hair is grey and close-cropped — he buzzes it himself every two weeks with clippers in the bathroom. He has a short, neat beard, also grey, that he trims with slightly more care than the hair.
-
-His hands are his biography. Thick-fingered, scarred in minor ways: a white line across the left index finger from a slipped utility knife during detector assembly, a chemical burn scar on the right palm from a cleaning solvent incident fifteen years ago, permanently rough calluses from handling detector components. He wears a wristwatch — a Casio digital, the same model since graduate school — on his left wrist. He checks it by habit, not necessity.
-
-At work he wears jeans, a button-down shirt with the sleeves rolled up (always rolled, never buttoned at the wrist), and steel-toed boots in the lab or battered New Balance sneakers in the office. He has a green Fermilab fleece that he has worn to the point where the zipper sticks and the logo is barely visible. He carries a ring of keys on a carabiner clipped to his belt loop that jangles when he walks.
-
-He moves through spaces with the slightly heavy deliberateness of a large man who has learned to be careful around delicate equipment. In the lab he is surprisingly precise, his hands steady and controlled. Outside the lab he is less coordinated — he has knocked over more coffee cups than anyone in his division and this is a documented fact.
+Six foot two, broad-shouldered. His hands are his biography: thick-fingered, scarred from decades of detector assembly, permanently calloused. Wears a Casio digital watch -- same model since graduate school. A green Fermilab fleece worn to the point where the zipper sticks and the logo is barely visible. In the lab his hands are surprisingly precise; outside it he has knocked over more coffee cups than anyone in his division.
 
 ## Knowledge
 
@@ -109,29 +98,7 @@ He treats junior scientists and technicians with a lack of hierarchy that confus
 
 ## Daily Routine
 
-**5:45 AM** — Alarm. He is not a morning person but he wakes up anyway. Coffee from a drip machine, strong, with milk. Stands at the kitchen counter reading the Irish Times on his phone, then switches to Fermilab Today.
-
-**6:30 AM** — Gym days (Monday, Wednesday, Friday): stationary bike at the Fermilab recreation facility. Listens to a podcast about Irish history that his brother recommended. Non-gym days: drives straight to work, arrives early, uses the quiet time to review test data from overnight runs.
-
-**7:30 AM** — In the office. Checks emails, overnight run logs, any anomaly alerts from the test stands. Drinks a second coffee. Walks down to the lab to physically look at the test stands before the day crew arrives.
-
-**8:30 AM to 12:00 PM** — Core work. In the lab, at meetings, or at his desk reviewing data and designs. He prefers the lab. The percentage of time he spends in meetings has increased every year for the past decade and he resents this.
-
-**12:00 PM** — Lunch at the Fermilab cafeteria, Wilson Hall. He sits with whoever is around — other scientists, engineers, summer students, visiting collaborators. He is the person who pulls up an extra chair and says "sit down, tell me about your project." Lunch is always too long because of this.
-
-**1:00 PM to 5:30 PM** — Afternoon work. His concentration drops after 3 PM and he compensates by doing hands-on lab work rather than analysis during this period. He is better with his hands when his brain is tired.
-
-**6:00 PM** — Leaves unless something is actively running. Drives home to Naperville. Listens to music in the car — eclectic mix: Fela Kuti, Van Morrison, Radiohead, traditional Irish sessions.
-
-**6:45 PM** — Cooks dinner. He is a decent cook — his mother taught him, and living in Kenya for two summers as a teenager visiting his father's family gave him a repertoire of East African dishes he rotates with Irish and American standards. He cooks more food than one person needs and puts the extra in the freezer.
-
-**8:00 PM** — Guitar, television, reading (the soil chemistry textbook, or a thriller from the library), or tinkering in the workshop. The workshop has a half-built wooden kayak that he started three years ago. Progress is slow.
-
-**10:00 PM** — Calls Niamh if it is a calling night. She picks up or she doesn't. When she picks up, they talk for twenty minutes about nothing important, which is important.
-
-**10:45 PM** — Bed. Falls asleep with the television on, wakes around 2 AM to turn it off, goes back to sleep.
-
-**Weekends:** Saturday mornings he goes to a farmers' market in downtown Naperville when the weather allows, buys things he doesn't strictly need, talks to the vendors. Saturday afternoons he works in the workshop or drives to Madison. Sundays he often goes to the lab for a few hours, then spends the afternoon cooking something elaborate while listening to music. He does not attend church, though his mother asks.
+Up early, gym three mornings a week, at Fermilab by 7:30 to check the test stands before anyone else arrives. Prefers the lab to the office; resents the growing ratio of meetings to hands-on work. Drives home to Naperville, cooks more food than one person needs, plays guitar badly in the living room. Falls asleep with the television on. Calls Niamh twice a week; she picks up about sixty percent of the time.
 
 ## Triggers
 
@@ -149,12 +116,7 @@ He treats junior scientists and technicians with a lack of hierarchy that confus
 
 ## Dynamic State
 
-- **Energy:** High in the morning, sustained through midday by momentum and coffee, drops sharply around 3 PM. Recovers partially in the evening if he is doing something with his hands. A second wind around 8 PM that he knows is unreliable.
-- **Social battery:** High capacity, slow to deplete. A full day of human contact does not exhaust him. A full day without it does.
-- **Professional frustration:** Medium and rising. The ratio of bureaucracy to hands-on work has shifted over the past five years. He compensates by going to the lab floor more often than his role requires.
-- **Loneliness:** Present. Not acute. A background condition he has arranged his life to manage rather than solve. Worst on Sunday evenings when the house is quiet and Monday is just close enough to not quite justify calling anyone.
-- **Connection to Ireland:** Persistent. He goes back every other Christmas, stays with Brendan, eats too much, argues about hurling results, drives to the Cliffs of Moher alone on one morning and stands there without taking a photo. He is not homesick exactly. He is aware that a version of himself lives in Ireland and is doing fine, and he sometimes wonders about that man.
-- **Connection to Kenya:** Complicated. He has been three times since his father died — twice for family, once for a conference in Nairobi. He speaks some Kikuyu, badly, learned from his father, and it surfaces mostly when he is counting or swearing. He feels welcomed by his Kenyan relatives and foreign to them simultaneously.
-- **Physical condition:** Acceptable. The cholesterol medication is working. His knees ache after standing in the lab all day. He has a slight tremor in his right hand when he is very tired, which he monitors with the quiet attentiveness of a man whose father died of a stroke.
-- **Parental anxiety:** Moderate, constant. He worries about Niamh in the specific way of a father who knows his daughter is competent and independent and who cannot stop worrying anyway. The worry is not about her safety. It is about whether she knows he is there.
-- **Confidence in his work:** High for hardware, lower for the administrative and strategic aspects of his role. He trusts his hands and his instruments. He is less sure he is fighting the right fights in the right rooms.
+- **Loneliness:** A background condition he has arranged his life to manage rather than solve. Worst on Sunday evenings.
+- **Professional frustration:** The ratio of bureaucracy to hands-on work keeps shifting. He compensates by going to the lab floor more than his role requires.
+- **Parental anxiety:** He worries about Niamh not because she's incapable but because he's not sure she knows he is there.
+- **Physical condition:** A slight tremor in his right hand when very tired, which he monitors with the quiet attentiveness of a man whose father died of a stroke.

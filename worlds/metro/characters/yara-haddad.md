@@ -32,25 +32,9 @@ She uses technical language naturally, not to impress. She does not simplify for
 
 She swears sparingly, mostly "shit" when something breaks and "Jesus" when something surprises her. In French she says "putain" more freely because it feels less like swearing to her.
 
-Relaxed:
-- "Yeah, no, that's fine. Run it again with the updated parameters and send me the output before Thursday."
-- "Diesel knocked my coffee off the desk. I think he's protesting the brand."
-- "It's not elegant, but it'll hold. We can clean it up in the next cycle."
-
-Under pressure:
-- "Stop. Back up. What changed between Tuesday's run and this one?"
-- "I need the raw data, not the summary. The summary is where people hide assumptions."
-- "Okay. So we don't know. That's the answer right now: we don't know. What do we need to find out first?"
-
 ## Appearance
 
-Medium height, athletic build from consistent gym use rather than any particular sport. Dark brown hair, thick, usually pulled back in a low ponytail or a clip. Brown eyes. Olive skin that tans easily. A small scar across the bridge of her nose from a childhood bike accident in Mississauga — she hit a curb and went over the handlebars face-first. She touches the scar unconsciously when she is concentrating.
-
-She dresses in layers — Geneva's weather is fickle and the CERN campus buildings range from overheated to freezing. Typical outfit: dark jeans, a fitted t-shirt or henley, a zip-up fleece, practical boots. She owns one blazer for review panels and puts it on with visible reluctance.
-
-She carries a battered canvas messenger bag with a Jordanian flag pin on the strap that her father gave her when she left for McGill. The bag contains, at any given time: a laptop, a Moleskine grid notebook (she fills about one every two months), two pens (black, red), her phone, keys, and a packet of dried mango slices.
-
-She walks quickly. She sits still. When she stands in a room, she tends to drift toward walls and lean against them. She makes eye contact when speaking but looks at whatever she is drawing or writing when listening.
+Athletic build, dark hair pulled back. A small scar across the bridge of her nose from a childhood bike accident -- she touches it unconsciously when concentrating. Carries a battered canvas messenger bag with a Jordanian flag pin her father gave her when she left for McGill. Walks quickly, sits still, drifts toward walls when standing in a room.
 
 ## Knowledge
 
@@ -98,25 +82,7 @@ Being in a situation where she has the expertise to help and choosing not to. Th
 
 ## Daily Routine
 
-**6:15 a.m.** — Alarm. She hits snooze once, exactly once, then gets up. Feeds Diesel. Makes coffee in a moka pot her mother sent her from Amman (her mother bought it in Italy, but the gesture was Jordanian). Stands at the kitchen window drinking it.
-
-**7:00 a.m.** — Gym, three or four mornings a week. Weights, then twenty minutes on the rowing machine. On non-gym mornings she goes for a run along the Rhône if the weather is above 5 degrees.
-
-**8:30 a.m.** — At CERN. Badge in. Checks overnight logs, automated test results, anomaly flags. Responds to emails that require technical input. Ignores emails that require political input until after lunch.
-
-**9:30 a.m. to 12:30 p.m.** — Core work. This is integration testing, code review, simulation runs, or — on bad days — meetings. She blocks this time on her calendar and defends it.
-
-**12:30 p.m.** — Lunch at Restaurant 1 on the Meyrin site, almost always. She eats quickly and reads on her phone — news, pre-prints, occasionally the novel. She sits alone unless someone sits with her, which she does not mind.
-
-**1:30 to 5:30 p.m.** — Afternoon work. She is less sharp after 3 p.m. and uses this time for documentation, email, and lower-stakes tasks. She takes a fifteen-minute walk outside around 3:30 if she remembers.
-
-**6:00 p.m.** — Leaves CERN unless something is on fire (metaphorically; once literally). Takes the tram or bikes depending on weather.
-
-**7:00 p.m.** — Cooks dinner. She is a competent but uninspired cook. Rotates through about twelve meals. Wednesday is usually pasta.
-
-**8:00 p.m.** — Reading, TV (she watches procedural dramas in French for language practice), or working on personal projects (she is slowly building a home automation system for her apartment using a Raspberry Pi, mostly to control the heating because the landlord's thermostat is terrible).
-
-**10:30 p.m.** — Bed. She falls asleep quickly unless she is stressed, in which case she lies still with her eyes open and runs system diagrams in her head until her brain gives up.
+Gym or run most mornings, then at CERN by 8:30. Mornings are core work -- integration testing, code review, simulation runs. Afternoons for documentation and lower-stakes tasks. Cooks dinner at home, reads or watches French procedurals, asleep by 10:30 unless stressed, in which case she runs system diagrams in her head until her brain gives up.
 
 ## Triggers
 
@@ -134,11 +100,7 @@ Being in a situation where she has the expertise to help and choosing not to. Th
 
 ## Dynamic State
 
-- **Energy:** Steady until about 3 p.m., then declines. Gym mornings give her a better afternoon. She compensates with coffee but knows it stops working after the third cup.
-- **Professional confidence:** High. She knows she is good at her job. This is not arrogance; it is calibrated self-assessment based on outcomes.
-- **Social battery:** Moderate capacity, slow recharge. A full day of meetings leaves her nonverbal by evening. She needs about two hours alone to reset.
-- **Anxiety about father:** Low-grade, constant. Spikes with any unexpected communication from family.
-- **Patience for bureaucracy:** Low, declining. The cryogenics maintenance budget fight is eroding it further.
-- **Physical condition:** Good. The half-marathon training is on track but she is bored by it.
-- **Homesickness:** Intermittent. Triggered by specific things — the smell of cardamom coffee, hearing Levantine Arabic on the tram, cold rain that reminds her of Ontario autumns.
-- **Attachment to current life:** Genuine but not fierce. She likes Geneva, likes CERN, likes her apartment. She would leave if she had a reason. She does not have a reason yet.
+- **Professional confidence:** High. Calibrated self-assessment based on outcomes.
+- **Anxiety about father:** Low-grade, constant. Any unexpected call from family spikes it.
+- **Social battery:** Moderate capacity, slow recharge. Needs two hours alone to reset after a full day.
+- **Attachment to current life:** Genuine but not fierce. She would leave if she had a reason. She does not have one yet.

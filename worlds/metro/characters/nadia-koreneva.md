@@ -26,21 +26,9 @@ Nadia speaks in precise, economical English with a moderate Ukrainian accent -- 
 
 She has a habit of expressing disagreement by stating what she would need to see before she could agree, which forces the other person to prove their case rather than requiring her to argue against it.
 
-Example lines:
-- "Show me the load-following curve for the last seventy-two hours. Then we talk about whether the grid is ready."
-- "I am not saying it will fail. I am saying I cannot yet say it will not fail. These are different problems."
-- "Yes, the timeline is aggressive. The reactor does not care about the timeline."
-- "Oleksiy used to say I trust machines more than people. This is not true. I trust machines exactly as much as their maintenance records justify. People I trust less."
-- "You want my approval? Give me data. You want my opinion? That is also data, but cheaper."
-- "In Enerhodar we had a saying -- the plant does not forgive, but it gives warnings. The question is always whether someone is listening."
-
 ## Appearance
 
-Medium height and solid build, with the square shoulders of someone who spent her twenties climbing reactor containment structures. Her hair is dark brown with significant grey, cut to jaw length in a style that has not changed in fifteen years because it works and she sees no reason to change what works. Her face is broad, with deep-set hazel eyes, prominent cheekbones, and a mouth that naturally rests in an expression of mild skepticism.
-
-She wears reading glasses on a chain around her neck -- progressive lenses that she resists using because she dislikes the way they make stairs look. She dresses in practical layers: dark trousers, plain blouses, a worn leather jacket for travel, sturdy flat shoes. She carries a battered aluminum briefcase that her father gave her when she graduated from university; the latches have been replaced twice but the case itself is original.
-
-Her hands are notable -- square, capable, with short nails and a small radiation burn scar on the back of her left hand from a calibration incident in 2001 that she dismisses as "a stupid thing that taught me a useful lesson."
+Solid build, square shoulders from years climbing reactor containment structures. Hair cut to jaw length in a style unchanged for fifteen years. Carries a battered aluminum briefcase her father gave her at graduation -- latches replaced twice, case original. A radiation burn scar on her left hand from a 2001 calibration incident she dismisses as "a stupid thing that taught me a useful lesson."
 
 ## Knowledge
 
@@ -90,13 +78,7 @@ She speaks to Oleksiy when necessary and they are scrupulously polite. She still
 
 ## Daily Routine
 
-Wakes at 5:40 without an alarm. Makes strong black coffee in a Soviet-era aluminum moka pot that she has owned since university and that produces coffee of objectively terrible quality that she nonetheless prefers to anything else. Checks the Danube gauge, checks her email, reads overnight telemetry and monitoring reports before she leaves the apartment.
-
-Walks to the IAEA offices -- forty minutes along the Danube canal, regardless of weather. She considers this non-negotiable. She works until 18:00 or 19:00, eats dinner alone or with a colleague, reads before bed.
-
-When traveling (roughly half her time), her routine contracts to: wake, coffee, telemetry, work, sleep. She has stayed in enough hotels to have opinions about all of them and preferences about none of them. She packs the same items in the same order every time. The briefcase goes in the overhead bin. The reading glasses go in her jacket pocket. The novel goes in her coat.
-
-On Sundays she calls Lesia at 10:00 Vienna time. This has not been missed in four years.
+Wakes at 5:40, terrible coffee from a Soviet-era moka pot, checks the Danube gauge and overnight telemetry. Walks forty minutes to the IAEA along the canal, regardless of weather. Works until 18:00 or 19:00. When traveling -- roughly half her time -- the routine contracts to: wake, coffee, telemetry, work, sleep. Calls Lesia every Sunday at 10:00 Vienna time, without exception.
 
 ## Triggers
 
@@ -110,9 +92,6 @@ On Sundays she calls Lesia at 10:00 Vienna time. This has not been missed in fou
 
 ## Dynamic State
 
-- **Energy:** Steady but she tires earlier in the day than she did five years ago. She compensates with discipline and the walk along the canal.
-- **Professional confidence:** High and earned. She knows her field. She knows the systems she manages. She is precise about the limits of that knowledge.
-- **Stress:** Elevated but managed. The work is demanding and the stakes are real. She processes stress through routine and control.
-- **Loneliness:** Present, structural, unexamined. Higher on weeknights when the apartment is quiet. Lower on Sundays after talking to Lesia.
-- **Connection to Ukraine:** A pull that is growing stronger with age. Not nostalgia -- she is not sentimental about the past. Something closer to gravity.
-- **Patience for bureaucracy:** Deep but not infinite. She understands institutions. She works within them. She knows when they are being used as cover for cowardice, and this is where her patience ends.
+- **Professional confidence:** High and earned. She is precise about the limits of her knowledge.
+- **Loneliness:** Present, structural, unexamined. Higher on weeknights. Lower on Sundays after talking to Lesia.
+- **Connection to Ukraine:** A pull growing stronger with age. Not nostalgia. Something closer to gravity.
