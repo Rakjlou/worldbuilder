@@ -36,6 +36,38 @@ The detection test: **"Does this describe what IS, or does it predict what WILL 
 
 Magnets hide in goals ("seeks redemption"), in objects ("a locked diary"), in descriptions ("a place of healing"), and in relationships ("a bond that will be tested"). Read every detail through this lens.
 
+#### In lore files
+
+Lore describes what exists. It does not describe what happens. When a lore file reads like a plot outline with the character names removed -- discovery, then confirmation, then crisis, then climax -- every seed will reproduce that outline.
+
+- **Story directives belong in intentions, not lore.** "The system is activated badly" is an authorial intention. "The system has never been tested at full scale" is a fact about the world.
+- **Pre-packaged debate positions are magnets.** If the lore spells out both sides of a conflict as bullet points, every seed copies them verbatim. Describe the physics that create the conflict and let the seed arrive at the positions.
+- **Narrative framing is a magnet.** "A diagnosis no one wants to confirm" turns a fact into a story beat. "The data is available to anyone with the instruments to look" is the same information without the dramatic staging.
+- **Story-direction language in world descriptions leaks into seeds.** "These relationships are the engine of the story" and "the lens through which the audience experiences the crisis" are instructions to the seeder, not facts about the world. Move them to intentions or remove them.
+
+#### In intentions files
+
+Intentions are the one place where narrative direction belongs. But even here, precision matters.
+
+- **Beats framed as events produce identical scenes.** "The object's nature is identified -- it matches Earth" gives every seed the same revelation at the same moment. "The moment where the nature of the threat shifts from external to reflexive" describes the emotional territory and lets each seed find its own path there.
+- **Rails should prescribe outcomes, not mechanisms.** "The activation goes wrong due to human causes" is a good rail. "A calibration error causes the activation to fail" prescribes the specific failure mode and every seed will use it.
+
+#### In character profiles
+
+Character profiles have six specific failure modes that the general magnet test does not catch:
+
+**1. The Narrator Flag.** Lines where the author tells the reader which detail matters. "His hands are *the key detail*." "She is, *by any objective measure*, exceptionally good." "She does not understand that paying attention the way she does is, *itself, the gift*." A seed writer reads these as instructions about which detail to build the story around. Describe the hands, the skill, the attention -- but do not editorialize about their significance.
+
+**2. The Triple Mention.** When a detail appears in three or more profile sections (Appearance + Fears + Dynamic State, for example), it becomes the character's narrative identity. Every seed builds the story around it. One mention is texture. Three is an assignment. Important details should live in one section. Other sections should carry competing weight.
+
+**3. The Expertise-Vulnerability Mirror.** When a character's main vulnerability is the exact inverse of their professional competence (precision hands + arthritis, pattern detection + institutional silencing), every seed builds the climax at the intersection where the vulnerability meets the crisis. Vulnerabilities should be *orthogonal* to expertise -- institutional, relational, financial, philosophical -- so that seeds must choose which dimension to exploit rather than finding the obvious one pre-wired.
+
+**4. The Mysterious Goal.** Goals that contain unexplained phenomena ("a discrepancy she cannot attribute to any known effect") are planted plot hooks. A seed will fire every one. Goals should describe present behaviors and mundane concerns -- never mysteries waiting to be solved by the story.
+
+**5. The Trajectory State.** Dynamic State entries framed as trajectories ("declining," "progressing," "growing") imply a narrative arc. "Functional but declining" predicts a story about decline. "Functional. Managed." describes a present condition. Describe states, not directions.
+
+**6. The Solo Function.** When every character's expertise maps to exactly one role in the world's central problem, every seed assembles the same team in the same configuration. Some characters should have expertise that doesn't map obviously to the crisis, or that overlaps with another character's domain, so that seeds must *discover* how a character contributes rather than slotting them into the one available position.
+
 ### Characters Are People, Not Functions
 
 Every character must have concerns independent of the protagonist. A grocer should care about her margins, her tomato garden, her rivalry with a supermarket chain. A fisherman should care about his aging body and harbor regulations. These mundane concerns make characters real. When their lives intersect with the story, it feels earned rather than engineered.
@@ -182,6 +214,14 @@ Run these checks across all files:
 - **Plot events in locations:** Do location descriptions or secrets contain story-planning notes or narrative beats?
 - **Goal language:** Are goals expressed as present behaviors ("walks the harbor every morning") or as destinations ("seeks peace")?
 - **Relationship symmetry:** Are both sides present? Are they present-tense and observational, not predictive?
+- **Narrator flags:** Does the profile tell the reader which detail is important? ("His hands are the key detail," "She is, by any objective measure, exceptionally good.") The profile should describe, not editorialize.
+- **Triple mentions:** Does a single detail appear in three or more profile sections? (e.g. a physical trait in Appearance, Fears, AND Dynamic State.) One mention is texture; three is a narrative assignment.
+- **Expertise-vulnerability mirrors:** Is a character's main vulnerability the exact inverse of their expertise? (precision worker + failing hands, pattern-detector + institutional silencing.) Vulnerabilities should be orthogonal to professional competence.
+- **Mysterious goals:** Do any goals contain unexplained phenomena that a seed will treat as plot hooks?
+- **Trajectory states:** Are Dynamic State entries framed as trajectories ("declining," "progressing") rather than conditions ("functional," "managed")?
+- **Solo functions:** Does every character's expertise map to exactly one role in the world's central problem? Are there characters with overlapping competencies or non-obvious relevance?
+- **Lore as plot outline:** Does the lore file describe what happens (story arc) or what exists (world state)? Are there story directives that belong in intentions instead?
+- **Intentions as events:** Are beats framed as specific events ("The object is identified as Earth") or as emotional territory ("The moment where the threat becomes reflexive")?
 
 Present findings as a numbered list of questions/issues for the author. Do not silently fix anything.
 
