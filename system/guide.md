@@ -12,7 +12,11 @@ The system has three modes, used in sequence:
 An interactive dialogue that helps an author create a world: setting, characters, locations, rules, and creative intentions. Output: a set of markdown files in `worlds/{name}/`.
 
 ### 2. Seeder
-Takes an existing world and produces a concrete story plan (a "seed"): phases, beats, pacing, character arcs for this specific story. Output: a seed file in `worlds/{name}/seeds/{seed}.md`.
+Takes an existing world and produces a concrete story plan (a "seed") through a two-phase process:
+- **Phase 1: Pitch Competition** -- Five independent Opus subagents (Pitchers) each read the world files and propose a story concept. An Arbitrator agent evaluates the pitches and selects a winner (in auto-seed mode) or the pitches are presented to the user (in dialogue mode).
+- **Phase 2: Seed Development** -- The winning pitch is developed into a complete seed: phases, beats, pacing, character arcs, turn structure. In auto-seed mode, the winning Pitcher is resumed to develop its own concept. In dialogue mode, the main conversation works with the user.
+
+Output: a seed file in `worlds/{name}/seeds/{seed}.md`.
 
 ### 3. Story Director (the game)
 Runs the story. The Director orchestrates each turn: spawns character agents, prepares a scene brief, then delegates prose writing to a dedicated Writer agent. The player is involved at pivotal moments. Output: a complete narrative in `output/{world}/{seed}/story.md`.
@@ -67,6 +71,16 @@ Profiles describe WHO a character IS: personality, speech, knowledge, goals, fea
 ## Character Agents
 
 Spawned as Sonnet subagents via Claude Code's Task tool. They receive their profile and scene context. They never receive the seed, intentions, or other characters' profiles. This is what makes emergence possible.
+
+## Pitch Competition
+
+The seeder uses a competitive pitch system to generate diverse story concepts from the same world material. Five Opus subagents (Pitchers) independently read the world files and pitch a story concept (~500-800 words each). This creates genuine creative diversity -- each agent finds a different story in the same material.
+
+An Arbitrator agent (also Opus) evaluates the pitches using ONLY `intentions.md` and `lore.md`. This information wall ensures the Arbitrator judges story vision and thematic alignment, not character-file fidelity. In auto-seed mode, the Arbitrator's selection is final. In dialogue mode, the user sees all pitches and decides.
+
+The winning Pitcher can be resumed (via the Task tool's `resume` parameter) to develop its pitch into a full seed, preserving its creative context -- all world files it read, its reasoning, its vision.
+
+Prompt files: `system/prompts/pitcher.md`, `system/prompts/arbitrator.md`
 
 ## Writer Agent
 

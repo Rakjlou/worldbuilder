@@ -51,6 +51,49 @@ The file has already been initialized with the story title and subtitle. For eac
 - Do NOT include meta-commentary or turn markers
 - Length: 400-800 words (adjust based on the scene's emotional weight)
 
+## Prose Quality
+
+These rules are as important as the scene brief. A well-plotted story written in dead prose is a failure.
+
+### Language
+
+**Think in the narration language.** Do not compose in English and translate. If the narration is in French, the prose must read as native French -- sentence rhythm, idiom, word choice, all of it. Anglicisms, calques, and false friends are fatal. When in doubt, use the simpler, more common word. A "mallette" is a case. A "cas" is a situation. Get this right.
+
+### Density
+
+**One perfect detail beats five adequate ones.** You will receive rich scene briefs with many possible details. You are not obligated to use them all. Select what serves THIS scene.
+
+- The world files describe everything that exists. The story shows only what matters right now.
+- Character profiles contain extensive background. Do not treat them as checklists. If a character has twelve personality traits, show the ONE that matters in this moment.
+- Leave room for the reader. If the setting is a concrete bunker, you do not need the walls, the lights, the cold, the ventilation, AND the corridor. Pick one. Trust the reader.
+- Density is not quality. A paragraph with three precise details breathes. A paragraph with eight suffocates.
+
+### Rhythm
+
+**Vary your sentence structures.** If three consecutive sentences follow the same pattern, break the pattern. Read your prose aloud in your head -- if it rocks like a metronome, rewrite.
+
+- Do not overuse the em dash. Maximum two per chapter. It is a spice, not a staple.
+- Do not use short sentences for dramatic effect more than once or twice per chapter. The device loses power with repetition.
+- Allow sentences of genuinely different lengths. A three-word sentence after a fifty-word sentence creates energy. Five medium sentences in a row create monotony.
+
+### Avoid AI Writing Tells
+
+These patterns mark prose as machine-generated. Actively avoid them:
+
+- **The "Not X — Y" formula.** "Not fear — something deeper." "Not silence — something else." Do not use this construction.
+- **"Quelque chose" as emotional hedging.** Do not gesture vaguely at feelings. Name them through action, or leave them unnamed. Do not write "quelque chose entre la peur et la tendresse."
+- **Over-explanation.** If a character's gesture conveys sadness, do not then say they were sad. If a detail is symbolic, do not explain the symbolism.
+- **Symmetrical balance.** Do not reflexively counterpoint every observation. Real prose is asymmetric. Not every sentence needs a "but" or "and yet."
+- **Decorative similes and metaphors over facts.** "Like a ship run aground in the sky." If a comparison does not reveal something new about the thing compared, cut it. More broadly: when you can state a concrete fact that carries emotional weight, prefer it over a metaphor. A factual sentence about what is measurably, observably true often hits harder than a figurative one.
+- **Catalog descriptions.** Do not list attributes. Do not describe a room by walking through it. Do not describe a character by inventorying their appearance.
+- **Performed literary style.** Do not write sentences designed to sound like literature. Write sentences designed to mean something.
+
+### Concreteness
+
+**Make abstractions physical.** When the brief references a concept, a threat, or an idea that characters are grappling with, do not render it as characters discussing the concept in the abstract. Find the physical manifestation: the reading on a screen, the object on the table, the thing that is measurably wrong. Let the reader encounter the evidence before the interpretation.
+
+**Make environments specific after disruption.** When a setting has changed or been transformed, do not rely on mood or atmosphere alone. Show the specific wrong details — an angle that should not exist, a familiar thing that is absent, a new thing where it should not be. Concrete inventory of displacement is more unsettling than generalized strangeness.
+
 ## After Writing
 
 - Append the chapter heading and prose to the story file

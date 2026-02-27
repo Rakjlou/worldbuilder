@@ -14,23 +14,25 @@ When a session starts, greet the user and ask what they want to do:
 ## Quick Detection
 
 - If the user says "build" or "new world" --> Load `system/prompts/worldbuilder.md` and follow it. If they name an existing world, the worldbuilder will enter Review & Edit mode automatically.
-- If the user says "seed" and names a world --> Load `system/prompts/seeder.md` and the world files.
+- If the user says "seed" and names a world --> Load `system/prompts/seeder.md` and follow the Pitch Competition process (Phase 1: spawn 5 Pitchers, Phase 2: develop the winning pitch into a seed through dialogue).
 - If the user says "play" and names a world + seed --> Load `system/prompts/story-director.md` and the world + seed.
 - If the user says "play" and names a world but NO seed --> **Auto-generate a seed first** (see below), then proceed to play.
 - If the user says "resume" --> Follow the Resume procedure below.
 - If the user names a specific world or seed without a mode --> Ask which mode they want.
 
-**"Load X" means:** Read the prompt file into your context and adopt that role for the remainder of this session. You do not spawn a subagent -- you become the Worldbuilder, Seeder, or Story Director. The one exception is Auto-Seed, which explicitly spawns an Opus subagent.
+**"Load X" means:** Read the prompt file into your context and adopt that role for the remainder of this session. You do not spawn a subagent -- you become the Worldbuilder, Seeder, or Story Director. The exceptions are the Pitch Competition (which spawns Pitcher and Arbitrator subagents) and Auto-Seed (which runs the full seeding pipeline as subagents).
 
 ## Auto-Seed (seedless play)
 
 When the user wants to play without naming a seed:
 
-1. Spawn an **Opus subagent** with the seeder prompt (`system/prompts/seeder.md`) and tell it explicitly to use **autonomous mode (surprise)** -- no author consultation
-2. The agent reads the world files, spawns its own critic subagents, and generates a seed that has been challenged and refined -- all without dialogue
-3. Save the seed to `worlds/{world}/seeds/{YYYYMMDD}-{seed-title}.md` (kebab-case title, e.g. `20260215-la-lumiere-sous-leau.md`)
-4. Proceed to play mode with this seed
-5. The player does not see the seed content -- they discover the story as it unfolds
+1. Load `system/prompts/seeder.md` and follow the **Pitch Competition** in auto-seed mode:
+   a. Read `system/prompts/pitcher.md` and spawn **5 Opus subagents** (Pitchers) in parallel, each with the pitcher prompt and the world directory path. Each reads the world files independently and returns a story pitch (~500-800 words). Store all 5 agentIds.
+   b. Read `system/prompts/arbitrator.md` and spawn **1 Opus subagent** (Arbitrator) with the arbitrator prompt, ONLY `intentions.md` + `lore.md` from the world, and all 5 pitches. The Arbitrator evaluates and selects the winner.
+   c. **Resume the winning Pitcher** (using its stored agentId) with the Arbitrator's verdict, development notes, and the seed template from `seeder.md`. The Pitcher develops its pitch into a full seed, spawns Sonnet critics to challenge it, and writes the seed file.
+2. Save the seed to `worlds/{world}/seeds/{YYYYMMDD}-{seed-title}.md` (kebab-case title, e.g. `20260226-le-dernier-plongeur.md`)
+3. Proceed to play mode with this seed
+4. The player does not see the seed content -- they discover the story as it unfolds
 
 ## Resume
 
