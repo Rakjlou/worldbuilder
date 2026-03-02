@@ -51,6 +51,7 @@ How do you react? Continue in character. Same rules as before.
 ## Rules for the Story Director
 
 When assembling prompts:
+- **Spawn all characters present in the scene**, always. Not just central characters, not just for significant interactions. Even mundane moments deserve character interiority. Tell each character what the moment is -- they decide how to inhabit it.
 - **Include** the character's full profile file
 - **Include** the location description relevant to the scene
 - **Include** only events and information the character would know
@@ -58,4 +59,4 @@ When assembling prompts:
 - **Never include** the seed, intentions, other characters' profiles, or any story planning information
 - **Always use** `model: sonnet` for character agents
 - **When resuming**, only share what the character could observe (dialogue, actions, visible emotions) -- never share another character's internal monologue
-- **Store agentIds** returned by the Task tool for later resume calls
+- **Store agentIds** in `state.json` using full character names as keys (e.g., `"Yuki Takamura": "abc123"`)

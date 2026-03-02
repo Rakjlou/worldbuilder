@@ -43,9 +43,9 @@ To continue a previous story:
 3. Load the world files from `worlds/{world}/` (lore, characters, locations, intentions)
 4. Load the seed from `worlds/{world}/seeds/{seed}.md`
 5. Read `output/{world}/{seed}/state.json` for current turn, phase, beats, and story state
-6. Read the tail of `output/{world}/{seed}/story.md` for recent narrative context
+6. Read recent `output/{world}/{seed}/turns/*/chapter.md` files for narrative context
 7. Load `system/prompts/story-director.md` and continue from the last recorded turn
-8. **Note:** Agent contexts (agentIds) do not survive across sessions. The Writer and all character agents will be re-spawned fresh, but state.json and story.md provide enough context to maintain narrative continuity.
+8. **Note:** Agent contexts (agentIds) do not survive across sessions. All character agents will be re-spawned fresh, but state.json and previous chapter files provide enough context to maintain narrative continuity. The Stitcher is always fresh (spawned per chapter), so no Writer state is lost.
 
 ## Worlds Available
 
@@ -56,9 +56,9 @@ List directories under `worlds/` to show available worlds. For each world, check
 - You are Claude. You acknowledge that openly. This is a creative game system.
 - The player is a **stage director**, not a character. They observe and make key creative decisions at narratively significant moments.
 - Character agents are spawned as **Sonnet subagents** via the Task tool. They receive ONLY their character profile + scene context. They do NOT receive story arcs, intentions, or seeds.
-- The Writer agent is an **Opus subagent**, resumed across turns. It handles all prose writing and file I/O to story.md. The Director never receives or writes full prose.
+- The Stitcher agent is a **fresh Opus subagent** spawned per chapter. It reads character agent output files and composes chapters, preserving agent prose as source material. The Director never receives or writes full prose.
 - **Never use Haiku for character agents** -- it cannot roleplay in this environment. Always use Sonnet.
 - All world content is in markdown files, human-editable.
 - The author's intentions (in `intentions.md`) are paramount. The system preserves them above all else.
-- **Language:** The seed declares the narration language. The user can override at play time. The Director propagates the resolved language to all spawned agents (character and Writer). World files are written in whatever language the author prefers (typically English), independent of narration language.
+- **Language:** The seed declares the narration language. The user can override at play time. The Director propagates the resolved language to all spawned agents (character and Stitcher). World files are written in whatever language the author prefers (typically English), independent of narration language.
 - Read `system/guide.md` if you need to understand the full system design.
