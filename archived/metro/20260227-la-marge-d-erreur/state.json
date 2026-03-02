@@ -1,0 +1,46 @@
+{
+  "turn": 30,
+  "phase": 8,
+  "phase_name": "Le Silence",
+  "current_beat": "STORY COMPLETE",
+  "location": "la-serena",
+  "time": "Weeks after activation.",
+  "characters_met": ["yuki", "daniel_reyes", "mateo", "seo-yun", "renata", "ephrem", "kwame", "yara", "nadia", "jeanne", "amir", "okonkwo", "helena"],
+  "relationships": {
+    "ephrem-yara": "Irreconcilable frameworks.",
+    "mateo-yuki": "Recognition. Two people who see systems from the inside."
+  },
+  "events": [
+    "T1-T5: Detection, confirmation, leaks, the box.",
+    "T6-T9: Confirmation, paradox, teleportation, 0.9743 written, institutions form.",
+    "T10-T11: Bientôt. Ephrem-Yara dispute.",
+    "T12: World fractures. Three voices.",
+    "T13: Construction begins. Helena Cavalcanti. The prototype geometry changes; 0.9743 remains. The cable in the corridor.",
+    "T14-15: Mateo transferred. Packs Paranal. Arrives at complex. Begins auditing. Meets Yuki. Workaround file grows.",
+    "T16-17: Nadia sees power deviations — within tolerances. Kwame sees echo before signal — writes tech note. Mateo's file grows.",
+    "T18-21: Mateo finds the 0.9743 — traces it to prototype an 2, geometry changed an 6. Tells Yuki. Report filed, classified. Tolérances.",
+    "T22-23: Three documents — Mateo's report, Kwame's note, Ephrem's email. No one reads all three. Puzzle stays in pieces.",
+    "T24-25: Last days. Pre-activation sequence begins. The cable. Yuki calls her mother. The 0.9743 in yellow on Mateo's screen.",
+    "T26-27: L'activation. Four perspectives interwoven. Mateo's fourteen seconds — doesn't act. Kwame says 'This is unacceptable' — lost in noise. The system fires. Yuki recognizes the Rubin pattern. Mateo sees the offset.",
+    "T28: Le silence. Mateo at his screen, Rodrigo beside him. 'No sé lo que hemos hecho.' Yuki walks into the desert at dawn.",
+    "T29-30: La boîte. Yuki in La Serena. Opens the box. Reads the first page. The gesture is enough."
+  ],
+  "player_choices": [
+    "T7: Clinical and methodical",
+    "T12: All three perspectives interwoven",
+    "T26: Activation — all four perspectives interwoven"
+  ],
+  "beats_completed": ["first_observation", "confirmation_begins", "mateo_ordinary_life", "international_team_forms", "information_leaks", "object_confirmed", "paradox_named", "teleportation_emerges", "0.9743_written", "paradox_public", "ephrem_yara_dispute", "world_fractures", "construction_begins", "mateo_transferred", "mateo_audits_code", "mateo_finds_0.9743", "three_puzzle_pieces", "final_pressure", "activation", "silence", "yuki_opens_box"],
+  "beats_remaining": [],
+  "agent_ids": {
+    "yuki": "aec9a1da7b9355f4d",
+    "mateo": "a8ca0ebc456dce786",
+    "renata": "a04e84987704ba3ec",
+    "ephrem": "a49b458d5296c1048",
+    "kwame": "aa41c99f5d4328882",
+    "yara": "ac081315bd3662496",
+    "nadia": "af73965aefcc9c469",
+    "writer": "a73dee25bf4abe631"
+  },
+  "status": "COMPLETE"
+}

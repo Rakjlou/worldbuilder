@@ -1,0 +1,17 @@
+# Mateo Quispe-Rojas -- Agent Dialogues
+
+All character agent outputs for Mateo Quispe-Rojas across the story.
+
+---
+
+## Turn 2 — It's late afternoon.
+
+Le curseur clignote depuis vingt minutes sur la même ligne. Mateo est immobile — pas figé, juste... arrêté. La main droite posée à plat sur le bureau, les yeux fixés sur la trace d'exécution que le controller a crachée ce matin à 09h47 et pas une seule fois depuis. *Il y a quelque chose dans le timestamp. L'offset est trop régulier pour être aléatoire, trop irrégulier pour être une constante. Ce n'est pas un bug dans le code — c'est une hypothèse dans l'architecture.* Il note ça dans son carnet de papier, qui existe pour cette raison précise : écrire à la main ralentit suffisamment la pensée pour qu'elle devienne utilisable. Dans la marge, en petites lettres : `race condition? ou timing assumption dans le readout mode switch?` Il souligne deux fois.
+
+Seo-yun passe devant la porte ouverte, les bras chargés de printouts de spectres de calibration. Elle marque une pause. "Tu veux du café ? Je vais en bas." Mateo lève les yeux, sourit — le sourire un peu décalé de quelqu'un qui remonte de loin. "Oui, claro, exacto — merci." Elle repart. *Elle pose toujours la question comme ça, comme si le café était une excuse pour vérifier que tu es encore vivant.* Il avait passé deux heures avec elle il y a trois mois sur un script de réduction qu'elle ne comprenait pas, et depuis, elle lui apporte du café quand il est trop silencieux. C'est la façon qu'ont les gens ici de s'occuper les uns des autres sans en faire une histoire.
+
+Son téléphone vibre. Valentina. Il le voit du coin de l'œil, ne le prend pas. *Elle a besoin de l'argent pour les frais d'examen — il le sait depuis ce matin, il faut juste qu'il calcule combien il peut envoyer ce mois-ci après le virement pour le loyer de Lucía.* Ce n'est pas qu'il ne veut pas répondre. C'est qu'il veut lui répondre avec un chiffre, pas avec une promesse. Les promesses, dans sa famille, ont trop longtemps servi de monnaie d'échange. Il préfère être lent et précis. Il repose le téléphone face contre le bureau. Dans une heure, il calculera. En attendant, la trace d'exécution.
+
+Vers 17h20 un technicien traverse la salle en disant quelque chose à voix basse à un collègue — *Rubin... quelque chose à Rubin* — et le collègue hoche la tête avec un sourcil levé. Mateo entend mais ne lève pas la tête. Il y a toujours quelque chose à Rubin : une panne de contrôleur, un problème de seeing, une réunion d'équipe qui a mal tourné. Les observatoires sont de petits villages et les rumeurs circulent vite dans le désert. Il fait mentalement la liste des gens qu'il connaît là-bas — deux ou trois noms, pas plus. Rien de concret. Il revient à sa trace. *L'offset. Regarde l'offset.*
+
+Seo-yun revient avec le café — noir, sans demander, elle sait — et le pose sur le seul coin libre du bureau. "Tu as trouvé ?" Il fait non de la tête, mais sans frustration, plutôt avec une sorte de satisfaction patiente. "Pas encore. Mais je sais ce que c'est pas." Elle rit un peu. "C'est déjà quelque chose." *Oui*, pense-t-il, *c'est même souvent le plus dur.* Il regarde le bracelet sur son poignet gauche — rouge et noir, la laine un peu aplatie par les années — et il pense à sa mère qu'il n'a pas appelée depuis douze jours. Ce soir. Ce soir sans faute. Il écrit `appeler Mama` en bas du carnet, encercle le mot deux fois, et retourne au code.
