@@ -18,4 +18,4 @@ First run of "La Marge d'Erreur" seed. Used the old architecture (persistent Wri
 
 ## Note
 
-The convergence issues discovered in these sessions -- every seed producing "Tomasz's hands" as the climax, Seo-yun as the automatic protagonist, the team assembling in the same 1:1 configuration -- led directly to the convergence magnet fixes in the Metro world files and the detection patterns added to the worldbuilder prompt.
+All sessions here use the old Writer architecture (persistent Opus agent, story.md monolith). The current system uses the Stitcher architecture (fresh-per-chapter agent reading character output files from disk, per-turn chapter.md files). Active outputs live in `output/`.
