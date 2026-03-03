@@ -590,6 +590,12 @@ let lastChapterCount = currentStory.chapters.length;
 setInterval(() => {
   if (!watchEnabled) return;
   try {
+    // Quick directory count check before expensive full parse
+    const turnCount = fs.readdirSync(turnsDir)
+      .filter(d => /^\d+$/.test(d) && fs.existsSync(path.join(turnsDir, d, 'chapter.md')))
+      .length;
+    if (turnCount === lastChapterCount) return;
+
     const newStory = loadStory();
     const newCount = newStory.chapters.length;
 
