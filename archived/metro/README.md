@@ -16,9 +16,6 @@ The same story, edited and iterated over many sessions. The reworked version ref
 ### `20260227-la-marge-d-erreur/`
 First run of "La Marge d'Erreur" seed. Used the old architecture (persistent Writer agent rewriting from scratch, story.md monolith, .agent-registry.json). Archived to make way for the Writer-as-Stitcher architecture -- where character agent prose is preserved as source material and chapters are composed per-turn from agent output files.
 
-### `20260227-la-marge-d-erreur-stitcher/`
-Second run of "La Marge d'Erreur" using the new Stitcher architecture -- fresh-per-chapter Opus agent reading character output files from disk, per-turn chapter.md files, all present characters spawned. The story that validated the Stitcher rewrite.
-
 ## Note
 
 The convergence issues discovered in these sessions -- every seed producing "Tomasz's hands" as the climax, Seo-yun as the automatic protagonist, the team assembling in the same 1:1 configuration -- led directly to the convergence magnet fixes in the Metro world files and the detection patterns added to the worldbuilder prompt.
