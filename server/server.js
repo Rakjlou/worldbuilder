@@ -38,61 +38,22 @@ let noMedia = process.argv.includes('--no-media');
 let watchEnabled = true;
 let currentVoice = config.tts.defaultVoice;
 let currentImageModel = config.gemini.defaultImageModel;
-const storyPath = process.argv.filter(a => a !== '--no-media').slice(2)[0];
-if (!storyPath) {
-  console.error('Usage: node server.js [--no-media] <path-to-story.md>');
+const sessionArg = process.argv.filter(a => a !== '--no-media').slice(2)[0];
+if (!sessionArg) {
+  console.error('Usage: node server.js [--no-media] <session-directory>');
   process.exit(1);
 }
-const resolvedStoryPath = path.resolve(storyPath);
-if (!fs.existsSync(resolvedStoryPath)) {
-  console.error(`File not found: ${resolvedStoryPath}`);
+const sessionDir = path.resolve(sessionArg);
+const turnsDir = path.join(sessionDir, 'turns');
+if (!fs.existsSync(turnsDir)) {
+  console.error(`Not a valid session directory (no turns/ found): ${sessionDir}`);
   process.exit(1);
 }
 
 // --- Cache directory ---
-const storyHash = crypto.createHash('md5').update(resolvedStoryPath).digest('hex').slice(0, 12);
+const storyHash = crypto.createHash('md5').update(sessionDir).digest('hex').slice(0, 12);
 const cacheDir = path.join(__dirname, 'cache', storyHash);
 fs.mkdirSync(cacheDir, { recursive: true });
-
-// --- Migrate old audio cache files to voice-keyed names ---
-(function migrateAudioCache() {
-  try {
-    const files = fs.readdirSync(cacheDir);
-    for (const file of files) {
-      const match = file.match(/^audio_(\d+)\.(\w+)$/);
-      if (match) {
-        const [, idx, ext] = match;
-        const newName = `audio_${idx}_${config.tts.defaultVoice}.${ext}`;
-        const oldPath = path.join(cacheDir, file);
-        const newPath = path.join(cacheDir, newName);
-        if (!fs.existsSync(newPath)) {
-          fs.renameSync(oldPath, newPath);
-          console.log(`Migrated cache: ${file} -> ${newName}`);
-        }
-      }
-    }
-  } catch {}
-})();
-
-// --- Migrate old image cache files to model-keyed names ---
-(function migrateImageCache() {
-  try {
-    const files = fs.readdirSync(cacheDir);
-    for (const file of files) {
-      const match = file.match(/^image_(\d+)\.(png|jpg)$/);
-      if (match) {
-        const [, idx, ext] = match;
-        const newName = `image_${idx}_${config.gemini.defaultImageModel}.png`;
-        const oldPath = path.join(cacheDir, file);
-        const newPath = path.join(cacheDir, newName);
-        if (!fs.existsSync(newPath)) {
-          fs.renameSync(oldPath, newPath);
-          console.log(`Migrated image cache: ${file} -> ${newName}`);
-        }
-      }
-    }
-  } catch {}
-})();
 
 // --- Markdown stripping for TTS ---
 function stripMarkdown(md) {
@@ -145,130 +106,101 @@ function getCachedImageModelsForChapter(index) {
   } catch { return []; }
 }
 
-// --- Story parsing ---
-function parseStory(content) {
-  const lines = content.split('\n');
-  let storyTitle = '';
-  let storySubtitle = '';
+// --- Story title resolution ---
+// Try to read from the seed file: output/{world}/{seed}/ -> worlds/{world}/seeds/{seed}.md
+function resolveStoryTitle() {
+  const seedName = path.basename(sessionDir);           // e.g. 20260227-la-marge-d-erreur
+  const worldName = path.basename(path.dirname(sessionDir)); // e.g. metro
+  const projectRoot = path.dirname(path.dirname(path.dirname(sessionDir)));
+  const seedFile = path.join(projectRoot, 'worlds', worldName, 'seeds', `${seedName}.md`);
+
+  try {
+    const content = fs.readFileSync(seedFile, 'utf-8');
+    // "# STORY SEED: La Marge d'Erreur" or "**Title:** La Marge d'Erreur"
+    const titleMatch = content.match(/^\*\*Title:\*\*\s*(.+)$/m);
+    if (titleMatch) return titleMatch[1].trim();
+    const h1Match = content.match(/^#\s+(?:STORY SEED:\s*)?(.+)$/m);
+    if (h1Match) return h1Match[1].trim();
+  } catch {}
+
+  // Fallback: derive from directory name (strip date prefix, un-kebab)
+  const slug = seedName.replace(/^\d{8}-/, '');
+  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+// --- Story loading from turns/ ---
+function loadStory() {
+  const storyTitle = resolveStoryTitle();
   const chapters = [];
 
-  // Extract h1 title
-  const h1Match = content.match(/^#\s+(.+)$/m);
-  if (h1Match) storyTitle = h1Match[1].trim();
+  // Read turn directories, sorted numerically
+  let turnDirs;
+  try {
+    turnDirs = fs.readdirSync(turnsDir)
+      .filter(d => /^\d+$/.test(d) && fs.existsSync(path.join(turnsDir, d, 'chapter.md')))
+      .sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+  } catch {
+    turnDirs = [];
+  }
 
-  // Extract subtitle (italic line after title)
-  const subtitleMatch = content.match(/^\*(.+)\*$/m);
-  if (subtitleMatch) storySubtitle = subtitleMatch[1].trim();
+  for (const turnDir of turnDirs) {
+    const chapterFile = path.join(turnsDir, turnDir, 'chapter.md');
+    const content = fs.readFileSync(chapterFile, 'utf-8');
 
-  // Split on ## headers
-  const parts = content.split(/\n(?=## )/);
-  for (const part of parts) {
-    const headerMatch = part.match(/^## (.+)$/m);
-    if (!headerMatch) continue;
+    // Each chapter.md starts with "## Title" followed by content
+    const headerMatch = content.match(/^## (.+)$/m);
+    const chapterTitle = headerMatch ? headerMatch[1].trim() : `Chapter ${turnDir}`;
 
-    const title = headerMatch[1].trim();
-    const headerEnd = part.indexOf('\n', part.indexOf('## '));
-    const rawContent = headerEnd >= 0 ? part.slice(headerEnd + 1).trim() : '';
-
-    // Remove trailing --- separator
-    const cleaned = rawContent.replace(/\n---\s*$/, '').trim();
+    // Content is everything after the ## header line
+    const headerEnd = content.indexOf('\n', content.indexOf('## '));
+    const rawContent = headerEnd >= 0 ? content.slice(headerEnd + 1).trim() : '';
 
     chapters.push({
       index: chapters.length,
-      title,
-      rawContent: cleaned,
-      htmlContent: marked(cleaned),
-    });
-  }
-
-  return { storyTitle, storySubtitle, chapters };
-}
-
-// --- Agent monologue helpers ---
-
-function getSessionDir() {
-  return path.dirname(resolvedStoryPath);
-}
-
-function buildChapterTurnMap(story) {
-  const sessionDir = getSessionDir();
-  const stateFile = path.join(sessionDir, 'state.json');
-  const map = new Map();
-
-  try {
-    const state = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
-    if (Array.isArray(state.events)) {
-      for (const event of state.events) {
-        // Pattern: "T3: Les lignes dans l'eau -- description"
-        const match = event.match(/^T(\d+):\s*(.+?)(?:\s*--.*)?$/);
-        if (!match) continue;
-        const turnNum = parseInt(match[1], 10);
-        const eventTitle = match[2].trim();
-
-        // Find matching chapter by title
-        const chapterIdx = story.chapters.findIndex(ch => ch.title === eventTitle);
-        if (chapterIdx >= 0) {
-          map.set(chapterIdx, turnNum);
-        }
-      }
-    }
-  } catch {}
-
-  // Fallback: agent hook logs 0-based turn numbers, so chapter index = turn number
-  for (let i = 0; i < story.chapters.length; i++) {
-    if (!map.has(i)) {
-      map.set(i, i);
-    }
-  }
-
-  return map;
-}
-
-function parseAgentFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf-8');
-  const lines = content.split('\n');
-
-  // Extract name from first line: "# Gabriel Marin -- Agent Dialogues"
-  let name = path.basename(filePath, '.md');
-  const headerMatch = lines[0]?.match(/^#\s+(.+?)(?:\s*--.*)?$/);
-  if (headerMatch) name = headerMatch[1].trim();
-
-  // Split on ## Turn N — label headers
-  const sections = [];
-  const parts = content.split(/\n(?=## Turn \d+)/);
-  for (const part of parts) {
-    const turnMatch = part.match(/^## Turn (\d+)\s*[—–-]\s*(.+)$/m);
-    if (!turnMatch) continue;
-
-    const turn = parseInt(turnMatch[1], 10);
-    const label = turnMatch[2].trim();
-    const headerEnd = part.indexOf('\n', part.indexOf('## Turn'));
-    let rawContent = headerEnd >= 0 ? part.slice(headerEnd + 1).trim() : '';
-    // Remove trailing --- separator
-    rawContent = rawContent.replace(/\n---\s*$/, '').trim();
-
-    sections.push({
-      turn,
-      label,
+      turn: parseInt(turnDir, 10),
+      title: chapterTitle,
       rawContent,
       htmlContent: marked(rawContent),
     });
   }
 
-  return { name, sections };
+  return { storyTitle, chapters };
 }
 
-function getAvailableCharacters() {
-  const agentsDir = path.join(getSessionDir(), 'agents');
+// --- Agent helpers for new turns-based format ---
+
+// Parse a single agent file from turns/NN/agents/NN-slug.md
+// Extracts character name and the ## Response section
+function parseAgentFile(filePath) {
+  const content = fs.readFileSync(filePath, 'utf-8');
+
+  // Name from "# Character Name"
+  let name = path.basename(filePath, '.md').replace(/^\d+-/, '');
+  const headerMatch = content.match(/^#\s+(.+)$/m);
+  if (headerMatch) name = headerMatch[1].trim();
+
+  // Extract everything after "## Response"
+  const responseIdx = content.indexOf('\n## Response');
+  let response = '';
+  if (responseIdx >= 0) {
+    const afterHeader = content.indexOf('\n', responseIdx + 1);
+    response = afterHeader >= 0 ? content.slice(afterHeader + 1).trim() : '';
+  }
+
+  return { name, response, htmlResponse: response ? marked(response) : '' };
+}
+
+// Get all agents for a given turn number
+function getAgentsForTurn(turnNum) {
+  const turnStr = String(turnNum).padStart(2, '0');
+  const agentsDir = path.join(turnsDir, turnStr, 'agents');
   try {
-    const files = fs.readdirSync(agentsDir).filter(f => f.endsWith('.md'));
+    const files = fs.readdirSync(agentsDir)
+      .filter(f => f.endsWith('.md'))
+      .sort();
     return files.map(f => {
-      const slug = f.replace(/\.md$/, '');
-      const filePath = path.join(agentsDir, f);
-      const firstLine = fs.readFileSync(filePath, 'utf-8').split('\n')[0] || '';
-      const match = firstLine.match(/^#\s+(.+?)(?:\s*--.*)?$/);
-      const name = match ? match[1].trim() : slug;
-      return { name, slug };
+      const parsed = parseAgentFile(path.join(agentsDir, f));
+      return { name: parsed.name, htmlContent: parsed.htmlResponse };
     });
   } catch {
     return [];
@@ -276,7 +208,7 @@ function getAvailableCharacters() {
 }
 
 // --- Current story state ---
-let currentStory = parseStory(fs.readFileSync(resolvedStoryPath, 'utf-8'));
+let currentStory = loadStory();
 console.log(`Loaded story: "${currentStory.storyTitle}" (${currentStory.chapters.length} chapters)`);
 
 // --- Image generation (Gemini Flash prompt + Imagen 4) ---
@@ -402,7 +334,6 @@ async function generateAudio(text, voice) {
     return generateAudioChunk(chunks[0], voice);
   }
 
-  // Generate all chunks sequentially and concatenate
   const buffers = [];
   for (let i = 0; i < chunks.length; i++) {
     console.log(`    Audio chunk ${i + 1}/${chunks.length} (${chunks[i].length} chars)`);
@@ -452,13 +383,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API: get story structure (always re-read from disk to avoid stale state)
 app.get('/api/story', (req, res) => {
   try {
-    currentStory = parseStory(fs.readFileSync(resolvedStoryPath, 'utf-8'));
+    currentStory = loadStory();
   } catch (err) {
-    console.error('Error reading story file:', err.message);
+    console.error('Error reading story:', err.message);
   }
   res.json({
     storyTitle: currentStory.storyTitle,
-    storySubtitle: currentStory.storySubtitle,
     mediaEnabled: !noMedia,
     watchEnabled,
     voices: config.tts.voices.map(v => ({ id: v, label: voiceLabel(v) })),
@@ -506,39 +436,14 @@ app.post('/api/voice', express.json(), (req, res) => {
   res.json({ currentVoice });
 });
 
-// API: list available character agents
-app.get('/api/agents', (req, res) => {
-  res.json({ characters: getAvailableCharacters() });
-});
-
-// API: get agent monologues for a chapter
-app.get('/api/chapter/:index/agents/:slug', (req, res) => {
+// API: get all agents for a chapter (coulisses)
+app.get('/api/chapter/:index/agents', (req, res) => {
   const index = parseInt(req.params.index, 10);
-  const slug = req.params.slug;
-  const agentFile = path.join(getSessionDir(), 'agents', `${slug}.md`);
+  const chapter = currentStory.chapters[index];
+  if (!chapter) return res.status(404).json({ error: 'Chapter not found' });
 
-  if (!fs.existsSync(agentFile)) {
-    return res.status(404).json({ error: 'Agent not found' });
-  }
-
-  const turnMap = buildChapterTurnMap(currentStory);
-  const turnNumber = turnMap.get(index);
-
-  if (turnNumber === undefined) {
-    return res.json({ character: slug, slug, turn: null, sections: [] });
-  }
-
-  const parsed = parseAgentFile(agentFile);
-  const sections = parsed.sections
-    .filter(s => s.turn === turnNumber)
-    .map(s => ({ label: s.label, htmlContent: s.htmlContent }));
-
-  res.json({
-    character: parsed.name,
-    slug,
-    turn: turnNumber,
-    sections,
-  });
+  const agents = getAgentsForTurn(chapter.turn);
+  res.json({ turn: chapter.turn, agents });
 });
 
 // API: get chapter image
@@ -680,35 +585,30 @@ app.get('/api/chapter/:index/audio', async (req, res) => {
   }
 });
 
-// --- File polling (stat check every 2s, read only on change) ---
-let lastMtimeMs = fs.statSync(resolvedStoryPath).mtimeMs;
+// --- File polling (watch turns/ for new chapter files, check every 2s) ---
+let lastChapterCount = currentStory.chapters.length;
 setInterval(() => {
   if (!watchEnabled) return;
   try {
-    const { mtimeMs } = fs.statSync(resolvedStoryPath);
-    if (mtimeMs === lastMtimeMs) return;
-    lastMtimeMs = mtimeMs;
-
-    const content = fs.readFileSync(resolvedStoryPath, 'utf-8');
-    const newStory = parseStory(content);
-    const oldCount = currentStory.chapters.length;
+    const newStory = loadStory();
     const newCount = newStory.chapters.length;
 
-    if (newCount !== oldCount) {
-      console.log(`Story updated: ${oldCount} -> ${newCount} chapters`);
+    if (newCount !== lastChapterCount) {
+      console.log(`Story updated: ${lastChapterCount} -> ${newCount} chapters`);
+      lastChapterCount = newCount;
+      currentStory = newStory;
+      broadcast({
+        type: 'story-updated',
+        chapterCount: newCount,
+        chapters: newStory.chapters.map(c => ({
+          index: c.index,
+          title: c.title,
+          htmlContent: c.htmlContent,
+        })),
+      });
     }
-    currentStory = newStory;
-    broadcast({
-      type: 'story-updated',
-      chapterCount: newCount,
-      chapters: newStory.chapters.map(c => ({
-        index: c.index,
-        title: c.title,
-        htmlContent: c.htmlContent,
-      })),
-    });
   } catch (err) {
-    console.error('Error polling story file:', err.message);
+    console.error('Error polling story:', err.message);
   }
 }, 2000);
 
@@ -716,7 +616,7 @@ setInterval(() => {
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`\nStory Reader running at http://localhost:${PORT}`);
-  console.log(`Watching: ${resolvedStoryPath}`);
+  console.log(`Session: ${sessionDir}`);
   console.log(`Cache: ${cacheDir}`);
   if (noMedia) console.log(`Media: DISABLED (--no-media)`);
   console.log();

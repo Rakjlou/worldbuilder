@@ -70,11 +70,8 @@ let currentVoice = '';
 let allVoices = [];
 let currentImageModel = '';
 let allImageModels = [];
-let onTitlePage = true;
 let volume = parseFloat(localStorage.getItem('storyVolume') || '0.7');
 let monologueMode = false;
-let currentCharacter = null;
-let allCharacters = [];
 
 const app = document.getElementById('app');
 const toast = document.getElementById('toast');
@@ -138,19 +135,9 @@ mediaToggle.addEventListener('change', async () => {
 });
 
 const monologueToggle = document.getElementById('monologue-toggle');
-monologueToggle.addEventListener('change', async () => {
+monologueToggle.addEventListener('change', () => {
   monologueMode = monologueToggle.checked;
-  if (monologueMode && allCharacters.length === 0) {
-    try {
-      const res = await fetch('/api/agents');
-      const data = await res.json();
-      allCharacters = data.characters || [];
-      if (allCharacters.length > 0 && !currentCharacter) {
-        currentCharacter = allCharacters[0].slug;
-      }
-    } catch {}
-  }
-  if (!onTitlePage && currentIndex >= 0) {
+  if (currentIndex >= 0) {
     renderChapter(currentIndex);
   }
 });
@@ -234,7 +221,6 @@ async function loadStory() {
 
 // --- Title Page ---
 function renderTitlePage() {
-  onTitlePage = true;
   currentIndex = -1;
 
   // Stop any playing audio
@@ -250,7 +236,6 @@ function renderTitlePage() {
     <div class="title-page">
       <div class="title-page-content">
         <h1 class="title-page-title">${story.storyTitle}</h1>
-        ${story.storySubtitle ? `<p class="title-page-subtitle">${story.storySubtitle}</p>` : ''}
         <button class="title-page-begin" id="begin-btn">Commencer</button>
       </div>
     </div>
@@ -273,7 +258,6 @@ function renderTitlePage() {
 }
 
 function beginStory() {
-  onTitlePage = false;
   renderChapter(0);
 }
 
@@ -298,7 +282,6 @@ function renderChapter(index) {
   app.innerHTML = `
     <header class="story-header">
       <h1 class="story-title">${story.storyTitle}</h1>
-      ${story.storySubtitle ? `<p class="story-subtitle">${story.storySubtitle}</p>` : ''}
     </header>
 
     ${mediaEnabled ? `
@@ -346,7 +329,7 @@ function renderChapter(index) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// --- Monologue rendering ---
+// --- Monologue rendering (Coulisses: all agents for the chapter) ---
 async function renderMonologue(index) {
   const ch = story.chapters[index];
 
@@ -359,20 +342,12 @@ async function renderMonologue(index) {
   isPlaying = false;
   audioLoaded = false;
 
-  // Build character chips
-  const chipsHtml = allCharacters.map(c =>
-    `<button class="voice-chip ${c.slug === currentCharacter ? 'active' : ''}" data-slug="${c.slug}">${c.name}</button>`
-  ).join('');
-
   app.innerHTML = `
     <header class="story-header">
       <h1 class="story-title">${story.storyTitle}</h1>
-      ${story.storySubtitle ? `<p class="story-subtitle">${story.storySubtitle}</p>` : ''}
     </header>
 
     <h2 class="chapter-title">${ch.title}</h2>
-
-    ${allCharacters.length > 0 ? `<div class="character-selector">${chipsHtml}</div>` : ''}
 
     <div id="monologue-content">
       <div class="monologue-empty">Chargement...</div>
@@ -393,52 +368,40 @@ async function renderMonologue(index) {
     if (currentIndex < story.chapters.length - 1) renderChapter(currentIndex + 1);
   });
 
-  // Character chip handlers
-  document.querySelectorAll('.character-selector .voice-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentCharacter = btn.dataset.slug;
-      renderMonologue(currentIndex);
-    });
-  });
-
   // Update menu state
   updateChapterList();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // Fetch monologue content
-  if (!currentCharacter || allCharacters.length === 0) {
-    document.getElementById('monologue-content').innerHTML =
-      '<div class="monologue-empty">Aucun dialogue de personnage disponible pour cette histoire.</div>';
-    return;
-  }
-
+  // Fetch all agents for this chapter
   try {
-    const res = await fetch(`/api/chapter/${index}/agents/${encodeURIComponent(currentCharacter)}`);
+    const res = await fetch(`/api/chapter/${index}/agents`);
     if (!res.ok) throw new Error('Not found');
     const data = await res.json();
 
     const container = document.getElementById('monologue-content');
-    if (!container) return; // user navigated away
+    if (!container) return;
 
-    if (data.sections.length === 0) {
-      container.innerHTML = '<div class="monologue-empty">Pas de monologue pour ce chapitre.</div>';
+    if (!data.agents || data.agents.length === 0) {
+      container.innerHTML = '<div class="monologue-empty">Pas de coulisses pour ce chapitre.</div>';
     } else {
-      container.innerHTML = data.sections.map(s => `
+      container.innerHTML = data.agents.map(agent => `
         <div class="monologue-section">
-          <h3 class="monologue-label">${s.label}</h3>
-          <div class="monologue-text">${s.htmlContent}</div>
+          <h3 class="monologue-label">${agent.name}</h3>
+          <div class="monologue-text">${agent.htmlContent}</div>
         </div>
       `).join('');
     }
   } catch {
     const container = document.getElementById('monologue-content');
     if (container) {
-      container.innerHTML = '<div class="monologue-empty">Impossible de charger les dialogues.</div>';
+      container.innerHTML = '<div class="monologue-empty">Impossible de charger les coulisses.</div>';
     }
   }
 }
 
 // --- Image loading ---
+let currentImageUrl = null;
+
 async function loadChapterImage(index) {
   const img = document.getElementById('chapter-img');
   const placeholder = document.getElementById('img-placeholder');
@@ -446,6 +409,12 @@ async function loadChapterImage(index) {
   const wrapper = img?.closest('.chapter-image-wrapper');
 
   if (!img) return;
+
+  // Revoke previous image URL to prevent leak
+  if (currentImageUrl) {
+    URL.revokeObjectURL(currentImageUrl);
+    currentImageUrl = null;
+  }
 
   // Remove any existing model selector
   const oldSelector = wrapper?.parentElement?.querySelector('.image-model-selector');
@@ -462,10 +431,10 @@ async function loadChapterImage(index) {
     const blob = await res.blob();
     const url = URL.createObjectURL(blob);
 
+    currentImageUrl = url;
     img.onload = () => {
       img.classList.add('loaded');
       placeholder.classList.add('hidden');
-      URL.revokeObjectURL(url);
     };
     img.src = url;
 
@@ -724,7 +693,7 @@ function showToast(chapterCount) {
 
 // --- Keyboard navigation ---
 document.addEventListener('keydown', (e) => {
-  if (onTitlePage && (e.key === 'Enter' || e.key === ' ')) {
+  if (currentIndex < 0 && (e.key === 'Enter' || e.key === ' ')) {
     e.preventDefault();
     beginStory();
   } else if (e.key === 'Escape' && menuPanel.classList.contains('open')) {
