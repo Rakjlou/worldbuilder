@@ -2,25 +2,24 @@
 
 ## Prompt
 
-Three days have passed since you found the residuals. You emailed Priya Chandrasekaran — an astronomer at the observatory. Not the most senior, not the most accessible, but the one you trust to actually look at the data before responding. She asked you to come by her office.
+Trois jours ont passé. Tu as refait tourner ton script chaque nuit depuis mardi. Les résidus sont toujours là. Ils sont dans les données de chaque nuit d'observation. Tu as éliminé tout ce que tu sais éliminer — tu as vérifié les flats, les darks, les logs du système de suivi, les conditions atmosphériques. Le signal est réel. Il se déplace. La trajectoire est cohérente d'une nuit à l'autre.
 
-You are now sitting across from Priya in her small office on the second floor. You've shown her your script, the raw files, the seven detections across three nights. She has been looking at them for twenty minutes without speaking. She asked you to re-run the script with data from last night's observation. You did. The residuals are still there.
+Tu es vendredi matin. Tu as décidé de montrer les données à quelqu'un. Tu as choisi le Dr. Andrés Velázquez — un astronome de l'observatoire. Pas le plus senior, pas le plus accessible, mais celui dont tu sais qu'il regardera vraiment les données avant de répondre. Tu es dans son bureau. Tu as apporté ton laptop avec tes scripts et les résidus de trois nuits. Tu viens de lui montrer les données.
 
-Priya has not said anything yet. She is still looking.
+Il regarde. Il ne répond pas tout de suite.
 
-The room smells like dry-erase markers and the heater that runs too hot. Through the window, the afternoon sun sits low over the Atacama. Your coffee — a fresh one this time — is untouched.
+Comment tu vis ce moment ? Qu'est-ce que tu fais pendant qu'il regarde ? Qu'est-ce que tu penses ?
 
-How do you react? What do you think while watching Priya look at your data? Continue in character. Same rules as before.
-Language: French
+Continue in character. Same rules as before.
 
 ## Response
 
-*Dix-neuf minutes. Vingt.*
+Yuki est assise en face de lui, les deux mains posées à plat sur les cuisses. Elle ne parle pas. Elle a dit ce qu'elle avait à dire — trois nuits, mouvement propre cohérent, trajectoire stable, zéro correspondance dans les catalogues qu'elle a pu consulter — et maintenant c'est lui qui regarde et elle qui attend.
 
-Je ne dis rien. Ce n'est pas difficile — le silence de Priya n'est pas un silence gêné, c'est un silence de travail, et j'ai appris à les distinguer. Elle clique. Elle fait défiler. Elle revient en arrière sur quelque chose, s'arrête, repart. Son expression ne change pas vraiment, mais il y a eu un moment, peut-être cinq minutes après qu'elle a chargé les données de la nuit dernière, où elle a retenu sa respiration de façon imperceptible. *J'ai vu ça.* Je n'ai pas fait de commentaire.
+*Ne parle pas. Laisse-le regarder.*
 
-Je regarde ma tasse de café. Elle est encore pleine, encore chaude probablement, mais l'idée de bouger me semble inutile pour l'instant. J'ai les mains posées à plat sur les genoux. Par la fenêtre, la lumière de l'après-midi est cette lumière particulière de l'Atacama — blanche, sèche, sans nuances — qui m'a pris des années à trouver belle. *Huit détections maintenant. Quatre nuits de relevé.* Je l'ai vu ce matin en compilant les résultats avant de monter ici. Je n'ai pas encore dit ce chiffre à voix haute.
+Elle fixe le bord de son bureau plutôt que son visage. Il y a une tasse de stylos, un bloc-notes avec quelque chose d'écrit dessus qu'elle ne cherche pas à lire, une photo punaisée au mur derrière lui qu'elle a déjà regardée deux fois pour s'occuper les yeux. Elle ramène ses mains sur ses genoux et s'aperçoit qu'elle était en train de gratter le bord de son pouce droit. Elle arrête. *Il regarde les données. C'est bien. C'est ce qu'il doit faire.*
 
-Ce qui m'occupe, c'est une question technique simple que je n'arrive pas à résoudre seule : est-ce que la persistance dans le temps est suffisante pour exclure un artefact de traitement ? Moi je dirais oui, mais je ne connais pas assez la physique de ce qui pourrait se trouver là pour savoir si je pose la bonne question. C'est exactement pourquoi je suis dans ce bureau plutôt que d'avoir envoyé un autre mail. *Je ne peux pas aller plus loin seule. Pas sur cette partie-là.*
+Ce qui l'inquiète ce n'est pas qu'il dise non. Ce qui l'inquiète, c'est qu'il dise non trop vite — qu'il lève la tête dans trente secondes avec une explication qu'elle n'a pas considérée, quelque chose d'évident qu'elle aurait dû voir et qu'elle n'a pas vu parce qu'elle n'est pas astronome et qu'elle ne sait pas ce qu'elle ne sait pas. *Trois nuits. J'ai refait tourner les scripts trois nuits.* Ça ne change rien. Si l'explication est là et qu'elle l'a ratée, elle l'a ratée.
 
-Je ne suis pas nerveuse. Ce serait le mauvais mot. Il y a quelque chose d'autre — une attention particulière, le genre que j'ai quand je sais qu'une information importante va arriver et que je veux être sûre de ne pas en rater une fraction. Je regarde Priya. Elle n'a toujours pas levé les yeux.
+Il ne dit rien. Elle remarque qu'il a fait défiler les résidus en arrière pour regarder la deuxième nuit à nouveau. *Bien.* Elle laisse le silence travailler. Dehors dans le couloir, quelqu'un passe, une porte se ferme. La climatisation fait son bruit de fond. Yuki regarde la tasse de stylos et attend.

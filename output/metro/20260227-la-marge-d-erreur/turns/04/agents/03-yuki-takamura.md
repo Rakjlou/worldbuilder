@@ -2,29 +2,28 @@
 
 ## Prompt
 
-Several weeks have passed since you showed the data to Priya. Things have moved. Priya contacted colleagues at other observatories. The anomaly was confirmed independently — Gemini South, the VLT at Paranal, the Subaru telescope in Hawaii all see the same thing. An informal group has formed. Emails circulate. You are cc'd on most of them, sometimes addressed directly — "Yuki, can you confirm the pipeline processed this correctly?" or "Takamura-san, could you re-extract the photometry for these coordinates?"
+Des mois ont passé depuis ta première détection. Velázquez a obtenu du temps de suivi. D'autres télescopes ont confirmé l'objet — il est réel, massif, en trajectoire directe. Une équipe internationale informelle se forme. Tu as été invitée à deux réunions auxquelles tu n'avais jamais été invitée, en tant que « la technicienne qui a vu le signal en premier ». Ton titre n'a pas changé. Ton statut, si.
 
-Your title hasn't changed. You are still "technical operator." But you are now invited to video calls with astronomers from four countries. They ask about the pipeline, the data reduction, the noise characteristics. They listen when you speak. Some of them remember your name from the original detection notice. One introduced you to a colleague as "the person who found it." You did not correct them, but it felt wrong. You run a pipeline. The pipeline found it.
+C'est un soir de semaine. Tu es chez toi à La Serena, dans ton appartement. Tu viens de rentrer de l'observatoire. Tu passes devant la chambre d'amis — le placard est ouvert, et tu aperçois la boîte. Les papiers de ton père. Trois ans.
 
-Today you received an email from a senior astronomer at Observatoire de Paris asking if you would be willing to join a more formal working group being assembled to study the object. The email was addressed to "Dr. Takamura." You do not have a doctorate.
+Puis ton téléphone sonne. C'est une femme que tu as rencontrée lors d'une conférence de restitution — Renata Ferreira, géophysicienne à l'IPGP à Paris. Elle te pose une question avec une précision qui masque une urgence que tu ne comprends pas tout à fait : « Les résidus que tu as vus dans le pipeline. Est-ce qu'ils montraient une signature cohérente avec un corps rocheux différencié ? »
 
-You are in your apartment in La Serena after your shift. It is evening. You are reading the email on your phone while sitting on the couch. The guest bedroom door is closed. The box is behind it.
+Tu ne comprends pas la question en termes géophysiques. Mais tu comprends les données.
 
-How do you react? Continue in character. Same rules as before.
-Language: French
+Comment tu réagis ? Qu'est-ce que tu fais ?
+
+Continue in character. Same rules as before.
 
 ## Response
 
-*Dr. Takamura.*
+Elle s'arrête dans le couloir. La porte du placard est ouverte derrière elle — elle ne se retourne pas.
 
-Je relis la ligne. Puis le mail en entier, lentement, depuis le début. L'objet : *Invitation — groupe de travail anomalie photométrique persistante APP-2026.* Le ton est formel, précis, le genre de français académique que je lis lentement parce que je cherche la signification exacte derrière chaque formulation. L'invitation est réelle. Le groupe est réel. *Dr. Takamura* est une erreur, mais tout le reste est réel.
+« Attendez. » Elle entre dans le salon, pose son sac, ouvre son laptop avec le téléphone coincé entre l'oreille et l'épaule. *Corps rocheux différencié. Je ne sais pas ce que ça veut dire en géophysique. Mais la question n'est pas sur la géophysique — elle est sur les résidus.* « Vous me demandez si la signature spectrale dans les résidus était cohérente avec quelque chose de spécifique. C'est ça la question ? »
 
-Je pose le téléphone sur le coussin à côté de moi. L'appartement est silencieux — le ventilateur de la cuisine, la rue en bas, rien d'autre. Je regarde le plafond pendant un moment. *Pas de doctorat. Pas de master. Un BTS informatique de Melbourne et neuf ans à faire tourner des pipelines sans qu'ils explosent.* La liste est claire dans ma tête, sans amertume particulière — juste les faits. Je ne suis pas la personne à qui on envoie ce genre de mail. Et pourtant le mail existe. *Kuso.* Tout bas, pour personne.
+Elle ne attend pas vraiment de confirmation. Elle a déjà le dossier ouvert. Ses scripts, ses sorties, trois nuits de résidus annotés dans un répertoire qu'elle a archivé méthodiquement parce que c'est ce qu'elle fait avec tout ce qui sort de l'ordinaire. Elle fait défiler les colonnes. *La signature. Il y avait quelque chose dans le profil de brillance de surface — une variation sur les expositions consécutives que j'avais attribuée à la rotation. J'avais mis une note là-dessus et je ne l'avais pas suivie parce que ça ne changeait pas la trajectoire.* « Donnez-moi une seconde. »
 
-Ce qui me préoccupe n'est pas l'erreur sur le titre — ça se corrige en deux lignes de réponse, ce n'est pas compliqué. Ce qui me préoccupe, c'est la question que l'invitation pose sans la poser : est-ce que je suis capable d'être utile dans un groupe comme celui-là, ou est-ce que je vais atteindre très rapidement la limite de ce que je comprends et devenir un problème pour les autres ? Je connais les données. Je connais le pipeline mieux que quiconque. Mais quand les conversations dérivent vers la physique — et elles dérivent, elles dérivent toujours — je m'arrête à la frontière de ce que je peux suivre et je prends des notes sans rien dire. *Est-ce que c'est suffisant ? Est-ce que c'est honnête ?*
+Elle trouve la note. Deux lignes, rédigées à deux heures du matin un mercredi : *variation de brillance ~0.3 mag sur 40 min — rotation probable ou surface hétérogène — à vérifier.* Elle ne l'a pas vérifiée. Elle regardait la trajectoire.
 
-Je reprends le téléphone. Je regarde la porte de la chambre d'amis, fermée. Mon père avait un doctorat en ingénierie des matériaux. Il n'en parlait jamais — c'était juste quelque chose qu'il avait fait, une étape parmi d'autres. La boîte de ses papiers est derrière cette porte depuis trois ans et je ne l'ai pas ouverte. *Ça n'a rien à voir.* Si. Un peu. Je ne sais pas.
+« Voilà. » Elle lit la note à Renata Ferreira mot pour mot, sans reformuler. Puis : « Pourquoi vous me posez cette question maintenant ? »
 
-Je commence à rédiger la réponse. Je corrige le titre en premier — une phrase courte, directe, sans m'appesantir : je m'appelle Yuki Takamura, je suis opératrice technique au Rubin Observatory, je n'ai pas de doctorat, je voulais que ce soit clair avant d'accepter quoi que ce soit. Puis j'accepte. Je relis. J'envoie avant de changer d'avis. *Le pipeline a trouvé quelque chose. Quelqu'un doit être capable de répondre aux questions sur le pipeline. C'est moi.*
-
-Mon café est encore chaud cette fois. Je le bois.
+Son index tape sur le bord du laptop. Une fois, deux fois, trois fois. Dehors il fait nuit, La Serena s'allume doucement, et dans le couloir derrière elle la porte du placard est toujours ouverte.

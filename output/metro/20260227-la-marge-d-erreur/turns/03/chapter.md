@@ -1,23 +1,27 @@
-## Le bracelet
+## Paranal
 
-Mateo tapa le message de commit lentement, en relisant chaque mot. Le diagnostic tenait en six lignes : une inversion de verrous entre le contrôleur de séquence et le thread de monitoring, reproductible au-dessus de huit hertz en dithering, corrigée par un ordre d'acquisition uniforme sur tous les points d'appel. Cinq cents cycles à douze hertz, zéro occurrence. *Bien.* Il relut une fois encore. Pas par doute — le fix était juste, il le savait — mais parce que dans vingt ans, quelqu'un lirait ça à trois heures du matin avec un télescope qui refuse de fonctionner, et cette personne méritait une explication complète. Il appuya sur entrée.
+Paranal, un dimanche. Le soleil fait ce qu'il fait toujours au-dessus du basalte — il tombe, droit, sans nuages pour le négocier.
 
-Il ferma son carnet de notes — pages couvertes de diagrammes de séquence, de flèches, d'un unique point d'interrogation encerclé trois fois. Il arracha la page. La froissa. La jeta. *C'est fait. C'est fini. Ça ne reviendra pas.*
+Mateo pose les yeux sur l'écran. La documentation est presque terminée — trois pages sur le problème de timing dans le module de lecture du détecteur ESPRESSO, avec les traces de logs, les hypothèses écartées, la solution finale. Il aurait pu s'arrêter à deux paragraphes. *Mais si quelqu'un reprend ça dans six mois sans contexte, il va perdre deux heures à reconstituer ce que j'ai mis deux heures à comprendre.* Il continue à écrire.
 
-En rabattant l'écran du laptop, le bracelet accrocha le coin de l'aluminium, comme toujours. Il regarda le fil rouge qui s'effilochait — un petit halo de laine qui s'échappait du nœud que Lucia avait serré avec ses dents, à l'aéroport de Cochabamba, en disant *te lo puedes quitar cuando ya no me extrañes*. Il n'avait jamais trouvé les ciseaux au bon moment. Ce n'était pas tout à fait vrai : il ne cherchait pas vraiment.
+Le couloir est silencieux. Rodrigo est parti vers seize heures en disant quelque chose sur un barbecue familial à Antofagasta. Mateo a répondu « claro, claro » sans lever les yeux de son terminal. Dehors, le désert prend la lumière rasante du soir, le basalte qui vire à l'ocre sombre. Il ne regarde pas souvent. Quand il regarde, il ne sait pas quoi faire de cette beauté-là, trop grande, trop silencieuse. Il préfère les problèmes qui ont une taille raisonnable.
 
-10h51. Il attrapa son téléphone et composa avant même de se lever de sa chaise. Ça sonna une fois, deux fois — et puis la voix de sa mère, un peu essoufflée, comme si elle venait de traverser la cuisine en courant : *¿Mateo? Espera, espera, que tengo las manos mojadas.* Il sourit, seul dans la salle technique, face aux rangées de serveurs qui bourdonnaient dans le froid.
+Il fait tourner le bracelet autour de son poignet machinalement — un geste qu'il ne remarque plus. La laine rouge et noire commence à s'effilocher sur le côté droit. *Il faudrait que je demande à Lucía comment on répare ça sans défaire le tissage.* Il note mentalement de lui envoyer un message, puis oublie aussitôt de noter le geste de noter.
 
-— Toma tu tiempo, mamá. No hay prisa.
+Quelqu'un lui a mentionné quelque chose à déjeuner. Un technicien du CTIO qui avait l'air vaguement excité. Rubin, des données inhabituelles, quelque chose dans ce goût-là. *Probablement un artefact de calibration. Ça arrive.* Mateo a une règle informelle : ne pas s'intéresser aux anomalies dans des systèmes qui ne sont pas les siens. Il a assez à faire avec les siens.
 
-*Elle a les mains mouillées. Elle est en train de laver les assiettes du déjeuner. C'est dimanche. Tout va bien.*
+Il sauvegarde la documentation, ferme le fichier, et sort son téléphone. Il compose le numéro de sa mère. Pendant que ça sonne, il regarde ses mains sur le bureau — les petites cicatrices entre les articulations, les ongles courts, les traces de câble sur la paume droite. Des mains qui savent ce qu'elles font. *Ça suffit, ça.* Sa mère décroche et dit *¿Hijo?* avec cette voix égale, neutre, qui ne dit rien de particulier, ce qui veut dire exactement ce que ça veut dire. Il dit *Sí, mamá, estoy aquí.*
 
-De l'autre côté de la cloison vitrée, quelqu'un passait dans le couloir sans s'arrêter.
+---
 
-Seo-yun ne ralentit pas. Ses yeux revinrent vers la vitre une fraction de seconde après être passée devant — le bracelet, rouge et noir, vif, presque agressif dans cet espace où tout était conçu pour disparaître. Les murs, les câbles, les visages. Elle ne savait pas pourquoi ce détail l'arrêtait, mentalement du moins.
+Deux systèmes adjacents dans le même bâtiment, entretenus par deux personnes qui ne se parlent pas encore. Elle cherche un offset de 0,3 Ångström ; lui documente un problème de timing déjà résolu. La distance entre leurs bureaux se mesure en mètres. Celle entre leurs vies, en habitudes.
 
-*À quoi ça me fait penser ?* Elle tourna la question comme on tourne un échantillon sous la lumière. Il y avait quelque chose — une gamine en manteau rouge dans la grisaille de Daejeon en hiver. Peut-être rien de si précis. Parfois une couleur suffit à créer un fantôme.
+Le couloir est calme — juste le bourdonnement sourd des systèmes de ventilation et le bruit de ses propres pas sur le béton. Seo-yun tient sa tasse des deux mains, les doigts réchauffés par la porcelaine. *L'offset est à peu près 0,3 Ångström — trop régulier pour être du bruit, trop petit pour qu'on s'en préoccupe dans la plupart des cas, mais suffisamment persistant pour être un problème.* Dilatation thermique, dérive mécanique, les fichiers de calibration de la semaine dernière. Rien ne s'emboîte encore.
 
-Elle ajusta la bretelle de son sac sur son épaule et recentra ses pensées sur ce qu'elle était en train de calculer : reformuler la demande de temps d'observation en insistant sur la fenêtre spectrale du silicate à 9,7 microns plutôt que sur le rapport signal-bruit global. Le comité serait peut-être plus réceptif. *Ou pas.* Elle n'avait pas encore décidé si envoyer la demande revenait à admettre que ses données actuelles étaient insuffisantes — une confession qu'elle n'était pas prête à formuler, même sur un formulaire interne.
+Elle jette un œil à sa montre. 14h47. Ce qui fait lundi matin, 6h47, à Daejeon. *Jae-won dort probablement encore. Ou alors il a vu le message et ne sait pas quoi répondre.* Sa mère lui a demandé si elle mangeait bien ; elle a répondu oui, puis elle s'est fait du riz dans la cuisine commune parce que ça devenait vrai dès qu'elle le disait. Son père avait voulu savoir si ses données avançaient. *Plus ou moins*, lui avait-elle dit.
 
-L'ingénieur ne l'avait pas vue. Elle ne connaissait pas son nom. Elle reconnaissait les visages ici, mais les noms lui venaient lentement, et elle n'avait jamais trouvé de bonne manière de demander une deuxième fois. Elle poussa la porte de la bibliothèque, ouvrit son ordinateur, et le bracelet quitta sa pensée — du moins en surface.
+Au bout du couloir, elle aperçoit une silhouette — l'ingénieur logiciel, Mateo. Celui qui avait corrigé son script de réduction sans rien dire trois mois plus tôt. Elle lui adresse un petit signe de tête en passant. *Il faudrait que je le remercie correctement un de ces jours.* Mais pas maintenant. Maintenant elle doit retourner au bureau, rouvrir les fichiers, et continuer à chercher où se cache cet offset.
+
+Le soir descend sur l'Atacama sans transition. À cette altitude, la lumière ne décline pas — elle cesse.
+
+Les gestes qui sauveront comptent déjà : la documentation trop longue que personne n'a demandée, le script corrigé pour une inconnue sans rien dire, l'obstination à traquer un décalage invisible. Mais pour l'instant ce ne sont que des manières d'être consciencieux, et la conscience professionnelle ne fait pas de bruit.
