@@ -1,79 +1,31 @@
 ## La surface
 
-Le paradoxe prend forme. Pas publiquement, pas encore. Dans les couloirs du projet, dans les emails techniques que six personnes lisent, dans les marges des documents de travail. Le mot circule sans que personne ne le prononce à voix haute.
+Le tableau blanc du bureau d'Ephrem Kebede n'avait pas été effacé depuis quatre jours. Le trait de feutre s'épaississait aux endroits où la courbe se refermait sur elle-même, comme si quelqu'un l'avait retracée du doigt en passant.
 
-La craie grince sur le tableau. Ephrem recule d'un pas, penche la tête, et regarde la surface qu'il a dessinée pour la quatrième fois cette semaine. Pas la même surface. Chaque itération est plus serrée, plus contrainte, comme si le dessin se rapprochait d'une forme que l'algèbre connaît déjà mais que sa main n'a pas encore trouvée.
+Il attendit que le bruit de pas d'Abenet disparaisse dans le couloir, puis se retourna vers le tableau. La craie était froide entre ses doigts. Il avait passé une heure à expliquer à Abenet pourquoi sa démonstration ne tenait pas — une lacune dans l'argument d'unicité, discrète mais fatale, comme une fissure dans une fondation. Abenet était parti découragé mais pas brisé. *Suffisant pour aujourd'hui.*
 
-*La variété est compacte. Sans bord. Le groupe fondamental est trivial sur la composante temporelle. Toute boucle peut être contractée en un point. Il n'y a pas de boucle privilégiée. Pas de première fois. Pas de dernière fois. La boucle est, ou elle n'est pas. Si elle est, elle n'a pas commencé.*
+Il leva la craie. Pas le bord du tableau — il commença au centre, comme toujours. Une courbe. Puis une autre qui revenait sur elle-même. Ses mains avaient tracé ce geste des centaines de fois ces derniers mois, dans l'air, pendant qu'il parlait à des journalistes qui comprenaient à moitié, à des collègues qui comprenaient à trois quarts, à Tigist qui l'écoutait avec patience et lui demandait ensuite si le citronnier avait besoin d'eau. La surface prit forme sur le tableau — fermée, compacte, sans frontière. Une variété qui n'avait ni dedans ni dehors dans le sens qu'on lui demandait d'avoir.
 
-Il pose la craie et essuie ses doigts sur le chiffon accroché au bord du tableau. La lumière du matin entre par la fenêtre ouverte. L'eucalyptus. La fumée de bois des quartiers en contrebas. Dimanche. Tigist est à l'hôpital depuis six heures. Il a fait le café seul, dans la jebena, en suivant le protocole exact, parce que le café du matin n'est pas un moment qu'on abrège, même seul.
+*Voilà le problème. Voilà exactement pourquoi la question qu'on pose est la mauvaise question.*
 
-Il se tourne vers Poincaré. La fougère a encore poussé cette semaine, ses frondes vertes débordant du pot en terre cuite que Hanna lui a envoyé de Bahir Dar.
+Il recula d'un pas. Les journaux disaient : « La topologie de Kebede prouve qu'il faut activer le système. » D'autres journaux disaient : « La topologie de Kebede prouve qu'il ne faut surtout pas l'activer. » Deux affirmations. Deux certitudes. Et lui, debout devant ce tableau, regardait une surface qui disait autre chose entièrement — qui disait qu'il n'y avait pas de premier instant dans ce système, que la distinction entre *cause* et *effet* s'effondrait à cette échelle, que chercher un point de départ sur une variété fermée, c'était chercher le commencement de l'équateur. *On peut commencer n'importe où. Ou nulle part.* La question n'était pas résolue différemment selon les camps. Elle était, dans sa structure même, indécidable.
 
-« Tu vois ce que ça implique, Poincaré ? » dit-il en amharique. Il pose l'index sur le dessin, sur l'endroit précis où deux lignes se rejoignent sans angle. « Si la surface est fermée, il n'y a pas de frontière entre l'intérieur et l'extérieur. Pas au sens naïf. Toute tentative de séparer un état "avant activation" d'un état "après activation" suppose un bord. » Il marque une pause. « Et il n'y a pas de bord. »
-
-Il reprend la craie. Écrit, sous le dessin, en lettres soignées : *M est compacte, connexe, sans bord. π₁(M) = 0.* Puis, en dessous : *Corollaire : il n'existe pas de partition continue de M en deux sous-variétés ouvertes non vides.*
-
-Il relit. C'est exact. C'est même élégant, de cette élégance austère des résultats qui disent non. *Vous ne pouvez pas couper cette surface en deux. L'état sûr et l'état activé ne sont pas séparables. Ils sont le même tissu.*
-
-Il pose la craie et va s'asseoir dans le fauteuil. Le cuir grince. Il regarde le tableau depuis l'autre bout de la pièce. La surface est là, tracée à la craie blanche sur fond vert, avec ses notations en dessous, et elle ressemble à ce qu'elle est : quelque chose de complet.
-
-« La bonne nouvelle, Poincaré, » dit-il doucement, « c'est que le résultat est propre. La mauvaise nouvelle, c'est que personne ne voudra l'entendre. »
-
-Il pense à Yara. La dernière visio, il y a deux semaines. Elle lui avait montré les spécifications de son architecture de sécurité, les seuils d'arrêt, les conditions de repli. Chaque condition supposait une frontière. Chaque seuil séparait un avant d'un après. Et la mathématique disait que cette frontière n'existait peut-être pas.
-
-*Je vais devoir le lui dire. Pas dans un email. Pas dans un document technique. En face. Avec le tableau.*
-
-Par la fenêtre, le campus est vide. Le café dans la tasse a refroidi.
+Il resta là un long moment, la craie encore levée, les onze plantes silencieuses derrière lui. Euler, la fougère, attrapait la lumière du matin. *Tu ne m'aides pas aujourd'hui, Euler.* La forme resterait là des jours, peut-être des semaines. Il ne l'effacerait pas. Elle était plus honnête que tout ce qu'il pourrait écrire à côté. Elle disait : voilà la forme du problème. Elle ne disait pas quoi faire. Elle ne pouvait pas dire quoi faire. Et personne, il en était maintenant certain d'une certitude calme et très lourde, ne voulait l'entendre.
 
 ---
 
-Ephrem pose la craie et le résultat ne changera plus. À onze fuseaux horaires de là, un téléphone sonne trois fois dans un appartement de La Serena.
+La surface qu'Ephrem avait tracée n'avait pas de bord. Le carton dans la chambre d'amis de Yuki n'avait pas été ouvert. Deux formes fermées, à six mille kilomètres l'une de l'autre, dont personne ne voulait dire ce qu'elles contenaient.
 
 ---
 
-Le téléphone sonne trois fois. Yuki s'est assise sur le rebord du canapé, les pieds nus sur le carrelage froid, un verre d'eau à côté d'elle. Dehors, la lumière de l'après-midi est blanche et immobile.
+Elle noua ses lacets debout, sans s'asseoir. Habitude de neuf ans — si elle s'assoit elle repart, si elle reste debout elle sort. La porte de la chambre d'amis était fermée dans son dos. Elle ne se retourna pas.
 
-— Moshi moshi.
+Dehors, l'air était encore froid, ce froid sec du matin sur la côte qui allait disparaître dans une heure. Elle commença lentement, comme toujours, remonta la rue en pente vers la route côtière. *Quarante minutes. Juste ne pas penser à autre chose.* Mais la phrase de sa mère était là, pas comme un reproche, plutôt comme quelque chose posé sur une table qu'on contourne depuis des semaines. *Bientôt.* Elle avait dit *bientôt* sans réfléchir, ce mot qui ne signifie rien quand on l'utilise comme ça.
 
-— C'est moi, Mama.
+La route s'ouvrit sur la mer. Elle ajusta son rythme. Dans les journaux ils avaient écrit « la technicienne qui a détecté le signal » — comme si elle avait trouvé quelque chose. *Je n'ai rien trouvé. J'ai remarqué que quelque chose ne correspondait pas.* Ce n'était pas la même chose. Un scientifique trouve. Elle, elle avait juste regardé les données assez longtemps pour voir où elles clochaient. Neuf ans à regarder des pipelines, ça apprend la différence entre le bruit normal et le mauvais bruit. Elle ne savait toujours pas si c'était un talent ou juste de l'accumulation.
 
-— Ah, Yuki. Attends, je baisse la télévision.
+Au cinquième kilomètre elle sut que les quarante minutes ne seraient pas là. Ses jambes le savaient avant sa tête. Elle ne ralentit pas — ce serait admettre quelque chose — mais elle ne força pas non plus. *Kuso.* Le paradoxe était public maintenant, les gens débattaient dans les rues de savoir si activer le système le rendait nécessaire ou si ne pas l'activer changeait quoi que ce soit, et elle, elle courait sur la route côtière de La Serena en essayant de passer sous quarante minutes pour sept kilomètres. *Papa aurait trouvé ça drôle. Ou peut-être pas. Je ne sais plus ce qu'il aurait trouvé drôle.*
 
-Le son d'un poste qui s'éteint. Puis la voix de sa mère, plus proche : « Il pleut depuis trois jours ici. Le jardin est content. Moi moins. »
+Elle finit la course, rentra à l'appartement, but un verre d'eau debout à la fenêtre. La porte de la chambre d'amis était toujours fermée. *Bientôt*, elle avait dit. Ça faisait trois ans.
 
-Sa mère parle de la voisine, Mme Chen, qui a fait refaire sa clôture. Du prix de la clôture. De la façon dont M. Chen a supervisé les travaux en pyjama. Yuki écoute. C'est le rythme de ces appels : les détails d'un monde qu'elle a quitté il y a neuf ans et qui continue sans elle, patient, inchangé.
-
-— Et le travail ? demande sa mère.
-
-— Pareil. On prépare une série de tests.
-
-*Tests. Le mot couvre tout. Couvre les réunions dans des salles sans fenêtres, les spécifications techniques qu'elle relit à trois heures du matin, le fait qu'elle est devenue consultante sur un système qu'elle ne comprend qu'à moitié et que les gens qui le comprennent entièrement ne dorment plus beaucoup non plus.*
-
-Un silence. Yuki le reconnaît. Sa mère prend une inspiration.
-
-— Et la boîte, Yuki ?
-
-Le verre d'eau est là, sur la table basse. Le carrelage est froid sous ses pieds.
-
-— Bientôt, Mama.
-
-Le mot sort comme il sort toujours. Lisse. Pratiqué. Un mot qui ne veut plus rien dire parce qu'elle l'a prononcé trop de fois. Sa mère ne répond pas tout de suite. Yuki entend la pluie de Melbourne dans le silence, ou peut-être qu'elle l'imagine.
-
-— D'accord. Prends soin de toi.
-
-— Toi aussi, Mama.
-
-Elle raccroche. Pose le téléphone à côté du verre d'eau. Reste assise.
-
-L'appartement est silencieux de la façon dont les appartements vides sont silencieux : le réfrigérateur, la circulation au loin, rien d'humain. Elle regarde le couloir qui mène à la chambre d'amis. La porte est fermée. Elle est toujours fermée. Derrière la porte, dans le placard, la boîte.
-
-*Elle ne m'a pas demandé ce qu'il y avait dedans. Elle ne demande jamais. Elle demande juste si je l'ai ouverte. Comme si l'acte suffisait. Comme si ouvrir le couvercle allait libérer quelque chose ou fermer quelque chose.*
-
-Yuki se lève. Va à la fenêtre. La rue est vide. Un chien dort à l'ombre d'une voiture garée.
-
-Elle pense à demain. Les spécifications du module de monitoring. La réunion à quatorze heures. Le café qu'elle oubliera de boire. Elle regarde la porte du couloir une dernière fois. Puis elle se retourne et va chercher son laptop.
-
----
-
-Le dimanche se termine comme tous les dimanches. Ephrem regarde une surface fermée sur un tableau vert. Yuki regarde une porte fermée dans un couloir vide. Les deux choses sont complètes. Les deux choses attendent.
+La porte de la chambre d'amis était fermée. La surface était sur le tableau. Les deux resteraient là demain, et le jour d'après, intactes de la même façon qu'on ne touche pas aux choses dont on connaît déjà la forme.

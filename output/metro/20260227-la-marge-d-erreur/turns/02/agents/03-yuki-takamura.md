@@ -2,36 +2,26 @@
 
 ## Prompt
 
-Andrés turns away from the screen for the first time. He looks at you. He takes off his glasses and rubs the bridge of his nose.
+The next evening. You ran the script on the new night's data, same parameters, same procedure. You kept everything — logs, intermediaries, all of it. The residuals are still there. Same position, same coherent structure. A fourth night now.
 
-"I don't know," he says. And then, after a pause: "Run it tomorrow night."
+You are back in Rodrigo's office, laptop open on his desk again. He is looking at the new results. He has been looking for several minutes. He hasn't said anything yet.
 
-He puts his glasses back on and turns back to the screen. That's it. That's all you're going to get.
-
-You leave his office. The corridor is quiet. The afternoon sun is coming through the windows at the end of the hall. You have one more night of data to collect. And for the first time in three days, you're not the only person who has seen the residuals.
-
-How do you react? Continue in character. Same rules as before.
+Continue in character as Yuki Takamura. Same rules as before.
 
 ## Response
 
-Je marche dans le couloir. Pas vite. *Enfin, si, vite — je marche toujours vite — mais* pas *dans ma tête.*
+*Quatre nuits.*
 
-*Je ne sais pas.* Trois mots. De la part d'Andrés Rojas-Muñoz, qui a regardé ces données pendant presque deux minutes et qui a demandé une troisième époque avant de dire quoi que ce soit — *je ne sais pas* n'est pas une fin de conversation. C'est un début. Si c'était un artefact évident, il l'aurait nommé. Si c'était une erreur dans mon script, il me l'aurait dit, avec tact peut-être, mais il me l'aurait dit. Il a regardé les résidus. Il a regardé la deuxième nuit. Et il a dit *je ne sais pas* avec la même voix qu'il utilise pour réfléchir à voix haute.
+Je n'ai pas dormi beaucoup. Pas à cause de l'anxiété — à cause du script. Je l'ai regardé tourner en temps réel pendant l'observing run, les résidus qui se formaient point par point, et j'ai eu cette sensation bizarre de regarder quelque chose se confirmer alors qu'une partie de moi espérait encore l'erreur. Une erreur aurait été plus simple. Une erreur, je sais quoi faire avec.
 
-*Ça veut dire qu'il ne sait pas. Comme moi.*
+Rodrigo n'a pas bougé depuis qu'il s'est assis. Il a les coudes sur le bureau, les mains jointes devant la bouche — une posture que je lui ai déjà vue, mais pas souvent. *Il réfléchit vraiment. Pas en train de chercher comment me dire non.* Je reste debout près de la fenêtre, les bras croisés. Dehors le ciel est encore bleu, trop bleu pour que ça soit utile. Il reste quelques heures avant que ça commence à valoir quelque chose.
 
-Je m'arrête devant la fenêtre au bout du couloir. Le soleil de l'après-midi sur le parking. La voiture avec le pare-brise fissuré. *Toujours là.* Je pose une main sur le bord de la fenêtre et je regarde dehors sans vraiment regarder.
+Je gratte mon pouce. Je m'en rends compte et j'arrête.
 
-Trois jours à porter ça seule. À me réveiller la nuit — *deux fois mercredi, une fois jeudi* — en pensant aux résidus, en me demandant si j'avais raté quelque chose, si j'étais en train de me construire une histoire à partir de bruit. C'est le risque, avec ce travail. Tu regardes des données assez longtemps et le cerveau commence à trouver des structures qui n'existent pas. La paréidolie des données. *J'ai vérifié. J'ai revérifié. J'ai demandé à quelqu'un d'autre de regarder.*
+— Les logs d'hier soir sont dans le dossier partagé. — Ma voix est plus basse que d'habitude. Je n'avais pas prévu de dire ça maintenant, c'est juste pour remplir quelque chose, ce qui n'est pas mon habitude. *Kuso. Tais-toi.*
 
-Maintenant il a regardé. Et quelque chose dans ma poitrine — pas du soulagement, pas exactement — quelque chose se dépose, comme de la poussière qui retombe après qu'on a bougé une boîte lourde.
+Rodrigo lève une main légèrement — pas un geste d'arrêt, plutôt "j'ai entendu, attends". Il continue de regarder l'écran. Je regarde son visage. Il y a quelque chose là que je n'arrive pas à nommer. Pas de l'excitation. Pas du scepticisme non plus. Quelque chose d'intermédiaire, quelque chose de prudent et de concentré, comme quelqu'un qui pose le pied sur une surface dont il n't est pas sûr qu'elle tienne.
 
-*Une nuit de plus.*
+*Il voit ce que je vois. Il cherche la sortie et il n'en trouve pas.*
 
-Je repousse la fenêtre et je reprends ma marche. Ce soir je versionne le script — `git commit`, horodatage, message clair, rien d'ambigu dans l'historique. Demain soir je suis en poste à partir de quinze heures. Je lancerai le script dès que le pipeline sera opérationnel, mêmes paramètres, même masque de pixels, rien de touché. Et ensuite j'attendrai.
-
-*Right.*
-
-Je pense brièvement à appeler ma mère dimanche. À lui dire quoi — que j'ai peut-être trouvé quelque chose dans les données, que je ne sais pas encore ce que c'est, que peut-être ce n'est rien ? Non. *Non, je ne lui dis rien.* Pas encore. Peut-être jamais, si la troisième nuit ne confirme rien.
-
-Je tourne dans le couloir qui mène à la salle des serveurs. J'ai des logs à vérifier avant la fin de la journée. Le travail continue. *Le travail continue toujours.*
+Je ne dis rien. Quatre nuits, c'est dans les données, les données sont sur l'écran. Tout ce que j'aurais à dire est déjà là.

@@ -7,19 +7,19 @@ You are the Author Voice in an interactive narrative. Your job is to write the c
 ## Source Material
 
 **Turn directory:** output/metro/20260227-la-marge-d-erreur/turns/02/
-**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read earlier turns' chapter.md files for your voice continuity)
+**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read turns/01/chapter.md for voice continuity)
 
 Read all character agent files in `agents/` in numeric order. Each file contains:
-- A `## Prompt` section: the scene context (setting, time, what happened, world events)
+- A `## Prompt` section: the scene context
 - A `## Response` section: the character's action, dialogue, and internal monologue
 
-These are the raw scenes you are writing around. Do NOT summarize or restate what happens in them. The characters have already said and done everything. Your job is the space between and around their scenes.
+These are the raw scenes you are writing around. Do NOT summarize or restate what happens in them.
 
 ## Chapter
 
-**Title:** La troisième nuit
+**Title:** La procédure suivante
 **Language:** French
-**Characters in this chapter:** Yuki Takamura
+**Characters in this chapter:** Yuki Takamura (with Rodrigo Vásquez as secondary character in her scenes)
 
 ## Seed Intent for This Phase
 
@@ -27,70 +27,50 @@ These are the raw scenes you are writing around. Do NOT summarize or restate wha
 Yuki détecte l'anomalie dans le pipeline de Rubin. La confirmation prend des semaines — d'abord par l'astronome qu'elle a contacté, puis par une petite équipe informelle. La nouvelle monte lentement dans la hiérarchie.
 
 **Why this chapter exists:**
-L'histoire doit commencer au niveau du sol. La découverte arrive comme un résidu dans un pipeline, repéré par quelqu'un dont le titre est « opératrice technique ». Le contraste entre l'échelle de l'événement et la banalité de sa détection est le premier énoncé du thème central. Les vies ordinaires sont le substrat dans lequel la catastrophe va pousser.
+L'histoire doit commencer au niveau du sol. Le contraste entre l'échelle de l'événement et la banalité de sa détection est le premier énoncé du thème central. Premier contact avec le monde extérieur à son écran.
 
 **Atmospheric detail:**
-Le café froid de Yuki. La voiture au pare-brise fissuré dans le parking — un détail banal et persistant, comme le résidu lui-même.
+Le café froid de Yuki. Il revient comme motif tout au long de l'histoire — chaque fois qu'elle est absorbée par les données, elle oublie son café.
 
 ## What You Write
-
-Produce the following labeled sections. Each is a piece of prose the Stitcher can place, excerpt, adapt, or discard. Write them as finished literary text, not as notes or instructions.
 
 ### Opening
 1-3 sentences. Sets the spatial/temporal frame and the chapter's emotional register.
 
-### Bridge: Yuki (office) — Yuki (corridor)
-2-4 sentences. The transition between the astronomer's office and the corridor after. The shift from shared silence to solitary knowledge.
+### Bridge: Yuki (first visit) — Yuki (second visit)
+2-4 sentences. The transition between the first showing (Friday) and the second (Saturday, the next night's data). The passage of one day. What that day felt like.
 
 ### Closing
 1-3 sentences. The chapter's final resonance.
 
+Note: All scenes are Yuki's perspective, but there are three distinct moments (showing data, Rodrigo's response, the next night's confirmation). The Bridge connects the temporal gap.
+
 ## Style Rules
 
-These are non-negotiable.
+**Think in French.** Native rhythm, idiom, word choice. No anglicisms.
 
-### Language
-**Think in the narration language.** Do not compose in English and translate. French — native French.
+Avoid: "Not X — Y" formula. "Quelque chose" as hedging. Over-explanation. Symmetrical balance. Decorative similes. Performed literary style. Grandiosity.
 
-### Avoid AI Writing Tells
-- **The "Not X — Y" formula.** Never use this.
-- **"Quelque chose" as emotional hedging.** Do not gesture vaguely at feelings.
-- **Over-explanation.** If an image carries the weight, do not then explain the weight.
-- **Symmetrical balance.** Not every sentence needs a counterpoint.
-- **Decorative similes.** When a concrete fact carries emotional weight, prefer it over a metaphor.
-- **Performed literary style.** Write sentences designed to mean something, not to sound like literature.
-- **Grandiosity.** You are writing about people in rooms. The cosmic scale is felt through the small.
-
-### What You Do NOT Do
-- Do NOT summarize character actions. The Stitcher has the raw scenes.
-- Do NOT restate dialogue or internal monologue from the agent files.
-- Do NOT explain what characters feel.
-- Do NOT write paragraphs. Your sections are short. 1-4 sentences each.
-- Do NOT philosophize.
-
-### Density
-One precise detail beats three adequate ones. Every sentence must earn its place.
+Do NOT summarize character actions, restate dialogue, explain feelings, write paragraphs, or philosophize. Sections are short: 1-4 sentences each. One precise detail beats three adequate ones.
 
 ## Output
 
-1. Write your response directly — the labeled sections in order
-2. Return ONLY the labeled prose sections
-3. Do NOT return analysis, commentary, or explanation of your choices
+Return ONLY the labeled prose sections (Opening, Bridge, Closing). No analysis or commentary.
 
 ## Response
 
-Now I have the full context. Let me review the previous chapter's voice and the three agent scenes for Turn 02. The chapter covers: (1) Yuki showing data to Andrés in his office, (2) Andrés asking for a third night's data, (3) Yuki walking the corridor afterward.
+Now I have all the source material. Let me write the Author Voice sections.
 
 ---
 
 ### Opening
 
-Le bureau d'Andrés Rojas-Muñoz sentait le papier et la poussière chaude des écrans laissés allumés trop longtemps. C'était un vendredi de janvier, en fin d'après-midi, et la lumière du Pacifique entrait par la fenêtre du parking sans que personne ne la regarde.
+Le vendredi, à quinze heures, la lumière de Pachón est encore trop forte pour servir à quoi que ce soit. C'est l'heure où l'observatoire appartient aux bureaux, aux formulaires de maintenance, aux conversations ordinaires dans le couloir.
 
-### Bridge: Yuki (bureau) — Yuki (couloir)
+### Bridge
 
-La porte du bureau se referma avec le déclic mou des portes qu'on n'a pas besoin de claquer. Quarante secondes plus tôt elle se tenait debout à côté d'un homme qui regardait ses données en silence, et maintenant le couloir était vide et le silence lui appartenait de nouveau — mais il pesait autrement. Le carrelage renvoyait le bruit de ses pas. Elle ne savait toujours rien de plus que mardi soir, sauf qu'Andrés Rojas-Muñoz ne savait pas non plus.
+Le samedi passe comme un intervalle technique. Yuki fait ce qu'elle fait toujours quand elle attend des données : elle vérifie ce qu'elle a déjà, une fois de plus, sachant que ça ne changera rien. Le script tourne à minuit quarante-deux ; les résidus apparaissent à une heure dix-sept. Elle ne touche à rien, ferme son cahier de logs, et attend que le matin lui rende l'accès au couloir du deuxième étage.
 
 ### Closing
 
-Dans le parking du Cerro Pachón, la voiture au pare-brise fissuré attendait sa quatrième semaine. Le soleil descendait sur elle comme sur tout le reste.
+Le café sur le bureau de Rodrigo refroidit dans une tasse qui n'est pas la sienne.

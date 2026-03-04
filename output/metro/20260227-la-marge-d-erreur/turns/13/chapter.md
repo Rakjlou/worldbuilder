@@ -1,73 +1,61 @@
-## Le béton
+## Les gestes
 
-Le désert change de forme. Ce qui était du sable et de la roche et du silence depuis des millénaires devient un chantier, puis une infrastructure, puis un système. Quatre mille trois cents personnes travaillent en trois équipes. Deux cent quarante camions de béton par jour. L'échelle dépasse la comparaison. Les gens qui construisent ne voient pas ce qu'ils construisent. Personne ne le voit. Le système est trop grand pour être vu.
-
-Le béton avait pris pendant la nuit. Helena posa la main dessus à six heures du matin, quand le soleil était encore bas et que la surface était froide. C'était un geste qu'elle faisait sur tous les chantiers, depuis Belo Monte, depuis les fondations du barrage où elle avait appris que le béton parle à ceux qui le touchent. Pas une métaphore. La température, la texture, la présence ou l'absence de microfissures sous les doigts.
-
-Celui-ci était bon. Vingt-huit mégapascals à vingt-huit jours, si le dosage était correct, et le dosage était correct parce qu'elle l'avait vérifié elle-même avant la coulée.
-
-Elle retira sa main et regarda le chantier. Ce qui s'étendait devant elle couvrait onze kilomètres carrés de désert. Elle avait essayé les comparaisons habituelles : mille cinq cents terrains de football, deux fois l'aéroport de Guarulhos. Aucune ne fonctionnait. L'échelle était au-delà de la comparaison.
-
-*À Belo Monte, le problème était l'eau. En Patagonie, le problème était le vent. Ici, le problème est l'échelle. Je ne sais pas encore contre quoi je construis.*
-
-La réunion de sept heures se tenait dans un préfabriqué climatisé. Douze personnes autour d'une table pliante. Helena ouvrit son cahier à spirale, papier quadrillé, le même modèle qu'elle utilisait depuis vingt-cinq ans.
-
-— Le radier de la zone Alpha a été coulé hier entre quatorze heures et vingt-deux heures. Les échantillons de contrôle seront testés à J+7 et J+28. La tolérance de planéité demandée est de deux millimètres sur trente mètres. C'est quatre fois la tolérance standard pour une dalle industrielle.
-
-Elle tourna une page.
-
-— L'approvisionnement en acier HA reste critique. La spécification métallurgique des lots de la semaine dernière montrait une variation de 0,3 % sur la teneur en carbone. J'ai refusé le lot.
-
-Quelqu'un demanda si le refus allait retarder la zone Beta. Helena répondit que oui, de quarante-huit heures, et que quarante-huit heures étaient récupérables par un décalage du coffrage. Elle avait déjà calculé la séquence.
-
-Après la réunion, elle retourna sur le radier. Seule. Le béton s'étendait, gris et lisse, sous un ciel sans nuage. Elle s'accroupit et posa de nouveau la main à plat. *Bon béton. Bon dosage. Bonne cure.* Puis elle se releva et regarda l'horizon, où les machines continuaient de creuser.
+Quatre villes, le même mardi. L'eau de la piscine à vingt-six degrés, la terre sèche autour du citronnier, le thé qui refroidit dans la tasse, le robinet ouvert après la course. Personne n'appelle personne.
 
 ---
 
-Helena touche le béton et le béton est bon. À quelques centaines de mètres du radier, dans un préfabriqué climatisé, un ingénieur migre quarante-sept fichiers de configuration du prototype vers la production.
+Les bras entrent dans l'eau. Un. Deux. Renata compte les longueurs depuis vingt ans, ce compte est devenu involontaire, automatique comme la respiration. Dix-sept. Dix-huit. Par les parois de verre, le fleuve est gris et lent ce matin. *5,51. La dernière itération donne 5,51. La Terre est à 5,51.* Elle tourne au mur, pousse, les jambes propulsent. Dix-neuf.
 
-Le ticket JIRA était le numéro ATK-4471. Titre : *Migration configuration files — MkII prototype to production baseline.* Priorité : moyenne. Assigné à : Devaux, L. Date d'échéance : vendredi.
+*Le vote a eu lieu. Ils construisent.* Elle respire à gauche. Un nageur la dépasse dans le couloir adjacent — le rythme trop rapide, il va se fatiguer avant les cinquante mètres. *Cinq virgule cinquante et un grammes par centimètre cube. Cinq fois que je refais le modèle. Cinq fois que la signature converge.* Vingt longueurs.
 
-Laurent Devaux ouvrit le ticket à neuf heures quatorze, entre un café et une mise à jour de firmware. La description tenait en quatre lignes : les fichiers de configuration du prototype MkII devaient être migrés vers le dépôt de production. Vérifier les formats. Adapter les chemins. Valider les tests.
-
-Il ouvrit le répertoire source. Quarante-sept fichiers. Formats mixtes — YAML, JSON, quelques fichiers texte plats hérités d'une époque où le prototype n'avait pas encore de framework de configuration. Il commença par les YAML parce qu'ils étaient les plus propres.
-
-Le fichier `temporal_correction.yaml` faisait vingt-trois lignes. Des paramètres de correction temporelle, des offsets, des facteurs de calibration. La ligne 14 :
-
-`temporal_offset_correction: 0.9743`
-
-Il la lut comme il lisait toutes les autres lignes : en vérifiant que le format était correct, que le type était numérique, que la valeur était dans une plage raisonnable. 0.9743 était un facteur proche de 1. Un facteur de correction. Il y en avait des dizaines dans les fichiers de configuration. Chacun compensait quelque chose. Il n'y avait pas de commentaire sur cette ligne. Pas de documentation inline. Pas de lien vers un rapport de calibration. L'ingénieur qui l'avait écrit, deux ans plus tôt, ne l'avait pas documenté parce que le nombre était correct pour le prototype, et que les nombres corrects ne nécessitent pas d'explication.
-
-Laurent copia le fichier dans le dépôt de production. Il lança les tests unitaires. Les tests vérifiaient le format, la cohérence des types, l'absence de valeurs nulles. Ils ne vérifiaient pas si une constante de calibration dérivée de la géométrie d'un prototype était applicable à une architecture de production dont les angles de faisceau étaient différents de 14,7 degrés. Ce n'était pas la fonction des tests unitaires. Les tests unitaires vérifient la forme. La signification est ailleurs.
-
-Les tests passèrent. Laurent nota dans le ticket : *Migration complete. 47 files migrated. Unit tests pass. Ready for review.* Il assigna la review à Chen, W., qui la validerait le lendemain en vérifiant les mêmes choses : les formats, les chemins, les types. Pas les valeurs. Les valeurs venaient du prototype. Le prototype avait fonctionné.
-
-Il ferma le ticket et passa au suivant. Le café avait refroidi.
-
-La constante 0.9743 était maintenant dans le dépôt de production, à la ligne 14 d'un fichier parmi quarante-sept, dans un répertoire parmi des centaines, dans un système que quatre mille personnes construisaient et que personne ne voyait entièrement.
+L'eau est à vingt-six degrés. Elle sent la chaleur du bassin contre ses avant-bras à chaque entrée. Mateus a nagé ici une fois, il y a deux ans. Il avait regardé la Seine par les parois de verre et dit : *Mãe, on nage dans le fleuve sans se mouiller.* Elle avait ri. *Il va à l'école ce matin. Il fait ses décimales. Le monde vote sur la fin possible de toutes les décimales et lui, il apprend les décimales.* Elle compte. Vingt et une. Vingt-deux. Les mains entrent dans l'eau. Un. Deux.
 
 ---
 
-À Atacama, un fichier de configuration prend sa place dans le dépôt de production. À Paranal, un email prend sa place dans une boîte de réception.
-
-L'email arriva à onze heures vingt-trois. Objet : *Infrastructure Advisory — ESO Southern Observatory Facilities — Consortium Integration Phase 1.* Expéditeur : un domaine que Mateo n'avait jamais vu. *@pds-consortium.org.*
-
-Il lut le premier paragraphe. Puis le relut.
-
-*In accordance with Resolution 2031-47 of the International Consortium for Planetary Displacement, certain ESO facilities in the Atacama region will be integrated into the consortium's operational infrastructure effective Q3 2031. This integration includes shared use of power distribution networks, communication relays, and selected observatory support buildings.*
-
-Il fit défiler. Le deuxième paragraphe parlait de *minimal disruption to ongoing scientific operations*. Paranal était le troisième site de la liste.
-
-*Shared use of power distribution networks.* Il pensa aux générateurs de Paranal. À la stabilité électrique dont les instruments avaient besoin. Aux spécifications que lui et Rodrigo avaient passées six mois à calibrer pour le mode haute résolution d'ESPRESSO. *Shared use* ne disait rien et disait tout.
-
-Il ferma l'email. Rouvrit le fichier de debug. La race condition du contrôleur était toujours là, patiente, logique, résoluble. Des problèmes qu'il savait résoudre.
-
-Dans le couloir, des voix. Plus fortes que d'habitude. Le mot *consortium* prononcé trois fois en vingt secondes. Rodrigo : *C'est temporaire, ils disent toujours ça.* Un rire court, sans joie.
-
-Mateo ne sortit pas dans le couloir. Il resta devant l'écran, le curseur clignotant à la ligne 247, et il pensa à Valentina, qui passait ses examens cette semaine à La Paz. Il pensa au bracelet à son poignet. Les systèmes ne partagent pas leurs ressources sans raison. Quand un système absorbe un autre, les priorités ont changé. Et quand les priorités changent, les gens qui travaillaient sur l'ancienne priorité sont déplacés.
-
-À dix-sept heures, il appela Valentina. Elle répondit à la deuxième sonnerie. Il ne mentionna pas l'email. Il lui demanda comment s'était passé l'examen de biochimie. Elle dit *bien, je crois*. Il dit *bien, c'est bien*.
+Renata compte ses longueurs. Ephrem compte ses citrons. Les deux gestes ont la même cadence — répéter la chose précise jusqu'à ce qu'elle tienne lieu de réponse.
 
 ---
 
-Le soir tombe sur le désert. Helena note dans son cahier les quantités coulées, les lots refusés, les tolérances tenues. Laurent ferme son ticket JIRA et rentre chez lui. Mateo appelle Valentina et ne mentionne pas l'email. À Paranal, les coupoles s'ouvrent pour une nuit de plus, mais le mot *intégration* est dans l'air, et l'air a changé de goût. Le béton prend. La constante reste. Les choses les plus importantes sont celles que personne ne remarque.
+Il pencha l'arrosoir lentement, regardant l'eau pénétrer la terre sèche autour des racines. Le sol l'absorbait sans urgence, sans résistance, simplement en recevant ce qui lui était offert. Tigist avait dit, encore ce matin, que le citronnier buvait trop. Il n'avait pas répondu. Certaines conversations n'ont pas besoin de conclusion.
+
+Les petits fruits pendaient là, jaunes et obstinés. Pas beaux. Trop petits, trop acides, la peau un peu rugueuse. Mais ils existaient, ce qui était déjà une forme d'argument. Il avait passé vingt ans à démontrer des choses que personne ne demandait à savoir — des surfaces sans bord, des variétés fermées, des topologies qui se refermaient sur elles-mêmes. Le comité avait écouté. Puis voté. C'était leur droit. Les mathématiques ne votent pas.
+
+Il posa l'arrosoir contre le mur de pierre et resta un moment debout, les mains un peu humides, regardant les branches sans vraiment les voir. *Yara comprendra.* Peut-être pas maintenant, peut-être pas avant que la structure soit déjà en place. Mais les équations resteraient sur le tableau blanc à Atacama, patientes, sans expiration. Il rentra dans la maison. Sur le seuil, il se retourna une fois vers l'arbre. Les fruits étaient encore là.
+
+---
+
+Ephrem rentre dans la maison. Kwame reste assis dans la sienne. Deux hommes seuls après le repas, dans la lumière qui baisse, avec des phrases qu'ils ont décidé de ne pas prononcer.
+
+---
+
+La vaisselle est faite. Le thé refroidit dans la tasse. Par la fenêtre, le jardin de Goostrey n'est qu'une rumeur d'obscurité — il sait qu'il y a des rosiers là-dehors, une haie de buis, une vieille pomme de terre que Gifty aurait su nommer. Il ne sort jamais par cette porte le soir. Le soir, il s'assoit.
+
+*Gifty.* Il commence toujours par son prénom, comme on ouvre une lettre qu'on a déjà lue. *Gifty, il y a des fréquences qui arrivent avant d'être émises.* Quatre ans qu'il essaie de comprendre ce que cela signifie pour la physique, et il n'y arrive pas, mais il comprend ce que cela signifie pour le temps : que la causalité n'est pas une loi naturelle, seulement une habitude que l'univers a prise. Que l'effet peut précéder la cause. Qu'on peut recevoir quelque chose avant même que quelqu'un ait eu l'idée de l'envoyer. *Je t'aurais écrit plus tôt, si j'avais su comment.* Il ne finit pas la phrase. Il ne finit jamais la phrase.
+
+Il boit une gorgée. Le thé est tiède. Dehors, un renard traverse le jardin — il le devine au mouvement contre les ombres, un déplacement silencieux et précis. Il avait dit à Gifty, lors de leur dernier appel honnête, que ce travail était plus grand que lui. Elle avait répondu : *Je sais, Kwame. C'est bien le problème.* Il n'avait pas su lui dire qu'elle avait raison. Il ne lui avait pas dit non plus qu'il l'aimait encore, parce qu'un homme n'a pas le droit de dire je t'aime à une femme qu'il a choisie de quitter, encore et encore, en prenant chaque fois le prochain avion. Il pose la tasse. La lettre se dissout dans le silence, comme toutes les autres.
+
+---
+
+La lettre que Kwame n'écrit pas, l'appel que Yuki passe quand même. Deux formes de fidélité au silence — l'une qui retient le mot, l'autre qui dit *bientôt* pour ne pas avoir à dire autre chose.
+
+---
+
+44:12. Encore. Elle pose le téléphone sur le plan de travail, boit directement au robinet. L'eau est froide. Bonne. La sueur sèche sur ses épaules, elle sent le sel et la route. Par la fenêtre : le Pacifique, plat ce matin, gris-bleu. Le projet continue. Le paradoxe est public. Et elle n'a toujours pas passé quarante minutes.
+
+Elle prend le téléphone. Compose le numéro. Sa mère décroche à la deuxième sonnerie — toujours à la deuxième, jamais à la première, comme si elle attendait sans vouloir paraître attendre.
+
+— *Yuki. Comment tu vas ?*
+— Bien. J'ai couru.
+— *Et le projet ?*
+— Ça continue.
+
+Un silence. Puis, inévitable :
+
+— *La boîte. Les papiers de ton père. Tu as eu le temps de—*
+— Bientôt.
+
+Sa mère dit *d'accord*. Elles savent toutes les deux. Mais le mot tient. Pour cette semaine encore, il tient.
+
+---
+
+Les bras entrent dans l'eau. L'arrosoir se pose contre le mur. La tasse est vide. Le mot tient encore une semaine. Quatre gestes, dans quatre villes, que personne ne regarde accomplir.

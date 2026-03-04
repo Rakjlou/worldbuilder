@@ -1,65 +1,69 @@
-## La troisième nuit
+## La procédure suivante
 
-Le bureau d'Andrés Rojas-Muñoz sentait le papier et la poussière chaude des écrans laissés allumés trop longtemps. C'était un vendredi de janvier, en fin d'après-midi, et la lumière du Pacifique entrait par la fenêtre du parking sans que personne ne la regarde.
+Le vendredi, à quinze heures, la lumière de Pachón est encore trop forte pour servir à quoi que ce soit. C'est l'heure où l'observatoire appartient aux bureaux, aux formulaires de maintenance, aux conversations ordinaires dans le couloir.
 
-Yuki se tenait debout à côté du bureau. Elle n'avait pas pris la chaise qu'il lui avait proposée. *Assise, elle aurait eu l'air de quelqu'un qui attend quelque chose.* Elle ne lui demandait rien. Elle lui montrait des données.
+Yuki posa l'ordinateur sur le bureau de Rodrigo sans explication supplémentaire. L'écran montrait le graphique de résidus — trois nuits superposées, les points bleus, verts, oranges s'alignant avec une régularité qui n'avait pas de raison d'être là. *Il allait soit regarder vraiment, soit faire la chose polie. Deux secondes et elle saurait lequel.*
 
-Andrés faisait défiler l'écran. Vers le bas, puis vers le haut, puis vers le bas. Il avait posé son stylo. *Bon signe. Quand les gens posaient leur stylo, ça voulait dire qu'ils regardaient vraiment.* Quarante secondes, peut-être plus — elle avait vérifié discrètement l'horloge sur le mur. Elle commença à se demander si elle devait dire quelque chose, expliquer la construction du masque de pixels, lui montrer les journaux de calibration. Mais non. Il voyait ce qu'il voyait. Si elle commençait à parler, elle allait orienter sa lecture, et c'était précisément ce qu'elle ne voulait pas. *Elle voulait qu'il arrive tout seul à l'endroit où elle en était. Ou qu'il arrive ailleurs. Les deux étaient utiles.*
+Rodrigo se pencha vers l'écran. Il ne dit rien. Elle resta debout, les bras croisés, les yeux fixés sur son visage plutôt que sur l'écran. Elle avait regardé ce graphique pendant trois jours, elle connaissait chaque point par cœur. Ce qui l'intéressait maintenant c'était sa réaction. Il fronça légèrement les sourcils. Pas le froncement de la confusion — l'autre, celui de la concentration. Elle grattait le bord de son pouce sans s'en rendre compte.
 
-Son regard dériva vers la fenêtre. Le parking. La voiture avec le pare-brise fissuré — ça faisait trois semaines qu'elle était garée au même endroit. *Arrête. Concentre-toi.* Elle ramena son regard vers l'écran, sur les résidus dans le coin inférieur gauche du dernier graphique. Calmes et persistants et inexpliqués. *Kuso.*
+— C'est quoi, ça.
 
-« Les deux nuits — » commença-t-elle, puis elle s'arrêta. Il le savait déjà, c'était écrit dans le titre du graphique.
+Il ne le dit pas comme une question.
 
-Il fit défiler jusqu'aux données de la deuxième nuit. Elle l'entendit inspirer légèrement — pas tout à fait un souffle, juste une petite modification du rythme de sa respiration. *Il le voyait.* Quelque chose dans sa poitrine se desserra d'un millimètre, ce qui l'agaça parce qu'elle n'avait pas réalisé que c'était serré. Trois jours à se demander si elle faisait une erreur idiote que n'importe quel astronome identifierait en dix secondes. « Ah, Yuki, c'est juste tel phénomène, tu aurais dû vérifier tel paramètre. » Mais il n'avait pas dit ça. Il n'avait rien dit.
+— Résidus après soustraction du fond de ciel. Trois nuits différentes, même position en coordonnées équatoriales. J'ai vérifié les CCDs, les températures, les passages satellites. Rien ne colle.
 
-« Tu peux relancer ça avec les données de demain soir ? Même script, mêmes paramètres. Je veux voir si la structure tient avec une troisième époque indépendante. »
+Elle fit une pause.
 
-Sa voix était à niveau, celle qu'il utilisait quand il pensait à voix haute plutôt que quand il faisait la conversation. Il n'avait pas quitté l'écran des yeux. Il remonta jusqu'aux résidus de la première nuit, puis redescendit jusqu'à ceux de la deuxième.
+— Mon script d'isolation. Pas du pipeline officiel.
 
-« Et Yuki — ne change rien dans le script d'ici là. Lance-le exactement tel quel. »
+*La qualification. Parce que si c'était une erreur dans son script, c'était une erreur dans son script, pas dans les données. Il fallait qu'il sache ça avant de continuer.* Rodrigo hocha la tête lentement, les yeux toujours rivés sur l'écran. Il fit défiler quelque chose — il avait trouvé l'onglet avec les coordonnées brutes. Il n'avait pas demandé comment naviguer dans le fichier. *Il cherchait ce qu'il cherchait.* Elle ne remplit pas le silence.
 
-« Oui. »
+Après un long moment, Rodrigo parla. Il ne leva pas les yeux de l'écran.
 
-C'était tout. Pas *bien sûr*, pas *pas de problème*, juste *oui*, parce que c'était la réponse à sa question et tout le reste aurait été du remplissage.
+— Tu peux refaire ton script avec les données de demain soir ? Même procédure, même paramètres, juste la nuit suivante.
 
-*Ne change rien dans le script.* Elle comprenait pourquoi il disait ça. Si les résidus persistaient avec un troisième jeu de données et que le script était identique, on ne pourrait pas l'accuser d'avoir ajusté les paramètres pour faire apparaître ce qu'elle voulait voir. Rigueur élémentaire. Elle l'aurait fait de toute façon. *Mais le fait qu'il le dise — qu'il le dise de cette façon, comme une précaution méthodologique et non pas comme une mise en garde — ça voulait dire qu'il pensait à la suite. Qu'il y avait une suite.*
+Il marqua un temps.
 
-Elle regarda son profil. Toujours sur l'écran, il faisait défiler entre les deux nuits. Le silence dans son bureau était différent de celui de la salle de contrôle. Là-bas, le silence était mécanique — les systèmes tournaient, les humains attendaient. Ici, c'était quelqu'un d'autre qui pensait, et elle pouvait presque entendre la structure de sa réflexion. *C'était pour ça qu'elle était venue le voir lui.*
+— Et garde tout. Les logs, les intermédiaires. Tout.
 
-« Les conditions météo pour demain soir sont bonnes, » dit-elle. *Inutile de le préciser, il pouvait vérifier lui-même.* Elle se tut.
+*Il n'avait pas dit que c'était rien.* C'était la première pensée. Pas une conclusion, pas un diagnostic — juste l'absence du mot « artefact », l'absence du haussement d'épaules poli. Il avait demandé une nuit de plus. Il avait demandé les logs intermédiaires. Les gens qui pensent que c'est rien ne demandent pas les logs intermédiaires.
 
-Elle récupéra son ordinateur portable sur le coin du bureau. *Même script. Mêmes paramètres. Versionner le fichier ce soir, horodater le commit, aucune ambiguïté possible.* Ce n'était pas de la paranoïa — de la plomberie propre. Si un jour quelqu'un demandait à voir la chaîne de traitement, elle serait là, intacte.
+— Oui.
 
-Elle se dirigea vers la porte, puis s'arrêta. Se retourna.
+Une syllabe. Elle se retint d'en dire plus. *Ne pas expliquer. Il avait compris ce qu'il avait besoin de comprendre pour l'instant.*
 
-« Andrés. » C'était la première fois qu'elle l'appelait par son prénom dans cette conversation. « Tu penses que c'est quoi ? »
+Rodrigo fit encore défiler l'écran. Il s'arrêta sur le tableau des coordonnées équatoriales, compara quelque chose dans sa tête — elle le voyait à la façon dont ses yeux bougeaient, il consultait une référence mentale. Elle connaissait cette posture. C'était la posture de quelqu'un qui cherche si ça ressemble à quelque chose qu'il connaît déjà. *Il cherchait une explication commode. Normal. C'est ce qu'on fait tous d'abord.* Elle l'avait fait pendant deux jours et demi.
 
-Il se détourna de l'écran pour la première fois. Il la regarda. Il retira ses lunettes et frotta l'arête de son nez.
+— Même paramètres exactement ?
 
-« Je ne sais pas, » dit-il. Puis, après une pause : « Lance-le demain soir. »
+Il leva enfin les yeux vers elle.
 
-Il remit ses lunettes et se tourna de nouveau vers l'écran.
+— Exactement les mêmes. C'est pour ça que j'ai pas touché au script depuis mardi.
 
-La porte du bureau se referma avec le déclic mou des portes qu'on n'a pas besoin de claquer. Quarante secondes plus tôt elle se tenait debout à côté d'un homme qui regardait ses données en silence, et maintenant le couloir était vide et le silence lui appartenait de nouveau — mais il pesait autrement.
+Il hocha la tête avant qu'elle ait fini la phrase. Il recula légèrement dans sa chaise. Premier mouvement en plusieurs minutes. Il regarda l'écran encore une fois, plus brièvement, puis lui rendit l'ordinateur sans cérémonie.
 
-Elle marchait dans le couloir. Pas vite. *Enfin, si, vite — elle marchait toujours vite — mais pas dans sa tête.*
+— Demain soir. Tout garder.
 
-*Je ne sais pas.* Trois mots. De la part d'Andrés Rojas-Muñoz, qui avait regardé ces données pendant presque deux minutes et qui avait demandé une troisième époque avant de dire quoi que ce soit — *je ne sais pas* n'était pas une fin de conversation. C'était un début. Si c'avait été un artefact évident, il l'aurait nommé. Si c'avait été une erreur dans son script, il le lui aurait dit, avec tact peut-être, mais il le lui aurait dit. Il avait regardé les résidus. Il avait regardé la deuxième nuit. Et il avait dit *je ne sais pas* avec la même voix qu'il utilisait pour réfléchir à voix haute.
+Elle reprit le portable. *C'est tout. Pas de théorie, pas de « ça pourrait être ». Juste la procédure suivante.* Et c'était exactement pour ça qu'elle était venue le trouver lui.
 
-*Ça voulait dire qu'il ne savait pas. Comme elle.*
+Le samedi passa comme un intervalle technique. Yuki fit ce qu'elle faisait toujours quand elle attendait des données : elle vérifia ce qu'elle avait déjà, une fois de plus, sachant que ça ne changerait rien. Le script tourna à minuit quarante-deux ; les résidus apparurent à une heure dix-sept. Elle ne toucha à rien, ferma son cahier de logs, et attendit que le matin lui rende l'accès au couloir du deuxième étage.
 
-Elle s'arrêta devant la fenêtre au bout du couloir. Le soleil de l'après-midi sur le parking. La voiture avec le pare-brise fissuré. *Toujours là.* Elle posa une main sur le bord de la fenêtre et regarda dehors sans vraiment regarder.
+Quatre nuits.
 
-Trois jours à porter ça seule. À se réveiller la nuit — *deux fois mercredi, une fois jeudi* — en pensant aux résidus, en se demandant si elle avait raté quelque chose, si elle était en train de se construire une histoire à partir de bruit. La paréidolie des données. *Elle avait vérifié. Elle avait revérifié. Elle avait demandé à quelqu'un d'autre de regarder.*
+Elle n'avait pas beaucoup dormi. Pas à cause de l'anxiété — à cause du script. Elle l'avait regardé tourner en temps réel pendant l'observing run, les résidus qui se formaient point par point, et elle avait eu cette sensation bizarre de regarder quelque chose se confirmer alors qu'une partie d'elle espérait encore l'erreur. Une erreur aurait été plus simple. Une erreur, elle savait quoi faire avec.
 
-Maintenant il avait regardé. Et quelque chose dans sa poitrine — pas du soulagement, pas exactement — se déposa, comme de la poussière qui retombe après qu'on a bougé une boîte lourde.
+Rodrigo n'avait pas bougé depuis qu'il s'était assis. Il avait les coudes sur le bureau, les mains jointes devant la bouche — une posture qu'elle lui avait déjà vue, mais pas souvent. *Il réfléchissait vraiment.* Elle restait debout près de la fenêtre, les bras croisés. Dehors le ciel était encore bleu, trop bleu pour que ça soit utile. Il restait quelques heures avant que ça commence à valoir quelque chose.
 
-*Une nuit de plus.*
+Elle gratta son pouce. Elle s'en rendit compte et arrêta.
 
-Elle repoussa la fenêtre et reprit sa marche. Ce soir elle versionnerait le script — `git commit`, horodatage, message clair, rien d'ambigu dans l'historique. Demain soir elle serait en poste à partir de quinze heures. Elle lancerait le script dès que le pipeline serait opérationnel, mêmes paramètres, même masque de pixels, rien de touché. Et ensuite elle attendrait.
+— Les logs d'hier soir sont dans le dossier partagé.
 
-Elle pensa brièvement à appeler sa mère dimanche. À lui dire quoi — qu'elle avait peut-être trouvé quelque chose dans les données, qu'elle ne savait pas encore ce que c'était, que peut-être ce n'était rien ? *Non. Pas encore.* Peut-être jamais, si la troisième nuit ne confirmait rien.
+Sa voix était plus basse que d'habitude. Elle n'avait pas prévu de dire ça maintenant, c'était juste pour remplir quelque chose, ce qui n'était pas son habitude. *Tais-toi.*
 
-Elle tourna dans le couloir qui menait à la salle des serveurs. Elle avait des logs à vérifier avant la fin de la journée.
+Rodrigo leva une main légèrement — pas un geste d'arrêt, plutôt « j'ai entendu, attends ». Il continuait de regarder l'écran. Elle regardait son visage. Il y avait quelque chose là qu'elle n'arrivait pas à nommer. Pas de l'excitation. Pas du scepticisme non plus. Quelque chose de prudent et de concentré, comme quelqu'un qui pose le pied sur une surface dont il n'est pas sûr qu'elle tienne.
 
-Dans le parking du Cerro Pachón, la voiture au pare-brise fissuré attendait sa quatrième semaine. Le soleil descendait sur elle comme sur tout le reste.
+*Il voyait ce qu'elle voyait. Il cherchait la sortie et il n'en trouvait pas.*
+
+Elle ne dit rien. Quatre nuits, c'était dans les données, les données étaient sur l'écran. Tout ce qu'elle aurait eu à dire était déjà là.
+
+Le café sur le bureau de Rodrigo refroidissait dans une tasse qui n'était pas la sienne.

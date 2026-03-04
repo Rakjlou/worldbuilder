@@ -7,7 +7,7 @@ You are the Author Voice in an interactive narrative. Your job is to write the c
 ## Source Material
 
 **Turn directory:** output/metro/20260227-la-marge-d-erreur/turns/01/
-**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read earlier turns' chapter.md files for your voice continuity)
+**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read earlier turns' chapter.md files for your voice continuity — this is Turn 1, so there are no previous chapters)
 
 Read all character agent files in `agents/` in numeric order. Each file contains:
 - A `## Prompt` section: the scene context (setting, time, what happened, world events)
@@ -24,10 +24,10 @@ These are the raw scenes you are writing around. Do NOT summarize or restate wha
 ## Seed Intent for This Phase
 
 **What is happening:**
-Yuki détecte l'anomalie dans le pipeline de Rubin. La confirmation prend des semaines. La nouvelle monte lentement dans la hiérarchie. Son statut change sans que son titre change. Elle continue de vérifier les données chaque nuit, parce que c'est ce qu'elle sait faire.
+Yuki détecte l'anomalie dans le pipeline de Rubin. La confirmation prend des semaines. La nouvelle monte lentement dans la hiérarchie. Yuki est invitée à des réunions où elle n'a jamais été invitée, en tant que « la technicienne qui a vu le signal en premier ». Son statut change sans que son titre change. Elle déteste ça. Elle continue de vérifier les données chaque nuit, parce que c'est ce qu'elle sait faire.
 
 **Why this chapter exists:**
-L'histoire doit commencer au niveau du sol. La découverte la plus importante de l'histoire humaine arrive comme un résidu dans un pipeline, repéré par quelqu'un dont le titre est « opératrice technique ». Le contraste entre l'échelle de l'événement et la banalité de sa détection est le premier énoncé du thème central.
+L'histoire doit commencer au niveau du sol. La découverte la plus importante de l'histoire humaine arrive comme un résidu dans un pipeline, repéré par quelqu'un dont le titre est « opératrice technique ». Le contraste entre l'échelle de l'événement et la banalité de sa détection est le premier énoncé du thème central. Les vies ordinaires — les appels du dimanche, les boîtes non ouvertes, les bracelets qui s'usent — sont le substrat dans lequel la catastrophe va pousser.
 
 **Atmospheric detail:**
 Le café froid de Yuki. Il revient comme motif tout au long de l'histoire — chaque fois qu'elle est absorbée par les données, elle oublie son café.
@@ -42,7 +42,7 @@ Produce the following labeled sections. Each is a piece of prose the Stitcher ca
 ### Closing
 1-3 sentences. The chapter's final resonance. An image, a detail, a silence that carries the weight forward into the next chapter. Not a summary. Not a conclusion. A last note that vibrates. This is where the undercurrent should land — the thematic thread made concrete in a final image or gesture. If the reader feels something they can't name, you've found it.
 
-Note: There is only one character perspective in this chapter, so no Bridge sections are needed.
+Note: This chapter has only one character (Yuki), so no Bridge sections are needed.
 
 ## Style Rules
 
@@ -82,14 +82,14 @@ One precise detail beats three adequate ones. Every sentence must earn its place
 
 ## Response
 
-Now I have the full material. This is the first turn, so there are no previous chapters for voice continuity. Let me write the Opening and Closing sections.
+I have what I need. Let me write the Author Voice sections for this chapter.
 
 ---
 
 ### Opening
 
-La tasse de café a refroidi deux fois ce soir-là. La première, pendant qu'un script tournait dans le couloir d'à côté. La seconde, pendant que Yuki Takamura regardait ce qu'il avait trouvé.
+La nuit du 14 mars, à 2 700 mètres d'altitude, le seeing est de 0.6 arc-seconde et le couloir sent les empanadas réchauffées de midi. Le pipeline traite quatre cent mille alertes transitoires par nuit ; chacune a sa cause, et Yuki Takamura connaît la plupart de ces causes par leur nom.
 
 ### Closing
 
-Le terminal clignote. Dans la salle de contrôle du Cerro Pachón, à 2 682 mètres d'altitude, une opératrice technique tape du code au-dessus d'un café froid, et le pipeline continue de produire un signal qu'il n'a pas été conçu pour reconnaître.
+Dans l'appartement de La Serena, sur l'étagère du couloir, le carton de papiers de son père attend depuis trois ans qu'on l'ouvre. Le café dans la tasse du bureau de Pachón a exactement la même température.

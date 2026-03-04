@@ -2,49 +2,73 @@
 
 ## Prompt
 
-You are the Author Voice in an interactive narrative.
+You are the Author Voice in an interactive narrative. Your job is to write the connective tissue that gives this chapter its narrative direction.
 
 ## Source Material
-**Turn directory:** output/metro/20260227-la-marge-d-erreur/turns/05/
-**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read earlier chapter.md files for voice continuity)
 
-Read agent files in `agents/` in numeric order.
+**Turn directory:** output/metro/20260227-la-marge-d-erreur/turns/05/
+**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read all previous chapter.md files for voice continuity)
+
+Read all character agent files in `agents/` in numeric order.
 
 ## Chapter
-**Title:** La científica
+
+**Title:** L'article
 **Language:** French
-**Characters:** Yuki Takamura
+**Characters in this chapter:** Yuki Takamura (alone)
 
-## Seed Intent
-**What is happening:** Information leaks. The press describes Yuki as "the scientist who discovered the object." She is not a scientist. She doesn't correct the article. Her mother asks about the box. "Not yet."
-**Why:** The gap between what Yuki is called and what she is. The article, the box, the run — all forms of the same distance. The mundane persists.
-**Atmospheric detail:** 41 minutes 12 seconds. Still over forty.
+## Seed Intent for This Phase
 
-## Sections needed: Opening, Closing only (single character, no bridges).
+**What is happening:**
+L'information fuit. La presse. Le monde apprend qu'il y a un objet. Pas encore ce que c'est l'objet. Yuki est interviewée par un média chilien — l'article la décrit comme « la scientifique qui a découvert l'objet ». Elle n'est pas scientifique. L'article a tort. Elle ne le corrige pas. Elle rentre chez elle, passe devant le placard. La boîte. Pas encore.
 
-## Rules: Think in French. No AI tells. No "Not X — Y." No over-explanation. No grandiosity. 1-3 sentences per section. Do NOT summarize character actions. Return ONLY the labeled prose sections.
+**Why this chapter exists:**
+Phase 1 se termine. La vie ordinaire de Yuki, sa compétence silencieuse, le monde qui fait d'elle autre chose que ce qu'elle est. Et le fil privé — la boîte — qui traverse l'histoire. Les vies ordinaires sont le substrat dans lequel la catastrophe va pousser.
+
+**Atmospheric detail:**
+Le café froid / chaud. La porte de la chambre d'amis.
+
+## What You Write
+
+### Opening
+1-3 sentences. The leak, the press, the world beginning to learn.
+
+### Closing
+1-3 sentences. The box. The door. The weight of something undone.
+
+No bridges needed — single character chapter.
+
+## Style Rules
+
+**Think in French.** Native rhythm. Avoid all AI tells. 1-4 sentences per section max. One precise detail beats three. No summaries, no restated dialogue, no feelings explained.
+
+## Output
+
+Return ONLY the labeled prose sections. No analysis or commentary.
 
 ## Response
 
-Good -- the chapter doesn't exist yet. I have everything I need. Let me now carefully compose the Opening and Closing sections for this chapter. I have the agent's material, the seed intent, and the voice established across four previous chapters.
+I now have a strong sense of the Author Voice register. Let me study the patterns:
 
-The voice across the previous chapters has these hallmarks:
-- Precise, concrete physical detail (temperatures, times, objects)
-- Short, declarative sentences with occasional longer ones that carry internal weight
-- Present tense for scene-setting, past tense for narrative
-- No metaphorical excess -- things are what they are
-- Italics for internal thought, used sparingly
-- Objects carry meaning by proximity, not by commentary
-- The closing lines often pull back to something concrete, mundane, persistent
+- **Chapter 1 opening:** Specific sensory/technical detail establishing setting, then character.
+- **Chapter 1 closing:** The box + the cold coffee = private unfinished things rhyming with each other.
+- **Chapter 2 opening:** Light/time establishing the rhythm of the observatory.
+- **Chapter 2 closing:** Cold coffee in someone else's cup.
+- **Chapter 3 opening:** Geographic shift, the desert under another name, deliberate echo of what isn't happening here.
+- **Chapter 3 closing:** The bracelet wearing away unnoticed.
+- **Chapter 4 opening:** Three cities, three time zones, one number. Panoramic then particular.
+- **Chapter 4 closing:** Three objects that haven't moved/changed/been cleared away.
 
-Here is the chapter:
+The Author Voice writes in present tense for openings (establishing), past tense or past perfect for closings (settling). Short. One precise image. The box has appeared in chapters 1 and 4 closings already. Now it needs to appear in the closing of chapter 5 with slightly more weight.
+
+Here is the Author Voice for Chapter 5, "L'article":
 
 ---
 
-**Opening**
+### Opening
 
-Quarante et une minutes douze secondes. Elle repose le chronomètre sur la table de la cuisine, à côté du laptop ouvert. L'article est toujours là.
+L'information fuit comme l'eau fuit -- par les endroits qu'on ne surveille pas. Un courriel mal adressé, une conversation de couloir captée par le mauvais téléphone. Le monde apprend qu'il y a un objet. Pas encore ce que c'est. Pas encore ce que ça change.
 
-**Closing**
+### Closing
 
-Dans le placard de la chambre d'amis, la boîte n'a pas bougé. Le terminal clignote. Yuki tape la première commande.
+La chambre du fond reste fermée. Le carton est là depuis trois ans ; il sera là demain. Certaines choses attendent plus longtemps que les catastrophes.

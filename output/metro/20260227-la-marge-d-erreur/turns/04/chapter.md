@@ -1,115 +1,57 @@
-## 0,003
+## Cinq virgule cinq
 
-Quinze heures quarante-sept à Paris. Huit heures du matin à Addis-Abeba. Le même chiffre sur deux écrans que personne n'a encore comparés.
-
-Les chiffres apparaissent ligne par ligne. Renata ne bouge pas. Les mains posées à plat sur le bureau, de chaque côté du clavier — une habitude qu'elle a prise pendant sa thèse, pour ne pas toucher quoi que ce soit pendant les dernières secondes d'un run. Par la fenêtre, la cour de l'IPGP est grise, les pavés mouillés. Elle ne regarde pas la cour.
-
-*Densité moyenne : 5 514 kg/m³. Rayon du noyau : 54,9 % du rayon total. Gradient thermique de surface compatible avec une activité tectonique résiduelle.*
-
-Elle retire ses lunettes de son front. Les pose sur le bureau.
-
-*Voilà.*
-
-Elle n'a pas besoin de faire défiler jusqu'aux paramètres de comparaison. Elle les connaît par cœur depuis l'école doctorale. Mais elle fait défiler quand même, parce qu'elle est comme ça, parce qu'elle a besoin que ce soit les nombres qui lui disent la chose, pas elle-même à elle-même. La colonne de droite : valeurs terrestres de référence. La colonne de gauche : objet 2026-RK7. L'écart-type résiduel entre les deux modèles : 0,003. Elle fixe ce chiffre. *Zéro virgule zéro zéro trois.* En dessous de son seuil d'incertitude instrumentale. Pas une coïncidence. Pas non plus une erreur de modèle ; elle les connaît, ses erreurs, elle les a cherchées pendant deux jours.
-
-Elle ouvre un nouveau document texte. Écrit : *Hypothèse à tester : différenciation planétaire identique à la Terre.* Puis : *Mécanisme d'accrétion commun ?* Elle s'arrête. Efface la deuxième ligne. Prématuré. Elle n'est pas là pour spéculer. Elle est là pour décrire ce que les données disent, avec les marges d'erreur correctes, dans le bon ordre. Elle écrit à la place : *Prochaine étape : contraindre l'histoire thermique. Vérifier compatibilité avec un corps de 4,5 Ga.*
-
-Il est 15h47. Mateus sort à 17h30. Elle a le temps.
-
-Elle rouvre la fenêtre de modélisation et commence à paramétrer le run suivant. *La question n'est pas de savoir si c'est vrai. La question est de savoir comment je vais l'écrire.*
+Trois villes, trois fuseaux horaires, un même nombre qui se forme à trois endroits différents. Paris, Addis-Abeba, La Serena — et entre les trois, des lignes téléphoniques, des courriels, des fichiers envoyés à travers des connexions dont personne ne vérifie le chiffrement parce que personne ne pense encore en ces termes.
 
 ---
 
-Renata écrit *0,003* dans un fichier texte et s'arrête. À cinq mille kilomètres, Ephrem dessine une surface qui se referme mal sur un tableau blanc en notant que les physiciens n'ont pas vu le trou. Aucun des deux ne connaît le nom de l'autre.
+Renata ferma la porte de son bureau. Pas parce que quelqu'un risquait d'entrer — il était dix-neuf heures, le couloir de l'IPGP était vide — mais parce qu'elle avait besoin que la pièce soit plus petite. Elle revint à l'écran. Le profil de densité en bas à gauche, la relation masse-rayon au centre, la décomposition spectrale en haut à droite. Elle lut chaque colonne lentement, comme si la lenteur pouvait changer quelque chose. *Ce n'est pas possible.* Et pourtant ce l'était. Ce l'était peut-être. Elle ferma tout et relança depuis les données brutes. Paramètres identiques. Elle nota l'heure : 19h14.
 
-Dans son bureau d'Addis-Abeba, Ephrem se lève de son fauteuil — le cuir grince, vieille protestation familière — et s'approche du tableau blanc. Les trois pages du physicien sont dans sa main gauche ; il ne les regarde pas. Il les connaît maintenant. Il lève la main droite et trace dans l'air, lentement, la courbe qu'il a vue ce matin en marchant sur le campus, entre les eucalyptus, quand l'air sentait la rosée et la fumée de bois des quartiers en bas.
+Le modèle tourna. Elle mangea une pomme qu'elle avait dans son sac. Elle ne la goûta pas. À 19h47, les résultats arrivèrent. Identiques. Elle relança une troisième fois, avec les incertitudes propagées sur les estimations de masse, marges larges, conservateur. Elle nota l'heure : 19h51. Elle allait rentrer chercher Mateus chez la voisine, et le modèle tournerait pendant qu'elle ferait des pâtes. Ce n'était pas qu'elle voulait partir. C'était que les pâtes prendraient vingt minutes et les résultats vingt-deux.
 
-*Là. Voilà la contrainte qu'ils n'ont pas vue.*
+Dans le métro, elle tenait la barre et regardait le reflet de sa main dans la vitre noire. *Un corps rocheux différencié. Noyau métallique, manteau silicaté, croûte. La signature spectrale dans les longueurs d'onde du moyen infrarouge. La densité moyenne — cinq virgule cinq.* La Terre a cinq virgule cinq. Elle rit, brièvement, et l'homme en face d'elle se décala d'un centimètre sur son siège. Ce n'était pas un rire joyeux. C'était le rire de quelqu'un qui vient de comprendre pourquoi le pont ne tient pas.
 
-Il prend le feutre et dessine : une surface, pas tout à fait un tore, pas tout à fait une sphère. Quelque chose d'intermédiaire, avec une cicatrice, un pli qui ne devrait pas s'effacer. Le physicien a écrit ses équations de trajectoire dans l'hypothèse implicite que l'espace des solutions est simplement connexe. Il ne l'a pas formulé ainsi. Il ne l'a probablement pas pensé ainsi. Mais c'est ce que ses équations supposent, et c'est faux. *L'espace n'est pas simplement connexe. Il y a un trou là-dedans. Un vrai trou topologique. Et cela change tout ce qu'on peut dire sur le comportement global des solutions.*
-
-Il recule d'un pas et regarde le dessin. Puis il tourne la tête vers le pot posé sur l'appui de fenêtre, la grande fougère qu'il a appelée Poincaré parce qu'elle envahit tout ce qu'elle touche. « Tu vois ça, Poincaré ? » dit-il à voix basse, en amharique. « Nos amis physiciens ont construit leur modèle sur un espace qui n'a pas la bonne forme. » Il marque une pause. « Je leur aurais dit vendredi, mais il faut bien laisser le problème respirer. »
-
-Il retourne s'asseoir, pose les trois pages à plat sur le bureau en repoussant doucement une pile de copies d'étudiants, et ouvre son carnet à la page qu'il a commencée ce matin pendant sa promenade. *Il faut être précis sur ce point avant d'écrire quoi que ce soit au physicien. Ne pas envoyer une intuition. Envoyer une démonstration.* Son stylo s'arrête une seconde au-dessus du papier. *Ou du moins le squelette d'une démonstration. Quelque chose de suffisamment rigoureux pour qu'il comprenne ce qu'il cherche.* Il sourit légèrement, sans s'en rendre compte. Voilà longtemps qu'un problème ne lui avait pas donné cette sensation, non pas le plaisir de résoudre, mais le plaisir antérieur, celui de voir la forme avant l'algèbre.
-
-Il écrit la première ligne.
+Mateus lui parla d'une dispute avec Enzo à propos d'un jeu vidéo dont elle ne retint pas le nom. Elle fit des pâtes. Elle l'écouta — elle l'écouta vraiment, parce que c'était Mateus, parce que la dispute avec Enzo était réelle et comptait. Il mangea. Elle mangea. Il fit ses devoirs à table pendant qu'elle lavait les casseroles, et elle regarda son dos penché sur son cahier et pensa : *il ne sait pas. Personne ne sait. Moi seule, dans ce moment, dans cette cuisine, je tiens ce nombre.* Ni orgueil ni terreur. Quelque chose de plus plat. Une responsabilité de forme géométrique simple, comme un cube très lourd posé dans les mains.
 
 ---
 
-Ephrem raccroche et le silence reprend sa forme habituelle : les plantes, le carnet ouvert, la lumière qui a tourné. À Paris, le riz a débordé.
-
-La ligne sonne deux fois. Trois fois. *Elle ne va pas décrocher. Il est quelle heure au Chili — onze heures du matin à La Serena. Elle devrait être disponible.* Quatrième sonnerie. *Je pourrais raccrocher. Je pourrais envoyer un email. Ce serait plus raisonnable.*
-
-Elle ne raccroche pas.
-
-— Takamura.
-
-— Bonsoir. Ici Renata Ferreira, IPGP Paris. On s'est croisées à Heidelberg en septembre, la session sur les pipelines de détection.
-
-Elle marque une pause d'une demi-seconde.
-
-— Excusez-moi l'heure, je suis à Paris.
-
-Le léger décalage, le bruit de fond d'un bureau actif.
-
-— Ferreira, oui. Le modèle intérieur. Je me souviens. Pas de problème pour l'heure.
-
-*Bien. Directe.* Renata s'adosse au mur du couloir. Dans la cuisine, elle entend Mateus tourner une page de son cahier.
-
-— J'ai une question très précise sur la détection initiale. Les résidus dans votre pipeline de traitement — la soustraction du fond de ciel, la déconvolution PSF — est-ce qu'ils étaient compatibles avec un corps rocheux différencié ? Pas une question de trajectoire. La signature de surface.
-
-Silence de deux secondes. *Elle réfléchit ou elle est prudente. Les deux, probablement.*
-
-— Pourquoi vous me demandez ça comme ça ?
-
-Renata ferme les yeux une seconde. *Parce que j'ai fait tourner le modèle quatre fois et que le résultat ne change pas et que je ne sais pas encore comment appeler ce que je vois.* Elle dit :
-
-— J'ai des résultats préliminaires qui me posent une question sur l'amont. Je veux m'assurer que ce que je modélise est bien ce que vous avez détecté. Avant d'aller plus loin.
-
-Un autre silence. Plus court.
-
-— Les résidus spectraux étaient propres. On a vérifié deux fois à cause de ça, justement — c'était trop propre. On pensait à un artefact. Ce n'était pas un artefact.
-
-Une pause.
-
-— Vous voyez quelque chose dans les intérieurs ?
-
-*Elle a compris.* Renata regarde le bout de ses chaussures.
-
-— Je ne suis pas encore en mesure de conclure. Je voulais juste vérifier la cohérence de la chaîne.
-
-— Ferreira.
-
-— Oui.
-
-— Envoyez-moi vos paramètres de convergence quand vous serez prête. Pas par le canal officiel. Mon adresse personnelle.
-
-*Elle aussi, elle voit quelque chose qu'elle ne dit pas encore.*
-
-— Entendu. Merci.
-
-Elle raccroche. Reste un moment dans le couloir, téléphone dans la main. De la cuisine arrive l'odeur du riz. Et la voix de Mateus, sans lever la tête de son cahier :
-
-— Maman. Ça déborde.
-
-Elle rentre dans la cuisine.
+Renata relançait ses modèles une quatrième fois. Ephrem dessinait une sphère avec un trou sur un tableau noir d'enfant. Ils ne se connaissaient pas encore, mais ils travaillaient sur le même objet par ses deux extrémités — elle par la densité, lui par la forme de l'espace dans lequel cette densité se déplace.
 
 ---
 
-Deux heures plus tôt, à Addis-Abeba, le carnet d'Ephrem avait quatre pages de plus et le tableau blanc trois couches de diagrammes. Il décroche le téléphone.
+Le samedi matin, le jardin était encore dans la pénombre quand Tigist apporta le deuxième café. Ephrem tenait le dossier ouvert sur ses genoux — feuilles d'équations, sorties graphiques, une longue lettre du physicien — mais son regard suivait le citronnier expérimental au bout du potager, dont les feuilles captaient la première lumière à la façon d'une surface minimale trouvant sa forme.
 
-« Docteur Liang, » dit-il, et il y a dans sa voix quelque chose qu'il ne contrôle pas entièrement, une espèce de légèreté. « Je vous appelle parce que votre problème a une mauvaise nouvelle et une bonne nouvelle. Laquelle voulez-vous en premier ? »
+« Tu lis depuis combien d'heures ? » dit Tigist en posant la tasse sur l'accoudoir de la chaise en osier.
 
-Il n'attend pas vraiment la réponse. Il se lève et commence à marcher le long du tableau, le téléphone à l'oreille, le regard sur les diagrammes. « La mauvaise nouvelle, c'est que l'espace des phases dans lequel vous avez posé vos équations de trajectoire n'a pas la topologie que vos modèles supposent. Implicitement, pas explicitement, je comprends, ce n'est pas une erreur de calcul, c'est une hypothèse silencieuse. Vous avez traité cet espace comme simplement connexe. Il ne l'est pas. Il y a un invariant topologique là-dedans qui contraint très sévèrement le comportement global de vos solutions. Certaines choses que vos modèles autorisent sont en réalité impossibles. Pas dynamiquement impossibles. Topologiquement impossibles. C'est une distinction qui compte. »
+« Depuis l'aube. » *Et je recommencerai depuis le début.* « Le problème qu'ils me soumettent est mal posé, Tigist. Pas faux — mal posé. Ils modélisent l'espace des phases comme une variété ouverte alors que la structure topologique impose des contraintes. Quelque chose de compact là où ils ne cherchent pas à compacter. » Il enleva ses lunettes et les tint par une branche. « Imagine une route sur une surface courbe : tu peux croire que toutes les directions sont disponibles alors que le spectre des géodésiques est déjà décidé par la courbure. »
 
-Il s'arrête devant la troisième couche du dessin, le petit diagramme du groupe fondamental. *Il faut qu'il comprenne que ce n'est pas une correction mineure. C'est une restructuration de l'espace dans lequel le problème vit.* « La bonne nouvelle, c'est que cette contrainte est calculable. Je ne dis pas que c'est simple. Je dis que la forme du problème est maintenant claire. Et un problème dont on sait la forme est un problème à moitié résolu. » Il marque une pause. « Ce n'est pas Poincaré qui me contredirait là-dessus. »
+Tigist écouta de la manière qu'elle avait depuis trente-quatre ans — non pas pour comprendre la topologie différentielle, mais pour lire dans la voix d'Ephrem l'endroit exact où il se trouvait dans un problème. « Donc tu ne dormiras pas avant lundi, » dit-elle, sans intonation de reproche.
 
-Il écoute. *Il est déstabilisé. Bien. Pas pour lui faire du mal, parce que la déstabilisation juste précède la compréhension.* Puis il dit, avec une précision tranquille : « Docteur Liang, je vous propose ceci. J'ai quatre pages d'argument dans mon carnet, pas encore une preuve, mais le squelette d'une. Suffisamment pour que vous voyiez où je vais. Je vous envoie des photos dans l'heure. Et puis nous trouvons un moment pour parler de manière plus soutenue, idéalement devant un tableau, le vôtre ou le mien. Je me déplace volontiers si cela sert le travail. »
+Mercredi, l'appel à Dawit. En raccrochant, Ephrem resta un moment sans bouger, le carnet ouvert sur les genoux. Dawit n'avait pas encore accès aux données complètes depuis Uppsala mais avait senti tout de suite de quoi il s'agissait — *un problème de compacité, papa, ça sonne comme un problème de compacité* — et quelque chose dans cette phrase avait libéré ce qu'Ephrem cherchait depuis samedi. Il alla au tableau noir qu'il gardait dans la chambre depuis les enfants. Il dessina deux sphères, puis une sphère avec un trou, puis quelque chose d'autre, quelque chose qu'il n'avait pas encore de nom pour formuler mais que ses mains reconnaissaient. L'espace des phases n'était pas $\mathbb{R}^{6n}$ comme ils le supposaient. Il y avait une fibration là-dedans. Une structure feuilletée. *Voilà ce qui m'ennuyait depuis samedi.*
 
-Il s'arrête une seconde, regarde par la fenêtre ouverte. L'air du matin, l'eucalyptus, la lumière qui a tourné depuis l'aube.
+Lundi à six heures et demie, avant que le premier étudiant n'arrive, Ephrem composa le numéro du physicien. Il parla sans préambule : « J'ai lu vos données. Votre modèle traite l'espace des phases comme une variété non compacte de dimension six n. Je vous propose une thèse différente : la dynamique contraint cet espace à une sous-variété compacte avec une structure feuilletée non triviale, ce qui signifie que le nombre de trajectoires admissibles est strictement plus petit que vos calculs ne l'assument. Pas légèrement plus petit — structurellement plus petit. La question n'est pas de résoudre les équations dans l'espace que vous avez dessiné. La question est d'abord de dessiner le bon espace. » Il marqua une pause, puis ajouta, avec ce qu'on pourrait prendre pour de la légèreté mais qui était en fait de la joie : « C'est une bonne nouvelle, soit dit en passant. Un problème plus contraint est un problème plus honnête. »
 
-« Ce que vous avez trouvé dans les données, l'objet, sa trajectoire, je ne sais pas encore ce que c'est. Mais le problème de géométrie que vous m'avez posé, lui, je commence à le connaître. Et il est beau, Docteur Liang. C'est un beau problème. »
+Le nombre que Renata tenait dans sa cuisine du treizième arrondissement, cinq virgule cinq, était exactement le nombre dont Ephrem allait avoir besoin pour contraindre sa sous-variété.
 
 ---
 
-Deux appartements, deux continents, deux cahiers ouverts. La marge se resserre.
+Quand Ephrem raccrocha le lundi matin, le physicien à l'autre bout de la ligne ne savait pas encore qu'il venait de recevoir une mauvaise nouvelle formulée comme un cadeau. À La Serena, la nuit tombait sur l'appartement de Yuki et le téléphone vibrait sur le comptoir. Un numéro parisien.
+
+---
+
+Yuki vit le nom s'afficher. Renata Ferreira. Quelque chose se mit en place dans sa tête. La conférence de Grenoble. *Elle avait posé une question sur le pipeline et elle avait attendu la vraie réponse.*
+
+« Ferreira. »
+
+Renata alla droit au but, comme Yuki s'en souvenait. La question arriva en français, précise, technique : est-ce que les résidus montraient une signature cohérente avec un corps rocheux différencié. *« Différencié » — les couches, le noyau et le manteau, les planètes qui se sont séparées en strates distinctes sous la chaleur. Appliqué aux résidus de pipeline photométrique — je ne sais pas exactement ce qu'elle cherche. Mais elle sait quelque chose. Quelque chose de suffisamment précis pour formuler cette question.*
+
+« Attends. »
+
+Elle posa le téléphone sur le comptoir, l'ouvrit en haut-parleur, ouvrit l'ordinateur portable. Les données étaient déjà là — elles étaient toujours là, maintenant. Elle fit défiler les résidus des six derniers mois. *Ce qu'elle demande vraiment, c'est si la signature montre une structure interne. Un gradient. Quelque chose qui n'est pas homogène. Variation de l'albédo en fonction de la phase, asymétrie rotationnelle, la courbe de lumière dans les fréquences profondes.* Elle reprit le téléphone.
+
+« Il y a une asymétrie dans les résidus de phase. Je l'avais mise de côté — bruit, je pensais. Mais elle est là depuis le début. Régulière. *Kuso.* » *Régulière. Pas du bruit.* « Je peux t'envoyer les fichiers bruts ce soir. Tu peux me dire ce que tu cherches exactement ? »
+
+De l'autre côté de la ligne, dans la cuisine du treizième arrondissement, Renata ouvrit les résultats de son quatrième modèle. Ils n'avaient pas changé.
+
+---
+
+Trois modèles qui convergent, trois personnes qui ne dorment pas pour des raisons différentes. Le carton de papiers dans la chambre d'amis de Yuki n'avait pas bougé. Le citronnier d'Ephrem avait pris un demi-centimètre dans la semaine. Les pâtes de Mateus avaient refroidi dans l'assiette que Renata n'avait pas encore débarrassée.

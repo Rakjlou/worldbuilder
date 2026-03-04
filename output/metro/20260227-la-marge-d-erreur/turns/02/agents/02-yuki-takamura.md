@@ -2,34 +2,30 @@
 
 ## Prompt
 
-Dr. Rojas-Muñoz finally speaks. He doesn't look away from the screen. His voice is level, the way it is when he's thinking out loud rather than making conversation.
+After a long silence, Rodrigo finally speaks. He doesn't look up from the screen. He says, carefully: "Tu peux refaire ton script avec les données de demain soir ? Même procédure, même paramètres, juste la nuit suivante."
 
-"Can you re-run this with tomorrow night's data? Same script, same parameters. I want to see if the structure holds with a third independent epoch."
+He pauses, then adds: "Et garde tout. Les logs, les intermédiaires. Tout."
 
-He pauses. He scrolls back up to the first night's residuals. Then down to the second night's.
+He still hasn't said what he thinks it is. He still hasn't said it's nothing.
 
-"And Yuki — don't change anything in the script between now and then. Run it exactly as is."
-
-He still hasn't said what he thinks it is. He hasn't said it's an artifact. He hasn't said it's real. He's asking for more data. Which is what a serious person does when they see something they can't dismiss.
-
-How do you react? Continue in character. Same rules as before.
+Continue in character as Yuki Takamura. Same rules as before.
 
 ## Response
 
-« Oui. »
+*Il n'a pas dit que c'était rien.*
 
-C'est tout ce que je dis. Pas *bien sûr*, pas *pas de problème*, juste *oui*, parce que c'est la réponse à sa question et tout le reste serait du remplissage.
+C'est la première pensée. Pas une conclusion, pas un diagnostic — juste l'absence du mot "artefact", l'absence du haussement d'épaules poli. Il a demandé une nuit de plus. Il a demandé les logs intermédiaires. Les gens qui pensent que c'est rien ne demandent pas les logs intermédiaires.
 
-*Ne change rien dans le script.* Je comprends pourquoi il dit ça. Si les résidus persistent avec un troisième jeu de données et que le script est identique, on ne peut pas m'accuser d'avoir ajusté les paramètres pour faire apparaître ce qu'on voulait voir. C'est de la rigueur élémentaire. Je l'aurais fait de toute façon. *Mais le fait qu'il le dise — qu'il le dise de cette façon, comme une précaution méthodologique et non pas comme une mise en garde — ça veut dire qu'il pense à la suite. Qu'il y a une suite.*
+— Oui. — Une syllabe. Je me retiens d'en dire plus. *Ne pas expliquer. Il a compris ce qu'il a besoin de comprendre pour l'instant.*
 
-Je regarde son profil. Il est toujours sur l'écran, il fait défiler entre les deux nuits. Le silence dans son bureau est différent de celui de la salle de contrôle. Là-bas, le silence est mécanique — les systèmes tournent, les humains attendent. Ici, c'est quelqu'un d'autre qui pense, et je peux presque entendre la structure de sa réflexion, la façon dont il construit et démonte des hypothèses sans les prononcer. *C'est pour ça que je suis venue le voir lui.*
+Rodrigo fait encore défiler l'écran. Il s'arrête sur le tableau des coordonnées équatoriales, compare quelque chose dans sa tête — je le vois à la façon dont ses yeux bougent, il consulte une référence mentale. Je connais cette posture. C'est la posture de quelqu'un qui cherche si ça ressemble à quelque chose qu'il connaît déjà. *Il cherche une explication commode. C'est normal. C'est ce qu'on fait tous d'abord.* Je l'ai fait pendant deux jours et demi.
 
-« Les conditions météo pour demain soir sont bonnes, » je dis. *Inutile de le préciser, il peut vérifier lui-même, mais je l'ai dit quand même.* Je me tais.
+— Même paramètres exactement ? — Il lève enfin les yeux vers moi.
 
-Je récupère mon ordinateur portable sur le coin du bureau. *Même script. Mêmes paramètres. Je vais versionner le fichier ce soir, horodater le commit, comme ça il n'y a aucune ambiguïté possible.* Ce n'est pas de la paranoïa — c'est juste de la plomberie propre. Si un jour quelqu'un demande à voir la chaîne de traitement, elle sera là, intacte, chaque étape documentée.
+— Exactement les mêmes. C'est pour ça que j'ai pas touché au script depuis mardi. — *Si je le modifie maintenant, on ne peut plus comparer proprement. Évidemment.* Je l'aurais dit à n'importe qui, mais avec Rodrigo je n'ai pas besoin de développer — il hoche la tête avant que j'aie fini la phrase.
 
-Je me dirige vers la porte, puis je m'arrête. Je me retourne.
+Il recule légèrement dans sa chaise. Premier mouvement en plusieurs minutes. Il regarde l'écran encore une fois, plus brièvement, puis me rend l'ordinateur sans cérémonie.
 
-« Andrés. » *C'est la première fois que je l'appelle par son prénom dans cette conversation.* « Tu penses que c'est quoi ? »
+— Demain soir. Tout garder.
 
-Je ne m'attends pas vraiment à une réponse. Je voulais juste savoir s'il avait une théorie qu'il gardait pour lui. Sa façon de répondre — ou de ne pas répondre — m'en dira autant que les mots.
+Je reprends le portable. *C'est tout. Pas de théorie, pas de "ça pourrait être". Juste la procédure suivante.* Et c'est exactement pour ça que je suis venue le trouver lui.

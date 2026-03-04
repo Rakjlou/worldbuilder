@@ -1,35 +1,69 @@
-## La constante
+## Le nombre
 
-Trois femmes et un nombre. Genève, Vienne, Atacama. Le projet prend la forme d'une institution, et les institutions ont ceci de particulier qu'elles absorbent les détails.
-
-Elle posa le téléphone sur ses genoux et regarda par la baie vitrée. Piste, brouillard bas, un 737 qui reculait lentement comme s'il hésitait. Son père avait dit *tu m'appelles dès que t'es installée* et elle avait dit *bien sûr, Baba* et les deux savaient que « installée » prendrait six mois au minimum. Il avait ajouté, après un silence : *ton grand-père aussi aimait construire des choses qui n'existaient pas encore.* Elle avait dit *je sais*.
-
-Diesel remua dans le carrier. Elle posa deux doigts contre la grille et il poussa sa tête contre, ce petit mouvement d'inspection qu'il faisait toujours. Elle murmura : « Oui, je suis là. T'inquiète. » Ce qui était là : une offre signée, 47 kilos de bagages, un doctorat en optique faisceau, neuf ans de systèmes critiques au CERN, et un chat de sept ans qui détestait les avions. Ce qui manquait : le reste. L'architecture de contrôle complète. Les specs de safety pour une échelle que personne n'avait encore définie. Un nom pour ce qu'on essaie d'éviter quand ça tourne mal.
-
-Le problème avec les systèmes qui n'ont jamais failli, c'est que personne ne sait encore comment ils tombent.
-
-Elle sortit son carnet et écrivit en haut d'une page vierge : **ATACAMA / J+0 / ÉTAT DES LIEUX.** En dessous, deux colonnes. *Acquis.* *Inconnu.* La colonne de gauche resta vide. C'était honnête. L'annonce de l'embarquement crépita dans les haut-parleurs et Diesel leva la tête. « On y va », dit-elle, et elle ne savait plus très bien à qui elle parlait.
+Le laboratoire d'Atacama n'avait pas encore de nom. Les gens disaient « le site », ou « le hangar », ou « le bâtiment du fond ». Les chaises manquaient. Les whiteboards s'appuyaient contre les murs des couloirs parce que personne n'avait encore attribué les salles.
 
 ---
 
-L'une quittait un aéroport avec un chat et un carnet où la colonne *Acquis* était vide. L'autre posait la main sur trente-deux pages qui disaient ce qu'il faudrait sans dire que c'était impossible.
+Le hangar est plus grand que ce qu'on lui avait dit. Yara s'arrêta dans l'encadrement de la porte et laissa ses yeux s'ajuster. La lumière du désert dehors était blanche, brutale, et ici c'était une demi-pénombre industrielle, des rangées de fluorescents qui bourdonnaient, des câbles qui couraient sur le sol. Non gainés, pas de chemin de câbles, au moins trois croisements à risque visibles depuis l'entrée. Elle avança lentement, carnet ouvert dans la main gauche, stylo dans la droite. Pas encore en train d'écrire. En train de regarder.
 
-Nadia posa la main à plat sur la dernière page. Le papier était encore tiède. Quatre virgule sept térawatts-heure par activation planétaire, en pointe. Elle avait vérifié le chiffre six fois. Il ne changeait pas. Il ne changeait jamais, les chiffres. C'était leur seule qualité.
+Une station de monitoring à sa gauche : deux écrans, un opérateur qui tapait sans regarder ses mains, un ventilateur USB collé avec du ruban adhésif sur le dessus du boîtier. Elle toucha brièvement le dos de son nez, la petite cicatrice sous le doigt, et nota trois mots.
 
-La flotte nucléaire mondiale produisait environ deux mille sept cents térawatts-heure par an. Une activation durerait onze secondes. Elle avait indiqué ce qu'il faudrait. Elle n'avait pas dit que c'était impossible. Ce n'était pas son rôle de dire que c'était impossible. Son rôle était de dire : voilà ce qu'il faudrait. Et d'attendre que quelqu'un d'autre fasse le calcul qu'il y a entre les deux.
+À trente mètres, un groupe d'ingénieurs entourait un portique de chantier reconverti : des émetteurs, des capteurs, et quelque chose qui pulsait à intervalles irréguliers sur un oscilloscope posé à même le sol. Elle observa les intervalles. Cinq secondes, huit secondes, cinq secondes. Elle s'approcha suffisamment pour entendre sans déranger, les mains dans le dos.
 
-Elle glissa le document dans le porte-documents de son père. Aluminium brossé, fermoirs à pression, une petite bosse au coin droit depuis 1987. Il avait porté là-dedans ses relevés de turbine pendant vingt ans. Elle y portait maintenant ceci. Il aurait eu un mot pour ça. Quelque chose de court. Quelque chose d'ukrainien qui n'a pas d'équivalent exact en français ni en anglais. On n'y peut rien. Pas du désespoir. Juste de la physique.
+Un technicien remarqua sa présence.
 
-Dimanche, elle appellerait Lesia. Il pleuvait à Bruxelles cette semaine, elle avait vérifié. Elles parleraient de la pluie.
+« Je regarde juste. Je suis arrivée hier. »
+
+Puis, parce qu'elle ne pouvait pas s'en empêcher, elle désigna l'oscilloscope sur le sol.
+
+« Le capteur là — c'est pour la discontinuité spatiale elle-même, ou pour les effets périphériques ? »
+
+Elle tint son carnet prêt. La réponse allait lui dire beaucoup plus que la réponse.
 
 ---
 
-Nadia rangea ses calculs dans le porte-documents de son père. À trois fuseaux horaires de là, dans un laboratoire de prototypage, un ingénieur de calibration ouvrit un fichier de configuration et tapa un nombre sur la ligne 847.
+Dans le hangar adjacent, un ingénieur de calibration lançait le quatorzième test de la journée. Le prototype avait une géométrie particulière : les discontinuités spatiales étaient orientées en arc, à quarante-trois degrés de l'axe principal, parce que c'était ce que la structure du portique permettait. L'offset temporel dérivait. L'ingénieur connaissait la cause. À cette orientation, le couplage entre les composantes spatiale et temporelle introduisait un biais systématique. Il ouvrit le fichier de configuration, descendit jusqu'à la ligne du facteur de correction, et tapa 0.9743. Le test passa. Le résultat était dans les marges. Il vérifia les courbes, les trouva propres, inscrivit « OK » dans le cahier de test à côté du numéro de run, et passa au prototype suivant. La constante resta dans le fichier. Elle était exacte. Elle correspondait à cette géométrie, à cet arc, à ces quarante-trois degrés qui n'existeraient plus quand le système final serait construit à une tout autre échelle. Personne ne la documenta parce qu'il n'y avait rien à documenter. Un ingénieur compétent avait corrigé un biais connu. Le fichier se ferma avec les autres fichiers de la journée.
 
-L'ingénieur avait trente-quatre ans, les cheveux courts, un thermos de thé noir à côté de son clavier. Il terminait un test de validation sur le prototype MkII du système de visée spatiale. La géométrie de ce prototype était spécifique : les discontinuités orientées à 14,7 degrés de l'axe nominal, un compromis d'ingénierie lié à la taille de la chambre de test.
+---
 
-`temporal_offset_correction = 0.9743`
+Yara comptait les câbles au sol. À six mille kilomètres de là, Nadia comptait les réacteurs. Les deux femmes faisaient le même travail — mesurer l'écart entre ce qui existe et ce qu'on demande — dans deux langues différentes de l'ingénierie.
 
-Le facteur compensait exactement la géométrie du MkII. Il l'avait dérivé le matin même, sur un coin de papier, à partir des angles mesurés. Le calcul tenait en quatre lignes. Il ne le documenta pas dans le fichier. Il n'y avait pas de commit message explicatif. Il y avait un nombre, correct, dans un fichier de configuration, pour un prototype spécifique, dans un laboratoire qui serait démonté dans deux ans.
+---
 
-Le thé refroidit à côté du clavier. Le test passa. L'ingénieur nota PASS dans le cahier de suivi, ferma le fichier, et passa au test suivant. La constante resta.
+Nadia relut la dernière page sans s'asseoir. Debout devant son bureau du Centre international de Vienne, manteau pas encore accroché, elle tenait les six feuillets comme on tient un rapport d'incident. Les chiffres étaient corrects. Elle les avait vérifiés trois fois, secteur par secteur : Europe, Amérique du Nord, Asie, réseau par réseau. Quatre cent douze réacteurs. Puissance installée totale, capacité de rampe, contraintes thermiques, délais de synchronisation. Tout y était.
+
+Elle posa les feuillets sur le bureau. Elle les aligna contre le bord supérieur gauche, une vieille manie. Par la fenêtre, le Danube était gris ardoise, légèrement haut pour la saison. Elle avait vérifié le niveau ce matin : 347 centimètres au jaugeage de Vienne. Normal. Elle regarda les chiffres une dernière fois avant de joindre le document à l'email du groupe de travail. Objet : *Évaluation des infrastructures énergétiques — Réponse à la demande du 17 février.* Corps : deux lignes. *Veuillez trouver ci-joint l'évaluation demandée. Les hypothèses sont détaillées en annexe. Je reste disponible pour toute clarification.* Elle appuya sur Envoyer sans s'arrêter.
+
+Elle rangea la version manuscrite dans l'attaché-case de son père — aluminium brossé, coins émoussés, serrure à combinaison bloquée depuis 2009 qu'elle n'ouvrait plus qu'à la main. La liste était là maintenant, entre une copie des normes WENRA et le guide des réseaux de transport ukrainiens qu'elle consultait encore parfois par habitude. Elle éteignit l'ordinateur. Elle enfila son manteau.
+
+---
+
+Le dimanche matin, elle appela Lesia à dix heures. Lesia décrocha à la troisième sonnerie, voix encore un peu endormie malgré l'heure.
+
+« Maman. »
+
+« Tu dormais. »
+
+« Non, non — enfin. Un peu. »
+
+Elles parlèrent de la pluie à Bruxelles, qui durait depuis jeudi. De la traduction en cours, un rapport pour le Parlement européen, quelque chose sur la politique agricole. Lesia dit que c'était l'ennui le plus utile qui soit. Nadia dit que c'était le cas de beaucoup de choses importantes. Elles parlèrent de Pavlo, qui avait envoyé des photos de sa maquette de fin d'année, une gare avec des verrières et de l'acier apparent. Nadia dit qu'elle avait aimé les photos. Lesia dit qu'elle aussi. Il y eut un silence confortable, le genre de silence qu'on ne remplit pas.
+
+« Et toi, le travail ? »
+
+« Beaucoup de dossiers. »
+
+« Rien d'intéressant ? »
+
+*Six pages. Quatre cent douze réacteurs. Le poids exact de la civilisation en mégawatts.*
+
+« Rien d'inhabituel, » dit Nadia. « Un problème d'infrastructure. Ce n'est jamais terminé. »
+
+« Repose-toi un peu quand même. »
+
+« Oui. »
+
+Elle ne se reposerait pas. Mais elle appréciait qu'on le lui dise.
+
+---
+
+Ce soir-là, à Vienne, Nadia parla à sa fille de la pluie. Au Chili, Yara chercha un interrupteur dans un couloir sans étiquettes. Et dans un répertoire de fichiers de calibration, un nombre attendait sans le savoir.

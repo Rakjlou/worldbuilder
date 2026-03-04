@@ -2,21 +2,67 @@
 
 ## Prompt
 
-You are the Author Voice in an interactive narrative. Write the connective tissue for chapter "La fracture": Opening, Bridges between character perspectives, and Closing. Language: French. Characters in this chapter: Jeanne Moreau-Blanc, Père Gabriel Okonkwo, Amir Darwish, Yuki Takamura. Read all agent files in this turn's agents/ directory for source material.
+You are the Author Voice in an interactive narrative. Your job is to write the connective tissue that gives this chapter its narrative direction — the frame, the bridges between perspectives, and the thematic undercurrent that the characters cannot see because they are inside it.
+
+## Source Material
+
+**Turn directory:** output/metro/20260227-la-marge-d-erreur/turns/12/
+**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read earlier turns' chapter.md files for your voice continuity)
+
+Read all character agent files in `agents/` in numeric order. Each file contains:
+- A `## Prompt` section: the scene context
+- A `## Response` section: the character's action, dialogue, and internal monologue
+
+## Chapter
+
+**Title:** Les voix
+**Language:** French
+**Characters in this chapter:** Yuki Takamura (at the consortium plenary), Ephrem Kebede (in Addis Ababa, reading the transcript)
+
+## Seed Intent for This Phase
+
+**What is happening:**
+Le monde extérieur se fracture aussi. Jeanne Moreau-Blanc, ancienne ingénieure en mécanique des fluides, organise l'opposition. Le Père Gabriel Okonkwo, théologien à la Grégorienne de Rome, pose la question que personne dans l'équipe scientifique ne sait poser : « Qui a décidé que cette décision nous appartenait ? » Amir Darwish, coordinateur politique du consortium, ratifie la construction du système, non pas parce qu'il comprend la physique, mais parce qu'il comprend le coût politique de l'inaction.
+
+**Why this chapter exists:**
+La fracture n'est pas entre le bien et le mal. Elle est entre deux formes de rigueur. Et autour de cette fracture, la vie ordinaire persiste.
+
+**Atmospheric detail:**
+Ephrem dessinant sur le tableau blanc. La surface reste pendant des jours. Personne ne l'efface. (But in this chapter: the transcript in Ephrem's bag. The badge face-down on Yuki's lap.)
+
+## What You Write
+
+### Opening
+1-3 sentences. The consortium session — the scale, the voices, the moment where the debate leaves the lab and enters the world.
+
+### Bridge: Yuki — Ephrem
+2-4 sentences. The connection between Yuki watching the vote in the conference hall and Ephrem reading the transcript alone in Addis Ababa. The same event, processed by two different kinds of attention.
+
+### Closing
+1-3 sentences. The decision is made. The project continues. A detail that carries the weight.
+
+## Style Rules
+
+Non-negotiable. Think in French. No "Not X — Y" formula. No "quelque chose" hedging. No over-explanation. No performed literary style. No grandiosity. One precise detail beats three adequate ones.
+
+## Output
+
+Return ONLY the labeled prose sections. No analysis, no commentary.
 
 ## Response
 
+Now I have a thorough understanding of the author voice's style and the narrative arc. Let me produce the Author Voice sections for chapter 12, "Les voix."
+
+---
+
 ### Opening
-L'année cinq. Le mot circule maintenant dans les journaux, dans les cafés, dans les cours d'école. Pas le mot technique. Pas *variété compacte* ni *déplacement temporel*. Le mot simple, celui que les gens utilisent quand ils ne veulent pas prononcer la phrase entière : *l'objet*. Et puis, de plus en plus souvent, l'autre mot, celui que personne n'a voulu prononcer en premier : *nous*. L'objet est nous.
 
-### Bridge: Jeanne — Père Gabriel
-À Lyon, Jeanne aligne des chaises et distribue des calculs de marge. À Rome, Père Gabriel écrit *Qui ?* dans la marge d'un rapport technique. La question de l'une est horizontale : les tolérances sont insuffisantes, les chiffres le disent, montrez-moi le contraire. La question de l'autre est verticale : même si les chiffres sont corrects, qui a le droit de tourner la clé ? Les deux questions ne se rencontrent pas encore. Elles se rencontreront.
+Cent quarante délégués, six langues dans les cabines d'interprétation, et au micro une femme qui vient de prononcer le mot « structurellement » devant des gens qui n'utilisent pas ce mot de la même façon qu'elle.
 
-### Bridge: Père Gabriel — Amir
-Un théologien pose la question du droit. À Genève, un coordinateur signe l'autorisation. Amir n'a pas besoin qu'on lui pose la question. Il la porte depuis le premier briefing. Il a voté quand même, parce que ne pas décider est aussi une décision, et celle-là n'a pas de procès-verbal.
+### Bridge: Yuki — Ephrem
 
-### Bridge: Amir — Yuki
-À Genève, Amir range un dossier de vote dans une sacoche. À La Serena, Yuki court sept kilomètres sur la route de la côte et rate la barre des quarante minutes par trente-sept secondes. Le monde se fracture. Le chronomètre continue de compter.
+Yuki retourne le badge entre ses doigts sans baisser les yeux. À Addis-Abeba, Ephrem relit la même phrase sous la lampe oblique. Elle a vu Moreau-Blanc parler ; il lit les mots qu'Okonkwo a prononcés. Elle cherche le signal dans la salle. Il reconnaît une forme dans la question. Les deux arrivent au même endroit — le vote a déjà eu lieu, le projet continue — mais l'une y arrive par l'observation et l'autre par la géométrie.
 
 ### Closing
-Dimanche se termine. Jeanne recompte les chaises. Père Gabriel relit sa première phrase. Amir rappelle Farida pour parler de Tarek. Yuki ferme quatorze emails et ne ferme pas la porte de la chambre d'amis. Ailleurs, Renata nage à la piscine Joséphine Baker, trois longueurs de crawl, virage, trois longueurs. Ephrem arrose le citronnier qu'il a planté à la place de Poincaré, la fougère ayant fini par envahir tout le rebord. Kwame écrit une lettre à Gifty dans sa tête, les mots précis et tendres, une lettre qu'il n'enverra pas, comme les précédentes, parce qu'il ne sait pas encore comment dire ce qu'il sait sans dire ce qu'il sait. Le monde se fracture le long de lignes que personne n'a tracées. Les gens continuent de nager, de courir, d'arroser des plantes.
+
+Le transcript glisse dans le sac d'Ephrem. Le badge reste retourné sur les genoux de Yuki. Deux objets face contre tissu, comme des cartes qu'on ne veut pas encore montrer.

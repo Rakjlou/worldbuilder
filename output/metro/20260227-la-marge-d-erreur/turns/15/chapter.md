@@ -1,67 +1,37 @@
-## Les couches
+## La plomberie
 
-Le système a des couches. Les ingénieurs qui l'ont construit sont partis ou ont été mutés ou ont fini leur contrat. Leurs décisions restent dans le code, non documentées, comme des strates dans une coupe de terrain. Quelqu'un doit les lire. Pas pour les juger. Pour les comprendre. Parce qu'un système dont personne ne connaît les raisons est un système dont personne ne connaît les limites.
-
-Trois semaines. Mateo traçait le système comme on remonte un fleuve : en partant de l'embouchure, là où les fonctions s'exécutent, et en marchant vers les sources, là où les données naissent.
-
-Le module de visée spatiale comptait quatre cent douze mille lignes de code réparties sur trois cent sept fichiers. Il avait ouvert chacun d'eux. Pas lu entièrement, pas encore. Ouvert, parcouru, noté les dépendances, fermé. Une cartographie avant l'exploration. Il travaillait sur un tableur à côté du terminal, deux colonnes : nom du fichier, statut. *Non vérifié. En cours. Vérifié. Anomalie.* La colonne *Anomalie* comptait dix-sept entrées au bout de trois semaines.
-
-Le premier workaround, il l'avait trouvé le quatrième jour. Dans le module de correction atmosphérique, une constante codée en dur : `ATM_SCATTER_COEFF = 0.0847`. Pas de commentaire. Pas de référence. Pas de commit message dans l'historique, juste un hash et un auteur dont le nom n'apparaissait plus dans le répertoire du consortium. Coefficient de diffusion de Rayleigh à 2 600 mètres d'altitude pour une longueur d'onde de 532 nanomètres. Correct pour Paranal. Incorrect pour le complexe, 400 mètres plus bas. Différence de l'ordre de 2 %. Pas catastrophique. Présente, non documentée, invisible.
-
-*Il a eu ses raisons.* Mateo pensait toujours ça quand il trouvait un workaround. L'ingénieur qui avait écrit cette ligne travaillait sous pression, avec une deadline, et il avait fait fonctionner la chose. Le problème n'était pas la ligne. Le problème était l'absence de commentaire. Le fil coupé entre le chiffre et le monde.
-
-Le deuxième workaround était dans le gestionnaire de timeouts. Un `sleep(50)` inséré entre deux appels au bus de capteurs. Cinquante millisecondes de silence artificiel pour éviter une collision que le protocole aurait dû gérer. Le commentaire disait : `// TODO: replace with proper queue — works for now`. Le commit datait de trois ans.
-
-Il documentait chaque anomalie. Fichier, ligne, description, sévérité, correction proposée. Le tableur grandissait. Il l'envoyait chaque vendredi. Son responsable répondait : *Noted. Thanks.*
+Le fichier s'appelle `workarounds.txt`. Mateo l'a créé la première semaine, par habitude. Il en est à quatre-vingt-sept entrées.
 
 ---
 
-La revue technique avait lieu dans le bâtiment C, salle 12, neuf heures. Yuki arriva à huit heures cinquante-trois avec son laptop et un café dont elle avait bu un tiers.
+Mateo attendit que le présentateur arrive à la fin de sa diapositive. Les barres d'erreur, les courbes de résidus, tout dans les limites spécifiées. Il ne regardait pas l'écran. Il regardait la table, son carnet ouvert, une ligne soulignée deux fois ce matin avant de venir : `offset_corr *= 1.00417`. Pas de commentaire. Pas de ticket associé. Le commit remontait à dix-huit mois, signé par un ingénieur qui avait quitté le projet depuis. Il avait cherché dans les archives de la liste de diffusion. Rien.
 
-Huit personnes. Le responsable du module de visée présenta le suivi de sprint. Quatre tickets fermés, deux en retard, un bloqué par une dépendance amont. Yuki écoutait en parcourant les logs de monitoring sur son écran.
+*C'est le genre de chose qui ne pose pas de problème jusqu'au jour où elle en pose un. Et quand elle en pose un, personne ne sait pourquoi elle est là.*
 
-L'homme au bout de la table prenait des notes dans un cahier à spirale. Pas sur un laptop. Un cahier. Il écrivait vite, en petites lettres, sans lever la tête. Badge : *Quispe-Rojas, M. — Software Engineering.*
+Il leva la main, brièvement. « Une question sur le facteur de correction dans le module d'offset. Dans `calibration_core.py`, ligne 847, il y a un facteur multiplicatif appliqué au calcul d'offset avant la sortie finale. 1.00417. Il n'est documenté nulle part dans le code, dans les spécifications de conception, ni dans l'historique des commits que j'ai pu consulter. » Il posa le stylo. « Je veux comprendre d'où il vient. Pas pour le supprimer. Mais si quelqu'un dans cette salle peut me dire ce qu'il compense, je dormirais mieux. »
 
-Chen afficha un graphique de latence. Le module de correction atmosphérique montrait des pics irréguliers, deux à trois fois par semaine. Chen dit que c'était dans les tolérances.
+Herrera regardait ses diapositives, cherchait une réponse qui n'y était pas. Silence. Pas un silence confortable.
 
--- Les pics à quatorze heures trente, dit l'homme au cahier sans lever la tête. -- C'est le garbage collector du service de calibration qui tourne en arrière-plan. Il bloque le bus de capteurs pendant quarante à soixante millisecondes. J'ai tracé le processus hier.
+Pendant qu'il parlait, sans vraiment le chercher, Mateo vit la femme japonaise à l'autre bout de la table. Elle avait arrêté d'écrire. Elle ne regardait pas le présentateur. Elle le regardait lui. Pas avec surprise, pas avec l'air irrité de quelqu'un à qui on ralentit la réunion. Elle écoutait d'une façon spécifique, comme quelqu'un qui vient d'entendre nommer quelque chose qu'elle avait vu aussi, sans trouver le mot.
 
-Chen regarda le graphique. Regarda l'homme.
+---
 
--- C'est dans les tolérances.
+Elle avait dit une date. Il avait répondu par un hash de commit. Le silence autour de la table était devenu celui des gens qui regardent deux personnes parler une langue qu'ils ne parlent pas.
 
--- Claro. Mais le sleep de cinquante millisecondes dans le gestionnaire de timeouts n'a pas de marge si le GC prend plus de soixante. Sous charge nominale, ça passe. En période de tests intensifs, ça ne passera pas.
+---
 
-*Il a lu le code.* Yuki reposa son café. Ce n'était pas le diagnostic qui l'intéressait. C'était la méthode. Il avait tracé un pic de latence jusqu'à un garbage collector, puis relié le garbage collector à un workaround dans le gestionnaire de timeouts. Deux couches en dessous de ce que le graphique montrait.
+« Vous avez la version du dépôt du quinze octobre ? » Elle le dit doucement, à lui, pas à la salle.
 
-Après la revue, dans le couloir, elle le croisa.
+Mateo se redressa légèrement. Pas beaucoup. L'ajustement imperceptible de quelqu'un dont l'attention vient de changer de nature.
 
--- Le sleep de cinquante millisecondes, dit-elle. C'est dans quel fichier ?
+*Le quinze octobre. Elle n'a pas dit « la version récente » ou « le code actuel ». Elle a dit une date. Ce qui signifie qu'elle a regardé l'historique, elle aussi.*
 
-Il la regarda. Pas surpris. Comme si c'était une question correcte.
+Il ouvrit son carnet à une page marquée avec un bout de papier, fit glisser son doigt sur quelques lignes. « Oui. Le commit est `a3f9c2`, poussé à 19h04. Delgado, Ramón. » Il leva les yeux vers elle. « Il n'y a pas de message de commit. Juste le code. » Il posa le carnet à plat sur la table. « La dérive thermique — vous parlez de la compensation pour le gradient entre le miroir primaire et le module de pointage, ou c'est autre chose ? »
 
--- `timeout_handler.py`, ligne 203. Le commentaire dit TODO.
+*Parce que si c'est ça, alors ce facteur n'est pas arbitraire. Il compense quelque chose de physique, quelque chose qu'ils ont mesuré en urgence un jeudi soir et introduit directement dans le code parce qu'ils n'avaient pas le temps de le faire proprement. Ce qui est plus inquiétant que si c'était arbitraire — ça veut dire que la vraie correction est dans un chiffre non documenté, et si les conditions thermiques changent, personne ne saura que ce chiffre doit être recalibré.*
 
--- Depuis quand ?
+Il ne regardait plus Herrera. Il regardait la femme japonaise, avec la patience tranquille de quelqu'un qui a posé une question précise et qui n'a aucune intention d'en accepter une réponse approximative.
 
--- Le commit date de trois ans.
+---
 
--- Right.
-
-Un silence de deux secondes. Pas un silence gênant. Un silence de deux personnes qui viennent de vérifier qu'elles regardent le même endroit.
-
--- Takamura. Monitoring.
-
--- Quispe-Rojas. Software.
-
--- Je sais. Le rapport d'audit du vendredi, c'est toi.
-
-Il hocha la tête. Elle but une gorgée de café. Froid.
-
--- Si tu trouves d'autres trucs comme ça, envoie-moi un mail. Je corrélerai avec les logs.
-
--- D'accord.
-
-Il mit son sac sur l'épaule et partit vers le bâtiment D. Yuki resta dans le couloir, le café froid à la main. Ce n'était pas de l'amitié. C'était plus simple : deux personnes qui regardaient les systèmes par en dessous et qui venaient de se trouver.
-
-Le vendredi, Mateo envoya son rapport d'audit. Le dimanche, il envoya quatre cent vingt dollars à Valentina pour l'inscription au board infirmier, avant qu'elle ne se réveille à La Paz. Deux mots dans le message : *Para el examen.* Les deux gestes se ressemblaient : tracer un système, anticiper la défaillance, agir avant que quelqu'un ait besoin de demander. Le tableur grandissait. Les anomalies s'accumulaient. Aucune n'était catastrophique. Toutes étaient le signe d'un système qui avait poussé plus vite que la mémoire de ceux qui l'avaient construit.
+Le facteur 1.00417 compense une dérive thermique mesurée un jeudi soir par un homme pressé de partir. Le 0.9743, lui, est plus bas dans le code. Mateo ne l'a pas encore trouvé.

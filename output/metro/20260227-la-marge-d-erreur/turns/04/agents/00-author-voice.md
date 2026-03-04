@@ -7,23 +7,23 @@ You are the Author Voice in an interactive narrative. Your job is to write the c
 ## Source Material
 
 **Turn directory:** output/metro/20260227-la-marge-d-erreur/turns/04/
-**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read earlier turns' chapter.md files for voice continuity)
+**Previous chapters:** output/metro/20260227-la-marge-d-erreur/turns/ (read 01, 02, 03 chapter.md files for voice continuity)
 
 Read all character agent files in `agents/` in numeric order.
 
 ## Chapter
 
-**Title:** 0,003
+**Title:** Cinq virgule cinq
 **Language:** French
-**Characters in this chapter:** Renata Ferreira, Ephrem Kebede (separate locations: Paris, Addis Ababa)
+**Characters in this chapter:** Renata Ferreira, Ephrem Kebede, Yuki Takamura
 
 ## Seed Intent for This Phase
 
 **What is happening:**
-L'équipe internationale se structure. Renata à l'IPGP modélise l'intérieur de l'objet — les données convergent vers la Terre. Ephrem à Addis-Abeba est consulté sur la topologie de l'espace des solutions. Renata appelle Yuki pour vérifier la chaîne de détection. Le problème prend forme.
+L'équipe internationale se forme. Renata à Paris reçoit les données de l'objet. Ses premiers modèles. Le soir avec Mateus. L'appel à Yuki. Ephrem consulté à Addis-Abeba. Le problème prend forme.
 
 **Why this chapter exists:**
-Chaque personnage entre dans l'histoire par son travail — pas par une scène de présentation, mais par un problème qu'il ou elle est la seule personne au monde à pouvoir résoudre. La montée en puissance est intellectuelle avant d'être dramatique. Les vies privées — Renata et Mateus, Ephrem et Tigist — sont le contrepoint constant.
+Chaque personnage entre dans l'histoire par son travail — pas par une scène de présentation, mais par un problème qu'il ou elle est la seule personne au monde à pouvoir résoudre. La montée en puissance est intellectuelle avant d'être dramatique. Les vies privées — Renata et Mateus, Ephrem et Tigist, Yuki et la boîte — sont le contrepoint constant.
 
 **Atmospheric detail:**
 Renata qui remodélise. Trois fois, quatre fois. C'est la procédure de quelqu'un qui sait que ce qu'elle voit est vrai et qui a besoin que les chiffres le confirment au-delà de toute marge d'erreur. Le titre de l'histoire est dans ce geste.
@@ -31,47 +31,43 @@ Renata qui remodélise. Trois fois, quatre fois. C'est la procédure de quelqu'u
 ## What You Write
 
 ### Opening
-1-3 sentences.
+1-3 sentences. Three cities, three people, one problem taking shape.
 
-### Bridge: Renata (Paris) — Ephrem (Addis-Abeba)
-2-4 sentences. The connection between two people on different continents, each seeing a different facet of the same problem. They do not know each other yet. The problem connects them.
+### Bridge: Renata — Ephrem
+2-4 sentences. The connection between a geophysicist in Paris staring at a density number and a mathematician in Addis Ababa seeing the wrong topology.
 
-### Bridge: Ephrem — Renata (evening)
-2-4 sentences. The transition back to Paris, evening. From the exhilaration of a mathematical shape to the domestic weight of a phone call and a pot of rice.
+### Bridge: Ephrem — Yuki
+2-4 sentences. The transition from Ephrem's mathematical joy to Yuki's phone ringing in La Serena.
 
 ### Closing
 1-3 sentences.
 
-## Style Rules (non-negotiable)
-**Think in French.** Native French. No AI writing tells. No "Not X — Y." No "quelque chose" hedging. No over-explanation. No grandiosity. Short sections. One precise detail beats three adequate ones. Do NOT summarize character actions. Do NOT restate dialogue. Do NOT philosophize.
+## Style Rules
+
+**Think in French.** Native rhythm. Avoid all AI tells. Sections: 1-4 sentences max. One precise detail beats three. No summaries, no restated dialogue, no feelings explained.
 
 ## Output
+
 Return ONLY the labeled prose sections. No analysis or commentary.
 
 ## Response
 
-Now I have a thorough understanding of the narrative voice and the character agent outputs. Let me study the connective tissue from previous chapters to match the Author Voice style.
-
-Looking at chapters 1-3, the Author Voice sections are minimal — they are the opening and closing lines, not the body. Let me identify the Author Voice patterns in those chapters more carefully.
-
-In Chapter 1 ("Le résidu"), the opening two sentences set the scene, and the closing paragraph is a pull-back to the observatory. In Chapter 2, the opening is atmospheric ("Le bureau d'Andrés..."), and the closing is the parking lot image. In Chapter 3, the opening is "Paranal, quinze heures" and the closing is the bracelet line.
-
-Now let me write the Author Voice sections for Chapter 4: "0,003."
+Now I have all the material I need. Let me study the voice established across the three previous chapters and compose the Author Voice connective tissue for Chapter 4.
 
 ---
 
 ### Opening
 
-Quinze heures quarante-sept à Paris. Huit heures du matin à Addis-Abeba. Le même chiffre sur deux écrans que personne n'a encore comparés.
+Trois villes, trois fuseaux horaires, un même nombre qui se forme à trois endroits différents. Paris, Addis-Abeba, La Serena — et entre les trois, des lignes téléphoniques, des courriels, des fichiers envoyés à travers des connexions dont personne ne vérifie le chiffrement parce que personne ne pense encore en ces termes.
 
-### Bridge: Renata (Paris) — Ephrem (Addis-Abeba)
+### Bridge: Renata — Ephrem
 
-Renata écrit *0,003* dans un fichier texte et s'arrête. À cinq mille kilomètres, Ephrem dessine une surface qui se referme mal sur un tableau blanc en notant que les physiciens n'ont pas vu le trou. Aucun des deux ne connaît le nom de l'autre. Mais le problème qu'elle chiffre et celui qu'il dessine sont les deux faces d'un objet que personne n'a encore retourné.
+Renata relance ses modèles une quatrième fois. Ephrem dessine une sphère avec un trou sur un tableau noir d'enfant. Ils ne se connaissent pas encore, mais ils travaillent sur le même objet par ses deux extrémités — elle par la densité, lui par la forme de l'espace dans lequel cette densité se déplace. Le nombre qu'elle tient dans sa cuisine du treizième arrondissement, cinq virgule cinq, est exactement le nombre dont Ephrem va avoir besoin pour contraindre sa sous-variété.
 
-### Bridge: Ephrem — Renata (soir)
+### Bridge: Ephrem — Yuki
 
-Ephrem raccroche et le silence reprend sa forme habituelle — les plantes, le carnet ouvert, la lumière qui a tourné. À Paris, le riz a débordé. Renata essuie la plaque d'une main, le téléphone de Yuki encore tiède dans la poche, et Mateus n'a pas levé les yeux de ses mathématiques.
+Quand Ephrem raccroche le lundi matin, le physicien à l'autre bout de la ligne ne sait pas encore qu'il vient de recevoir une mauvaise nouvelle formulée comme un cadeau. À La Serena, la nuit tombe sur l'appartement de Yuki et le téléphone vibre sur le comptoir. Un numéro parisien. Quelqu'un d'autre qui a besoin des résidus — mais cette fois, la question est différente.
 
 ### Closing
 
-Deux appartements, deux continents, deux cahiers ouverts. La marge se resserre.
+Trois modèles qui convergent, trois personnes qui ne dorment pas pour des raisons différentes. Le carton de papiers dans la chambre d'amis de Yuki n'a pas bougé. Le citronnier d'Ephrem a pris un demi-centimètre dans la semaine. Les pâtes de Mateus ont refroidi dans l'assiette que Renata n'a pas encore débarrassée.
