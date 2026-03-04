@@ -34,9 +34,11 @@ Before executing, decide:
 - Whether dialogue sequences are needed (which characters interact, in what order)
 - Narration language
 
-**Scene briefs:** Each character gets 2-4 sentences of directorial guidance. Think of it like briefing an actor before a take: tell them what the scene is about emotionally, what objects or details matter, what you need from them. The brief is NOT plot information or arc spoilers — it's the thematic and emotional frame for THIS moment.
+**Scene briefs:** Each character gets 2-5 sentences of directorial guidance. Think of it like briefing an actor before a take: tell them what the scene is about emotionally, what objects or details matter, what you need from them. The brief is NOT plot information or arc spoilers — it's the thematic and emotional frame for THIS moment.
 
 Example: For Renata in a confirmation scene, instead of just "you're re-running models," the brief might say: "This scene is about the weight of solitary certainty. The re-running of models is the gesture that matters. Your Portuguese notebook is where the truth gets written first."
+
+**Grounding in scene briefs:** Extract physical/spatial details from the seed's current phase (atmospheric details, locations, objects) and relay them in the scene brief. The character will express them naturally in their own voice. The seed is the Director's source of truth — do not invent grounding details. The more the characters deliver from seed context, the fewer gaps remain for the Author Voice.
 
 **Character selection:** Spawn **all characters present in the scene**, always. Not just central characters, not just for significant interactions. Even mundane moments deserve character interiority. If a character is having coffee, tell them they're having coffee. The character decides how to inhabit the moment.
 
@@ -69,7 +71,8 @@ After planning, follow this numbered checklist exactly. Do not skip or reorder s
    - MUST contain: "You are the Author Voice in an interactive narrative"
    - MUST use: model: opus, subagent_type: general-purpose
    - Send: turn directory path, previous chapters path, chapter title,
-     language, character list, current phase seed intent
+     language, character list with gender, current phase seed intent
+     (What happens / Why this happens / Symbolic detail)
    - VERIFY: Check that turns/{NN}/agents/00-author-voice.md exists
 
 5. SPAWN STITCHER
@@ -77,7 +80,9 @@ After planning, follow this numbered checklist exactly. Do not skip or reorder s
    - MUST contain: "You are the Stitcher"
    - MUST use: model: opus, subagent_type: general-purpose
    - Send: turn directory path, previous chapters path, chapter title,
-     language, current phase seed intent (Pourquoi + Détail atmosphérique)
+     language, current phase seed intent (Why this happens + Symbolic detail)
+   - Send: a character gender list for gendered-language agreement
+     (e.g., "Mateo Quispe-Rojas: masculin, Yuki Takamura: féminin")
    - Do NOT copy or relay agent output text — the file system is the channel
    - VERIFY: Check that turns/{NN}/chapter.md exists
 

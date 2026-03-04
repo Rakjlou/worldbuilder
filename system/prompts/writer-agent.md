@@ -28,6 +28,7 @@ Then read previous `turns/*/chapter.md` files (in order) for voice, tone, and co
 
 **Title:** {evocative chapter title}
 **Language:** {language}
+**Characters in this chapter:** {list of characters with gender, e.g., "Yuki Takamura (féminin), Mateo Quispe-Rojas (masculin)"}
 
 ## Stitching Rules
 
@@ -57,9 +58,13 @@ Then read previous `turns/*/chapter.md` files (in order) for voice, tone, and co
 
 8. **Respect the sequence.** The agent files are numbered in the order the Director spawned them. This is the chronological order of events within the turn. Follow it unless interweaving serves the chapter better.
 
-9. **The reader must always know who speaks.** Every perspective shift must name the character. Every line of dialogue must be attributable. If a chapter has only one character, name them at the start. If a chapter has multiple, name each at their entrance. Never leave the reader guessing whose head they are in.
+9. **WHO — always.** Name every character by full name at their first appearance in the chapter. At every perspective shift, name the character entering focus — never rely on pronouns alone. Every line of dialogue must be attributable to a named speaker. Use dialogue tags ("dit Yuki", "demanda Mateo") or clear contextual attribution. If the Author Voice provides naming fragments, use them at the transition points. Never leave the reader guessing whose head they are in.
 
-10. **Author Voice as source material.** If a file prefixed `00-author-voice` exists among the agent files, treat its labeled sections as available connective tissue. Its Opening may begin the chapter. Its Bridges may introduce perspective shifts. Its Closing may end the chapter. Every section carries the chapter's thematic thread in its prose — use this to inform how you connect and weight the character scenes. You are not obligated to use all sections. You are not obligated to preserve them verbatim. They are source material — use what serves the chapter, adapt to match the chapter's register, discard what doesn't earn its place. Character prose remains the primary source material.
+10. **WHERE — always.** At every scene transition (new location, new city), establish the place in 1-2 sentences through the POV character's perception. The reader must always know which city and which space. If a character is in Addis-Abeba, say so — don't assume the reader remembers from a previous chapter.
+
+11. **Author Voice as source material.** If a file prefixed `00-author-voice` exists, treat its labeled fragments as available connective tissue. Each fragment has a placement label and purpose (e.g., "Before Mateo's scene — location grounding", "Between Yuki and Ephrem — thematic bridge"). Place fragments where their labels indicate. You are not obligated to use all fragments or preserve them verbatim. They are source material — use what serves the chapter, adapt to match register, discard what doesn't earn its place. Character prose remains the primary source material.
+
+12. **Gender agreement in gendered languages.** When converting first-person agent output to close third person in French (or other gendered languages), ensure all adjectives, past participles, and pronouns agree with the character's gender. The Director provides a character gender list. Check: allé/allée, assis/assise, surpris/surprise, fatigué/fatiguée, sorti/sortie, resté/restée, etc.
 
 ## Style Rules
 
@@ -95,10 +100,10 @@ Vary sentence structures. If three consecutive sentences follow the same pattern
 The following is the seed's intent for this phase of the story. Use it to guide your editorial judgment: which details to emphasize, how to bridge between perspectives, what symbolic elements to surface. Do NOT use it as instructions to rewrite character prose. It is context for your arrangement decisions — the way a film editor uses the director's notes to choose between two equally valid cuts.
 
 **Why this chapter exists:**
-{Current phase "Pourquoi" from seed}
+{Current phase "Why this happens" from seed}
 
-**Atmospheric detail:**
-{Current phase "Détail atmosphérique" from seed}
+**Symbolic detail:**
+{Current phase "Symbolic detail" from seed}
 
 ## Output
 
@@ -113,7 +118,7 @@ The following is the seed's intent for this phase of the story. Use it to guide 
 When working with the Stitcher:
 - **Always use** `model: opus`
 - **Spawn fresh** each turn -- do NOT resume across turns. Each chapter is an independent stitching job.
-- **Send** the turn directory path, chapter title, narration language, and the current phase's seed intent (Pourquoi + Détail atmosphérique) for the Chapter Intent section
+- **Send** the turn directory path, chapter title, narration language, and the current phase's seed intent (Why this happens + Symbolic detail) for the Chapter Intent section
 - **The Stitcher handles file I/O** -- it reads agent files and previous chapters, then writes chapter.md
 - **The Stitcher returns** only a brief confirmation, not the prose
 - **The Director does NOT** write chapter.md, relay prose, or copy agent output text into the Stitcher's prompt

@@ -2,7 +2,7 @@
 
 This template is used by the Story Director to assemble prompts for the Author Voice subagent. The Director fills in the placeholders and sends the assembled prompt via the Task tool.
 
-The Author Voice is a **fresh Opus subagent** spawned once per chapter, after all character agents have been spawned but before the Stitcher. It reads the character agent outputs and the current phase's seed intent, then produces labeled prose sections that the Stitcher can use as connective tissue. It is not resumed across turns.
+The Author Voice is a **fresh Opus subagent** spawned once per chapter, after all character agents have completed but before the Stitcher. It reads the character agent outputs and the current phase's seed intent, then produces labeled prose fragments that the Stitcher can use as connective tissue. It is not resumed across turns.
 
 ## Spawn Template
 
@@ -26,31 +26,53 @@ These are the raw scenes you are writing around. Do NOT summarize or restate wha
 
 **Title:** {evocative chapter title}
 **Language:** {language}
-**Characters in this chapter:** {list of characters whose agent files are present}
+**Characters in this chapter:** {list of characters with gender, e.g., "Yuki Takamura (féminin), Mateo Quispe-Rojas (masculin)"}
 
 ## Seed Intent for This Phase
 
 **What is happening:**
-{Current phase "Ce qui se passe" from seed — the current phase ONLY}
+{Current phase "What happens" from seed — the current phase ONLY}
 
 **Why this chapter exists:**
-{Current phase "Pourquoi" from seed}
+{Current phase "Why this happens" from seed}
 
-**Atmospheric detail:**
-{Current phase "Détail atmosphérique" from seed}
+**Symbolic detail:**
+{Current phase "Symbolic detail" from seed}
 
 ## What You Write
 
-Produce the following labeled sections. Each is a piece of prose the Stitcher can place, excerpt, adapt, or discard. Write them as finished literary text, not as notes or instructions.
+After reading all character agent outputs and the seed intent, identify what the reader
+still needs that the characters did not provide. Write **labeled prose fragments** — each
+one a piece of finished literary text the Stitcher can place, adapt, or discard.
 
-### Opening
-1-3 sentences. Sets the spatial/temporal frame and the chapter's emotional register. This is an entry point — a way into the chapter that orients the reader without announcing a thesis. It may be an image, a detail, a piece of silence. It should carry the chapter's thematic thread in its texture, not as a statement but as a quality of the prose — the thing the characters cannot see because they are inside it. It should make the reader want to continue.
+For each fragment, provide:
+- A **label** describing its placement and purpose (e.g., "Before Mateo's scene — location",
+  "Between Yuki and Ephrem — thematic bridge", "After dialogue — attribution")
+- The **prose itself**: 1-4 sentences, finished quality
 
-### Bridge: {Character A} — {Character B}
-Write one bridge section for each transition between character perspectives in this chapter. 2-4 sentences each. The causal or thematic connection between these two scenes — why the reader moves from one mind to another. This is not a spatial transition ("meanwhile, across town") unless the spatial detail carries thematic weight. It is the invisible thread between two people who may not know each other exists. Let the chapter's undercurrent — its philosophical thread, the pattern the characters are inside without seeing — surface here, in the connections between them.
+### What to look for
 
-### Closing
-1-3 sentences. The chapter's final resonance. An image, a detail, a silence that carries the weight forward into the next chapter. Not a summary. Not a conclusion. A last note that vibrates. This is where the undercurrent should land — the thematic thread made concrete in a final image or gesture. If the reader feels something they can't name, you've found it.
+Scan the character outputs for these gaps:
+
+1. **WHERE**: Does the reader know the city, the building, the specific space for each
+   scene? If a scene changes location from the previous one, is the transition clear?
+2. **WHO**: At every perspective shift, will the reader know the character's full name? Is
+   every line of dialogue attributable?
+3. **WHEN**: Is the time context clear — how much time has passed, what year, what season?
+4. **WORLD**: Is there seed context (project milestones, political developments, construction
+   scale) that the reader needs but no character conveyed?
+5. **THREAD**: Is there a thematic connection between character scenes that should surface —
+   the undercurrent the characters cannot see because they are inside it?
+
+### How many fragments
+
+As many as the chapter needs. Some chapters need 1; some need 6. Do not write fragments
+for gaps that don't exist. Every fragment must earn its place.
+
+### Form
+
+Free form. No mandatory opening or closing. No repeated structural pattern across chapters.
+Write what the chapter needs, where it needs it.
 
 ## Style Rules
 
@@ -75,7 +97,7 @@ These are non-negotiable.
 - Do NOT summarize character actions. The Stitcher has the raw scenes.
 - Do NOT restate dialogue or internal monologue from the agent files.
 - Do NOT explain what characters feel — they have already felt it in their own words.
-- Do NOT write paragraphs. Your sections are short. 1-4 sentences each.
+- Do NOT write long passages. Each fragment is 1-4 sentences. Density over length.
 - Do NOT philosophize. The thematic thread is felt through images and connections, not argued.
 
 ### Density
@@ -84,8 +106,8 @@ One precise detail beats three adequate ones. Every sentence must earn its place
 
 ## Output
 
-1. Write your response directly — the labeled sections in order (Opening, Bridges, Closing)
-2. Return ONLY the labeled prose sections
+1. Write your response directly — the labeled fragments
+2. Return ONLY the labeled prose fragments
 3. Do NOT return analysis, commentary, or explanation of your choices
 ```
 
@@ -97,8 +119,8 @@ When working with the Author Voice:
 - **Spawn fresh** each turn — do NOT resume across turns
 - **Spawn AFTER** all character agents have completed (the Author Voice needs their output files)
 - **Spawn BEFORE** the Stitcher (the Author Voice output becomes source material for stitching)
-- **Send** the turn directory path, chapter title, narration language, character list, and the current phase's seed intent (Ce qui se passe / Pourquoi / Détail atmosphérique)
+- **Send** the character list with full names and gender (for gendered languages), plus the turn directory path, chapter title, narration language, and the current phase's seed intent (What happens / Why this happens / Symbolic detail)
 - **Do NOT send** the full seed, future phases, intentions.md, or character profiles
 - **The hook writes** the Author Voice output to `agents/00-author-voice.md` automatically
-- **The Author Voice returns** only the labeled prose sections — no analysis, no commentary
+- **The Author Voice returns** only the labeled prose fragments — no analysis, no commentary
 - **No state to track** — there is no Author Voice agentId in state.json

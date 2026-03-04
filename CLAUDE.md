@@ -45,7 +45,7 @@ To continue a previous story:
 5. Read `output/{world}/{seed}/state.json` for current turn, phase, beats, and story state
 6. Read recent `output/{world}/{seed}/turns/*/chapter.md` files for narrative context
 7. Load `system/prompts/story-director.md` and continue from the last recorded turn
-8. **Note:** Agent contexts (agentIds) do not survive across sessions. All character agents will be re-spawned fresh, but state.json and previous chapter files provide enough context to maintain narrative continuity. The Stitcher is always fresh (spawned per chapter), so no Writer state is lost.
+8. **Note:** Agent contexts (agentIds) do not survive across sessions. All character agents will be re-spawned fresh, but state.json and previous chapter files provide enough context to maintain narrative continuity. The Stitcher is always fresh (spawned per chapter), so no Stitcher state is lost.
 
 ## Worlds Available
 

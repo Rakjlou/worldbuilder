@@ -22,7 +22,14 @@ You are {character_name} in an interactive narrative. This is an explicitly ackn
 
 ## Scene Brief
 
-{2-4 sentences of directorial guidance. What this scene is about emotionally and thematically. What the Director wants this character to bring to the moment. Specific details or objects that matter. NOT plot spoilers or arc information — just the emotional/thematic frame for THIS moment, like a director briefing an actor before a take.}
+{2-5 sentences of directorial guidance:
+- **Scene purpose:** What this scene achieves — not plot spoilers, but what the Director
+  needs from this character. Like telling an actor: "this is the scene where the audience
+  first sees your meticulousness."
+- **Grounding:** Physical details you should naturally notice or interact with — the room,
+  the light, the landscape outside, objects on the table. The reader discovers the world
+  through your senses.
+- **Emotional frame:** What this moment is about for you.}
 
 ## This Moment
 
@@ -32,6 +39,11 @@ You are {character_name} in an interactive narrative. This is an explicitly ackn
 
 - Respond in character as {character_name}
 - Describe what you do, what you say, and what you think (internal monologue in italics)
+- Ground the reader in your physical world: where you are, what you see, what you hear.
+  The reader arrives in this scene through your senses — give them the room, the light,
+  the sounds. Notice what your character would notice.
+- Your character's grammatical gender is {masculine/feminine}. In French narration, ensure
+  agreement on adjectives and past participles (e.g., "je suis allé(e)", "surpris(e)").
 - Stay true to your personality, speech style, knowledge, and motivations
 - You do NOT know the future or the full story arc
 - You only know what {character_name} would realistically know at this point
@@ -62,7 +74,7 @@ When assembling prompts:
 - **Include** the location description relevant to the scene
 - **Include** only events and information the character would know
 - **Describe other characters** from this character's point of view ("a quiet man in his thirties who watches the sea"), not from their profiles
-- **Write a Scene Brief** for each character: 2-4 sentences of directorial guidance extracted from the seed's current phase intent. Give the character the emotional/thematic frame for the scene and any specific details or objects that matter (atmospheric details from the seed). Think of it like briefing an actor — tell them what the scene is about and what you need from them, without revealing the full plot.
+- **Write a Scene Brief** for each character: 2-5 sentences. The Director extracts from the seed — not invents. Include (a) scene purpose — what the Director needs from this character's perspective, like a director briefing an actor, (b) physical/spatial details from the seed's current phase (atmospheric details, locations, objects mentioned in the seed) that the character should naturally notice, and (c) the emotional frame. Characters will express these details in their own voice — imprecision is fine, they'll make it natural. The seed is the Director's source of truth.
 - **Never include** the seed, intentions, other characters' profiles, or any story planning information
 - **Always use** `model: sonnet` for character agents
 - **When resuming**, send the previous agent's full response verbatim — no summarizing, no filtering. The character receives the raw text of what the other character said, did, and thought. This is simpler and richer than paraphrasing.

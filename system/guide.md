@@ -26,10 +26,10 @@ Output: a collection of chapter files in `output/{world}/{seed}/turns/*/chapter.
 ## Key Concepts
 
 ### The Player is a Stage Director
-The player doesn't control a character. They observe the story unfold and make key creative decisions at narratively significant moments (3-5 per story). The system decides when to ask based on emotional stakes, not routine.
+The player doesn't control a character. They observe the story unfold and make key creative decisions at narratively significant moments (2-4 per story, or none if the story doesn't warrant them). The system decides when to ask based on emotional stakes, not routine.
 
 ### Information Walls
-The Story Director knows everything (world, intentions, seed). Character agents know their own profile, the current scene, and a scene brief (directorial guidance extracted from the seed — emotional/thematic frame, not plot spoilers). The Author Voice knows the current phase's seed intent and the character outputs. The Stitcher knows the agent files, previous chapters, and the current phase's "Pourquoi" and "Détail atmosphérique" from the seed. This layered separation creates emergence — characters can still surprise the Director — while ensuring the seed's narrative intent reaches the prose.
+The Story Director knows everything (world, intentions, seed). Character agents know their own profile, the current scene, and a scene brief (directorial guidance extracted from the seed — emotional/thematic frame, not plot spoilers). The Author Voice knows the current phase's seed intent and the character outputs. The Stitcher knows the agent files, previous chapters, and the current phase's "Why this happens" and "Symbolic detail" from the seed. This layered separation creates emergence — characters can still surprise the Director — while ensuring the seed's narrative intent reaches the prose.
 
 ### Three Layers of Content
 - **World files** describe what IS (lore, characters, locations)
@@ -102,7 +102,7 @@ Profiles describe WHO a character IS: personality, speech, knowledge, goals, fea
 
 ## Character Agents
 
-Spawned as Sonnet subagents via Claude Code's Task tool. They receive their profile, scene context, and a **scene brief** — 2-4 sentences of directorial guidance that the Director extracts from the seed's current phase intent (emotional/thematic frame, important details and objects). They never receive the full seed, intentions, or other characters' profiles.
+Spawned as Sonnet subagents via Claude Code's Task tool. They receive their profile, scene context, and a **scene brief** — 2-5 sentences of directorial guidance that the Director extracts from the seed's current phase intent (scene purpose, physical/spatial grounding, emotional frame). They never receive the full seed, intentions, or other characters' profiles.
 
 When characters interact via the resume pattern, they receive the previous character's **full raw output** verbatim — not a Director summary.
 
@@ -120,7 +120,7 @@ Prompt files: `system/prompts/pitcher.md`, `system/prompts/arbitrator.md`
 
 ## Author Voice Agent
 
-A fresh Opus subagent spawned once per chapter, after character agents but before the Stitcher. It reads the current phase's seed intent (Ce qui se passe, Pourquoi, Détail atmosphérique) and the character agent outputs, then produces labeled prose sections: Opening, Bridges between perspectives, Closing, and Undercurrent (the thematic thread). These sections are written to `agents/00-author-voice.md` and become source material for the Stitcher.
+A fresh Opus subagent spawned once per chapter, after character agents have completed but before the Stitcher. It reads the current phase's seed intent (What happens, Why this happens, Symbolic detail) and the character agent outputs, then identifies gaps the characters did not cover (WHERE, WHO, WHEN, world context, thematic thread) and produces labeled prose fragments — each with a placement label and purpose. The number and type of fragments vary per chapter; there is no fixed structure. These fragments are written to `agents/00-author-voice.md` and become source material for the Stitcher.
 
 The Author Voice does not summarize or restate character actions. Its job is the narrative tissue between and around scenes — the frame, the connections, the "why these moments together."
 
@@ -128,7 +128,7 @@ Prompt file: `system/prompts/author-voice.md`
 
 ## Stitcher Agent
 
-A fresh Opus subagent spawned once per chapter (not resumed across turns). It reads the agent output files from the turn's `agents/` directory (including the Author Voice at `00-author-voice.md`), previous `chapter.md` files for continuity, and the current phase's seed intent (Pourquoi + Détail atmosphérique) for editorial context. It composes a chapter that preserves the character agents' prose as source material.
+A fresh Opus subagent spawned once per chapter (not resumed across turns). It reads the agent output files from the turn's `agents/` directory (including the Author Voice at `00-author-voice.md`), previous `chapter.md` files for continuity, and the current phase's seed intent (Why this happens + Symbolic detail) for editorial context. It composes a chapter that preserves the character agents' prose as source material.
 
 The Stitcher uses the Author Voice prose as available connective tissue — it can place, adapt, excerpt, or discard it. Character prose remains the primary source. The Stitcher adds its own connective tissue as needed: transitions, scene-setting bridges, temporal flow. It does not rewrite agent prose.
 
