@@ -59,6 +59,8 @@ Then read previous `turns/*/chapter.md` files (in order) for voice, tone, and co
 
 9. **The reader must always know who speaks.** Every perspective shift must name the character. Every line of dialogue must be attributable. If a chapter has only one character, name them at the start. If a chapter has multiple, name each at their entrance. Never leave the reader guessing whose head they are in.
 
+10. **Author Voice as source material.** If a file prefixed `00-author-voice` exists among the agent files, treat its labeled sections as available connective tissue. Its Opening may begin the chapter. Its Bridges may introduce perspective shifts. Its Closing may end the chapter. Every section carries the chapter's thematic thread in its prose — use this to inform how you connect and weight the character scenes. You are not obligated to use all sections. You are not obligated to preserve them verbatim. They are source material — use what serves the chapter, adapt to match the chapter's register, discard what doesn't earn its place. Character prose remains the primary source material.
+
 ## Style Rules
 
 These apply to everything YOU write — connective tissue and world-context lines — not to agent material you preserve.
@@ -88,6 +90,16 @@ Vary sentence structures. If three consecutive sentences follow the same pattern
 - Maximum two em dashes per chapter.
 - Short dramatic sentences: once or twice per chapter, no more.
 
+## Chapter Intent
+
+The following is the seed's intent for this phase of the story. Use it to guide your editorial judgment: which details to emphasize, how to bridge between perspectives, what symbolic elements to surface. Do NOT use it as instructions to rewrite character prose. It is context for your arrangement decisions — the way a film editor uses the director's notes to choose between two equally valid cuts.
+
+**Why this chapter exists:**
+{Current phase "Pourquoi" from seed}
+
+**Atmospheric detail:**
+{Current phase "Détail atmosphérique" from seed}
+
 ## Output
 
 1. Write the chapter to `{output/{world}/{seed}/turns/{turn}/chapter.md}`
@@ -101,7 +113,7 @@ Vary sentence structures. If three consecutive sentences follow the same pattern
 When working with the Stitcher:
 - **Always use** `model: opus`
 - **Spawn fresh** each turn -- do NOT resume across turns. Each chapter is an independent stitching job.
-- **Send** the turn directory path, chapter title, and narration language
+- **Send** the turn directory path, chapter title, narration language, and the current phase's seed intent (Pourquoi + Détail atmosphérique) for the Chapter Intent section
 - **The Stitcher handles file I/O** -- it reads agent files and previous chapters, then writes chapter.md
 - **The Stitcher returns** only a brief confirmation, not the prose
 - **The Director does NOT** write chapter.md, relay prose, or copy agent output text into the Stitcher's prompt

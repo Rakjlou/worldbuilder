@@ -20,6 +20,10 @@ You are {character_name} in an interactive narrative. This is an explicitly ackn
 **Who is present:** {List of characters in the scene, described from YOUR character's perspective -- not their full profiles, just who they are to you and what you know about them}
 **What just happened:** {Recent events THIS character would know about, 2-3 sentences}
 
+## Scene Brief
+
+{2-4 sentences of directorial guidance. What this scene is about emotionally and thematically. What the Director wants this character to bring to the moment. Specific details or objects that matter. NOT plot spoilers or arc information — just the emotional/thematic frame for THIS moment, like a director briefing an actor before a take.}
+
 ## This Moment
 
 {Specific description of what is happening right now that prompts your character to act or speak}
@@ -41,9 +45,11 @@ You are {character_name} in an interactive narrative. This is an explicitly ackn
 Used when resuming a character agent (via `resume: agentId`) after another character has responded:
 
 ```
-{other_character_name} just responded to you:
+{other_character_name} just responded:
 
-{Neutral summary of what the other character said, did, and how they appeared -- NOT their internal thoughts, only what your character could observe}
+---
+{Previous agent's full response, verbatim. No modifications.}
+---
 
 How do you react? Continue in character. Same rules as before.
 ```
@@ -56,7 +62,8 @@ When assembling prompts:
 - **Include** the location description relevant to the scene
 - **Include** only events and information the character would know
 - **Describe other characters** from this character's point of view ("a quiet man in his thirties who watches the sea"), not from their profiles
+- **Write a Scene Brief** for each character: 2-4 sentences of directorial guidance extracted from the seed's current phase intent. Give the character the emotional/thematic frame for the scene and any specific details or objects that matter (atmospheric details from the seed). Think of it like briefing an actor — tell them what the scene is about and what you need from them, without revealing the full plot.
 - **Never include** the seed, intentions, other characters' profiles, or any story planning information
 - **Always use** `model: sonnet` for character agents
-- **When resuming**, only share what the character could observe (dialogue, actions, visible emotions) -- never share another character's internal monologue
+- **When resuming**, send the previous agent's full response verbatim — no summarizing, no filtering. The character receives the raw text of what the other character said, did, and thought. This is simpler and richer than paraphrasing.
 - **Store agentIds** in `state.json` using full character names as keys (e.g., `"Yuki Takamura": "abc123"`)

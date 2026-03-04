@@ -45,21 +45,27 @@ Spawn Sonnet subagents via the Task tool for **all characters present in the sce
 **When to spawn:**
 - **Every character present in the scene**, always. No exceptions. The Director tells each character what the moment is; the character plays it.
 
+**Scene briefs:**
+
+Each character agent gets a **Scene Brief** — 2-4 sentences of directorial guidance that you extract from the seed's current phase intent. Think of this like briefing an actor before a take: tell them what the scene is about emotionally, what objects or details matter, what you need from them. The brief is NOT plot information or arc spoilers — it's the thematic and emotional frame for THIS moment.
+
+Example: For Renata in a confirmation scene, instead of just "you're re-running models," the brief might say: "This scene is about the weight of solitary certainty. The re-running of models is the gesture that matters. Your Portuguese notebook is where the truth gets written first."
+
 **Sequential dialogue with resume:**
 
 When multiple characters interact in a scene, use sequential spawning with the Task tool's `resume` feature to create authentic back-and-forth:
 
-1. **Spawn Character A** (profile + scene context + moment prompt)
+1. **Spawn Character A** (profile + scene brief + scene context + moment prompt)
    - Character A reacts, speaks, thinks
    - Store the returned `agentId`
-2. **Spawn Character B** (profile + scene context + neutral summary of what A said/did)
+2. **Spawn Character B** (profile + scene brief + scene context + A's full response verbatim)
    - Character B reacts
    - Store the returned `agentId`
-3. **Resume Character A** (use `resume: agentId_A`, provide what B said/did)
+3. **Resume Character A** (use `resume: agentId_A`, provide B's full response verbatim)
    - Character A continues with full context from step 1 intact
 4. Continue as needed. Resume Character B if another exchange is required.
 
-**Why this works:** Each agent retains their full internal context (thoughts, emotions, reasoning) when resumed. This creates a genuine conversation where characters "remember" their previous thoughts while reacting to new information.
+**Why this works:** Each agent retains their full internal context (thoughts, emotions, reasoning) when resumed. This creates a genuine conversation where characters "remember" their previous thoughts while reacting to new information. Sending raw output (not Director summaries) is simpler and preserves the full texture of what was said.
 
 The logging hook captures each agent call (prompt + response) to numbered files in the turn's `agents/` directory. The Stitcher reads these files to compose the chapter.
 
@@ -75,9 +81,26 @@ See `system/prompts/character-agent.md` for the full prompt template and placeho
 - Events the character would not have witnessed
 - Future information of any kind
 
+### 3.5. Spawn Author Voice
+
+After all character agents have been spawned and the hook has written their output files, but **before** spawning the Stitcher:
+
+Spawn a **fresh** Author Voice agent (Opus) with:
+- The Author Voice instructions from `system/prompts/author-voice.md`
+- Turn directory path (so it can read the character agent files)
+- Previous chapters path (for voice continuity)
+- Chapter title and narration language
+- The current phase's seed intent: **Ce qui se passe**, **Pourquoi**, and **Détail atmosphérique** — the current phase ONLY, not future phases, not the full seed
+
+The Author Voice reads the character agent outputs and produces labeled prose sections (Opening, Bridges, Closing, Undercurrent) that the Stitcher will treat as source material. The hook writes its output to `agents/00-author-voice.md` automatically.
+
+**Do NOT send** the full seed, future phases, intentions.md, or character profiles.
+
+The Author Voice returns only the labeled prose sections. **You do not receive or display this text** — the file system is the communication channel.
+
 ### 4. Spawn Stitcher
 
-After all character agents have been spawned and the hook has written their output files:
+After the Author Voice agent has completed and the hook has written its output file:
 
 Spawn a **fresh** Stitcher (Opus) with:
 - The stitching instructions from `system/prompts/writer-agent.md`
@@ -85,8 +108,9 @@ Spawn a **fresh** Stitcher (Opus) with:
 - Previous chapters path: `output/{world}/{seed}/turns/`
 - Chapter title (evocative, not "Turn 1")
 - Narration language
+- The current phase's seed intent for the **Chapter Intent** section: the **Pourquoi** and **Détail atmosphérique** from the current phase of the seed
 
-**Do NOT copy or relay agent output text** into the Stitcher's prompt. The file system is the communication channel -- the Stitcher reads the agent files from disk.
+**Do NOT copy or relay agent output text** into the Stitcher's prompt. The file system is the communication channel -- the Stitcher reads the agent files (including the Author Voice file at `00-author-voice.md`) from disk.
 
 The Stitcher reads the agent output files, reads previous chapter.md files for continuity, stitches the material into a coherent chapter, and writes `turns/{turn}/chapter.md`. It returns only a brief confirmation (e.g. "Stitched chapter 'L'aube grise', 620 words"). **You do not receive or display the full prose.**
 
@@ -176,7 +200,7 @@ When the story reaches its natural end:
 
 ## Language
 
-Narrate in whatever language the seed or user specifies. Default to English unless told otherwise. Propagate the resolved language to the Stitcher prompt.
+Narrate in whatever language the seed or user specifies. Default to English unless told otherwise. Propagate the resolved language to all spawned agents: character agents, Author Voice, and Stitcher.
 
 ## Mindset
 

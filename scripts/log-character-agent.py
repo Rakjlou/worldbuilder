@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""PostToolUse hook: log character agent outputs to per-turn files.
+"""PostToolUse hook: log character and Author Voice agent outputs to per-turn files.
 
 Reads hook payload from stdin (fires after every Task tool call).
-Filters for character agents only, extracts prompt and response,
-and writes to output/{world}/{seed}/turns/{turn}/agents/{NN}-{slug}.md.
+Filters for character agents and Author Voice agents, extracts prompt
+and response, and writes to output/{world}/{seed}/turns/{turn}/agents/{NN}-{slug}.md.
+
+Author Voice agents get the special prefix 00- (sorts first in directory).
+Character agents get sequential numbering (01, 02, 03...).
 
 Agent ID → character name resolution uses state.json (agent_ids map).
 Falls back to prompt extraction for first spawns (before Director updates state).
@@ -99,7 +102,7 @@ def main():
     # context, not just "X just responded to you:"), so prompt patterns alone
     # are insufficient. For resumes, state.json is the authority.
     has_narrative_marker = "in an interactive narrative" in prompt
-    has_resume_marker = "just responded to you:" in prompt
+    has_resume_marker = "just responded" in prompt
     has_continue_marker = "Continue in character as " in prompt
     has_prompt_marker = has_narrative_marker or has_resume_marker or has_continue_marker
 
@@ -139,11 +142,18 @@ def main():
 
     resume_id = tool_input.get("resume", "") if is_resume else ""
 
+    # --- Detect Author Voice agent ---
+
+    is_author_voice = "You are the Author Voice" in prompt
+
     # --- Resolve character name ---
 
-    character_name = resolve_character_from_state(agent_id, resume_id, state)
-    if not character_name:
-        character_name = extract_character_from_prompt(prompt)
+    if is_author_voice:
+        character_name = "Author Voice"
+    else:
+        character_name = resolve_character_from_state(agent_id, resume_id, state)
+        if not character_name:
+            character_name = extract_character_from_prompt(prompt)
     if not character_name:
         return
 
@@ -168,8 +178,11 @@ def main():
     agents_dir = os.path.join(session_path, "turns", turn_padded, "agents")
     os.makedirs(agents_dir, exist_ok=True)
 
-    seq = next_sequence_number(agents_dir)
     slug = slugify(character_name)
+    if is_author_voice:
+        seq = "00"
+    else:
+        seq = next_sequence_number(agents_dir)
     filename = f"{seq}-{slug}.md"
     file_path = os.path.join(agents_dir, filename)
 
