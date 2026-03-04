@@ -1,0 +1,37 @@
+{
+  "turn": 17,
+  "phase": 6,
+  "current_beat": "Tests compressed, Mateo deeper in code, 0.9743 approaching",
+  "location": "Atacama complex",
+  "time": "Year 9, tests accelerating",
+  "characters_met": ["Yuki Takamura", "Mateo Quispe-Rojas", "Seo-yun Park", "Renata Ferreira", "Ephrem Kebede", "Yara Haddad", "Nadia Koreneva", "Kwame Asante-Mensah", "Helena Cavalcanti", "Jeanne Moreau-Blanc", "Pere Gabriel Okonkwo", "Amir Darwish"],
+  "relationships": {
+    "yuki-andres": "Confirmed across three nights",
+    "renata-yuki": "Renata called Yuki; both sensing something unsaid",
+    "ephrem-liang": "Ephrem showed topology constraint",
+    "ephrem-yara": "Dispute over topology vs safety architecture; unresolved",
+    "mateo-yuki": "Met at technical review; mutual recognition through systems thinking; sharing audit findings"
+  },
+  "events": [
+    "T1: Yuki detects residuals in Rubin pipeline.",
+    "T2: Yuki shows data to Andrés. Confirmation begins.",
+    "T3: Mateo at Paranal, ordinary life.",
+    "T4: Renata models object interior (0.003 match to Earth). Ephrem sees topology. Renata calls Yuki.",
+    "T5: Press leaks. Article calls Yuki 'la científica.' She doesn't correct it. Mother asks about the box.",
+    "T6: Renata's notebook. Night before sharing results.",
+    "T7: Renata presents Earth match. Ephrem sees surface without boundary.",
+    "T8: Kwame sees temporal displacement signal. 4.7 microseconds before sent.",
+    "T9: Yara recruited. Nadia's energy list. 0.9743 planted in prototype calibration.",
+    "T10: Ephrem's closed-surface proof. Yuki calls mother. 'Bientôt.'",
+    "T11: Yara-Ephrem dispute. Safety architecture vs topology. The frontier may not exist.",
+    "T12: Paradox goes public. Jeanne organizes opposition in Lyon. Père Okonkwo asks 'Qui?' in Rome. Amir ratifies construction in Geneva. Yuki runs, calls mother, says 'Bientôt' again.",
+    "T13: Construction begins. Helena touches the concrete. The constant 0.9743 migrates from prototype to production in a routine JIRA ticket. Mateo at Paranal receives integration email.",
+    "T14: Mateo transferred to Atacama. Calls parents. Father: 'C'est un travail important.' Arrives at the complex. Opens the code — recognizes function names, not the code inside them.",
+    "T15: Mateo audits the system. Finds undocumented workarounds, hardcoded constants. Meets Yuki at a technical review — she asks about the sleep(50). Mutual recognition.",
+    "T16: Kwame sees the echo — a pre-signal in calibration tests. Temporal displacement signature where there shouldn't be one. Nadia sees 0.04% charge deviation, asks for extra test, told schedule doesn't permit. Both document. Neither connects to the other."
+  ],
+  "player_choices": [],
+  "beats_completed": ["first_observation", "confirmation_with_astronomer", "mateo_ordinary_life", "international_team_forms", "information_leaks", "official_confirmation", "paradox_named", "teleportation_emerges", "0.9743_planted", "ephrem_yara_dispute", "public_fracture", "construction_begins", "mateo_transferred", "mateo_audits", "tests_compressed"],
+  "beats_remaining": ["mateo_finds_0.9743", "three_puzzle_pieces", "pre_activation", "activation", "silence", "epilogue"],
+  "agent_ids": {}
+}

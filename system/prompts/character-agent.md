@@ -51,7 +51,7 @@ Used when resuming a character agent (via `resume: agentId`) after another chara
 {Previous agent's full response, verbatim. No modifications.}
 ---
 
-How do you react? Continue in character. Same rules as before.
+How do you react? Continue in character as {character_name}. Same rules as before.
 ```
 
 ## Rules for the Story Director

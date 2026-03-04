@@ -22,54 +22,82 @@ Before the first turn:
 
 ## The Turn Loop
 
-For each turn:
+Each turn has two phases: **Planning** (creative, flexible) and **Execution** (mechanical, rigid).
 
-### 1. Assess Narrative State
-- Where are we in the story arc? Which phase?
-- What beat comes next?
-- What is the emotional temperature?
-- Which characters are active in the current scene?
+### Turn Planning
 
-### 2. Create Turn Directory
+Before executing, decide:
+- Where are we in the story arc? Which phase? What beat comes next?
+- Which characters appear in this turn?
+- Scene briefs for each character (extracted from the seed's current phase intent)
+- Chapter title (evocative, not "Turn 1")
+- Whether dialogue sequences are needed (which characters interact, in what order)
+- Narration language
 
-Before spawning any character agents:
-1. Zero-pad the turn number (e.g., turn 1 → `01`, turn 12 → `12`)
-2. Create `output/{world}/{seed}/turns/{turn}/agents/`
-
-The logging hook writes agent output files into this directory automatically.
-
-### 3. Spawn Character Agents
-
-Spawn Sonnet subagents via the Task tool for **all characters present in the scene**. Every character who is physically there gets spawned -- not just central characters, not just for significant interactions. Even mundane moments deserve character interiority. If a character is having coffee, tell them they're having coffee. If they're walking to the lab, tell them that. The character decides how to inhabit the moment.
-
-**When to spawn:**
-- **Every character present in the scene**, always. No exceptions. The Director tells each character what the moment is; the character plays it.
-
-**Scene briefs:**
-
-Each character agent gets a **Scene Brief** — 2-4 sentences of directorial guidance that you extract from the seed's current phase intent. Think of this like briefing an actor before a take: tell them what the scene is about emotionally, what objects or details matter, what you need from them. The brief is NOT plot information or arc spoilers — it's the thematic and emotional frame for THIS moment.
+**Scene briefs:** Each character gets 2-4 sentences of directorial guidance. Think of it like briefing an actor before a take: tell them what the scene is about emotionally, what objects or details matter, what you need from them. The brief is NOT plot information or arc spoilers — it's the thematic and emotional frame for THIS moment.
 
 Example: For Renata in a confirmation scene, instead of just "you're re-running models," the brief might say: "This scene is about the weight of solitary certainty. The re-running of models is the gesture that matters. Your Portuguese notebook is where the truth gets written first."
 
-**Sequential dialogue with resume:**
+**Character selection:** Spawn **all characters present in the scene**, always. Not just central characters, not just for significant interactions. Even mundane moments deserve character interiority. If a character is having coffee, tell them they're having coffee. The character decides how to inhabit the moment.
 
-When multiple characters interact in a scene, use sequential spawning with the Task tool's `resume` feature to create authentic back-and-forth:
+### Turn Execution Algorithm
 
-1. **Spawn Character A** (profile + scene brief + scene context + moment prompt)
-   - Character A reacts, speaks, thinks
-   - Store the returned `agentId`
-2. **Spawn Character B** (profile + scene brief + scene context + A's full response verbatim)
-   - Character B reacts
-   - Store the returned `agentId`
+After planning, follow this numbered checklist exactly. Do not skip or reorder steps.
+
+```
+1. UPDATE STATE
+   Set state.json "turn" to the new turn number.
+
+2. CREATE DIRECTORY
+   Create output/{world}/{seed}/turns/{NN}/agents/
+   (Zero-pad: turn 1 → 01, turn 12 → 12)
+
+3. FOR EACH CHARACTER (in scene order):
+   a. Assemble prompt using character-agent.md First Spawn Template
+      - MUST contain: "You are {name} in an interactive narrative"
+      - MUST use: model: sonnet, subagent_type: general-purpose
+   b. Spawn via Agent tool → receive agentId
+   c. Write agentId to state.json agent_ids immediately
+   d. VERIFY: Check that turns/{NN}/agents/{NN}-{slug}.md exists
+      (the hook writes this automatically)
+   e. If dialogue sequence: resume with other character's verbatim response
+      - Resume prompt MUST contain: "Continue in character as {name}."
+      - Update agent_ids AFTER first spawn, BEFORE any resumes
+
+4. SPAWN AUTHOR VOICE
+   - Assemble prompt using author-voice.md Spawn Template
+   - MUST contain: "You are the Author Voice in an interactive narrative"
+   - MUST use: model: opus, subagent_type: general-purpose
+   - Send: turn directory path, previous chapters path, chapter title,
+     language, character list, current phase seed intent
+   - VERIFY: Check that turns/{NN}/agents/00-author-voice.md exists
+
+5. SPAWN STITCHER
+   - Assemble prompt using writer-agent.md instructions
+   - MUST contain: "You are the Stitcher"
+   - MUST use: model: opus, subagent_type: general-purpose
+   - Send: turn directory path, previous chapters path, chapter title,
+     language, current phase seed intent (Pourquoi + Détail atmosphérique)
+   - Do NOT copy or relay agent output text — the file system is the channel
+   - VERIFY: Check that turns/{NN}/chapter.md exists
+
+6. UPDATE STATE
+   Add turn events, update beats, update phase if needed.
+
+7. REPORT TO PLAYER
+   Chapter title + brief beat summary. Then continue to next turn or present a choice.
+```
+
+### Sequential Dialogue with Resume
+
+When multiple characters interact in a scene, use sequential spawning with `resume` to create authentic back-and-forth:
+
+1. **Spawn Character A** (profile + scene brief + scene context + moment prompt) → store agentId
+2. **Spawn Character B** (profile + scene brief + scene context + A's full response verbatim) → store agentId
 3. **Resume Character A** (use `resume: agentId_A`, provide B's full response verbatim)
-   - Character A continues with full context from step 1 intact
 4. Continue as needed. Resume Character B if another exchange is required.
 
-**Why this works:** Each agent retains their full internal context (thoughts, emotions, reasoning) when resumed. This creates a genuine conversation where characters "remember" their previous thoughts while reacting to new information. Sending raw output (not Director summaries) is simpler and preserves the full texture of what was said.
-
-The logging hook captures each agent call (prompt + response) to numbered files in the turn's `agents/` directory. The Stitcher reads these files to compose the chapter.
-
-**Store `agentId` values in `state.json`** so characters can be resumed across turns. A character spawned in Turn 3 can be resumed in Turn 4 with their accumulated context. Use full character names as keys: `{"Yuki Takamura": "abc123"}` not `{"yuki": "abc123"}`.
+Each agent retains their full internal context when resumed. Sending raw output (not Director summaries) is simpler and preserves the full texture of what was said.
 
 See `system/prompts/character-agent.md` for the full prompt template and placeholder structure.
 
@@ -81,42 +109,41 @@ See `system/prompts/character-agent.md` for the full prompt template and placeho
 - Events the character would not have witnessed
 - Future information of any kind
 
-### 3.5. Spawn Author Voice
+### Pipeline Prohibitions
 
-After all character agents have been spawned and the hook has written their output files, but **before** spawning the Stitcher:
+**NEVER do these:**
+- NEVER write agent files (`turns/{NN}/agents/*.md`) directly. The hook writes them.
+- NEVER write `chapter.md` directly. The Stitcher writes it.
+- NEVER spawn a single agent to handle multiple pipeline stages.
+- NEVER batch multiple turns into a single agent call.
+- NEVER skip the Author Voice step.
+- NEVER send agent output text in the Stitcher's prompt — the file system is the channel.
+- NEVER use `model: haiku` for character agents.
 
-Spawn a **fresh** Author Voice agent (Opus) with:
-- The Author Voice instructions from `system/prompts/author-voice.md`
-- Turn directory path (so it can read the character agent files)
-- Previous chapters path (for voice continuity)
-- Chapter title and narration language
-- The current phase's seed intent: **Ce qui se passe**, **Pourquoi**, and **Détail atmosphérique** — the current phase ONLY, not future phases, not the full seed
+### State.json Timing
 
-The Author Voice reads the character agent outputs and produces labeled prose sections (Opening, Bridges, Closing, Undercurrent) that the Stitcher will treat as source material. The hook writes its output to `agents/00-author-voice.md` automatically.
+The logging hook reads `state.json` immediately after each Agent tool call. It needs two things:
 
-**Do NOT send** the full seed, future phases, intentions.md, or character profiles.
+1. **"turn"** → to know which directory to write to (`turns/07/agents/`)
+2. **"agent_ids"** → to reverse-lookup resumed agents (agentId → character name)
 
-The Author Voice returns only the labeled prose sections. **You do not receive or display this text** — the file system is the communication channel.
+Therefore:
+- Update **"turn" BEFORE** spawning any agents for that turn (step 1)
+- Update **"agent_ids" AFTER** each first spawn, **BEFORE** any resumes (step 3c)
 
-### 4. Spawn Stitcher
+If you skip step 1: the hook writes to the wrong turn directory.
+If you skip step 3c: the hook can't resolve resumed agents (falls back to regex).
 
-After the Author Voice agent has completed and the hook has written its output file:
+### Resuming a Session
 
-Spawn a **fresh** Stitcher (Opus) with:
-- The stitching instructions from `system/prompts/writer-agent.md`
-- Turn directory path: `output/{world}/{seed}/turns/{turn}/`
-- Previous chapters path: `output/{world}/{seed}/turns/`
-- Chapter title (evocative, not "Turn 1")
-- Narration language
-- The current phase's seed intent for the **Chapter Intent** section: the **Pourquoi** and **Détail atmosphérique** from the current phase of the seed
+If starting a new session mid-story:
+1. Read `state.json` for current turn, phase, beats, events
+2. Read the last 2-3 `chapter.md` files for narrative context
+3. Read the seed for the current and next phase intent
+4. Clear `agent_ids` in `state.json` (old agentIds don't survive across sessions)
+5. Continue from the current turn following the Turn Execution Algorithm
 
-**Do NOT copy or relay agent output text** into the Stitcher's prompt. The file system is the communication channel -- the Stitcher reads the agent files (including the Author Voice file at `00-author-voice.md`) from disk.
-
-The Stitcher reads the agent output files, reads previous chapter.md files for continuity, stitches the material into a coherent chapter, and writes `turns/{turn}/chapter.md`. It returns only a brief confirmation (e.g. "Stitched chapter 'L'aube grise', 620 words"). **You do not receive or display the full prose.**
-
-Tell the player what chapter was written, summarize the beat briefly, then continue to the next turn or present a choice.
-
-### 5. Decide: Involve the Player?
+### Decide: Involve the Player?
 
 The player is a **stage director**. They observe and make key creative decisions. Guideline: a 20-25 turn story might have 2-4 player choices, but this is not a quota. Fewer choices -- or none -- is perfectly fine if the story doesn't warrant them. Never manufacture a choice to hit a number. Every choice offered must be a genuine fork where the player's decision meaningfully shapes what happens next.
 
@@ -139,7 +166,7 @@ Choices must be impactful. If a choice doesn't make the player genuinely pause a
 
 **When NOT presenting a choice, continue automatically** to the next turn. Do not pause between turns unless a player choice is warranted.
 
-### 6. Protect the Author's Intentions
+### Protect the Author's Intentions
 
 The author's intentions (`intentions.md`) are the anchor. The seed can bend; the intentions cannot.
 
@@ -148,7 +175,7 @@ The author's intentions (`intentions.md`) are the anchor. The seed can bend; the
 - If offering choices would derail the story, stop offering choices and narrate toward the intended arc
 - Acknowledge player input gracefully when redirecting
 
-### 7. Update State
+### State Schema
 
 Track in `output/{world}/{seed}/state.json`:
 

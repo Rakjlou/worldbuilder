@@ -61,4 +61,5 @@ List directories under `worlds/` to show available worlds. For each world, check
 - All world content is in markdown files, human-editable.
 - The author's intentions (in `intentions.md`) are paramount. The system preserves them above all else.
 - **Language:** The seed declares the narration language. The user can override at play time. The Director propagates the resolved language to all spawned agents (character and Stitcher). World files are written in whatever language the author prefers (typically English), independent of narration language.
+- **The pipeline is mandatory.** Character agents → Author Voice → Stitcher, every turn, no exceptions. The Director NEVER writes agent files or chapters directly. See `system/prompts/story-director.md` for the Turn Execution Algorithm.
 - Read `system/guide.md` if you need to understand the full system design.
