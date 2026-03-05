@@ -55,16 +55,25 @@ After planning, follow this numbered checklist exactly. Do not skip or reorder s
    (Zero-pad: turn 1 → 01, turn 12 → 12)
 
 3. FOR EACH CHARACTER (in scene order):
-   a. Assemble prompt using character-agent.md First Spawn Template
+   a. Check state.json agent_ids for an existing agentId
+   b. IF agentId exists → RESUME the agent
+      - Use character-agent.md Cross-Turn Resume Template
+      - Prompt is lighter: new scene brief + what happened since + moment
+      - No need to re-send character profile (agent remembers it)
+      - MUST contain: "Continue in character as {name}."
+      - MUST use: model: sonnet, subagent_type: general-purpose
+   c. IF no agentId (first appearance, or new session) → SPAWN FRESH
+      - Use character-agent.md First Spawn Template (unchanged)
       - MUST contain: "You are {name} in an interactive narrative"
       - MUST use: model: sonnet, subagent_type: general-purpose
-   b. Spawn via Agent tool → receive agentId
-   c. Write agentId to state.json agent_ids immediately
-   d. VERIFY: Check that turns/{NN}/agents/{NN}-{slug}.md exists
+   d. Write agentId to state.json agent_ids immediately
+      - For resumes: the agentId does NOT change, but still verify it's in state.json
+   e. VERIFY: Check that turns/{NN}/agents/{NN}-{slug}.md exists
       (the hook writes this automatically)
-   e. If dialogue sequence: resume with other character's verbatim response
+      If missing: STOP. Report the missing file to the player and wait for instructions.
+   f. If dialogue sequence: resume with other character's verbatim response
       - Resume prompt MUST contain: "Continue in character as {name}."
-      - Update agent_ids AFTER first spawn, BEFORE any resumes
+      - This is unchanged from current behavior
 
 4. SPAWN AUTHOR VOICE
    - Assemble prompt using author-voice.md Spawn Template
@@ -106,13 +115,27 @@ Each agent retains their full internal context when resumed. Sending raw output 
 
 See `system/prompts/character-agent.md` for the full prompt template and placeholder structure.
 
-**Never send a character agent:**
-- The seed or any story plan
-- The `intentions.md` file
-- Other characters' full profiles (only brief descriptions from this character's perspective)
-- Story arc information for any character
-- Events the character would not have witnessed
-- Future information of any kind
+**What characters receive — the Director decides.**
+
+The Director controls what each character knows at each moment. The scene brief
+is the primary channel. The Director may include any context that serves the
+scene — including seed-derived information, consequences, or implications —
+as long as it is filtered through what the character would plausibly know or
+deduce at that point in the story.
+
+The Director should NOT send:
+- The raw seed file or intentions.md (these are Director tools, not character context)
+- Other characters' full profiles (describe others from this character's POV)
+- Future events the character has no way of knowing
+
+The Director SHOULD include in scene briefs:
+- What the character has observed, learned, or deduced up to this point
+- The consequences or implications of events, when the character would understand them
+- Enough context for the character to deliver the scene with the right weight
+
+The scene brief is like an actor's script notes: it tells the character what
+they know and feel in this moment so they can perform it in their own voice.
+The Director's job is to give the character what they need. Not more, not less.
 
 ### Pipeline Prohibitions
 
@@ -134,18 +157,19 @@ The logging hook reads `state.json` immediately after each Agent tool call. It n
 
 Therefore:
 - Update **"turn" BEFORE** spawning any agents for that turn (step 1)
-- Update **"agent_ids" AFTER** each first spawn, **BEFORE** any resumes (step 3c)
+- Update **"agent_ids" AFTER** each first spawn, **BEFORE** any resumes (step 3d)
+- For resumed agents: the agentId doesn't change. The hook resolves them via the existing state.json entry. No update needed — just verify the entry is present.
 
 If you skip step 1: the hook writes to the wrong turn directory.
-If you skip step 3c: the hook can't resolve resumed agents (falls back to regex).
+If you skip step 3d: the hook can't resolve resumed agents (falls back to regex).
 
 ### Resuming a Session
 
-If starting a new session mid-story:
+When continuing a story mid-way:
 1. Read `state.json` for current turn, phase, beats, events
 2. Read the last 2-3 `chapter.md` files for narrative context
 3. Read the seed for the current and next phase intent
-4. Clear `agent_ids` in `state.json` (old agentIds don't survive across sessions)
+4. Keep `agent_ids` from `state.json` — attempt to resume them on the next turn (step 3a of the Turn Execution Algorithm). If a resume fails (e.g., stale agentId from a previous session), spawn the character fresh and update the agentId.
 5. Continue from the current turn following the Turn Execution Algorithm
 
 ### Decide: Involve the Player?

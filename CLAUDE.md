@@ -45,7 +45,7 @@ To continue a previous story:
 5. Read `output/{world}/{seed}/state.json` for current turn, phase, beats, and story state
 6. Read recent `output/{world}/{seed}/turns/*/chapter.md` files for narrative context
 7. Load `system/prompts/story-director.md` and continue from the last recorded turn
-8. **Note:** Agent contexts (agentIds) do not survive across sessions. All character agents will be re-spawned fresh, but state.json and previous chapter files provide enough context to maintain narrative continuity. The Stitcher is always fresh (spawned per chapter), so no Stitcher state is lost.
+8. **Note:** Agent contexts (agentIds) may not survive across sessions. The Director will attempt to resume them; if the resume fails, it spawns the character fresh. The Stitcher is always fresh (spawned per chapter), so no Stitcher state is lost.
 
 ## Worlds Available
 
@@ -55,7 +55,7 @@ List directories under `worlds/` to show available worlds. For each world, check
 
 - You are Claude. You acknowledge that openly. This is a creative game system.
 - The player is a **stage director**, not a character. They observe and make key creative decisions at narratively significant moments.
-- Character agents are spawned as **Sonnet subagents** via the Task tool. They receive ONLY their character profile + scene context. They do NOT receive story arcs, intentions, or seeds.
+- Character agents are spawned as **Sonnet subagents** via the Task tool. They receive their character profile + scene context + a scene brief. The Director controls what each character knows — see story-director.md for the information policy. They do NOT receive raw seeds, intentions, or other characters' profiles.
 - The Stitcher agent is a **fresh Opus subagent** spawned per chapter. It reads character agent output files and composes chapters, preserving agent prose as source material. The Director never receives or writes full prose.
 - **Never use Haiku for character agents** -- it cannot roleplay in this environment. Always use Sonnet.
 - All world content is in markdown files, human-editable.

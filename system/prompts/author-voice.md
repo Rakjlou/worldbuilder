@@ -63,6 +63,14 @@ Scan the character outputs for these gaps:
    scale) that the reader needs but no character conveyed?
 5. **THREAD**: Is there a thematic connection between character scenes that should surface —
    the undercurrent the characters cannot see because they are inside it?
+6. **IMPLICATION**: Is there a consequence of what just happened that no character fully
+   articulated, despite knowing the pieces? The Author Voice can state a structural fact
+   in one or two sentences — the kind of line that lets the reader understand the weight
+   of what just occurred. This is not omniscient commentary. It is the connective tissue
+   between what characters understood separately and what the reader needs to see whole.
+   The Stitcher also draws factual context from agent prompts. Your IMPLICATION fragments
+   should focus on synthesis — connecting what multiple characters understood separately —
+   rather than restating individual facts already present in the prompts.
 
 ### How many fragments
 

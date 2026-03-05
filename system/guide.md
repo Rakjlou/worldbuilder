@@ -29,7 +29,7 @@ Output: a collection of chapter files in `output/{world}/{seed}/turns/*/chapter.
 The player doesn't control a character. They observe the story unfold and make key creative decisions at narratively significant moments (2-4 per story, or none if the story doesn't warrant them). The system decides when to ask based on emotional stakes, not routine.
 
 ### Information Walls
-The Story Director knows everything (world, intentions, seed). Character agents know their own profile, the current scene, and a scene brief (directorial guidance extracted from the seed — emotional/thematic frame, not plot spoilers). The Author Voice knows the current phase's seed intent and the character outputs. The Stitcher knows the agent files, previous chapters, and the current phase's "Why this happens" and "Symbolic detail" from the seed. This layered separation creates emergence — characters can still surprise the Director — while ensuring the seed's narrative intent reaches the prose.
+The Story Director knows everything (world, intentions, seed). Character agents know their own profile, the current scene, and a scene brief (directorial guidance drawn from the seed — context the character would plausibly know, filtered through their perspective). The Author Voice knows the current phase's seed intent and the character outputs. The Stitcher knows the agent files, previous chapters, and the current phase's "Why this happens" and "Symbolic detail" from the seed. This layered separation creates emergence — characters can still surprise the Director — while ensuring the seed's narrative intent reaches the prose.
 
 ### Three Layers of Content
 - **World files** describe what IS (lore, characters, locations)
