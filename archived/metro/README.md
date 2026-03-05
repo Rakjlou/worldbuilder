@@ -22,6 +22,9 @@ Complete 21-turn run of "La Marge d'Erreur" using the Stitcher architecture (fre
 ### `20260227-la-marge-d-erreur-v3/`
 First 4 turns of "La Marge d'Erreur" using the Author Voice pipeline. This partial run was used to validate and refine the Author Voice system: an Opus agent spawned per chapter between character agents and Stitcher, producing narrative connective tissue (opening frames, thematic bridges, closings) from the seed's per-phase intent. Also introduced scene briefs for characters, raw previous-agent output on resume, and seed-informed Stitcher (phase Pourquoi + Détail atmosphérique). Comparison with v2 confirmed the pipeline works -- chapters gained narrative direction and thematic coherence while preserving character prose verbatim. The undercurrent section was folded into Opening/Bridges/Closing after observing the Stitcher consistently ignored it as a separate section.
 
+### `20260227-la-marge-d-erreur-v4/`
+Complete 25-turn run of "La Marge d'Erreur." Revised T1-T15 from v3 with improved narrative clarity (WHO/WHERE/grounding across the pipeline), then continued T16-T25 to story completion. Same Author Voice + Stitcher architecture as v3, with refined scene briefs and grounding in character agent prompts.
+
 ## Note
 
-Earlier sessions use the old Writer architecture (persistent Opus agent, story.md monolith). v2 uses the Stitcher architecture. v3 adds the Author Voice layer. Active outputs live in `output/`.
+Earlier sessions use the old Writer architecture (persistent Opus agent, story.md monolith). v2 uses the Stitcher architecture. v3 adds the Author Voice layer. v4 is the first complete run with the full pipeline. Active outputs live in `output/`.
